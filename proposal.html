@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adit &times; Puro Flow Media  |  90-Day Growth Partnership Proposal</title>
+<meta property="og:title" content="Adit x Puro Flow Media - 90-Day Growth Partnership Proposal">
+<meta property="og:description" content="A social media channel that generates demos independent of events. Strategy plus production, performance-first.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://adit-deck.vercel.app/og-proposal.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://adit-deck.vercel.app/proposal.html">
+<meta name="twitter:image" content="https://adit-deck.vercel.app/og-proposal.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#0A0A0A; --charcoal:#1A1A1A; --card:#212327;
+    --steel:#555555; --mut-dark:#9A9A9A;
+    --off:#F5F5F5; --off2:#ECECEC;
+    --blue:#1E3A5F; --blue-acc:#5286C2;
+    --text-light:#F5F5F5; --text-dark:#0E0E10; --mut-light:#56585C;
+    --line-dark:rgba(255,255,255,.11); --line-light:#DBDBDB;
+    --display:'Orbitron',Verdana,sans-serif;
+    --body:'Montserrat',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--body);background:var(--off);color:var(--text-dark);-webkit-font-smoothing:antialiased;line-height:1.6;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 30px;}
+
+  section{padding:100px 0;}
+  .eyebrow{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.26em;text-transform:uppercase;color:var(--blue);display:flex;align-items:center;gap:11px;margin-bottom:24px;}
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--blue);display:inline-block;}
+  .dark .eyebrow{color:var(--blue-acc);}
+  .dark .eyebrow::before{background:var(--blue-acc);}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(22px,3vw,33px);line-height:1.14;letter-spacing:.005em;text-transform:uppercase;color:var(--text-dark);max-width:20ch;overflow-wrap:break-word;}
+  h2 .b{color:var(--blue);}
+  .dark h2{color:var(--text-light);}
+  .dark h2 .b{color:var(--blue-acc);}
+  .lead{font-size:clamp(15.5px,1.6vw,17.5px);line-height:1.7;color:var(--mut-light);max-width:62ch;margin-top:22px;font-weight:400;}
+  .dark .lead{color:#C2C2C2;}
+  .dark{background:var(--black);}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* HERO */
+  .hero{background:var(--black);position:relative;overflow:hidden;padding:120px 0 96px;}
+  .hero::before{content:"";position:absolute;top:-25%;left:-10%;width:60vw;height:60vw;max-width:760px;max-height:760px;
+    background:radial-gradient(circle,rgba(82,134,192,.16) 0%,rgba(30,58,95,.06) 42%,transparent 68%);pointer-events:none;}
+  .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:54px;align-items:center;position:relative;z-index:2;}
+  .logo{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:.04em;color:#fff;line-height:1;}
+  .logo small{display:block;font-size:11px;font-weight:600;letter-spacing:.62em;color:var(--mut-dark);margin-top:7px;text-transform:uppercase;}
+  .x-line{font-family:var(--body);font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--blue-acc);margin:26px 0 6px;}
+  .meta{font-family:var(--body);font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--mut-dark);}
+  .blueline{width:60px;height:3px;background:var(--blue-acc);margin:30px 0;border-radius:2px;}
+  .hero h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,5vw,52px);line-height:1.06;letter-spacing:.01em;color:#fff;text-transform:uppercase;overflow-wrap:break-word;}
+  .hero h1 .b{color:var(--blue-acc);}
+  .hero .date{font-family:var(--body);font-size:clamp(13px,1.5vw,15px);font-weight:500;color:#CFCFCF;margin-top:24px;letter-spacing:.02em;}
+  .hero .thesis{font-size:clamp(14.5px,1.6vw,16.5px);color:var(--mut-dark);margin-top:13px;max-width:48ch;line-height:1.62;}
+  .tagline{margin-top:34px;font-family:var(--display);font-weight:600;font-size:clamp(13px,1.5vw,15px);letter-spacing:.18em;color:#fff;text-transform:uppercase;}
+  .tagline .b{color:var(--blue-acc);}
+  .portrait{position:relative;}
+  .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;display:block;filter:grayscale(8%) contrast(1.03);border:1px solid var(--line-dark);}
+  .portrait::after{content:"";position:absolute;left:-1px;bottom:-1px;width:46%;height:4px;background:var(--blue-acc);}
+  .portrait .cap{font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--mut-dark);margin-top:14px;text-align:right;}
+
+  /* OPPORTUNITY / generic light */
+  .light{background:var(--off);}
+  .light.alt{background:var(--off2);}
+
+  /* FOUR */
+  .grid4{display:grid;grid-template-columns:1fr 1fr;gap:1px;margin-top:48px;background:var(--line-light);border:1px solid var(--line-light);}
+  .cell4{background:var(--off);padding:30px 30px 32px;}
+  .cell4 .n{font-family:var(--display);font-weight:700;font-size:22px;color:var(--blue);letter-spacing:.04em;}
+  .cell4 h3{font-family:var(--display);font-weight:600;font-size:15.5px;letter-spacing:.02em;text-transform:uppercase;margin:12px 0 9px;color:var(--text-dark);}
+  .cell4 .goal{font-size:13.5px;color:var(--mut-light);margin-bottom:13px;font-weight:400;}
+  .cell4 .move{font-size:14.5px;line-height:1.55;color:var(--text-dark);}
+  .cell4 .move b{color:var(--blue);font-weight:600;}
+
+  /* TWO STAGES (dark) */
+  .stages2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px;}
+  .stage{border:1px solid var(--line-dark);padding:32px 30px;background:var(--charcoal);position:relative;}
+  .stage .bar{position:absolute;left:0;top:0;bottom:0;width:3px;}
+  .stage.dental .bar{background:var(--blue-acc);}
+  .stage.opto .bar{background:#fff;}
+  .stage .tag{font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--mut-dark);}
+  .stage h3{font-family:var(--display);font-weight:600;font-size:18px;color:#fff;margin:9px 0 5px;letter-spacing:.01em;text-transform:uppercase;line-height:1.2;}
+  .stage .where{font-size:12.5px;color:var(--mut-dark);margin-bottom:16px;font-weight:400;}
+  .stage p{font-size:14.5px;line-height:1.6;color:#C8C8C8;}
+  .stages-note{margin-top:24px;font-size:15px;color:var(--mut-dark);}
+  .stages-note b{color:#fff;font-weight:600;}
+
+  /* DELIVERABLES */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:38px 54px;margin-top:48px;}
+  .deliv .col h4{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:18px;padding-bottom:11px;border-bottom:1px solid var(--line-light);}
+  .deliv ul{list-style:none;}
+  .deliv li{font-size:14.5px;line-height:1.45;color:var(--text-dark);padding-left:20px;position:relative;margin-bottom:12px;}
+  .deliv li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;background:var(--blue);}
+  .deliv li b{font-weight:600;}
+  .deliv .both{grid-column:1 / -1;border-top:1px solid var(--line-light);padding-top:26px;}
+  .deliv .both ul{display:grid;grid-template-columns:1fr 1fr;gap:0 54px;}
+
+  /* SPLIT (engine / style) */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  .split .lead{margin-top:0;}
+  .hero-grid>div,.split>div{min-width:0;}
+  .flowrow{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;}
+  .pill{font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);background:rgba(30,58,95,.07);border:1px solid rgba(30,58,95,.22);padding:8px 14px;}
+  .dark .pill{color:var(--blue-acc);background:rgba(82,134,192,.1);border-color:rgba(82,134,192,.3);}
+  .stylelist{list-style:none;margin-top:10px;}
+  .stylelist li{font-size:14.5px;line-height:1.5;color:#C8C8C8;padding-left:22px;position:relative;margin-bottom:11px;}
+  .stylelist li::before{content:"";position:absolute;left:0;color:var(--blue-acc);font-weight:700;}
+
+  /* INVESTMENT (dark) */
+  .price-wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:42px;align-items:center;margin-top:46px;}
+  .price-card{border:1px solid var(--line-dark);background:var(--charcoal);padding:8px 32px;}
+  .price-row{display:flex;justify-content:space-between;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--line-dark);}
+  .price-row:last-child{border-bottom:none;}
+  .price-row .what{font-size:15px;color:#EAEAEA;font-weight:500;}
+  .price-row .what span{display:block;font-size:12px;color:var(--mut-dark);margin-top:4px;font-weight:400;}
+  .price-row .amt{font-family:var(--display);font-weight:700;font-size:28px;color:#fff;letter-spacing:.01em;}
+  .price-note{font-size:14.5px;line-height:1.65;color:var(--mut-dark);}
+  .price-note b{color:#fff;font-weight:600;}
+  .travel{display:inline-block;font-family:var(--body);font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-acc);border:1px solid rgba(82,134,192,.4);padding:9px 15px;margin-top:22px;}
+
+  /* WHY */
+  .why{display:grid;grid-template-columns:1fr 1fr;gap:12px 44px;margin-top:44px;}
+  .why .item{padding:24px 0;border-top:1px solid var(--line-light);}
+  .why .item h4{font-family:var(--display);font-weight:600;font-size:15px;text-transform:uppercase;letter-spacing:.02em;color:var(--text-dark);margin-bottom:8px;}
+  .why .item p{font-size:14px;color:var(--mut-light);line-height:1.55;}
+  .why .item .wnum{font-family:var(--display);font-weight:700;font-size:17px;color:var(--blue);letter-spacing:.04em;margin-bottom:7px;}
+  .diff-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:46px;align-items:center;}
+  .diff-main{min-width:0;}
+  .diff-main .why{margin-top:38px;}
+  .diff-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 24%;border-radius:16px;border:1px solid var(--line-light);display:block;}
+
+  /* video cards */
+  .vidwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:46px;}
+  .vidcard{position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;background:var(--charcoal);border:1px solid var(--line-light);cursor:pointer;}
+  .vidcard video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:var(--charcoal);z-index:1;}
+  .vidcard .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--steel);font-size:24px;z-index:0;}
+  .vidcard::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,11,13,0) 42%,rgba(10,11,13,.74) 100%);pointer-events:none;z-index:2;}
+  .soundbtn{position:absolute;top:13px;right:13px;z-index:3;font-family:var(--body);font-size:11.5px;font-weight:600;color:#fff;background:rgba(30,58,95,.92);border:1px solid rgba(255,255,255,.18);border-radius:30px;padding:6px 12px;cursor:pointer;}
+  .soundbtn:hover{background:var(--blue);}
+  .soundbtn.on{background:var(--blue-acc);color:#0A0A0A;border-color:transparent;}
+  .vidlabel{position:absolute;left:16px;bottom:15px;z-index:3;font-family:var(--display);font-weight:600;font-size:13.5px;letter-spacing:.03em;text-transform:uppercase;color:#fff;}
+  .vidcredit{margin-top:26px;font-size:13.5px;color:var(--mut-light);}
+  .vidcredit a{color:var(--blue);text-decoration:none;}
+  .vidcredit a:hover{color:var(--text-dark);}
+
+  /* CTA */
+  .cta{background:var(--black);text-align:center;padding:118px 0;position:relative;overflow:hidden;}
+  .cta::before{content:"";position:absolute;bottom:-45%;left:50%;transform:translateX(-50%);width:80vw;height:55vw;max-width:900px;max-height:560px;
+    background:radial-gradient(circle,rgba(82,134,192,.15) 0%,transparent 64%);pointer-events:none;}
+  .cta .wrap{position:relative;z-index:2;}
+  .cta h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.6vw,48px);color:#fff;letter-spacing:.01em;text-transform:uppercase;max-width:none;margin:0 auto;line-height:1.1;overflow-wrap:break-word;}
+  .cta .sub{font-size:clamp(14.5px,1.6vw,17px);color:var(--mut-dark);margin-top:24px;}
+  .contact{margin-top:36px;font-family:var(--body);font-size:13px;font-weight:500;letter-spacing:.04em;color:#DADADA;}
+  .contact a{color:var(--blue-acc);text-decoration:none;border-bottom:1px solid rgba(82,134,192,.4);}
+  .contact a:hover{color:#fff;}
+  .cta .tagline2{margin-top:46px;font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.2em;color:var(--mut-dark);text-transform:uppercase;}
+  .cta .tagline2 .b{color:var(--blue-acc);}
+
+  a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--blue-acc);outline-offset:3px;}
+
+  @media (max-width:780px){
+    section{padding:72px 0;}
+    .hero-grid,.grid4,.stages2,.deliv,.split,.price-wrap,.why,.vidwrap,.diff-grid,.deliv .both ul{grid-template-columns:1fr;}
+    .deliv .both ul{gap:0;}
+    .diff-photo{max-width:380px;}
+    .hero-grid{gap:40px;}
+    .portrait{max-width:340px;}
+    .portrait .cap{text-align:left;}
+    .split{gap:32px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+</style>
+<style>
+/* proposal additions */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:44px;background:var(--line-light);border:1px solid var(--line-light);}
+.stat{background:var(--off);padding:26px 22px;}
+.dark .stats{background:var(--line-dark);border-color:var(--line-dark);}
+.dark .stat{background:var(--charcoal);}
+.stat .num{font-family:var(--display);font-weight:700;font-size:clamp(23px,3vw,31px);color:var(--blue);letter-spacing:.01em;}
+.dark .stat .num{color:var(--blue-acc);}
+.stat .lab{font-size:12px;color:var(--mut-light);margin-top:9px;line-height:1.45;}
+.dark .stat .lab{color:var(--mut-dark);}
+/* stylelist marker without em-dash */
+.stylelist li::before{content:"" !important;position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--blue-acc);}
+.light .stylelist li{color:var(--text-dark);}
+.sublabel{font-family:var(--display);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;padding-bottom:11px;border-bottom:1px solid var(--line-light);}
+.dark .sublabel{color:var(--blue-acc);border-color:var(--line-dark);}
+.deliv.cols3{grid-template-columns:repeat(3,1fr);gap:34px 36px;}
+.phaselab{font-family:var(--body);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);}
+.ph-days{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.02em;text-transform:uppercase;color:var(--text-dark);margin:5px 0 15px;}
+.deliv .col.p h4{border-bottom:none;padding-bottom:0;margin-bottom:6px;}
+.kpi-target{border-left:3px solid var(--blue-acc);padding:6px 0 6px 16px;margin-bottom:16px;}
+.kpi-target .t{font-family:var(--display);font-weight:700;font-size:16px;color:var(--text-dark);letter-spacing:.01em;}
+.kpi-target .d{font-size:13.5px;color:var(--mut-light);margin-top:4px;}
+.propnote{margin-top:30px;font-size:14.5px;color:var(--mut-light);line-height:1.65;max-width:66ch;}
+.propnote b{color:var(--text-dark);font-weight:600;}
+.dark .propnote{color:var(--mut-dark);} .dark .propnote b{color:#fff;}
+.cta .tagline3{margin-top:14px;font-family:var(--display);font-weight:500;font-size:11.5px;letter-spacing:.28em;color:var(--mut-dark);text-transform:uppercase;}
+.cta .tagline3 .b{color:var(--blue-acc);}
+.preparedfor{font-family:var(--body);font-size:12px;font-weight:500;letter-spacing:.04em;color:#CFCFCF;margin-top:22px;line-height:1.7;}
+.preparedfor b{color:#fff;font-weight:600;}
+@media(max-width:780px){.stats{grid-template-columns:1fr 1fr;}.deliv.cols3{grid-template-columns:1fr;}}
+</style>
+</head><body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="logo">PUROFLOW<small>MEDIA</small></div>
+    <div class="x-line">&times; ADIT</div>
+    <div class="blueline"></div>
+    <h1>THE 90-DAY GROWTH <span class="b">PARTNERSHIP</span></h1>
+    <div class="date">Proposal &nbsp;&middot;&nbsp; Social Demand Generation for Adit</div>
+    <div class="preparedfor">Prepared for <b>Josh Gosnell</b> and <b>Dustin Bybee</b>, Adit<br>By Felipe Toscano, Founder, Puro Flow Media</div>
+    <div class="tagline" style="margin-top:30px;">CREATE IN <span class="b">FLOW</span> STATE.</div>
+  </div>
+</header>
+
+<section class="light">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Objective</div>
+    <h2 class="reveal">A channel that produces<br>without <span class="b">events.</span></h2>
+    <p class="lead reveal">The goal is simple and it matches exactly what you said on the call: build a social media channel that generates demos on its own, month after month, independent of trade shows. You are fighting event dependence. This is the answer. Own the strategy and the execution, so Adit stops relying on events and starts compounding a channel that produces regardless of what is happening elsewhere.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">The Mandate</div>
+      <h2 class="reveal">Own the strategy<br>and the <span class="b">execution.</span></h2>
+      <p class="lead reveal">No more too many chefs. No more three weeks with nothing posted. You give me the wheel on Instagram and the Facebook strategy. I own what gets posted, the story it tells, and the demand it produces. Then you judge me on the demand. The edge I bring that a strategist alone cannot: I also shoot and edit the content. Strategy and production, one owner.</p>
+    </div>
+    <div class="reveal">
+      <div class="sublabel">What I own</div>
+      <ul class="stylelist">
+        <li>Content strategy across all four verticals</li>
+        <li>Facebook groups and Instagram as priority channels</li>
+        <li>The full loop: shoot, edit, and post</li>
+        <li>The ManyChat comment-to-DM demand engine</li>
+        <li>Attribution back to real demos</li>
+        <li>Events as a secondary, when-it-makes-sense layer</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Opportunity</div>
+    <h2 class="reveal">Dental is proven.<br>The rest is <span class="b">wide open.</span></h2>
+    <div class="stats reveal">
+      <div class="stat"><div class="num">~31</div><div class="lab">demos per month from social today</div></div>
+      <div class="stat"><div class="num">100%</div><div class="lab">from organic Facebook groups</div></div>
+      <div class="stat"><div class="num">0</div><div class="lab">from Instagram, TikTok, or LinkedIn</div></div>
+      <div class="stat"><div class="num">23 of 29</div><div class="lab">of last month's demos were dental</div></div>
+    </div>
+    <p class="propnote reveal">Two lanes are barely touched, and both are ours to take. <b>Instagram is at zero</b>, so the first win is turning zero into a real number. And <b>optometry, orthodontics, and chiropractic</b> produced roughly six demos combined last month against dental's twenty-three. Dental already proves the model works. We run the same playbook where the whitespace is biggest.</p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Engine</div>
+    <h2 class="reveal">Story-first content,<br>built to be <span class="b">tracked.</span></h2>
+    <p class="lead reveal">Storytelling reels built on the daily struggles of running a practice and the software pain Adit solves, in the influencer format that stops a dentist mid-scroll. Not ChatGPT graphics people can smell. Every piece funnels to a ManyChat keyword: comment the word, get the resource in the DM. That is the hook and the tracking in one.</p>
+    <div class="sublabel reveal" style="margin-top:34px;">The complaints we turn into content</div>
+    <div class="flowrow reveal">
+      <span class="pill">Missed calls</span>
+      <span class="pill">Front-desk follow-up</span>
+      <span class="pill">Disconnected systems</span>
+      <span class="pill">Inefficient scheduling</span>
+      <span class="pill">Low conversion</span>
+      <span class="pill">Bad attribution</span>
+      <span class="pill">Too many tools</span>
+      <span class="pill">Patient communication</span>
+    </div>
+    <p class="propnote reveal">Attribution is built in. ManyChat captures intent, a traceable booking link ties the demo to Puro Flow, and it lands in Zoho like every other demo. So we can prove exactly what social produced, by platform and by vertical.</p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap">
+    <div class="eyebrow reveal">The 90-Day Plan</div>
+    <h2 class="reveal">Build the foundation,<br>then <span class="b">scale it.</span></h2>
+    <p class="lead reveal">Give me 90 days to build the organic foundation the right way. First two months are preparation with early results, and by September the number should be climbing.</p>
+    <div class="deliv cols3 reveal">
+      <div class="col p">
+        <div class="phaselab">Phase 01 &middot; Days 1&ndash;30</div>
+        <div class="ph-days">Foundation</div>
+        <ul>
+          <li>Audit all platforms and set up the Instagram grid so it builds trust</li>
+          <li>Build content pillars for each vertical</li>
+          <li>Map the Facebook groups and the customer advocates already in them</li>
+          <li>Lock the story and the posting cadence</li>
+          <li>Ship the first content from what is already filmed</li>
+        </ul>
+      </div>
+      <div class="col p">
+        <div class="phaselab">Phase 02 &middot; Days 31&ndash;60</div>
+        <div class="ph-days">Execution</div>
+        <ul>
+          <li>Consistent posting across Facebook groups and Instagram</li>
+          <li>The ManyChat engine live on every piece</li>
+          <li>Expand into optometry, orthodontics, and chiropractic</li>
+          <li>Start measuring demos by platform and vertical</li>
+          <li>By September, a marked increase</li>
+        </ul>
+      </div>
+      <div class="col p">
+        <div class="phaselab">Phase 03 &middot; Days 61&ndash;90</div>
+        <div class="ph-days">Scale</div>
+        <ul>
+          <li>Double down on what is producing demos</li>
+          <li>Introduce a small paid layer on Instagram now the foundation looks legit</li>
+          <li>Stand up testimonial and sales-enablement libraries</li>
+          <li>Report attributed demos and closes, then set the plan to grow it</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="light alt">
+  <div class="wrap">
+    <div class="eyebrow reveal">How We Measure It</div>
+    <h2 class="reveal">You judge me<br>on <span class="b">demand.</span></h2>
+    <p class="lead reveal">Baseline today is about 31 demos a month, and 23 of those are dental. Here is what the first 90 days should move, all tracked in Zoho and attributed to Puro Flow through ManyChat and the booking link.</p>
+    <div style="margin-top:40px;max-width:640px;">
+      <div class="kpi-target reveal"><div class="t">Instagram: 0 &rarr; 5+ demos</div><div class="d">Turn a channel producing nothing into a real, attributed number.</div></div>
+      <div class="kpi-target reveal"><div class="t">Facebook: grow the channel ~20%</div><div class="d">Roughly ten more demos a month on top of the current base.</div></div>
+      <div class="kpi-target reveal"><div class="t">New verticals: first attributed demos</div><div class="d">Optometry, orthodontics, and chiropractic, where almost nothing exists today.</div></div>
+    </div>
+    <p class="propnote reveal">Success looks like going from about 30 demos a month to 40 or more, <b>with a real Instagram number where there is currently zero.</b></p>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="eyebrow reveal">The Investment</div>
+    <h2 class="reveal">Performance-first.<br>Downside <span class="b">capped.</span></h2>
+    <div class="price-wrap">
+      <div class="price-card reveal">
+        <div class="price-row"><div class="what">Monthly retainer<span>Full strategy plus production plus the Puro Flow team</span></div><div class="amt">$4,500</div></div>
+        <div class="price-row"><div class="what">Per completed demo<span>For every demo above the current 30 per month baseline</span></div><div class="amt">$50</div></div>
+        <div class="price-row"><div class="what">Per closed deal<span>For every close from Puro Flow attributed demos</span></div><div class="amt">$500</div></div>
+      </div>
+      <div class="reveal">
+        <p class="price-note">This is not a strategy-only role and it is not a shooter-only role. It is content strategy, full in-house production, and an agency team, structured so you pay for performance. <b>Your fixed cost is capped. Your upside is not.</b></p>
+        <span class="travel">Events billed per engagement, not baked in</span>
+      </div>
+    </div>
+    <p class="propnote reveal">Event shoots stay separate and optional. When it makes sense, a half-day shoot can bank a month or two of content, priced per engagement, so the retainer stays lean and focused on the channel that produces every month.</p>
+  </div>
+</section>
+
+<section class="light">
+  <div class="wrap split">
+    <div>
+      <div class="eyebrow reveal">The Team &amp; Timeline</div>
+      <h2 class="reveal">Not a freelancer.<br>An <span class="b">agency.</span></h2>
+      <p class="lead reveal">You are hiring Puro Flow Media, a production team with editors and support across time zones, so content keeps moving even when I am on a plane or asleep. When we shoot an event, I bring a second shooter. This scales with you.</p>
+    </div>
+    <div class="reveal">
+      <div class="sublabel">Getting started</div>
+      <ul class="stylelist">
+        <li>Ready for day one next week on approval</li>
+        <li>A large library from the dental and optometry shows is already filmed and ready</li>
+        <li>Access to attend upcoming Adit events inside the 90 days</li>
+        <li>Green light for the next chiropractic show when it lands</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Give me 90 days.<br>Then judge me on the demand.</h2>
+    <p class="sub">One owner of strategy and execution. A channel that produces without events. Aligned to performance, so it pays for itself as it grows.</p>
+    <div class="contact">Felipe Toscano &middot; Founder, Puro Flow Media &middot; <a href="mailto:felipe@puroflowmedia.com">felipe@puroflowmedia.com</a></div>
+    <div class="tagline2">VICTIMS WAIT. HEROES <span class="b">CREATE.</span></div>
+    <div class="tagline3">CREATE IN <span class="b">FLOW</span> STATE.</div>
+  </div>
+</section>
+
+
+<script>
+(function(){var els=document.querySelectorAll('.reveal:not(.in)');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+els.forEach(function(e){io.observe(e);});})();
+</script>
+
+</body></html>
