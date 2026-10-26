@@ -320,12 +320,291 @@ button{font:inherit;color:inherit}
 .fclose .thanks{margin-top:34px;font:700 21px/1.25 var(--display);letter-spacing:.05em;text-transform:uppercase}
 .fclose .ask{margin:12px 0 0;font:500 15px/1.55 var(--body);color:var(--muted)}
 .fclose .ask b{color:var(--white)}
+/* ================= VIEW SWITCH + ANALYTICS ================= */
+.modes{display:inline-flex;gap:4px;padding:4px;border-radius:999px;border:1px solid rgba(245,245,245,.16);background:rgba(10,10,10,.6);flex:none}
+.modes a{display:inline-flex;align-items:center;text-decoration:none;font:700 12px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;padding:12px 16px;border-radius:999px;color:var(--muted);white-space:nowrap;transition:background .2s,color .2s}
+.modes a:hover{color:var(--white)}
+.modes a[aria-current="page"]{background:var(--white);color:var(--black)}
+.modes a:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
+.top .modes{margin-left:28px}
+.wtabs{max-width:1090px;overflow-x:auto;scrollbar-width:none}
+.wtabs.scrolly{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 28px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 28px,#000 calc(100% - 28px),transparent 100%)}
+.wtabs::-webkit-scrollbar{display:none}
+.wtab{flex:none}
+.day .dayname{font:800 30px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;white-space:nowrap}
+.day h2{margin-top:20px;font-size:50px;line-height:1.06}
+.day .hook{margin-top:22px}
+.day .two{margin-top:26px}
+.day .dayname span{color:var(--blue-lit);margin-left:.45em}
+.day .tags .file{margin-left:auto;font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+.day .tags .file:hover{color:var(--white)}
+.day .tags .file svg{width:14px;height:14px}
+.plats{display:flex;gap:10px;flex-wrap:wrap}
+.plat{display:flex;flex-direction:column;gap:7px;min-width:112px;padding:12px 15px;border-radius:14px;border:1px solid rgba(245,245,245,.16);background:rgba(245,245,245,.03);text-decoration:none;transition:border-color .2s,background .2s,transform .2s}
+a.plat:hover{border-color:rgba(245,245,245,.5);background:rgba(245,245,245,.07);transform:translateY(-2px)}
+a.plat:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
+.plat .pn{display:flex;align-items:center;gap:7px;font:600 10.5px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.plat .pn i{width:7px;height:7px;border-radius:50%;background:var(--pc);flex:none}
+.plat .pn svg{width:11px;height:11px;margin-left:auto;opacity:.55}
+.plat b{font:800 25px/1 var(--display);font-variant-numeric:tabular-nums}
+.plat em{font-style:normal;font:500 11.5px/1.2 var(--body);color:var(--faint);white-space:nowrap}
+.plat.total{background:var(--blue);border-color:var(--blue)}
+.plat.total .pn,.plat.total em{color:#C9D6E6}
+.day .foot .plats{flex:1 1 auto}
+.card .d{font-size:16px}
+.card .srow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.card .vw{font:600 12px/1 var(--body);letter-spacing:.06em;color:var(--muted)}
+.card .vw b{color:var(--white);font-weight:700}
+.score .wrapc{position:absolute;left:140px;right:140px;top:150px}
+.score .lead{margin:14px 0 0;font:500 21px/1.5 var(--body);color:var(--muted);max-width:1400px}
+.sb{margin-top:26px;width:100%;border-collapse:separate;border-spacing:0 8px;table-layout:fixed}
+.sb th{font:600 12.5px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--faint);text-align:right;padding:0 18px 4px;white-space:nowrap}
+.sb th:first-child{text-align:left;width:32%}
+.sb th i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--pc);margin-right:8px;vertical-align:1px}
+.sb td{background:rgba(245,245,245,.035);padding:14px 18px;text-align:right;font:700 24px/1 var(--display);font-variant-numeric:tabular-nums;white-space:nowrap}
+.sb td small{display:block;margin-top:7px;font:500 12px/1 var(--body);color:var(--faint);letter-spacing:0}
+.sb td:first-child{text-align:left;border-radius:14px 0 0 14px;font:600 17px/1.3 var(--body);white-space:normal}
+.sb td:first-child small{font:700 11.5px/1 var(--display);letter-spacing:.18em;color:var(--blue-lit);margin:0 0 7px;text-transform:uppercase}
+.sb td:last-child{border-radius:0 14px 14px 0;background:rgba(30,58,95,.55)}
+.sb td.best{color:var(--blue-lit)}
+.sb td:last-child.best{color:#fff}
+.sb td.na{color:rgba(245,245,245,.22);font-weight:500}
+.sb tfoot td{background:transparent;color:var(--muted);font-size:20px;padding-top:10px}
+.sb tfoot td:first-child{font:700 13px/1 var(--display);letter-spacing:.2em;text-transform:uppercase}
+.sb tfoot td:last-child{background:transparent;color:var(--white)}
+.share{margin-top:10px;display:flex;height:10px;border-radius:5px;overflow:hidden;gap:2px}
+.share i{display:block;height:100%;background:var(--pc)}
+.sharekey{margin-top:12px;display:flex;gap:22px;flex-wrap:wrap;font:600 14px/1 var(--body);color:var(--muted)}
+.sharekey span{display:inline-flex;align-items:center;gap:8px}
+.sharekey span i{width:8px;height:8px;border-radius:50%;background:var(--pc)}
+.sharekey b{color:var(--white)}
+.upd{margin-top:16px;font:500 13px/1.5 var(--body);color:var(--faint)}
+.fhead .modes{align-self:flex-start}
+.fhead .modes a{padding:10px 13px;font-size:10.5px}
+.fday .dayname{margin-bottom:12px;font:800 21px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.fday .dayname span{color:var(--blue-lit);margin-left:.45em}
+.fday{scroll-margin-top:calc(172px + env(safe-area-inset-top,0px))}
+.fday .plats{margin-top:18px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.fday .plat{min-width:0;padding:10px 11px}
+.fday .plat b{font-size:19px}
+.fday .plat .pn{font-size:9.5px;letter-spacing:.1em}
+.fday .plat em{font-size:10.5px;white-space:normal}
+.fsb{overflow-x:auto;margin-right:calc(-1 * max(18px,env(safe-area-inset-right,0px)));padding-right:18px;scrollbar-width:none}
+.fsb::-webkit-scrollbar{display:none}
+.fsb .sb{min-width:660px;table-layout:auto;margin-top:14px}
+.fsb .sb td{font-size:16px;padding:11px 12px}
+.fsb .sb td:first-child{font-size:13px;min-width:170px}
+.fsb .sb th{font-size:10px;padding:0 12px 4px}
+.fsb .sb tfoot td{font-size:15px}
+
+/* ================= FACEBOOK GROUPS ================= */
+.gv{min-height:100vh;background:var(--black)}
+.gwrap{max-width:1480px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+.ghead{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.9);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.ghead .gwrap{display:flex;align-items:center;gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.ghead .gmark{width:170px;color:var(--white);display:block}
+.mtabs{display:flex;gap:8px;margin-left:auto}
+.mtabs .wtab{text-decoration:none}
+.gbody{display:grid;grid-template-columns:280px minmax(0,1fr);gap:48px;padding-top:36px;padding-bottom:70px}
+.rail{position:sticky;top:110px;align-self:start;display:flex;flex-direction:column;gap:10px}
+.rail-h{font:700 12px/1 var(--display);letter-spacing:.28em;text-transform:uppercase;color:var(--faint);margin:0 0 6px}
+.vbtn{all:unset;cursor:pointer;display:grid;grid-template-columns:12px 1fr;column-gap:12px;row-gap:7px;align-items:center;padding:14px 16px;border-radius:14px;border:1px solid rgba(245,245,245,.12);background:rgba(26,26,26,.5);transition:border-color .2s,background .2s}
+.vbtn i{width:12px;height:12px;border-radius:50%;background:var(--vc,var(--white))}
+.vbtn b{font:700 14px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.vbtn span{grid-column:2;font:500 12.5px/1.35 var(--body);color:var(--muted)}
+.vbtn span.warn{color:var(--warn)}
+.vbtn:hover{border-color:rgba(245,245,245,.35)}
+.vbtn:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
+.vbtn[aria-pressed="true"]{border-color:var(--vc,var(--white));background:color-mix(in srgb,var(--vc,#1E3A5F) 16%,#111)}
+.rail-note{margin-top:14px;padding:16px;border-radius:14px;border:1px solid rgba(245,245,245,.1);font:500 13.5px/1.55 var(--body);color:#C9CCD2}
+.rail-note b{display:block;margin-bottom:8px;font:700 11px/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--blue-lit)}
+.rail-note p{margin:0}
+.rail-note p + p{margin-top:8px}
+.rail .btn{height:46px;font-size:11.5px;margin-top:4px}
+.gmain{min-width:0}
+.ghero .eyebrow{font:600 12px/1.4 var(--body);letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.ghero h1{margin:14px 0 0;font:900 62px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;display:flex;align-items:center;gap:18px}
+.ghero h1 i{width:18px;height:18px;border-radius:50%;background:var(--vc,var(--blue-lit));flex:none}
+.ghero p{margin:16px 0 0;max-width:920px;font:500 18px/1.55 var(--body);color:var(--muted)}
+.gtiles{margin-top:28px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gtile{border:1px solid rgba(245,245,245,.12);border-radius:18px;padding:20px;background:linear-gradient(180deg,rgba(30,58,95,.28),rgba(26,26,26,.4))}
+.gtile b{display:block;font:900 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.gtile span{display:block;margin-top:10px;font:600 12px/1.35 var(--body);letter-spacing:.12em;text-transform:uppercase;color:#D9DBDF}
+.gtile small{display:block;margin-top:6px;font:500 12.5px/1.4 var(--body);color:var(--faint)}
+.gtile.warn{border-color:rgba(227,164,75,.5);background:linear-gradient(180deg,rgba(227,164,75,.1),rgba(26,26,26,.4))}
+.gtile.warn b{color:var(--warn)}
+.gsec{margin-top:56px}
+.gsec .h2{font-size:28px}
+.gsec .lead{margin:10px 0 0;max-width:920px;font:500 16px/1.55 var(--body);color:var(--muted)}
+.vtitle{display:flex;align-items:center;gap:10px;margin:30px 0 0;font:700 14px/1 var(--display);letter-spacing:.22em;text-transform:uppercase;color:var(--vc)}
+.vtitle i{width:10px;height:10px;border-radius:50%;background:var(--vc)}
+.vtitle span{margin-left:6px;font:500 13px/1 var(--body);letter-spacing:0;text-transform:none;color:var(--faint)}
+.mgrid{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(188px,1fr));gap:20px}
+.mcard{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:9px;min-width:0}
+.mcard .mm{position:relative;aspect-ratio:9/16;border-radius:18px;overflow:hidden;background:var(--charcoal);box-shadow:0 0 0 1px rgba(245,245,245,.12) inset;container-type:inline-size}
+.mcard .mm::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--vc);z-index:5}
+.mcard .mm::after{content:"";position:absolute;inset:0;border-radius:18px;box-shadow:0 0 0 2px var(--vc) inset;opacity:0;transition:opacity .25s;z-index:6}
+.mcard:hover .mm::after,.mcard:focus-visible .mm::after{opacity:1}
+.mcard:focus-visible{outline:none}
+.mcard .mm>img,.mcard .mm>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.mcard .mm>video{opacity:0;transition:opacity .3s}
+.mcard:hover .mm>video{opacity:1}
+.mcard .mm .mock{padding:14cqw 7cqw 9cqw}
+.mcard .mid{display:flex;align-items:center;gap:8px;margin-top:4px;font:700 13px/1 var(--display);letter-spacing:.18em;color:var(--vc)}
+.mcard .mid span{color:var(--faint);font:600 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.mcard .mt{font:700 16px/1.3 var(--body);text-wrap:balance}
+.mcard .ms{font:500 12.5px/1.4 var(--body);color:var(--muted)}
+.mcard .status{font-size:10px;padding:5px 9px;align-self:flex-start}
+.status[data-s="Waiting on Adit"] i,.status[data-s="Needs numbers check"] i,.status[data-s="After Nov 2"] i{background:var(--warn)}
+.status[data-s="No group access"] i{background:#E5484D}
+.ytm{position:absolute;inset:0;background:#000;overflow:hidden}
+.ytm .bg{position:absolute;inset:-10%;width:120%;height:120%;object-fit:cover;filter:blur(18px) brightness(.5)}
+.ytm .fg{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);width:100%;aspect-ratio:16/9;object-fit:cover}
+.ytm .yl{position:absolute;left:8%;right:8%;bottom:8%;font:600 5cqw/1.3 var(--body);color:#fff;text-align:center}
+.ytm .yl b{display:block;font:700 3.6cqw/1 var(--display);letter-spacing:.2em;text-transform:uppercase;color:var(--vc,var(--blue-lit));margin-bottom:2.4cqw}
+.playg{position:absolute;left:50%;top:50%;width:18cqw;height:18cqw;margin:-9cqw 0 0 -9cqw;border-radius:50%;background:rgba(10,10,10,.6);border:1px solid rgba(255,255,255,.55);display:grid;place-items:center}
+.playg::after{content:"";margin-left:1.2cqw;border-left:5cqw solid #fff;border-top:3cqw solid transparent;border-bottom:3cqw solid transparent}
+.comingm{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4cqw;text-align:center;padding:10cqw;background:repeating-linear-gradient(135deg,rgba(245,245,245,.045) 0 6cqw,transparent 6cqw 12cqw),var(--charcoal)}
+.comingm svg{width:18cqw;height:18cqw;color:var(--vc,var(--blue-lit))}
+.comingm b{font:800 6.4cqw/1.2 var(--display);letter-spacing:.06em;text-transform:uppercase}
+.comingm span{font:500 5.2cqw/1.4 var(--body);color:var(--muted)}
+.slt{width:100%;margin-top:16px;border-collapse:separate;border-spacing:0 10px}
+.slt th{font:600 11.5px/1.3 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--faint);text-align:left;padding:0 16px 2px}
+.slt td{background:rgba(245,245,245,.035);padding:14px 16px;vertical-align:middle;font:500 14px/1.45 var(--body)}
+.slt td:first-child{border-radius:14px 0 0 14px;border-left:3px solid var(--vc);width:27%}
+.slt td:nth-child(2){width:14%}
+.slt td:last-child{border-radius:0 14px 14px 0}
+.slt .gname{font:700 15px/1.3 var(--body);text-decoration:none}
+a.gname:hover{text-decoration:underline}
+.slt small{display:block;margin-top:4px;font:500 12px/1.4 var(--body);color:var(--faint)}
+.slot{all:unset;box-sizing:border-box;cursor:pointer;display:block;width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(245,245,245,.14);background:rgba(10,10,10,.4)}
+button.slot:hover{border-color:var(--vc)}
+button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
+.slot .stt{font:600 14px/1.35 var(--body)}
+.slot .stt b{font:700 12px/1 var(--display);letter-spacing:.14em;color:var(--vc);margin-right:8px}
+.slot.decide{cursor:default;border-style:dashed;background:transparent}
+.slot.decide .stt{color:var(--muted)}
+.slot.done{border-color:rgba(95,191,138,.55);background:rgba(95,191,138,.07)}
+.slot .res{display:flex;gap:14px;flex-wrap:wrap;margin-top:8px;font:700 13px/1 var(--body);color:var(--white)}
+.slot .res em{font-style:normal;color:var(--faint);font-weight:500;margin-left:4px}
+.slt tr.locked td{background:rgba(245,245,245,.018)}
+.slt tr.locked .gname{color:var(--muted)}
+.lockmsg{display:flex;align-items:center;gap:10px;color:var(--warn);font:600 13.5px/1.45 var(--body)}
+.lockmsg svg{width:16px;height:16px;flex:none}
+.glist{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.gi{display:flex;flex-direction:column;gap:9px;padding:13px 15px;border-radius:14px;border:1px solid rgba(245,245,245,.1);border-left:3px solid var(--vc);background:rgba(26,26,26,.45)}
+.gi.off{opacity:.5}
+.gi a,.gi .gn{font:600 14px/1.35 var(--body);text-decoration:none}
+.gi a:hover{text-decoration:underline}
+.gi .bd{display:flex;gap:6px;flex-wrap:wrap}
+.bdg{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:999px;font:600 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(245,245,245,.18);color:var(--muted);white-space:nowrap}
+.bdg.y{color:var(--white);border-color:rgba(95,191,138,.6)}
+.bdg.n{color:var(--faint);border-style:dashed}
+.bdg.sp{background:var(--vc);border-color:var(--vc);color:#0A0A0A}
+.gasks{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.gasks .item{display:grid;grid-template-columns:160px 1fr;gap:18px;border:1px solid rgba(245,245,245,.12);border-radius:16px;padding:20px 22px;background:rgba(26,26,26,.5)}
+.gasks b{font:800 13px/1.35 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-lit)}
+.gasks p{margin:0;font:500 15px/1.55 var(--body);color:#E3E5E8}
+.gfoot{margin-top:64px;padding-top:26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--faint);font:500 13px/1.5 var(--body)}
+.gfoot .flowline{font-size:13px;letter-spacing:.42em}
+.gfoot a{color:var(--muted)}
+.drawer{position:fixed;inset:0;z-index:50}
+.dscrim{position:absolute;inset:0;background:rgba(0,0,0,.62);animation:dfade .25s both}
+.dpanel{position:absolute;top:0;right:0;bottom:0;width:min(1000px,100%);background:#101010;border-left:1px solid var(--line);display:grid;grid-template-columns:350px minmax(0,1fr);overflow:hidden;animation:dslide .35s cubic-bezier(.2,.7,.2,1) both}
+@keyframes dfade{from{opacity:0}}
+@keyframes dslide{from{transform:translateX(40px);opacity:0}}
+.dmedia{padding:34px 0 34px 34px;display:flex;flex-direction:column;gap:14px;align-items:stretch;overflow-y:auto}
+.dmedia .phone{width:100%;cursor:pointer}
+.dmedia .ytbox{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 0 0 1px rgba(245,245,245,.14) inset}
+.dmedia .ytbox iframe{position:absolute;left:0;top:50%;transform:translateY(-50%);width:100%;aspect-ratio:16/9;border:0}
+.dmedia .snd{height:40px;padding:0 16px;font-size:11.5px;align-self:center}
+.dmedia .ytnote{font:500 12.5px/1.45 var(--body);color:var(--faint);text-align:center}
+.dbody{padding:34px 34px 60px;overflow-y:auto;display:flex;flex-direction:column;gap:22px}
+.dclose{all:unset;cursor:pointer;position:absolute;top:16px;right:18px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(245,245,245,.25);display:grid;place-items:center;background:rgba(10,10,10,.85);z-index:3}
+.dclose:hover{background:rgba(245,245,245,.1)}
+.dclose:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
+.dclose svg{width:18px;height:18px}
+.dtags{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding-right:54px}
+.dtags .chip{height:30px;padding:0 13px;font-size:11px;background:var(--vc);color:#0A0A0A}
+.dtags .pill{height:30px;padding:0 13px;font-size:11px}
+.dtags .status{height:30px;padding:0 12px;font-size:10.5px}
+.dbody h2{margin:0;font:800 32px/1.12 var(--display);letter-spacing:.02em;text-transform:uppercase;text-wrap:balance}
+.dbody .who{margin:-8px 0 0;font:500 15px/1.45 var(--body);color:var(--muted)}
+.dblk{display:flex;flex-direction:column;gap:10px}
+.dblk .label{font-size:12px}
+.dblk .lrow{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.copy{all:unset;cursor:pointer;font:700 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:9px 14px;border-radius:999px;border:1px solid rgba(245,245,245,.3);white-space:nowrap}
+.copy:hover{background:rgba(245,245,245,.08)}
+.copy:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
+.copy.ok{background:var(--ok);border-color:var(--ok);color:#0A0A0A}
+.capbox{border-radius:14px;background:#F5F5F5;color:#1c1e21;padding:18px 20px;font:400 16px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.capbox p{margin:0 0 12px;white-space:pre-line}
+.capbox p:last-child{margin-bottom:0}
+.dblk .txt p{margin:0;font:400 16px/1.6 var(--body);color:#D9DBDF}
+.dwhere{display:flex;flex-direction:column;gap:8px}
+.dwhere>div{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:12px 14px;border-radius:12px;background:rgba(245,245,245,.04);font:600 14px/1.4 var(--body)}
+.dwhere span{color:var(--faint);font-weight:500;text-align:right}
+.dacts{display:flex;gap:10px;flex-wrap:wrap}
+.dacts .btn{height:48px;padding:0 22px;font-size:12px}
+.dbody .notebox{padding:12px 16px;font:500 14px/1.5 var(--body)}
+@media (max-width:999px){
+  .ghead .gwrap{gap:12px;padding-top:10px;padding-bottom:10px}
+  .ghead .gmark{width:120px}
+  .mtabs{margin-left:0;width:100%}
+  .mtabs .wtab{padding:9px 12px;border-radius:12px;gap:4px}
+  .mtabs .wtab b{font-size:12px}
+  .mtabs .wtab span{font-size:10px}
+  .gbody{grid-template-columns:minmax(0,1fr);gap:0;padding-top:0}
+  .rail{position:sticky;top:var(--ghh,112px);z-index:15;flex-direction:row;overflow-x:auto;gap:8px;margin:0 calc(-1 * max(18px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(18px,env(safe-area-inset-left,0px)));padding:10px max(18px,env(safe-area-inset-left,0px));background:rgba(10,10,10,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail-h,.rail-note,.rail .btn{display:none}
+  .vbtn{flex:0 0 auto;padding:9px 13px;row-gap:5px}
+  .vbtn b{font-size:12px}
+  .vbtn span{font-size:10.5px;white-space:nowrap}
+  .ghero{padding-top:26px}
+  .ghero h1{font-size:38px;gap:12px}
+  .ghero h1 i{width:13px;height:13px}
+  .ghero p{font-size:15.5px}
+  .gtiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .gtile{padding:16px}
+  .gtile b{font-size:30px}
+  .gtile span{font-size:10.5px}
+  .gsec{margin-top:44px}
+  .gsec .h2{font-size:19px}
+  .gsec .lead{font-size:14.5px}
+  .mgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .mcard .mt{font-size:14px}
+  .slt,.slt tbody,.slt tr,.slt td{display:block;width:100%!important}
+  .slt thead{display:none}
+  .slt{border-spacing:0}
+  .slt tr{margin-bottom:12px;border-radius:14px;overflow:hidden;border-left:3px solid var(--vc);background:rgba(245,245,245,.035)}
+  .slt td{background:transparent!important;border-radius:0!important;border-left:0!important;padding:10px 14px}
+  .slt td[data-l]::before{content:attr(data-l);display:block;margin-bottom:7px;font:600 10px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+  .glist{grid-template-columns:minmax(0,1fr)}
+  .gasks{grid-template-columns:minmax(0,1fr)}
+  .gasks .item{grid-template-columns:minmax(0,1fr);gap:8px;padding:16px 18px}
+  .dpanel{grid-template-columns:minmax(0,1fr);grid-auto-rows:min-content;overflow-y:auto;width:100%}
+  .dmedia{padding:70px 18px 0;align-items:center;overflow:visible}
+  .dmedia .phone,.dmedia .ytbox{width:min(70vw,300px)}
+  .dbody{padding:24px 18px 60px;overflow:visible}
+  .dbody h2{font-size:23px}
+  .capbox{font-size:15px;padding:16px}
+}
+@media print{
+  .ghead{position:static}
+  .rail{position:static}
+  .drawer{display:none}
+  .mcard .mm>video{display:none}
+}
 @media (prefers-reduced-motion:reduce){.slide,.slide.on,.fan .phone{transition:none}.lightbar::after{animation:none!important}}
 </style>
 </head>
 <body>
 <div id="app"></div>
 <script src="weeks.js"></script>
+<script src="stats.js"></script>
+<script src="groups-list.js"></script>
+<script src="groups.js"></script>
 <script>
 const LOGO = `<svg class="logo-svg" role="img" aria-label="PuroFlow Media" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2008 373"><path fill-rule="evenodd" fill="currentColor" d="M586.2 367.4L584.0 365.9L584.0 358.0C584.0 353.7 583.5 348.9 583.0 347.5C581.8 344.3 560.1 320.0 558.5 320.0C557.9 320.0 556.9 320.5 556.2 321.2L555.0 322.4L555.0 343.2L555.0 364.0L553.0 366.0L551.0 368.0L546.2 368.0C543.6 368.0 540.9 367.5 540.2 366.8L539.0 365.6L539.0 335.0C539.0 317.3 538.6 303.0 538.0 300.8L536.9 297.1L533.0 294.0L529.0 290.8L529.0 288.5C529.0 285.6 530.4 285.3 542.2 286.0L552.0 286.6L555.6 290.0C557.6 291.9 560.9 295.8 563.0 298.5C565.0 301.2 571.2 308.2 576.7 313.9L586.6 324.3L589.0 323.7C590.4 323.3 593.6 320.4 596.3 317.1C600.8 311.5 611.9 299.3 620.6 290.2L624.7 286.0L630.8 286.0L636.9 286.0L637.6 287.2C638.5 288.5 638.1 363.5 637.3 365.6C636.8 366.9 631.1 369.0 627.9 369.0C627.1 369.0 625.5 368.4 624.4 367.6L622.5 366.2L622.0 342.3L621.5 318.5L619.7 318.2C617.4 317.7 613.7 321.1 610.2 326.5C608.8 328.7 604.7 333.6 601.1 337.3L594.5 344.2L594.5 354.7L594.5 365.2L592.1 367.1C589.3 369.4 589.0 369.4 586.2 367.4ZM777.8 367.1C774.2 365.4 769.0 359.5 769.0 357.2C769.0 356.2 769.5 354.9 770.2 354.2L771.4 353.0L816.1 353.0L860.8 353.0L862.0 354.5L863.3 356.0L862.4 359.2C861.9 360.9 859.9 363.6 858.0 365.1L854.5 367.9L817.6 368.2L780.7 368.5L777.8 367.1ZM1377.2 367.4L1375.0 365.9L1375.0 343.6L1375.0 321.3L1376.8 319.7L1378.5 318.2L1421.4 317.9L1464.2 317.6L1465.6 319.5L1467.0 321.4L1467.0 342.4L1467.0 363.5L1465.7 366.0L1464.5 368.5L1459.0 368.8L1453.6 369.1L1452.3 367.4L1451.0 365.6L1451.0 350.9L1451.0 336.1L1448.9 334.6L1446.8 333.2L1419.7 333.6L1392.7 334.0L1391.3 335.1L1390.0 336.2L1390.0 349.7L1390.0 363.1L1388.9 365.3C1388.2 366.5 1387.2 367.8 1386.6 368.2C1384.7 369.5 1379.5 369.1 1377.2 367.4ZM997.8 365.8L996.2 364.2L996.1 342.2L996.0 320.3L997.2 319.2C997.9 318.7 1000.4 317.9 1002.8 317.5L1007.1 316.8L1009.5 318.4L1012.0 320.0L1012.0 334.9L1012.0 349.8L1013.5 351.0L1015.0 352.2L1042.1 352.4L1069.1 352.5L1070.6 350.6L1072.0 348.6L1072.0 325.9L1072.0 303.2L1070.3 301.9L1068.7 300.5L1036.3 300.0L1003.9 299.5L999.9 295.3C996.0 291.1 995.0 287.8 997.1 286.4C997.8 286.0 1016.7 285.8 1039.1 285.8L1080.0 285.9L1082.0 287.0C1083.1 287.6 1084.7 289.5 1085.6 291.2L1087.2 294.3L1086.5 325.9L1085.8 357.5L1084.5 360.7L1083.2 363.9L1079.3 365.8L1075.5 367.8L1037.5 367.6L999.5 367.5L997.8 365.8ZM1223.0 366.0L1222.0 364.0L1222.0 326.8C1222.1 306.4 1222.5 288.9 1223.0 287.9C1224.6 284.9 1234.6 285.0 1236.5 288.0C1236.8 288.5 1237.1 305.9 1237.1 326.7L1237.2 364.4L1235.0 366.2L1232.8 368.0L1228.4 368.0L1224.1 368.0L1223.0 366.0ZM779.8 333.1C773.5 332.4 771.8 331.3 769.6 325.9L768.1 322.3L769.3 320.6L770.6 318.8L815.3 318.9C839.9 318.9 860.5 319.2 861.0 319.5C863.7 321.2 861.0 332.0 857.5 333.4C855.4 334.2 787.5 333.9 779.8 333.1ZM1386.6 299.5C1379.4 297.0 1374.6 290.5 1377.7 287.5L1379.2 286.0L1422.3 286.2L1465.5 286.5L1465.8 288.7C1466.3 291.9 1461.6 297.5 1456.9 299.4L1453.0 301.0L1421.7 301.0L1390.5 300.9L1386.6 299.5ZM777.6 299.0C774.1 297.9 771.3 295.4 769.3 291.7L767.9 288.9L769.0 287.5L770.2 286.1L815.8 286.3L861.5 286.5L861.8 289.2C862.2 292.8 860.6 295.7 856.7 298.0L853.5 300.0L817.0 299.9C796.9 299.9 779.2 299.4 777.6 299.0ZM504.4 172.1C503.4 171.9 501.9 171.3 501.2 170.8L500.0 169.8L500.0 123.4L500.0 77.0L502.4 75.5L504.7 74.0L568.6 74.2C603.7 74.3 636.8 74.4 642.0 74.4C653.8 74.5 656.5 73.8 658.5 70.0L660.0 67.1L660.0 53.3L660.0 39.4L658.4 37.2L656.9 35.0L588.2 35.3L519.5 35.5L516.5 33.8C510.9 30.6 503.6 24.5 501.9 21.5C500.9 19.9 499.8 16.2 499.5 13.5L498.9 8.5L500.2 6.8L501.5 5.1L595.6 4.8L689.7 4.5L691.4 5.9L693.1 7.3L692.8 44.9L692.5 82.5L689.8 87.5C686.3 94.0 680.7 100.0 674.7 103.4L669.9 106.2L652.4 106.4L634.9 106.6L634.0 107.9C632.7 110.1 633.7 111.6 640.8 117.3C648.1 123.2 687.1 161.6 690.7 166.4L693.0 169.3L692.0 170.5L691.0 171.6L670.7 171.8L650.3 172.0L646.4 168.9C644.3 167.2 629.4 152.9 613.4 137.0L584.2 108.2L580.9 107.3C579.0 106.8 567.9 106.5 556.2 106.6L534.9 106.8L533.5 108.0L532.0 109.2L532.0 138.5L532.0 167.8L530.2 169.8L528.5 171.9L517.4 172.2C511.3 172.4 505.4 172.3 504.4 172.1ZM5.0 170.1L4.0 168.1L4.0 123.3L4.0 78.4L5.4 76.5L6.7 74.6L83.1 74.3C125.1 74.1 160.4 73.8 161.6 73.5C164.9 72.8 165.7 69.3 165.9 54.1L166.0 39.7L164.5 37.4L163.0 35.0L92.6 35.0L22.3 35.0L16.3 31.0C13.0 28.8 9.0 25.6 7.4 23.9L4.6 20.9L4.2 14.1L3.8 7.2L6.1 5.8L8.5 4.4L100.8 4.5L193.2 4.5L194.9 6.7L196.7 8.8L197.3 45.9L197.9 82.9L196.4 87.7C194.6 93.7 189.0 100.1 182.6 103.4L177.7 106.0L109.4 106.0L41.0 106.0L39.0 108.0L37.0 110.0L37.0 139.0L37.0 168.0L35.0 170.0L33.0 172.0L19.5 172.0L6.1 172.0L5.0 170.1ZM264.3 169.4C261.5 167.9 257.2 164.8 255.0 162.5L250.8 158.2L249.4 152.4C247.5 144.4 247.6 142.4 250.1 139.9L252.3 137.7L347.3 138.4L442.4 139.1L443.7 140.1C445.5 141.7 445.3 146.5 443.0 153.0L441.2 158.5L437.3 162.3C435.2 164.4 431.5 167.3 429.0 168.8L424.5 171.5L347.0 171.8L269.5 172.0L264.3 169.4ZM755.2 170.9L754.0 169.6L754.0 122.4L754.0 75.1L755.6 73.6L757.1 72.0L770.0 72.0L782.9 72.0L784.0 73.9L785.0 75.9L785.0 105.3L785.0 134.7L787.1 136.6L789.2 138.5L851.1 138.8L913.0 139.0L915.0 137.0L917.0 135.0L917.0 105.1L917.0 75.1L918.6 73.6L920.1 72.0L932.4 72.0L944.6 72.0L946.6 73.4L948.5 74.8L948.4 119.8C948.3 166.7 948.1 169.3 945.3 170.6C944.3 171.0 901.4 171.6 850.0 171.8L756.5 172.1L755.2 170.9ZM1007.2 170.8L1006.0 169.6L1006.0 123.8L1006.0 78.0L1007.8 76.2L1009.6 74.4L1101.1 74.1L1192.5 73.8L1194.4 75.9L1196.3 78.0L1195.7 82.9C1194.7 91.4 1190.9 97.0 1182.0 103.1L1178.5 105.5L1109.9 106.0L1041.2 106.5L1039.1 108.4L1037.0 110.3L1037.0 139.5L1037.0 168.7L1035.2 170.3L1033.3 172.0L1020.9 172.0L1008.4 172.0L1007.2 170.8ZM1262.6 170.5C1260.6 168.5 1260.8 176.7 1261.2 103.5C1261.4 69.4 1261.5 34.0 1261.5 24.9L1261.5 8.3L1262.9 6.7L1264.2 5.0L1277.4 5.0L1290.6 5.0L1291.8 6.2L1293.0 7.4L1293.0 71.2L1293.0 135.0L1295.0 137.0L1297.0 139.0L1375.2 139.0L1453.4 139.0L1454.9 140.5C1460.1 145.7 1452.1 162.1 1441.3 168.6L1436.5 171.5L1350.3 171.8L1264.2 172.1L1262.6 170.5ZM1498.9 170.4L1497.5 168.7L1497.5 125.1C1497.4 80.9 1497.8 74.7 1500.6 73.6C1501.5 73.3 1507.3 73.0 1513.6 73.0L1525.0 73.0L1527.0 75.0L1529.0 77.0L1529.0 106.0L1529.0 135.0L1531.3 136.5L1533.7 138.0L1596.2 138.7L1658.7 139.3L1660.8 137.2L1663.0 135.0L1663.0 105.7L1663.0 76.3L1664.8 74.7L1666.7 73.0L1679.3 73.0L1691.9 73.0L1693.4 74.6L1695.0 76.1L1695.0 122.5L1695.0 169.0L1692.8 170.4L1690.5 171.8L1595.4 172.0L1500.3 172.1L1498.9 170.4ZM1746.2 170.8C1745.5 170.1 1745.0 167.7 1745.0 165.3L1745.0 161.0L1748.4 154.2C1753.6 144.1 1760.7 138.0 1767.6 138.0C1768.9 138.0 1770.9 137.1 1772.0 136.0L1773.9 134.1L1773.9 70.3L1774.0 6.5L1775.7 5.2C1777.5 3.9 1783.0 3.8 1795.8 4.8L1804.1 5.5L1805.0 7.0C1805.6 7.9 1806.0 34.0 1806.0 71.2L1806.0 134.0L1808.0 136.0L1810.0 138.0L1833.5 138.0L1856.9 138.0L1857.8 136.2C1858.4 135.3 1859.0 106.4 1859.3 71.2L1859.9 7.9L1861.1 6.4L1862.2 5.0L1875.9 5.0C1883.4 5.0 1890.2 5.5 1891.0 6.0L1892.5 6.9L1892.5 13.7C1892.6 17.4 1892.7 46.0 1892.8 77.1L1893.0 133.8L1894.8 135.9L1896.5 138.0L1919.8 138.1L1943.0 138.3L1945.0 136.5L1947.0 134.7L1947.0 71.5L1947.0 8.4L1948.2 6.7L1949.5 5.1L1962.2 4.9L1974.9 4.7L1976.5 6.0L1978.0 7.2L1978.0 70.4L1978.0 133.6L1979.5 135.7C1980.3 136.9 1982.4 138.2 1984.1 138.5C1992.2 140.3 1999.7 148.8 2002.4 159.4C2004.1 166.0 2003.7 169.6 2001.0 171.0L1999.1 172.0L1873.3 172.0L1747.4 172.0L1746.2 170.8ZM251.8 106.7C250.5 106.3 249.2 105.4 248.8 104.7C248.4 104.0 248.0 82.3 248.1 56.3L248.1 9.1L249.8 7.1L251.5 5.0L264.3 4.9L277.0 4.8L278.5 6.0L280.0 7.2L280.0 55.0L280.0 102.8L278.2 104.8L276.5 106.9L265.2 107.2C259.0 107.4 253.0 107.2 251.8 106.7ZM414.4 105.3L412.7 103.6L413.4 55.5L414.2 7.5L415.8 6.3L417.4 5.0L430.2 5.0L443.0 5.0L444.3 7.3L445.7 9.5L445.9 56.3L446.2 103.1L444.4 105.1L442.7 107.0L429.4 107.0L416.1 107.0L414.4 105.3ZM774.8 34.7C769.1 33.2 757.9 24.6 755.4 19.8C753.7 16.6 753.5 6.4 755.1 5.4C755.7 5.0 798.0 4.6 849.1 4.4L942.0 4.0L944.5 5.0C948.0 6.3 948.5 8.2 947.1 14.6L945.8 20.1L942.8 23.6C941.1 25.5 937.2 28.7 934.1 30.8L928.6 34.5L910.0 35.2C886.2 36.2 779.1 35.8 774.8 34.7ZM1095.5 35.0L1025.5 34.5L1019.2 30.6C1015.7 28.4 1011.6 25.2 1010.0 23.4L1007.2 20.1L1006.0 14.6L1004.9 9.1L1005.9 7.1C1006.5 6.0 1007.8 4.9 1008.7 4.7C1009.7 4.4 1051.5 4.2 1101.5 4.1L1192.5 4.1L1195.0 5.3C1202.0 8.8 1196.8 20.9 1184.3 30.2L1179.0 34.0L1173.9 35.0C1171.0 35.6 1168.0 35.9 1167.1 35.8C1166.2 35.6 1134.0 35.3 1095.5 35.0ZM1518.0 34.7C1516.1 34.2 1513.4 32.9 1511.9 31.7C1510.4 30.5 1507.3 28.2 1505.0 26.7C1499.6 22.9 1498.2 20.6 1497.4 14.0L1496.8 8.5L1498.6 6.2L1500.5 3.9L1596.3 4.6L1692.2 5.3L1693.7 6.8L1695.2 8.3L1694.6 11.9C1693.4 19.4 1685.0 28.8 1675.0 33.7L1671.5 35.4L1596.5 35.5C1554.5 35.6 1520.0 35.3 1518.0 34.7Z"/></svg>`;
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M9 7h8v8"/></svg>';
@@ -334,6 +613,76 @@ const SPK_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strok
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
 const app = document.getElementById("app");
 let soundOn = false, mode = null, week = null, cleanup = [];
+
+/* ---------- live numbers (stats.js, rebuilt every morning from Metricool) ---------- */
+const ST = typeof STATS !== "undefined" ? STATS : null;
+const GM = typeof GROUP_MONTHS !== "undefined" && GROUP_MONTHS.length ? GROUP_MONTHS : null;
+const GL = typeof GROUP_LIST !== "undefined" ? GROUP_LIST : null;
+const VS = typeof VERTICALS !== "undefined" ? VERTICALS : [];
+let view = "organic", gmonth = null, gvert = "all";
+const PLAT = [
+  { k: "ig", n: "Instagram", c: "#C13584" },
+  { k: "fb", n: "Facebook", c: "#4C7BF4" },
+  { k: "li", n: "LinkedIn", c: "#0FA3B1" },
+  { k: "tt", n: "TikTok", c: "#C9CCD2" },
+  { k: "yt", n: "YouTube", c: "#FF4040" }
+];
+const MONS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>';
+const CAM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3z"/></svg>';
+const XI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const pl = (n, w) => `${fmtN(n)} ${w}${n === 1 ? "" : "s"}`;
+const fmtN = n => (n === undefined || n === null) ? "·" : n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K" : Number(n).toLocaleString("en-US");
+function niceDate(d){ const p = String(d.date).split("/").map(Number); return MONS[p[0]-1] + " " + p[1]; }
+function stat(w, d){ return ST && ST.posts ? ST.posts[`${w.id}/${d.id}`] || null : null; }
+function hasStats(st){ return !!st && PLAT.some(p => st[p.k] && st[p.k].views !== undefined); }
+function dayStatus(w, d){ return hasStats(stat(w, d)) ? "Posted" : d.status; }
+function updatedLabel(){ if (!ST || !ST.updated) return ""; try { return new Date(ST.updated).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" }) + " PT"; } catch(e){ return ""; } }
+function secLine(p, x){
+  if (!x) return "";
+  if (p.k === "li") return x.impressions !== undefined ? `${fmtN(x.impressions)} impressions` : "";
+  if (x.watch) return `${x.watch}s avg watch`;
+  if (x.comments) return pl(x.comments, "comment");
+  if (x.shares) return pl(x.shares, "share");
+  return x.likes !== undefined ? pl(x.likes, "like") : "";
+}
+function plats(st){
+  if (!hasStats(st)) return "";
+  const on = PLAT.filter(p => st[p.k] && st[p.k].views !== undefined), t = st.total || {};
+  return `<div class="plats">${on.map(p => { const x = st[p.k]; return `<a class="plat" style="--pc:${p.c}" href="${esc(x.url)}" target="_blank" rel="noopener" aria-label="${p.n}: ${fmtN(x.views)} views, open the post"><span class="pn"><i></i>${p.n}${ARROW}</span><b>${fmtN(x.views)}</b><em>${esc(secLine(p, x))}</em></a>`; }).join("")}<div class="plat total"><span class="pn">Total views</span><b>${fmtN(t.views)}</b><em>${pl(t.likes, "like")} · ${pl(t.comments, "comment")}</em></div></div>`;
+}
+function cardViews(w, d){ const st = stat(w, d); if (!hasStats(st)) return ""; const n = PLAT.filter(p => st[p.k] && st[p.k].views !== undefined).length; return `<span class="vw"><b>${fmtN(st.total.views)}</b> views · ${n} platform${n > 1 ? "s" : ""}</span>`; }
+function scoreRows(w){ return w.days.map(d => ({ d, st: stat(w, d) })).filter(r => hasStats(r.st)); }
+function scoreTable(w){
+  const rows = scoreRows(w); if (!rows.length) return "";
+  const v = (r, k) => k === "total" ? ((r.st.total && r.st.total.views) || 0) : ((r.st[k] && r.st[k].views) || 0);
+  const best = {}; [...PLAT.map(p => p.k), "total"].forEach(k => best[k] = Math.max(...rows.map(r => v(r, k))));
+  const tot = {}; PLAT.forEach(p => tot[p.k] = rows.reduce((s, r) => s + v(r, p.k), 0));
+  const grand = PLAT.reduce((s, p) => s + tot[p.k], 0);
+  const cell = (x, k) => x && x.views !== undefined
+    ? `<td class="${x.views === best[k] && x.views > 0 && rows.length > 1 ? "best" : ""}">${fmtN(x.views)}<small>${pl(x.likes || 0, "like")}${x.comments ? ` · ${pl(x.comments, "comment")}` : ""}</small></td>`
+    : `<td class="na">·</td>`;
+  return `<table class="sb"><thead><tr><th>Post</th>${PLAT.map(p => `<th><i style="--pc:${p.c}"></i>${p.n}</th>`).join("")}<th>Total</th></tr></thead>
+    <tbody>${rows.map(r => `<tr><td><small>${r.d.short} · ${niceDate(r.d)}</small>${esc(r.d.title)}</td>${PLAT.map(p => cell(r.st[p.k], p.k)).join("")}<td class="${v(r, "total") === best.total && rows.length > 1 ? "best" : ""}">${fmtN(v(r, "total"))}<small>${pl(r.st.total.likes, "like")}</small></td></tr>`).join("")}</tbody>
+    <tfoot><tr><td>Week total</td>${PLAT.map(p => `<td>${tot[p.k] ? fmtN(tot[p.k]) : "·"}</td>`).join("")}<td>${fmtN(grand)}</td></tr></tfoot></table>`;
+}
+function shareBar(w){
+  const rows = scoreRows(w); if (!rows.length) return "";
+  const tot = PLAT.map(p => ({ p, n: rows.reduce((s, r) => s + ((r.st[p.k] && r.st[p.k].views) || 0), 0) })).filter(x => x.n > 0).sort((a, b) => b.n - a.n);
+  const grand = tot.reduce((s, x) => s + x.n, 0) || 1;
+  return `<div class="share" role="img" aria-label="Share of views by platform">${tot.map(x => `<i style="--pc:${x.p.c};width:${(x.n / grand * 100).toFixed(1)}%"></i>`).join("")}</div>
+    <div class="sharekey">${tot.map(x => `<span style="--pc:${x.p.c}"><i></i>${x.p.n} <b>${Math.round(x.n / grand * 100)}%</b></span>`).join("")}</div>`;
+}
+function scoreLead(w){
+  const rows = scoreRows(w); if (!rows.length) return "";
+  const top = rows.slice().sort((a, b) => b.st.total.views - a.st.total.views)[0];
+  const grand = rows.reduce((s, r) => s + r.st.total.views, 0);
+  return `${rows.length} post${rows.length > 1 ? "s" : ""} and ${fmtN(grand)} views across every platform they ran on. ${esc(top.d.title)} led the week with ${fmtN(top.st.total.views)}.`;
+}
+function modesNav(){
+  const lw = WEEKS[WEEKS.length - 1], ow = (view === "organic" && week) ? week : lw;
+  return `<nav class="modes" aria-label="Choose a view"><a href="#${ow.id}"${view === "organic" ? ' aria-current="page"' : ""}>Organic</a>${GM ? `<a href="#groups-${(gmonth || GM[GM.length - 1]).id}"${view === "groups" ? ' aria-current="page"' : ""}>Facebook Groups</a>` : ""}</nav>`;
+}
 
 function weekFromHash(){
   const h = (location.hash||"").slice(1);
@@ -351,8 +700,19 @@ function setHash(h){ try { history.replaceState(null,"","#"+h); } catch(e){} }
 
 /* ---------- Adit-brand mocks ---------- */
 const WM = '<div class="wm"><span class="wa">ad</span><span class="wb">it</span></div>';
-function mock(kind, inCard){
+function mock(kind, inCard, o){
+  o = o || {};
   const prod = inCard ? "" : '<span class="prod">In design</span>';
+  if (kind === "chirotop"){
+    return `<div class="mock dark">${prod}${WM}<span class="tag">October Review Challenge</span><div class="h">Chiro<br><em>on top</em></div><div class="sub">A chiropractic office led the board from the first leaderboard to the last</div>
+      <div class="stats"><div><b>19</b><span>practices, 4 verticals</span></div><div><b>1st</b><span>Cook Chiropractic</span></div></div>
+      <div class="cta">How do you ask?</div></div>`;
+  }
+  if (kind === "optodata"){
+    return `<div class="mock light">${prod}${WM}<span class="tag">Optometry · one month</span>
+      <div class="stats"><div><b>17,540</b><span>calls answered</span></div><div><b>2,424</b><span>appointments booked</span></div><div><b>~200</b><span>eye care practices</span></div></div>
+      <div class="cta">How many do you miss?</div></div>`;
+  }
   if (kind === "leaderboard"){
     const rows = [["@dr.jesse_cook",37],["@aliddin58",19],["@breezeortho",16],["@sammiecappello",13],["@ms.laurielynn",12]];
     return `<div class="mock light">${prod}${WM}<span class="tag">Review Challenge</span><div class="h"><em>5 days</em><br>left</div><div class="sub">The board heading into the final week</div>
@@ -368,7 +728,7 @@ function mock(kind, inCard){
   if (kind === "numbers"){
     return `<div class="mock light">${prod}${WM}<span class="tag">October by the numbers</span>
       <div class="stats"><div><b>19</b><span>practices entered</span></div><div><b>119</b><span>new Google reviews</span></div><div><b>1</b><span>month</span></div></div>
-      <div class="cta">Winners tomorrow</div><div class="slides"><i></i><i></i><i></i><i></i></div></div>`;
+      <div class="cta">${o.groups ? "Join November" : "Winners tomorrow"}</div><div class="slides"><i></i><i></i><i></i><i></i></div></div>`;
   }
   return "";
 }
@@ -443,15 +803,17 @@ function buildDeck(){
     <div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Adit</div></div></section>`});
   S.push({t:"week", h:`<section class="slide glance"><div class="head"><div><h2 class="h2">Week ${w.n} at a Glance</h2><p>${esc(w.glanceNote)}</p></div>
     <a class="btn ghost" style="height:58px;padding:0 28px;font-size:15px" href="${HUB.folder}" target="_blank" rel="noopener">All reels + covers ${ARROW}</a></div>
-    <div class="cards n${n}" style="grid-template-columns:repeat(${n},${n<=4?"260px":"1fr"});${n>=7?"top:320px":""}">${w.days.map((d,i)=>`<button class="card" type="button" data-go="${i+2}">
+    <div class="cards n${n}" style="grid-template-columns:repeat(${n},${n<=4?"260px":n<=6?"minmax(0,262px)":"1fr"});${n>=5&&n<=6?"justify-content:space-between;":""}${n>=7?"top:320px":""}">${w.days.map((d,i)=>`<button class="card" type="button" data-go="${i+2}">
       <div class="thumb">${thumbInner(w,d,false)}</div>
-      <div class="d">${d.short} ${d.date}</div><div class="t">${esc(d.title)}</div><div class="b">${esc(d.bucket)}</div>${status(d.status)}</button>`).join("")}</div></section>`});
+      <div class="d">${d.short} · ${niceDate(d)}</div><div class="t">${esc(d.title)}</div><div class="b">${esc(d.bucket)}</div><div class="srow">${status(dayStatus(w,d))}${cardViews(w,d)}</div></button>`).join("")}</div></section>`});
   w.days.forEach(d=>{
+    const st = stat(w,d), posted = hasStats(st), half = d.jump && /\b(AM|PM)$/.test(d.jump) ? ` · ${d.jump.split(" ").pop()}` : "";
     S.push({t:d.id, h:`<section class="slide day">
       <div class="ph">${phone(w,d,"main")}</div>
       ${d.video?`<div class="ctrl"><button class="snd" type="button" aria-pressed="false">${SPK_OFF}<span>Tap for sound</span></button><div class="track"><i></i></div></div>`:""}
       <div class="col">
-        <div class="tags"><span class="pill">${d.day} ${d.date}</span><span class="chip">${esc(d.bucket)}</span>${status(d.status)}<span class="fmt">${esc(d.format)}</span></div>
+        <div class="dayname">${d.day} <span>${niceDate(d)}${half}</span></div>
+        <div class="tags"><span class="chip">${esc(d.bucket)}</span>${status(dayStatus(w,d))}<span class="fmt">${esc(d.format)}</span>${posted && d.drive ? `<a class="file" href="${d.drive}" target="_blank" rel="noopener">${d.slides?"Design file":"Video file"} ${ARROW}</a>` : ""}</div>
         <h2>${esc(d.title)}</h2>
         <div class="hook"><div class="label">Hook</div><p>${esc(d.hook)}</p></div>
         <div class="two">
@@ -459,9 +821,10 @@ function buildDeck(){
           <div><div class="blk"><div class="label">Thought behind it</div><div class="txt"><p>${esc(d.thought)}</p></div></div>
           <div class="blk"><div class="label">CTA + Hashtags</div><div class="txt"><p>${esc(d.cta)}</p></div><p class="hash">${esc(d.tags)}</p></div></div>
         </div>
-        <div class="foot">${actions(d)}${notes(d)}${results(d.results)}</div>
+        <div class="foot">${posted ? plats(st) + notes(d) : actions(d) + notes(d) + results(d.results)}</div>
       </div></section>`});
   });
+  if (scoreRows(w).length) S.push({t:"scoreboard", h:`<section class="slide score"><div class="wrapc"><h2 class="h2">Week ${w.n} Scoreboard</h2><p class="lead">${scoreLead(w)}</p>${scoreTable(w)}${shareBar(w)}<div class="upd">Views are plays on videos and impressions on image posts. LinkedIn shows video views. Live from Metricool${updatedLabel() ? `, updated ${updatedLabel()}` : ""}.</div></div></section>`});
   if (w.learnings) S.push({t:"learnings", h:`<section class="slide learn"><div class="wrapc"><h2 class="h2">What Week ${w.n} Told Us</h2><p class="lead">Instagram numbers from Metricool. This is what shaped the plan for the following week.</p>
     <div class="tiles" style="grid-template-columns:repeat(${Math.max(w.learnings.length,3)},1fr)">${w.learnings.map(l=>`<div class="tile"><b>${l.k}</b><p>${esc(l.v)}</p></div>`).join("")}</div></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></section>`});
   if (w.close.kind === "asks") S.push({t:"asks", h:`<section class="slide asks"><div class="wrapc"><h2 class="h2">${esc(w.close.title)}</h2>
@@ -470,7 +833,7 @@ function buildDeck(){
     <div class="thanks">Thank you, Adit team</div><div class="ask">Ideas or edits for next week? Drop them in <b>${HUB.feedback}</b>.</div></div><div class="lightbar"></div></section>`});
 
   app.innerHTML = `<div class="deck" id="deck"><div class="stage" id="stage"><div class="grid"></div>
-    <div class="top"><div class="mark">${LOGO}</div><div class="wtabs" role="tablist" aria-label="Weeks">${weekTabs()}</div></div>
+    <div class="top"><div class="mark">${LOGO}</div>${modesNav()}<div class="wtabs" role="tablist" aria-label="Weeks">${weekTabs()}</div></div>
     <div id="slides">${S.map(s=>s.h).join("")}</div>
     <div class="bottom"><div class="bars" id="bars">${S.map((s,i)=>`<button type="button" aria-label="Go to slide ${i+1}"><i></i></button>`).join("")}</div>
       <button class="fs" id="fs" type="button">Full screen</button><span class="count" id="count"></span>
@@ -479,6 +842,9 @@ function buildDeck(){
   </div></div>`;
   const deck = document.getElementById("deck"), stage = document.getElementById("stage");
   const slides = [...deck.querySelectorAll(".slide")], bars = [...deck.querySelectorAll("#bars button")];
+  const wt = deck.querySelector(".wtabs"), wsel = wt && wt.querySelector('[aria-selected="true"]');
+  if (wt && wsel) wt.scrollLeft = Math.max(0, (wsel.offsetLeft - wt.offsetLeft) - wt.clientWidth + wsel.offsetWidth + 6);
+  if (wt && wt.scrollWidth > wt.clientWidth + 2) wt.classList.add("scrolly");
   let cur = -1;
   const fit = ()=>{ const k = Math.min(innerWidth/1920, innerHeight/1080); stage.style.transform = `translate(-50%,-50%) scale(${k})`; };
   fit(); addEventListener("resize", fit); cleanup.push(()=>removeEventListener("resize", fit));
@@ -531,6 +897,7 @@ function buildFeed(){
   const w = week, n = w.days.length;
   app.innerHTML = `<div class="feed">
   <header class="fhead"><div class="wrap">
+    ${modesNav()}
     <div class="seg" role="tablist" aria-label="Weeks">${weekTabs()}</div>
     <nav class="jump" aria-label="Jump to a day" style="grid-template-columns:repeat(${n},1fr)">${w.days.map(d=>`<a href="#${w.id}-${d.id}" data-id="${d.id}">${d.jump||d.short}</a>`).join("")}</nav>
   </div></header>
@@ -538,20 +905,22 @@ function buildFeed(){
     <div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><p class="sub">${esc(w.summary)}</p>
     <div class="lightbar"></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></div></section>
   <section class="fsec"><div class="wrap"><h2 class="h2">Week ${w.n} at a glance</h2><p class="lead">${esc(w.glanceNote)}</p>
-    <div class="strip">${w.days.map(d=>`<a class="card" href="#${w.id}-${d.id}"><div class="thumb">${thumbInner(w,d,true)}</div><span class="d">${d.short} ${d.date}</span><span class="t">${esc(d.title)}</span>${status(d.status)}</a>`).join("")}</div></div></section>
-  ${w.days.map(d=>`<section class="fday" id="${w.id}-${d.id}" data-id="${d.id}"><div class="wrap">
-    <div class="tags"><span class="pill">${d.day} ${d.date}</span><span class="chip">${esc(d.bucket)}</span>${status(d.status)}<span class="fmt">${esc(d.format)}</span></div>
+    <div class="strip">${w.days.map(d=>`<a class="card" href="#${w.id}-${d.id}"><div class="thumb">${thumbInner(w,d,true)}</div><span class="d">${d.short} · ${niceDate(d)}</span><span class="t">${esc(d.title)}</span>${status(dayStatus(w,d))}</a>`).join("")}</div></div></section>
+  ${w.days.map(d=>{ const st = stat(w,d), posted = hasStats(st), half = d.jump && /\b(AM|PM)$/.test(d.jump) ? ` · ${d.jump.split(" ").pop()}` : ""; return `<section class="fday" id="${w.id}-${d.id}" data-id="${d.id}"><div class="wrap">
+    <div class="dayname">${d.day} <span>${niceDate(d)}${half}</span></div>
+    <div class="tags"><span class="chip">${esc(d.bucket)}</span>${status(dayStatus(w,d))}<span class="fmt">${esc(d.format)}</span></div>
     <h2>${esc(d.title)}</h2>
     ${phone(w,d,"")}
     ${d.video?`<div class="ctrl"><button class="snd" type="button" aria-pressed="false">${SPK_OFF}<span>Tap for sound</span></button><div class="track"><i></i></div></div>`:""}
-    ${results(d.results)}
+    ${posted ? plats(st) : results(d.results)}
     <div class="blk"><div class="label">Hook</div><p class="hook">${esc(d.hook)}</p></div>
     <div class="blk"><div class="label">Caption</div><div class="txt">${d.caption.map(p=>`<p>${esc(p)}</p>`).join("")}</div></div>
     <div class="blk"><div class="label">Thought behind it</div><div class="txt"><p>${esc(d.thought)}</p></div></div>
     <div class="blk"><div class="label">CTA + Hashtags</div><div class="txt"><p>${esc(d.cta)}</p></div><p class="hash">${esc(d.tags)}</p></div>
     ${notes(d)}
-    <div class="acts">${actions(d)}</div>
-  </div></section>`).join("")}
+    <div class="acts">${posted ? (d.drive ? `<a class="btn ghost" href="${d.drive}" target="_blank" rel="noopener">${d.slides?"Open design file":"Open video file"} ${ARROW}</a>` : "") : actions(d)}</div>
+  </div></section>`; }).join("")}
+  ${scoreRows(w).length ? `<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">Week ${w.n} scoreboard</h2><p class="lead">${scoreLead(w)}</p>${shareBar(w)}<div class="fsb">${scoreTable(w)}</div><p class="upd">Views are plays on videos and impressions on image posts. Live from Metricool${updatedLabel() ? `, updated ${updatedLabel()}` : ""}.</p></div></section>` : ""}
   ${w.learnings?`<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">What week ${w.n} told us</h2><p class="lead">Instagram numbers from Metricool.</p><div class="ftiles">${w.learnings.map(l=>`<div class="tile"><b>${l.k}</b><p>${esc(l.v)}</p></div>`).join("")}</div></div></section>`:""}
   ${w.close.kind==="asks"?`<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">${esc(w.close.title)}</h2><p class="lead">${esc(w.close.next)}</p><div class="ftiles">${w.close.items.map(it=>`<div class="tile ask"><b>${esc(it.k)}</b><p>${esc(it.v)}</p></div>`).join("")}</div></div></section>`:""}
   <section class="fclose"><div class="wrap"><div class="logo">${LOGO}</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="lightbar"></div>
@@ -588,23 +957,222 @@ function stepCar(car, auto){ const im=[...car.querySelectorAll(".sl")]; if (im.l
   const dots=car.parentElement.querySelectorAll(".sdots i"); dots.forEach((dd,k)=>dd.classList.toggle("on",k===j)); }
 setInterval(()=>{ document.querySelectorAll(".slide.on .car, .feed .car").forEach(c=>stepCar(c,true)); }, 3200);
 document.addEventListener("click", e=>{ const ph = e.target.closest && e.target.closest(".phone"); if (!ph) return; const car = ph.querySelector(".car"); if (car) stepCar(car); });
+/* ================= FACEBOOK GROUPS ================= */
+const vinfo = id => VS.find(v => v.id === id) || { id, label: id, color: "#6E98CC" };
+const MI = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+function logFor(m){
+  const L = (ST && ST.groupLog) || [];
+  return L.filter(e => { const s = String(e.date || ""); const t = Date.parse(s) || Date.parse(s.replace(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/, "$3-$1-$2"));
+    if (!t) return true; const d = new Date(t); return d.getMonth() === MI[m.id] && String(d.getFullYear()) === String(m.year); });
+}
+function vgroups(vid){ return (GL && GL.verticals && GL.verticals[vid]) || { all: [], sponsored: [] }; }
+function vsum(m, vid){
+  const V = vgroups(vid), open = V.sponsored.filter(g => g.access), menu = m.menu.filter(x => x.v === vid);
+  return { all: V.all.length, access: V.all.filter(g => g.access).length, sp: V.sponsored.length, open: open.length,
+    slots: open.reduce((s, g) => s + (g.freq || 2), 0), tbc: open.filter(g => !g.freq).length * 2,
+    menu: menu.length, ready: menu.filter(x => x.status === "Ready").length, posted: logFor(m).filter(e => e.vertical === vid).length };
+}
+function resBits(e){ return [["views", e.views], ["comments", e.comments], ["reactions", e.reactions]].filter(x => x[1] !== undefined && x[1] !== null).map(x => `<span>${fmtN(x[1])}<em>${x[0]}</em></span>`).join(""); }
+function gMedia(x){
+  const md = x.media || {};
+  if (md.type === "video") return `<img src="${md.poster}" alt="" loading="lazy"><video muted playsinline loop preload="none" data-src="${md.src}"></video>`;
+  if (md.type === "youtube"){ const th = `https://i.ytimg.com/vi/${md.id}/hqdefault.jpg`; return `<div class="ytm"><img class="bg" src="${th}" alt="" loading="lazy"><img class="fg" src="${th}" alt="" loading="lazy"><span class="playg"></span><span class="yl"><b>Testimonial</b>${esc(x.talent)}</span></div>`; }
+  if (md.type === "mock") return mock(md.kind, true, { groups: true });
+  return `<div class="comingm">${CAM}<b>${esc(x.status)}</b><span>${esc(md.line || "")}</span></div>`;
+}
+function mcard(x){
+  return `<button class="mcard" type="button" data-open="${x.id}" style="--vc:${vinfo(x.v).color}" aria-label="${esc(x.id)}: ${esc(x.title)}">
+    <div class="mm">${gMedia(x)}</div><div class="mid">${x.id}<span>${esc(x.kind)}</span></div>
+    <div class="mt">${esc(x.title)}</div><div class="ms">${esc(x.talent)}<br>Best for: ${esc(x.room)}</div>${status(x.status)}</button>`;
+}
+function gname(g){ return g.url ? `<a class="gname" href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.name)}</a>` : `<span class="gname">${esc(g.name)}</span>`; }
+function slotCell(m, g, wk){
+  const s = (m.slots[g.key] || {})[wk], lbl = `${m.weeks[wk].label} · ${m.weeks[wk].range}`;
+  const log = logFor(m).filter(e => e.group === g.key);
+  if (!s) return `<td data-l="${lbl}"><div class="slot decide"><div class="stt">Open slot</div><small>Pick on the weekly call</small></div></td>`;
+  let pid = s.post, e = pid ? log.find(x => x.post === pid) : null;
+  if (s.decide){
+    const w1 = (m.slots[g.key] || {}).w1, other = log.find(x => !w1 || x.post !== w1.post);
+    if (!other) return `<td data-l="${lbl}"><div class="slot decide"><div class="stt">Best of week 1</div><small>Pick by ${esc(m.decideBy)} · ${esc(s.day)}</small></div></td>`;
+    pid = other.post; e = other;
+  }
+  const item = m.menu.find(x => x.id === pid);
+  return `<td data-l="${lbl}"><button class="slot${e ? " done" : ""}" type="button" data-open="${esc(pid)}"><div class="stt"><b>${esc(pid)}</b>${esc(item ? item.title : "")}</div><small>${esc(s.day)}${s.note ? " · " + esc(s.note) : ""} · ${esc(e ? "Posted" : (item ? item.status : ""))}</small>${e ? `<div class="res">${resBits(e)}</div>` : ""}</button></td>`;
+}
+function slotRow(m, g, vid){
+  const vc = vinfo(vid).color;
+  const can = g.comment === true ? "We can reply" : g.comment === false ? "Post only, no replies" : "Replies to confirm";
+  const freq = g.freq ? `${g.freq} posts a month` : "Limit to confirm";
+  if (!g.access) return `<tr class="locked" style="--vc:${vc}"><td data-l="Group">${gname(g)}<small>Sponsored · ${freq}</small></td><td colspan="3" data-l="Status"><div class="lockmsg">${LOCK}No one on our side can post here yet</div></td></tr>`;
+  return `<tr style="--vc:${vc}"><td data-l="Group">${gname(g)}<small>${can} · ${freq}</small></td><td data-l="Who posts">${g.posters.length ? esc(g.posters.join(", ")) : "To confirm"}</td>${slotCell(m, g, "w1")}${slotCell(m, g, "w3")}</tr>`;
+}
+function slotTable(m, vids){
+  return `<table class="slt"><thead><tr><th>Sponsored group</th><th>Who posts</th><th>${m.weeks.w1.label} · ${m.weeks.w1.range}</th><th>${m.weeks.w3.label} · ${m.weeks.w3.range}</th></tr></thead>
+    <tbody>${vids.flatMap(vid => vgroups(vid).sponsored.map(g => slotRow(m, g, vid))).join("")}</tbody></table>`;
+}
+function groupItems(vid){
+  const rank = g => (g.sponsored ? 2 : 0) + (g.access ? 1 : 0);
+  return vgroups(vid).all.slice().sort((a, b) => rank(b) - rank(a)).map(g => `<div class="gi${g.access ? "" : " off"}">${g.url ? `<a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.name)}</a>` : `<span class="gn">${esc(g.name)}</span>`}
+    <div class="bd">${g.sponsored ? `<span class="bdg sp">Sponsored</span>` : ""}${g.partner ? `<span class="bdg y">Official partner</span>` : ""}<span class="bdg ${g.access ? "y" : "n"}">${g.access ? "We're in" : "No access"}</span>${g.devi === true ? `<span class="bdg y">Devi in</span>` : ""}</div></div>`).join("");
+}
+function stamp(iso){ try { return new Date(iso).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" }) + " PT"; } catch(e){ return ""; } }
+function buildGroups(){
+  const m = gmonth, vid = gvert, all = vid === "all", vids = all ? VS.map(v => v.id) : [vid], vi = all ? null : vinfo(vid);
+  const tot = VS.reduce((a, v) => { const s = vsum(m, v.id); Object.keys(s).forEach(k => a[k] = (a[k] || 0) + s[k]); return a; }, {});
+  const S1 = all ? tot : vsum(m, vid);
+  const railBtn = (id, label, color, sub, warn) => `<button class="vbtn" type="button" data-v="${id}" aria-pressed="${gvert === id}" style="--vc:${color}"><i></i><b>${label}</b><span${warn ? ' class="warn"' : ""}>${sub}</span></button>`;
+  const rail = railBtn("all", "All verticals", "#F5F5F5", `${tot.all} groups · ${tot.sp} sponsored`)
+    + VS.map(v => { const s = vsum(m, v.id); return railBtn(v.id, v.short || v.label, v.color, s.open ? `${s.all} groups · ${s.open} of ${s.sp} sponsored open` : `${s.all} groups · no access yet`, !s.open); }).join("");
+  const H = typeof GROUPS_HUB !== "undefined" ? GROUPS_HUB : {};
+  const tile = (b, span, small, warn) => `<div class="gtile${warn ? " warn" : ""}"><b>${b}</b><span>${span}</span>${small ? `<small>${esc(small)}</small>` : ""}</div>`;
+  let tiles;
+  if (all) tiles = tile(tot.all, "Groups on our list", `${tot.access} where someone on our side has access`)
+    + tile(tot.sp, "Sponsored groups", `${tot.open} we can post in today`, tot.open < tot.sp)
+    + tile(tot.slots, `Post slots in ${m.tab}`, tot.tbc ? `${tot.tbc} of them wait on a confirmed limit` : "Two per open sponsored group")
+    + tile(tot.menu, "Posts on the menu", `${tot.ready} ready now · ${tot.posted} posted so far`);
+  else { const locked = vgroups(vid).sponsored.filter(g => !g.access).map(g => g.name);
+    tiles = tile(S1.all, "Groups on our list", S1.access ? `${S1.access} where someone on our side has access` : "No access in any of them yet", !S1.access)
+    + tile(`${S1.open} of ${S1.sp}`, "Sponsored groups open", locked.length ? `Locked: ${locked.join(", ")}` : "Every one of them is open", S1.open < S1.sp)
+    + tile(S1.slots, `Post slots in ${m.tab}`, S1.tbc ? `${S1.tbc} of them wait on a confirmed limit` : S1.slots ? "Two per open sponsored group" : "Nothing to post into yet", !S1.slots)
+    + tile(S1.menu, "Posts on the menu", `${S1.ready} ready now · ${S1.posted} posted so far`); }
+  const intro = !all && !S1.open ? `Every post below is ready. We just need a room to put them in: no one on our side can post in any of the ${S1.all} ${vi.label.toLowerCase()} groups yet.` : m.summary;
+  const menuBlock = all
+    ? VS.map(v => { const items = m.menu.filter(x => x.v === v.id); return items.length ? `<div style="--vc:${v.color}"><div class="vtitle"><i></i>${v.label}<span>${items.length} posts</span></div><div class="mgrid">${items.map(mcard).join("")}</div></div>` : ""; }).join("")
+    : `<div class="mgrid">${m.menu.filter(x => x.v === vid).map(mcard).join("")}</div>`;
+  const lists = vids.map(v => `<div style="--vc:${vinfo(v).color}">${all ? `<div class="vtitle"><i></i>${vinfo(v).label}<span>${vgroups(v).all.length} groups</span></div>` : ""}<div class="glist">${groupItems(v)}</div></div>`).join("");
+  const asks = (m.asks || []).map(a => `<div class="item"><b>${esc(a.k)}</b><p>${esc(a.v)}${a.k === "Log every post" && H.postLog ? ` <a href="${H.postLog}" target="_blank" rel="noopener">Open the Group Post Log</a>` : ""}</p></div>`).join("");
+  app.innerHTML = `<div class="gv">
+  <header class="ghead"><div class="gwrap"><a class="gmark" href="#${WEEKS[WEEKS.length - 1].id}" aria-label="PuroFlow Media, back to the organic calendar">${LOGO}</a>${modesNav()}
+    <div class="mtabs" role="tablist" aria-label="Months">${GM.map(x => `<a class="wtab" role="tab" href="#groups-${x.id}${all ? "" : "-" + vid}" aria-selected="${x === m}"><b>${x.tab}</b><span>${x.year} · ${x.state}</span></a>`).join("")}</div></div></header>
+  <div class="gwrap gbody">
+    <aside class="rail" aria-label="Verticals"><div class="rail-h">Verticals</div>${rail}
+      <div class="rail-note"><b>How a month runs</b><p>Week 1: Post 1 goes into every sponsored group we can post in.</p><p>Week 3: whatever won week 1 reruns in the rooms that haven't seen it.</p><p>Every day: soldiers comment, answer questions and log what they see. They don't pitch.</p></div>
+      ${H.postLog ? `<a class="btn ghost" href="${H.postLog}" target="_blank" rel="noopener">Group Post Log ${ARROW}</a>` : ""}${H.mastersheet ? `<a class="btn ghost" href="${H.mastersheet}" target="_blank" rel="noopener">Groups Mastersheet ${ARROW}</a>` : ""}</aside>
+    <main class="gmain">
+      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div></section>
+      <section class="gsec"><h2 class="h2">The menu</h2><p class="lead">Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.</p>${menuBlock}</section>
+      <section class="gsec"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>
+      <section class="gsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>
+      ${asks ? `<section class="gsec"><h2 class="h2">What we need from the Adit team</h2><div class="gasks">${asks}</div></section>` : ""}
+      <footer class="gfoot"><div>Groups synced from the FB Groups Mastersheet${GL && GL.updated ? ` on ${stamp(GL.updated)}` : ""}. Results come from the Group Post Log.</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></footer>
+    </main>
+  </div></div>`;
+  const gv = app.querySelector(".gv"), hd = gv.querySelector(".ghead");
+  const setH = () => gv.style.setProperty("--ghh", hd.offsetHeight + "px"); setH();
+  addEventListener("resize", setH); cleanup.push(() => removeEventListener("resize", setH));
+  gv.querySelectorAll(".vbtn").forEach(b => b.addEventListener("click", () => { const v = b.dataset.v; location.hash = `groups-${m.id}${v === "all" ? "" : "-" + v}`; }));
+  gv.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openDrawer(b.dataset.open)));
+  gv.querySelectorAll(".mcard").forEach(c => { const v = c.querySelector(".mm>video"); if (!v) return;
+    const on = () => { if (!v.getAttribute("src")) v.src = v.dataset.src; v.currentTime = 0; v.play().catch(()=>{}); }, off = () => v.pause();
+    c.addEventListener("mouseenter", on); c.addEventListener("mouseleave", off); });
+  const rl = gv.querySelector(".rail"), sel = rl && rl.querySelector('.vbtn[aria-pressed="true"]');
+  if (sel && rl.scrollWidth > rl.clientWidth) rl.scrollLeft = Math.max(0, sel.offsetLeft - 18);
+}
+let drawerKey = null;
+function closeDrawer(){
+  const d = document.querySelector(".drawer");
+  if (d){ d.querySelectorAll("video").forEach(v => { v.pause(); v.removeAttribute("src"); v.load(); }); d.remove(); }
+  document.body.style.overflow = "";
+  if (drawerKey){ removeEventListener("keydown", drawerKey); drawerKey = null; }
+}
+function openDrawer(id){
+  const m = gmonth, x = m && m.menu.find(i => i.id === id); if (!x) return;
+  closeDrawer();
+  const vc = vinfo(x.v).color, md = x.media || {};
+  const where = []; Object.entries(m.slots).forEach(([gk, s]) => ["w1", "w3"].forEach(wk => { if (s[wk] && s[wk].post === id) where.push({ gk, wk, day: s[wk].day }); }));
+  const gByKey = k => { for (const v of VS){ const V = vgroups(v.id), g = V.sponsored.find(g => g.key === k) || V.all.find(g => g.key === k); if (g) return g; } return { name: k }; };
+  const log = logFor(m).filter(e => e.post === id);
+  let media;
+  if (md.type === "video") media = `<div class="phone"><div class="screen"><span class="island"></span><video playsinline loop preload="metadata" poster="${md.poster}" src="${md.src}"></video></div></div><button class="snd" type="button" aria-pressed="false">${SPK_OFF}<span>Tap for sound</span></button>`;
+  else if (md.type === "youtube") media = `<div class="ytbox"><iframe src="https://www.youtube-nocookie.com/embed/${md.id}?rel=0&modestbranding=1&playsinline=1" title="${esc(x.title)}" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div><div class="ytnote">From Adit's testimonial library on YouTube</div>`;
+  else media = `<div class="phone"><div class="screen"><span class="island"></span>${md.type === "mock" ? mock(md.kind, false, { groups: true }) : `<div class="comingm">${CAM}<b>${esc(x.status)}</b><span>${esc(md.line || "")}</span></div>`}</div></div>`;
+  const acts = [];
+  if (x.drive) acts.push(`<a class="btn solid" href="${x.drive}" target="_blank" rel="noopener">Open video file ${ARROW}</a>`);
+  if (x.yt) acts.push(`<a class="btn ${x.drive ? "ghost" : "solid"}" href="${x.yt}" target="_blank" rel="noopener">Watch on YouTube ${ARROW}</a>`);
+  if (x.ig) acts.push(`<a class="btn ghost" href="${x.ig}" target="_blank" rel="noopener">See it on Instagram ${ARROW}</a>`);
+  const whereHtml = where.length ? where.map(p => { const e = log.find(l => l.group === p.gk); return `<div>${esc(gByKey(p.gk).name)}<span>${esc(m.weeks[p.wk].label)} · ${esc(p.day)}${e ? ` · ${fmtN(e.views)} views, ${fmtN(e.comments)} comments` : ""}</span></div>`; }).join("")
+    : `<div>${esc(x.room)}<span>${x.status === "No group access" ? "Waiting on group access" : "Placed on the weekly call"}</span></div>`;
+  const el = document.createElement("div");
+  el.className = "drawer"; el.style.setProperty("--vc", vc);
+  el.innerHTML = `<div class="dscrim"></div><aside class="dpanel" role="dialog" aria-modal="true" aria-label="${esc(x.title)}"><button class="dclose" type="button" aria-label="Close">${XI}</button>
+    <div class="dmedia">${media}</div>
+    <div class="dbody">
+      <div class="dtags"><span class="chip">${esc(vinfo(x.v).label)}</span><span class="pill">${esc(x.id)}</span>${status(x.status)}</div>
+      <h2>${esc(x.title)}</h2>
+      <p class="who">${esc(x.talent)} · ${esc(x.format)} · ${esc(x.kind)}</p>
+      ${x.caption ? `<div class="dblk"><div class="lrow"><div class="label">Group caption</div><button class="copy" type="button">Copy caption</button></div><div class="capbox">${x.caption.map(p => `<p>${esc(p)}</p>`).join("")}</div></div>` : ""}
+      ${x.variant ? `<div class="notebox"><p><b>Variant:</b> ${esc(x.variant)}</p></div>` : ""}
+      ${x.firstComment ? `<div class="dblk"><div class="label">First comment from the poster</div><div class="txt"><p>${esc(x.firstComment)}</p></div></div>` : ""}
+      <div class="dblk"><div class="label">Why it fits the room</div><div class="txt"><p>${esc(x.why)}</p></div></div>
+      <div class="dblk"><div class="label">Where it goes</div><div class="dwhere">${whereHtml}</div></div>
+      ${(x.notes || []).length ? `<div class="notebox">${x.notes.map(n => `<p><b>Note:</b> ${esc(n)}</p>`).join("")}</div>` : ""}
+      ${acts.length ? `<div class="dacts">${acts.join("")}</div>` : ""}
+    </div></aside>`;
+  document.body.appendChild(el); document.body.style.overflow = "hidden";
+  el.querySelector(".dscrim").addEventListener("click", closeDrawer);
+  el.querySelector(".dclose").addEventListener("click", closeDrawer);
+  try { el.querySelector(".dclose").focus({ preventScroll: true }); } catch(e){}
+  const cp = el.querySelector(".copy");
+  if (cp) cp.addEventListener("click", () => {
+    const t = x.caption.join("\n\n");
+    const done = () => { cp.textContent = "Copied"; cp.classList.add("ok"); setTimeout(() => { cp.textContent = "Copy caption"; cp.classList.remove("ok"); }, 1800); };
+    const fallback = () => { const ta = document.createElement("textarea"); ta.value = t; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); done(); } catch(e){} ta.remove(); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, fallback); else fallback();
+  });
+  const v = el.querySelector("video");
+  if (v){
+    v.muted = true; v.play().catch(()=>{});
+    const b = el.querySelector(".snd");
+    const tog = () => { v.muted = !v.muted; if (v.paused) v.play().catch(()=>{}); b.setAttribute("aria-pressed", String(!v.muted)); b.innerHTML = (!v.muted ? SPK_ON : SPK_OFF) + `<span>${!v.muted ? "Sound on" : "Tap for sound"}</span>`; };
+    b.addEventListener("click", tog);
+    el.querySelector(".phone").addEventListener("click", e => { e.stopPropagation(); tog(); });
+  }
+  drawerKey = e => { if (e.key === "Escape") closeDrawer(); };
+  addEventListener("keydown", drawerKey);
+}
+
 /* ================= router ================= */
 function isDesk(){ return innerWidth >= 900 && innerWidth > innerHeight * 1.05; }
+function parseHash(){
+  const h = (location.hash || "").slice(1);
+  if (GM && /^groups(-|$)/.test(h)){
+    const p = h.split("-");
+    return { view: "groups", m: GM.find(x => x.id === p[1]) || GM[GM.length - 1], v: VS.some(x => x.id === p[2]) ? p[2] : "all" };
+  }
+  return { view: "organic", w: weekFromHash() };
+}
 function render(){
   cleanup.forEach(f=>f()); cleanup = [];
+  closeDrawer();
   app.querySelectorAll("video").forEach(v=>{ v.pause(); v.removeAttribute("src"); v.load(); });
+  if (view === "groups"){ mode = "groups"; document.title = `Adit Facebook Groups · ${gmonth.tab} | PuroFlow Media`; buildGroups(); return; }
   mode = isDesk() ? "desk" : "feed";
   document.title = `Adit Content Calendar · Week ${week.n} | PuroFlow Media`;
   if (mode === "desk") buildDeck(); else { buildFeed(); }
+}
+function route(){
+  const r = parseHash();
+  if (r.view === "groups"){
+    const changed = view !== "groups" || gmonth !== r.m || gvert !== r.v;
+    view = "groups"; gmonth = r.m; gvert = r.v;
+    if (changed){ render(); scrollTo(0, 0); }
+  } else {
+    const was = view, changed = view !== "organic" || r.w !== week;
+    view = "organic"; week = r.w;
+    if (changed){ render(); if (was !== "organic") scrollTo(0, 0); }
+  }
 }
 function switchWeek(id){
   const w = WEEKS.find(x=>x.id===id); if (!w || w===week) return;
   week = w; setHash(w.id); render(); if (mode==="feed") scrollTo(0,0);
 }
-week = weekFromHash();
-render();
-addEventListener("resize", ()=>{ if ((isDesk()?"desk":"feed") !== mode) render(); });
-addEventListener("hashchange", ()=>{ const w = weekFromHash(); if (w !== week){ week = w; render(); } });
+(function init(){
+  const r = parseHash(); view = r.view;
+  if (r.view === "groups"){ gmonth = r.m; gvert = r.v; week = WEEKS[WEEKS.length - 1]; } else week = r.w;
+  render();
+})();
+addEventListener("resize", ()=>{ if (view === "organic" && (isDesk()?"desk":"feed") !== mode) render(); });
+addEventListener("hashchange", route);
 </script>
 </body>
 </html>

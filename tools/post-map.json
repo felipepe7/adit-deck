@@ -1,0 +1,90 @@
+{
+  "_about": "Which native post on each platform belongs to which calendar day. Keys are <week id>/<day id> from calendar/weeks.js. refresh.mjs adds new matches on its own and lists anything it could not place in tools/last-refresh.json. _ignore holds posts that are not part of the calendar (Adit's own event posts, testimonial uploads).",
+  "sep-28/mon-a": {
+    "ig": "https://www.instagram.com/reel/Dd1P9dijNDz/",
+    "fb": "https://www.facebook.com/reel/1329993815739284/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7510324053606486018",
+    "yt": "https://www.youtube.com/watch?v=IC7yZtqy36s"
+  },
+  "sep-28/mon-b": {
+    "ig": "https://www.instagram.com/reel/Dd11WMfkZ04/",
+    "fb": "https://www.facebook.com/reel/2293518738106697/",
+    "tt": "https://www.tiktok.com/@get_adit/video/7690771779605908750",
+    "yt": "https://www.youtube.com/watch?v=IRwUQHj1kvQ"
+  },
+  "sep-28/wed-a": {
+    "ig": "https://www.instagram.com/p/Dd53AaSG-5_/",
+    "fb": "https://facebook.com/847463824059774/posts/1665043498968465"
+  },
+  "sep-28/wed-b": {
+    "ig": "https://www.instagram.com/p/Dd69frgzqcH/",
+    "fb": "https://facebook.com/847463824059774/posts/1665568888915926"
+  },
+  "oct-5/mon": {
+    "ig": "https://www.instagram.com/reel/DeHRbUpnz2S/",
+    "fb": "https://www.facebook.com/reel/1134742445901836/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7512867053414989824",
+    "yt": "https://www.youtube.com/watch?v=hhDvOt64FoY"
+  },
+  "oct-12/mon": {
+    "ig": "https://www.instagram.com/p/DeYzdaYmz2M/",
+    "fb": "https://facebook.com/847463824059774/posts/1677772234362258"
+  },
+  "oct-12/tue-a": {
+    "ig": "https://www.instagram.com/reel/Deb4CnigvZ6/",
+    "fb": "https://www.facebook.com/reel/2035292466988797/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7515766868276572162",
+    "yt": "https://www.youtube.com/watch?v=NmRp5gGpvtg"
+  },
+  "oct-12/tue-b": {
+    "ig": "https://www.instagram.com/p/DedQNL-Ggzk/",
+    "fb": "https://facebook.com/847463824059774/posts/1679669080839240"
+  },
+  "oct-19/mon": {
+    "ig": "https://www.instagram.com/reel/DerbrE0Aiaq/",
+    "fb": "https://www.facebook.com/reel/1151891607415645/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7517949370999201792",
+    "tt": "https://www.tiktok.com/@get_adit/video/7699549811070029069",
+    "yt": "https://www.youtube.com/watch?v=ZlfAqRXzTLU"
+  },
+  "oct-19/tue": {
+    "ig": "https://www.instagram.com/reel/Deun8PODHEB/",
+    "fb": "https://www.facebook.com/reel/2205168517017850/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518413556577607680",
+    "tt": "https://www.tiktok.com/@get_adit/video/7698847523288386830",
+    "yt": "https://www.youtube.com/watch?v=evo04u1do_w"
+  },
+  "oct-19/wed": {
+    "ig": "https://www.instagram.com/reel/Dew2Bq_FFg2/",
+    "fb": "https://www.facebook.com/reel/4090124344618146/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518719372207714305",
+    "yt": "https://www.youtube.com/watch?v=zIxI_0wct8A"
+  },
+  "oct-19/thu": {
+    "ig": "https://www.instagram.com/reel/DezKXQAiP4a/",
+    "fb": "https://www.facebook.com/reel/3171625226361913/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7519052410695073792",
+    "yt": "https://www.youtube.com/watch?v=tEsITh8Kt3Y"
+  },
+  "oct-19/fri": {
+    "ig": "https://www.instagram.com/reel/De141e3gJBR/",
+    "fb": "https://www.facebook.com/reel/1761492281589692/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7519431374714482688",
+    "yt": "https://www.youtube.com/watch?v=GpllK5n1sQ0"
+  },
+  "_ignore": [
+    "https://facebook.com/847463824059774/posts/1686729633466518",
+    "https://www.facebook.com/reel/2226400754587688/",
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7518044725476503552",
+    "https://www.youtube.com/watch?v=6meika8XjnM",
+    "https://www.youtube.com/watch?v=Eaqw15pNnd4",
+    "https://www.youtube.com/watch?v=Fgt5cvdwmiU",
+    "https://www.youtube.com/watch?v=Q3PM2-wPlCc",
+    "https://www.youtube.com/watch?v=WYRVou53QGA",
+    "https://www.youtube.com/watch?v=XW3hQvlGjFI",
+    "https://www.youtube.com/watch?v=YOmmb9L3_qQ",
+    "https://www.youtube.com/watch?v=qtHzh5M2-7M",
+    "https://www.youtube.com/watch?v=ttW50x5V-4A",
+    "https://www.youtube.com/watch?v=vjnQTtTBM-8"
+  ]
+}
