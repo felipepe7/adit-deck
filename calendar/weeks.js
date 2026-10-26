@@ -1,5 +1,6 @@
-/* Adit x PuroFlow Media content calendar.
+/* Adit x PuroFlow Media content calendar. Weeks run oldest to newest; the newest opens by default.
    To add a week: copy the last object in WEEKS, change the dates and days, drop the reels in media/wN/. */
+const LEGACY = { "week-1": "oct-19", "week-2": "oct-26" };
 const HUB = {
   handle: "@get_adit",
   folder: "https://drive.google.com/drive/folders/1V_CR-VNonq-Lrk2_FkKINx_5MWylALdE",
@@ -8,7 +9,165 @@ const HUB = {
 
 const WEEKS = [
   {
-    id: "week-1", n: 1, range: "Oct 19 to 23", state: "Posted",
+    id: "sep-28", n: 1, tab: "Sep 28", range: "Sep 28 to Oct 4", state: "Posted",
+    theme: "Josh Games + Challenge Launch",
+    cover: { big: "SEP 28", to: "TO OCT 4", year: "2026" },
+    summary: "4 posts on @get_adit: two Josh reels, the Review Challenge launch carousel and a product offer.",
+    glanceNote: "Josh games to start conversations, then the Review Challenge launch carousel, which became our most commented post since late September.",
+    media: "media/w0928/",
+    days: [
+      { id: "mon-a", day: "Monday", short: "Mon", jump: "Mon AM", date: "9/28", status: "Posted", format: "Reel · 57s · 6:06 AM PT",
+        title: "Agree or Disagree: Practice Management Edition", bucket: "Game / Thought Leadership", video: true,
+        ig: "https://www.instagram.com/reel/Dd1P9dijNDz/",
+        drive: "https://drive.google.com/file/d/1WAuc-OaZJaKMIx1Jj2P4JxYbN4UqT-lY/view?usp=drive_link",
+        results: [["327", "Views"], ["7.4s", "Avg watch"], ["10", "Likes"]],
+        hook: "Agree or disagree: practice management edition 🤔",
+        caption: [
+          "We put the things dental, optometry and chiropractic office owners say out loud on a board, and Josh had to pick a side on every single one. No hedging. No \"it depends.\"",
+          "A few of these will start an argument in your break room."
+        ],
+        thought: "A game built for comments. Josh has to commit to a side on statements owners say every day, across dental, optometry and chiro. Debate formats get people arguing in the comments, which is the signal Instagram rewards.",
+        cta: "Which one did he get wrong? 👇",
+        tags: "#dentaloffice #practicemanagement #practiceowner",
+        ask: "Which one did he get wrong?" },
+      { id: "mon-b", day: "Monday", short: "Mon", jump: "Mon PM", date: "9/28", status: "Posted", format: "Reel · 11:31 AM PT",
+        title: "Dental No-Show Policy, the Honest Version", bucket: "Dental / Front Desk", cover: "mon-b.jpg",
+        ig: "https://www.instagram.com/reel/Dd11WMfkZ04/",
+        results: [["154", "Views"], ["4.6s", "Avg watch"], ["6", "Likes"]],
+        hook: "Dental no-show policy, the honest version 🦷",
+        caption: [
+          "Not the one written in your new patient packet. The one your front desk actually holds the line on.",
+          "Every office has a gap between the two, and that gap is where the schedule falls apart."
+        ],
+        thought: "A pain point every front desk lives with. Calling out the gap between the written policy and the enforced one makes it relatable, and asking for their best enforced policy turns the comments into peer advice.",
+        cta: "What is the best no-show policy you have actually enforced? 👇",
+        tags: "#dentaloffice #noshows #practicemanagement",
+        ask: "Best no-show policy you've enforced?" },
+      { id: "wed-a", day: "Wednesday", short: "Wed", jump: "Wed AM", date: "9/30", status: "Posted", format: "Carousel · 5 slides · 1:02 AM PT",
+        title: "Review Challenge Launch: $1,750 in Prizes", bucket: "Challenge / Launch",
+        slides: ["wed-a-1.jpg", "wed-a-2.jpg", "wed-a-3.jpg", "wed-a-4.jpg", "wed-a-5.jpg"],
+        ig: "https://www.instagram.com/p/Dd53AaSG-5_/",
+        drive: "https://drive.google.com/file/d/11_ujNuWnJPRootZLzpzhmErJNgoWXgQJ/view?usp=drive_link",
+        results: [["823", "Views"], ["65", "Comments"], ["27", "Likes"]],
+        hook: "Google reviews are the new word of mouth. So we're paying the practices that grow them the fastest 🏆",
+        caption: [
+          "$1,750 in Amazon prizes 😍 14 days. Open to any U.S. dental, ortho, optometry or chiropractic practice, @get_adit client or not.",
+          "How to enter: 1️⃣ Follow @get_adit · 2️⃣ Comment CHALLENGE below (tag your colleagues for bonus points) · 3️⃣ Check your DMs and send us your office name",
+          "The contest runs Oct 7 to Oct 21. Leaderboards drop every Monday and Friday right here."
+        ],
+        thought: "The kickoff. A pinned rules carousel gives every entrant one place to learn how scoring works, and comment-to-enter turns each entry into a ManyChat conversation and a captured practice contact.",
+        cta: "Comment CHALLENGE below. Swipe for the full rules 👉",
+        tags: "#dentalpractice #googlereviews #dentalmarketing",
+        ask: "Comment CHALLENGE to enter" },
+      { id: "wed-b", day: "Wednesday", short: "Wed", jump: "Wed PM", date: "9/30", status: "Posted", format: "Image post · 11:18 AM PT",
+        title: "Free Phones & VoIP for Life", bucket: "Product / Offer", slides: ["wed-b.jpg"],
+        ig: "https://www.instagram.com/p/Dd69frgzqcH/",
+        results: [["183", "Views"], ["5", "Comments"], ["4", "Likes"]],
+        hook: "Keep the calls. Lose the phone bill. 🤏📞",
+        caption: [
+          "Get free phones and VoIP for life with Adit, the all-in-one practice management platform that brings patient communication, scheduling, reminders and payments together."
+        ],
+        thought: "A direct product offer to balance the engagement posts. One clear benefit in one image (no more phone bill), with a question that gets owners talking about the expenses they want to cut.",
+        cta: "Practice owners and office managers: what's one monthly expense you'd love to break up with? 👇",
+        tags: "PracticeManagement PatientCommunication HealthcareTechnology DentalPractice Adit",
+        ask: "Which expense would you cut?" }
+    ],
+    learnings: [
+      { k: "65", v: "comments on the challenge launch carousel, our most commented post since late September. Comment-to-enter turns attention into contacts." },
+      { k: "7.4s", v: "average watch on Josh's agree or disagree game, versus 4.6s on the no-show tip. Games hold attention longer than tips." },
+      { k: "183", v: "views on the phone bill image, the lowest of the week. Static product offers reach the fewest people." }
+    ],
+    close: { kind: "thanks" }
+  },
+  {
+    id: "oct-5", n: 2, tab: "Oct 5", range: "Oct 5 to 11", state: "Posted",
+    theme: "Entries Closing",
+    cover: { big: "OCT 5", to: "TO OCT 11", year: "2026" },
+    summary: "1 reel on @get_adit: the 48-hour push before Review Challenge entries closed on Wednesday, Oct 7.",
+    glanceNote: "One feed post this week: the deadline push before entries closed Wednesday, Oct 7.",
+    media: "media/w1005/",
+    days: [
+      { id: "mon", day: "Monday", short: "Mon", date: "10/5", status: "Posted", format: "Reel · 6:03 AM PT",
+        title: "48 Hours Left to Get In", bucket: "Challenge / Urgency", cover: "mon.jpg",
+        ig: "https://www.instagram.com/reel/DeHRbUpnz2S/",
+        results: [["204", "Views"], ["3.8s", "Avg watch"], ["7", "Likes"]],
+        hook: "48 hours left to get in 👀",
+        caption: [
+          "$1,750 in gift cards. 14 days. One scoreboard.",
+          "Whichever practice grows its Google reviews the most between Oct 7 and Oct 21 takes $1,000. Second takes $500. Third takes $250. Paid to the practice.",
+          "Every new review counts, any rating. Nobody is being asked to chase 5 stars. We're measuring which practice actually gets patients to show up and leave one, because that's the skill that compounds long after this contest ends 📈"
+        ],
+        thought: "Deadline urgency before entries closed, plus a fairness rule up front (any rating counts) so practices could enter without worrying about gaming their Google profile.",
+        cta: "Rules are in the video. Comment CHALLENGE and we'll send you the whole thing. Entries close Wednesday.",
+        tags: "#DentalPractice #GoogleReviews #PracticeGrowth",
+        ask: "Comment CHALLENGE, entries close Wednesday" }
+    ],
+    learnings: [
+      { k: "3.8s", v: "average watch on the deadline reminder. A countdown with no face on screen lost people fastest." },
+      { k: "1", v: "feed post this week. Posting every day starts the week of Oct 26." }
+    ],
+    close: { kind: "thanks" }
+  },
+  {
+    id: "oct-12", n: 3, tab: "Oct 12", range: "Oct 12 to 18", state: "Posted",
+    theme: "Entries Reopened + First Leaderboard",
+    cover: { big: "OCT 12", to: "TO OCT 18", year: "2026" },
+    summary: "3 posts on @get_adit: entries reopened by demand, Dr. Rita Chuang's testimonial and the first public leaderboard.",
+    glanceNote: "Demand reopened the challenge, the first leaderboard named every practice, and Dr. Rita Chuang gave us October's most viewed reel.",
+    media: "media/w1012/",
+    days: [
+      { id: "mon", day: "Monday", short: "Mon", date: "10/12", status: "Posted", format: "Carousel · 1:27 AM PT",
+        title: "Entries Are Open Again", bucket: "Challenge / Reopen", slides: ["mon-1.jpg"],
+        ig: "https://www.instagram.com/p/DeYzdaYmz2M/",
+        results: [["486", "Views"], ["11", "Comments"], ["8", "Likes"]],
+        hook: "We closed entries Wednesday. You wouldn't let us. 👀",
+        caption: [
+          "Entries are open again until Friday, Oct 16.",
+          "⏱️ Your clock starts the day you enter. Everyone gets counted on the same day, end of day Friday Oct 30, so every day you sit on this is a day off your own clock. Already in? You keep your start date and your head start 💪",
+          "🏆 $1,000, $500 and $250 in gift cards, paid to the practice. Every new review counts, any rating. No paying, discounting or incentivizing anyone for a review."
+        ],
+        thought: "Practices kept asking to join after entries closed, so we reopened and made the urgency explicit: your clock starts the day you enter, and the first movers keep their head start.",
+        cta: "Comment the word CHALLENGE to get in 👇",
+        tags: "#Doctors #GoogleReviews #PracticeGrowth",
+        ask: "Comment CHALLENGE, open until Oct 16" },
+      { id: "tue-a", day: "Tuesday", short: "Tue", jump: "Tue AM", date: "10/13", status: "Posted", format: "Reel · 6:07 AM PT",
+        title: "Dr. Rita Chuang on What Changed", bucket: "Client Testimonial", cover: "tue-a.jpg",
+        ig: "https://www.instagram.com/reel/Deb4CnigvZ6/",
+        results: [["404", "Views"], ["10.3s", "Avg watch"], ["17", "Likes"]],
+        hook: "We didn't write this one 👀",
+        caption: [
+          "Dr. Rita Chuang, president of the CAO, on what actually changed in her practice.",
+          "Her point isn't really about software. It's about time. The calls that get captured instead of missed, the admin that stops eating the day, and what a team does with the hours that come back.",
+          "Ask most practice owners what they want more of and it isn't more patients. It's more time with the ones already in the chair."
+        ],
+        thought: "Unscripted proof from a respected doctor. A client in her own words beats any claim Adit can make about itself, and it became our most viewed reel of October.",
+        cta: "No hard ask. The testimonial does the work.",
+        tags: "#PracticeGrowth #PracticeManagement #PatientExperience",
+        ask: "Testimonial, no hard ask" },
+      { id: "tue-b", day: "Tuesday", short: "Tue", jump: "Tue PM", date: "10/13", status: "Posted", format: "Carousel · 6:56 PM PT",
+        title: "First Leaderboard: The Top 5", bucket: "Challenge / Leaderboard", slides: ["tue-b-1.jpg"],
+        ig: "https://www.instagram.com/p/DedQNL-Ggzk/",
+        results: [["642", "Views"], ["39", "Comments"], ["21", "Likes"]],
+        hook: "🚨🏆 The Adit Review Challenge leaderboard is live, and it's getting spicy 🔥",
+        caption: [
+          "Here is the leaderboard as of Oct 13 👇",
+          "🥇 @dr.jesse_cook 13 · 🥈 @aliddin58 11 · 🥉 @mistylove5830 8 · 4️⃣ @breezeortho 6 · 5️⃣ @sammiecappello 6",
+          "The gap between 5th and 6th is ONE point. One review. One tag. That is all it takes to flip this board 😳"
+        ],
+        thought: "The first public scoreboard. Naming and tagging every practice gives contestants something to share, pulls their followers in, and shows practices on the fence that real offices are already winning.",
+        cta: "Still want in? Comment CHALLENGE on our most recent pinned post. Entries close Friday, Oct 16.",
+        tags: "#AditReviewChallenge",
+        ask: "Comment CHALLENGE to get on the board" }
+    ],
+    learnings: [
+      { k: "404", v: "views on Dr. Rita Chuang's testimonial, the most viewed reel of October, with 10.3s average watch." },
+      { k: "39", v: "comments on the first leaderboard. Naming practices in public gets them commenting and tagging." },
+      { k: "642", v: "views on the leaderboard carousel, beating every reel that week." }
+    ],
+    close: { kind: "thanks" }
+  },
+  {
+    id: "oct-19", n: 4, tab: "Oct 19", range: "Oct 19 to 23", state: "Posted",
     theme: "Challenge + Thought Leadership",
     cover: { big: "OCT 19", to: "TO OCT 23", year: "2026" },
     summary: "5 reels edited and posted Monday through Friday on @get_adit.",
@@ -19,7 +178,7 @@ const WEEKS = [
         title: "Review Challenge Extended to Oct 31", bucket: "Challenge / Community", video: true,
         ig: "https://www.instagram.com/reel/DerbrE0Aiaq/",
         drive: "https://drive.google.com/file/d/1Uxn5PpyfMR148NDo3hjkU05f4Xp8F8gC/view?usp=drive_link",
-        results: { views: 335, watch: "7.1s", likes: 11 },
+        results: [["335", "Views"], ["7.1s", "Avg watch"], ["11", "Likes"]],
         hook: "🚨🏆 The Adit Review Challenge just got extended 🔥",
         caption: [
           "Due to popular demand, the challenge is staying open through the end of October, and every Google review since October 1st now counts 👀",
@@ -34,7 +193,7 @@ const WEEKS = [
         title: "What Doctors Miss About Business", bucket: "Thought Leadership", video: true,
         ig: "https://www.instagram.com/reel/Deun8PODHEB/",
         drive: "https://drive.google.com/file/d/1yMLJGxRR-_cyn0KugX-mEtj-jkD9R2LY/view?usp=drive_link",
-        results: { views: 210, watch: "6.2s", likes: 8 },
+        results: [["210", "Views"], ["6.2s", "Avg watch"], ["8", "Likes"]],
         hook: "What do doctors misunderstand about business? 🤔📊",
         caption: [
           "Most doctors are incredible clinicians who were never trained to run a business. Josh Gosnell, VP of Revenue at Adit, says the biggest blind spot is simple: knowing your numbers.",
@@ -48,7 +207,7 @@ const WEEKS = [
         title: "Shelley Bostrom at WOCON", bucket: "Partner / Social Proof", video: true,
         ig: "https://www.instagram.com/reel/Dew2Bq_FFg2/",
         drive: "https://drive.google.com/file/d/1PJYkJzoEdBYE_F-8SlhF73QTE38GGvrM/view?usp=drive_link",
-        results: { views: 387, watch: "13.0s", likes: 25 },
+        results: [["387", "Views"], ["13.0s", "Avg watch"], ["25", "Likes"]],
         hook: "When Shelley talks, practice owners listen. 🙌",
         caption: [
           "At WOCON in Monterey, Jeff Holt (Business Development, Adit Ortho) brought @alignmypractice founder Shelley Bostrom to the stage to talk about what every practice is really competing on: the patient experience.",
@@ -62,7 +221,7 @@ const WEEKS = [
         title: "Josh's Dental Tech Tier List", bucket: "Thought Leadership / Product", video: true,
         ig: "https://www.instagram.com/reel/DezKXQAiP4a/",
         drive: "https://drive.google.com/file/d/1tvKl-TIDmwJPYrYdQsglzvzXJevyBwXL/view?usp=drive_link",
-        results: { views: 298, watch: "6.4s", likes: 4 },
+        results: [["298", "Views"], ["6.4s", "Avg watch"], ["4", "Likes"]],
         hook: "Josh ranked dental technology from S tier to C tier 👀🦷",
         caption: [
           "🏆 S tier: two-way texting (98% of patients read a text within 60 seconds) and practice analytics.",
@@ -78,7 +237,7 @@ const WEEKS = [
         title: "Final Stretch: Tag Points Doubled", bucket: "Challenge / Growth", video: true,
         ig: "https://www.instagram.com/reel/De141e3gJBR/",
         drive: "https://drive.google.com/file/d/1lqhZODpnk1hJj5qWVesxBUq0wI-20jRF/view?usp=drive_link",
-        results: { views: 194, watch: "4.9s", likes: 8 },
+        results: [["194", "Views"], ["4.9s", "Avg watch"], ["8", "Likes"]],
         hook: "🏁 Final stretch of the Adit Review Challenge 🔥 Tag points just doubled 🚨",
         caption: [
           "Already tagged 5 colleagues? Tag 5 more doctors or office managers and earn 5 more points, up to 10 tag points per practice. Team members count too.",
@@ -90,7 +249,7 @@ const WEEKS = [
         ask: "Tag 5 more colleagues, comment CHALLENGE" }
     ],
     learnings: [
-      { k: "387", v: "views on Shelley at WOCON, our best post of the week. Real faces from real events win." },
+      { k: "387", v: "views on Shelley at WOCON, the best post of the week. Real faces from real events win." },
       { k: "13.0s", v: "average watch on Shelley, more than double every Josh talking head that week." },
       { k: "4.9s", v: "average watch on Friday's challenge announcement. The audience has heard \"comment CHALLENGE\" from Josh enough." },
       { k: "105s", v: "was too long for the tech tier list: 6% retention. Our record tier list (Sep 18, 1,843 views) ran 52s." }
@@ -98,7 +257,7 @@ const WEEKS = [
     close: { kind: "thanks" }
   },
   {
-    id: "week-2", n: 2, range: "Oct 26 to Nov 1", state: "Planned",
+    id: "oct-26", n: 5, tab: "Oct 26", range: "Oct 26 to Nov 1", state: "Planned",
     theme: "Challenge Final Week + New Faces",
     cover: { big: "OCT 26", to: "TO NOV 1", year: "2026" },
     summary: "7 posts, one every day. The challenge gets the bookends, and the middle of the week goes to new faces, optometry and live proof.",
