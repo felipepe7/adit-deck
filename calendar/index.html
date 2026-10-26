@@ -495,16 +495,41 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
 .slt tr.locked .gname{color:var(--muted)}
 .lockmsg{display:flex;align-items:center;gap:10px;color:var(--warn);font:600 13.5px/1.45 var(--body)}
 .lockmsg svg{width:16px;height:16px;flex:none}
-.glist{margin-top:14px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
-.gi{display:flex;flex-direction:column;gap:9px;padding:13px 15px;border-radius:14px;border:1px solid rgba(245,245,245,.1);border-left:3px solid var(--vc);background:rgba(26,26,26,.45)}
-.gi.off{opacity:.5}
-.gi a,.gi .gn{font:600 14px/1.35 var(--body);text-decoration:none}
-.gi a:hover{text-decoration:underline}
-.gi .bd{display:flex;gap:6px;flex-wrap:wrap}
-.bdg{display:inline-flex;align-items:center;height:22px;padding:0 9px;border-radius:999px;font:600 10px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(245,245,245,.18);color:var(--muted);white-space:nowrap}
-.bdg.y{color:var(--white);border-color:rgba(95,191,138,.6)}
-.bdg.n{color:var(--faint);border-style:dashed}
-.bdg.sp{background:var(--vc);border-color:var(--vc);color:#0A0A0A}
+.rooms{--vr:110,152,204;margin-top:16px;padding:22px 24px 24px;border-radius:20px;border:1px solid rgba(var(--vr),.3);background:radial-gradient(130% 150% at 0% 0%,rgba(var(--vr),.17),transparent 58%),rgba(22,22,22,.72)}
+.glsec .rooms{margin-top:18px}
+.rooms-h{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
+.rt{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0}
+.rt i{width:10px;height:10px;border-radius:50%;background:var(--vc);box-shadow:0 0 0 4px rgba(var(--vr),.2);flex:none}
+.rt b{font:800 17px/1.1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.rt span{font:500 13.5px/1.4 var(--body);color:var(--muted)}
+.rkey{display:flex;gap:8px;flex-wrap:wrap}
+.rkey .k{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 11px;border-radius:999px;font:600 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;border:1px solid rgba(var(--vr),.45);background:rgba(var(--vr),.1);color:var(--white)}
+.rkey .k svg{width:12px;height:12px;flex:none;color:var(--vc)}
+.rkey .k em{font-style:normal;font-weight:800;margin-left:2px}
+.rkey .k.sp{background:var(--vc);border-color:var(--vc);color:#0A0A0A}
+.rkey .k.sp svg{color:#0A0A0A}
+.rkey .k.off{border-style:dashed;border-color:rgba(245,245,245,.28);background:transparent;color:var(--muted)}
+.rkey .k.off svg{color:var(--faint)}
+.rwall{margin-top:18px;display:flex;flex-wrap:wrap;gap:9px}
+.room{display:inline-flex;align-items:center;gap:8px;min-height:36px;max-width:100%;box-sizing:border-box;padding:7px 14px 7px 12px;border-radius:20px;border:1px solid rgba(var(--vr),.42);background:rgba(var(--vr),.08);color:var(--white);font:600 13.5px/1.3 var(--body);text-decoration:none;transition:transform .2s,background .2s,border-color .2s,box-shadow .2s,filter .2s;animation:rin .55s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0) * 26ms)}
+.room svg{width:14px;height:14px;flex:none}
+.room>svg:first-child{color:var(--vc)}
+.room .ar{width:12px;height:12px;opacity:.4;transition:opacity .2s,transform .2s}
+.room .lk{width:13px;height:13px;color:var(--muted)}
+a.room:hover{transform:translateY(-2px);border-color:var(--vc);background:rgba(var(--vr),.2);box-shadow:0 12px 26px -16px rgba(var(--vr),.95)}
+a.room:hover .ar{opacity:1;transform:translate(1px,-1px)}
+a.room:focus-visible{outline:2px solid var(--vc);outline-offset:3px}
+.room.sp{background:var(--vc);border-color:var(--vc);color:#0A0A0A;font-weight:700;box-shadow:0 10px 26px -16px rgba(var(--vr),1)}
+.room.sp>svg:first-child{color:#0A0A0A}
+a.room.sp:hover{background:var(--vc);filter:brightness(1.08)}
+.room.off{border-style:dashed;border-color:rgba(245,245,245,.24);background:transparent;color:var(--muted)}
+.room.off>svg:first-child{color:var(--faint)}
+a.room.off:hover{border-color:rgba(245,245,245,.5);background:rgba(245,245,245,.05);box-shadow:none}
+.room.sp.off{border:1.5px dashed var(--vc);background:rgba(var(--vr),.07);color:var(--white);box-shadow:none}
+.room.sp.off>svg:first-child{color:var(--vc)}
+.rmore{all:unset;box-sizing:border-box;cursor:pointer;display:none;align-items:center;margin-top:12px;height:36px;padding:0 16px;border-radius:999px;border:1px solid rgba(245,245,245,.3);font:700 11px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--white)}
+.rmore:focus-visible{outline:2px solid var(--vc);outline-offset:2px}
+@keyframes rin{from{opacity:0;transform:translateY(10px) scale(.96)}}
 .gasks{margin-top:16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 .gasks .item{display:grid;grid-template-columns:160px 1fr;gap:18px;border:1px solid rgba(245,245,245,.12);border-radius:16px;padding:20px 22px;background:rgba(26,26,26,.5)}
 .gasks b{font:800 13px/1.35 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-lit)}
@@ -587,7 +612,14 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
   .slt tr{margin-bottom:12px;border-radius:14px;overflow:hidden;border-left:3px solid var(--vc);background:rgba(245,245,245,.035)}
   .slt td{background:transparent!important;border-radius:0!important;border-left:0!important;padding:10px 14px}
   .slt td[data-l]::before{content:attr(data-l);display:block;margin-bottom:7px;font:600 10px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
-  .glist{grid-template-columns:minmax(0,1fr)}
+  .rooms{padding:16px 16px 18px;border-radius:16px}
+  .rt b{font-size:14px}
+  .rt span{flex-basis:100%;font-size:12.5px}
+  .rkey .k{height:26px;padding:0 10px;font-size:9.5px}
+  .rwall{margin-top:14px;gap:8px}
+  .room{min-height:34px;font-size:13px;padding:7px 12px 7px 10px}
+  .rooms:not(.open) .room.x{display:none}
+  .rmore{display:inline-flex}
   .gasks{grid-template-columns:minmax(0,1fr)}
   .gasks .item{grid-template-columns:minmax(0,1fr);gap:8px;padding:16px 18px}
   .dpanel{grid-template-columns:minmax(0,1fr);grid-auto-rows:min-content;overflow-y:auto;width:100%}
@@ -604,12 +636,14 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
   .ghead .modes{display:none}
   .gbody{grid-template-columns:minmax(0,1fr);gap:0;padding-top:22px}
   .rail,.drawer,.mcard .mm>video{display:none}
-  .gtile,.mcard,.slt tr,.gi,.gasks .item,.vblock,.gfoot{break-inside:avoid}
+  .gtile,.mcard,.slt tr,.rooms,.gasks .item,.vblock,.gfoot{break-inside:avoid}
+  .room{animation:none!important}
+  .rmore{display:none!important}
   .gsec.pbreak{break-before:page}
   .ghow{display:grid}
   .gsec.menu,.vblock + .vblock{break-before:page}
 }
-@media (prefers-reduced-motion:reduce){.slide,.slide.on,.fan .phone{transition:none}.lightbar::after{animation:none!important}}
+@media (prefers-reduced-motion:reduce){.slide,.slide.on,.fan .phone{transition:none}.lightbar::after{animation:none!important}.room{animation:none}}
 </style>
 </head>
 <body>
@@ -644,6 +678,8 @@ const MONS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov",
 const LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>';
 const CAM = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3z"/></svg>';
 const XI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.6l2.85 5.78 6.38.93-4.62 4.5 1.09 6.35L12 17.17l-5.7 2.99 1.09-6.35-4.62-4.5 6.38-.93z"/></svg>';
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.3 4.3L19 7.2"/></svg>';
 const pl = (n, w) => `${fmtN(n)} ${w}${n === 1 ? "" : "s"}`;
 const fmtN = n => (n === undefined || n === null) ? "·" : n >= 10000 ? (n / 1000).toFixed(1).replace(/\.0$/, "") + "K" : Number(n).toLocaleString("en-US");
 function niceDate(d){ const p = String(d.date).split("/").map(Number); return MONS[p[0]-1] + " " + p[1]; }
@@ -1023,10 +1059,26 @@ function slotTable(m, vids){
   return `<table class="slt"><thead><tr><th>Sponsored group</th><th>Who posts</th><th>${m.weeks.w1.label} · ${m.weeks.w1.range}</th><th>${m.weeks.w3.label} · ${m.weeks.w3.range}</th></tr></thead>
     <tbody>${vids.flatMap(vid => vgroups(vid).sponsored.map(g => slotRow(m, g, vid))).join("")}</tbody></table>`;
 }
-function groupItems(vid){
-  const rank = g => (g.sponsored ? 2 : 0) + (g.access ? 1 : 0);
-  return vgroups(vid).all.slice().sort((a, b) => rank(b) - rank(a)).map(g => `<div class="gi${g.access ? "" : " off"}">${g.url ? `<a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.name)}</a>` : `<span class="gn">${esc(g.name)}</span>`}
-    <div class="bd">${g.sponsored ? `<span class="bdg sp">Sponsored</span>` : ""}${g.partner ? `<span class="bdg y">Official partner</span>` : ""}<span class="bdg ${g.access ? "y" : "n"}">${g.access ? "We're in" : "No access"}</span>${g.devi === true ? `<span class="bdg y">Devi in</span>` : ""}</div></div>`).join("");
+const rgbOf = hex => { const h = String(hex || "").replace("#", ""); return /^[0-9a-f]{6}$/i.test(h) ? [0, 2, 4].map(i => parseInt(h.slice(i, i + 2), 16)).join(",") : "110,152,204"; };
+/* every group in a vertical as a wall of name tags: sponsored filled, groups we're in outlined, no access dashed */
+function roomsWall(vid, o = {}){
+  const v = vinfo(vid), L = vgroups(vid).all; if (!L.length) return "";
+  const CUT = 8, rank = g => (g.sponsored ? 2 : 0) + (g.access ? 1 : 0);
+  const list = L.slice().sort((a, b) => rank(b) - rank(a));
+  const n = { sp: L.filter(g => g.sponsored).length, in: L.filter(g => !g.sponsored && g.access).length, off: L.filter(g => !g.sponsored && !g.access).length };
+  const icon = (svg, cls) => svg.replace("<svg", `<svg${cls ? ` class="${cls}"` : ""} aria-hidden="true"`);
+  const pill = (g, i) => {
+    const cls = `room${g.sponsored ? " sp" : ""}${g.access ? "" : " off"}${i >= CUT ? " x" : ""}`;
+    const tip = [g.sponsored ? "Sponsored" : "", g.access ? "We're in" : "No access yet", g.devi === true ? "Devi in" : ""].filter(Boolean).join(" · ");
+    const body = `${g.sponsored ? STAR : g.access ? CHECK : icon(LOCK)}<span>${esc(g.name)}</span>${g.sponsored && !g.access ? icon(LOCK, "lk") : ""}`;
+    return g.url ? `<a class="${cls}" style="--i:${i}" href="${esc(g.url)}" target="_blank" rel="noopener" title="${esc(tip)} · open on Facebook">${body}${icon(ARROW, "ar")}</a>`
+      : `<span class="${cls}" style="--i:${i}" title="${esc(tip)}">${body}</span>`;
+  };
+  const key = [["sp", STAR, "Sponsored", n.sp], ["in", CHECK, "We're in", n.in], ["off", icon(LOCK), "No access yet", n.off]]
+    .filter(k => k[3]).map(k => `<span class="k ${k[0]}">${k[1]}${k[2]} <em>${k[3]}</em></span>`).join("");
+  return `<div class="rooms" style="--vc:${v.color};--vr:${rgbOf(v.color)}">
+    <div class="rooms-h"><div class="rt"><i></i><b>${L.length} ${esc(v.label.toLowerCase())} groups</b>${o.sub ? `<span>${esc(o.sub)}</span>` : ""}</div><div class="rkey">${key}</div></div>
+    <div class="rwall">${list.map(pill).join("")}</div>${list.length > CUT ? `<button class="rmore" type="button" aria-expanded="false" data-n="${list.length - CUT}">+${list.length - CUT} more</button>` : ""}</div>`;
 }
 function stamp(iso){ try { return new Date(iso).toLocaleString("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit", timeZone: "America/Los_Angeles" }) + " PT"; } catch(e){ return ""; } }
 function buildGroups(){
@@ -1052,7 +1104,7 @@ function buildGroups(){
   const menuBlock = all
     ? VS.map(v => { const items = m.menu.filter(x => x.v === v.id); return items.length ? `<div class="vblock" style="--vc:${v.color}"><div class="vtitle"><i></i>${v.label}<span>${items.length} posts</span></div><div class="mgrid">${items.map(mcard).join("")}</div></div>` : ""; }).join("")
     : `<div class="mgrid">${m.menu.filter(x => x.v === vid).map(mcard).join("")}</div>`;
-  const lists = vids.map(v => `<div style="--vc:${vinfo(v).color}">${all ? `<div class="vtitle"><i></i>${vinfo(v).label}<span>${vgroups(v).all.length} groups</span></div>` : ""}<div class="glist">${groupItems(v)}</div></div>`).join("");
+  const lists = all ? vids.map(v => roomsWall(v)).join("") : "";
   const asks = (m.asks || []).map(a => `<div class="item"><b>${esc(a.k)}</b><p>${esc(a.v)}${a.k === "Log every post" && H.postLog ? ` <a href="${H.postLog}" target="_blank" rel="noopener">Open the Group Post Log</a>` : ""}</p></div>`).join("");
   app.innerHTML = `<div class="gv">
   <header class="ghead"><div class="gwrap"><a class="gmark" href="#${WEEKS[WEEKS.length - 1].id}" aria-label="PuroFlow Media, back to the organic calendar">${LOGO}</a>${modesNav()}
@@ -1062,10 +1114,10 @@ function buildGroups(){
       <div class="rail-note"><b>How a month runs</b><p>Week 1: Post 1 goes into every sponsored group we can post in.</p><p>Week 3: whatever won week 1 reruns in the rooms that haven't seen it.</p><p>Every day: soldiers comment, answer questions and log what they see. They don't pitch.</p></div>
       ${H.postLog ? `<a class="btn ghost" href="${H.postLog}" target="_blank" rel="noopener">Group Post Log ${ARROW}</a>` : ""}${H.mastersheet ? `<a class="btn ghost" href="${H.mastersheet}" target="_blank" rel="noopener">Groups Mastersheet ${ARROW}</a>` : ""}</aside>
     <main class="gmain">
-      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div><div class="ghow"><div><b>${m.weeks.w1.label} · ${m.weeks.w1.range}</b><p>Post 1 goes into every sponsored group we can post in.</p></div><div><b>${m.weeks.w3.label} · ${m.weeks.w3.range}</b><p>Whatever won week 1 reruns in the rooms that haven't seen it. Pick it by ${esc(m.decideBy)}.</p></div><div><b>Every day</b><p>Soldiers comment, answer questions and log each post in the Group Post Log. They don't pitch.</p></div></div></section>
+      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div>${all ? "" : roomsWall(vid, { sub: "on our list · open any of them on Facebook" })}<div class="ghow"><div><b>${m.weeks.w1.label} · ${m.weeks.w1.range}</b><p>Post 1 goes into every sponsored group we can post in.</p></div><div><b>${m.weeks.w3.label} · ${m.weeks.w3.range}</b><p>Whatever won week 1 reruns in the rooms that haven't seen it. Pick it by ${esc(m.decideBy)}.</p></div><div><b>Every day</b><p>Soldiers comment, answer questions and log each post in the Group Post Log. They don't pitch.</p></div></div></section>
       <section class="gsec menu"><h2 class="h2">The menu</h2><p class="lead">Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.</p>${menuBlock}</section>
       <section class="gsec pbreak"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>
-      <section class="gsec pbreak glsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>
+      ${lists ? `<section class="gsec pbreak glsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>` : ""}
       ${asks ? `<section class="gsec"><h2 class="h2">What we need from the Adit team</h2><div class="gasks">${asks}</div></section>` : ""}
       <footer class="gfoot"><div>Groups synced from the FB Groups Mastersheet${GL && GL.updated ? ` on ${stamp(GL.updated)}` : ""}. Results come from the Group Post Log.</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></footer>
     </main>
@@ -1075,6 +1127,7 @@ function buildGroups(){
   addEventListener("resize", setH); cleanup.push(() => removeEventListener("resize", setH));
   gv.querySelectorAll(".vbtn").forEach(b => b.addEventListener("click", () => { const v = b.dataset.v; location.hash = `groups-${m.id}${v === "all" ? "" : "-" + v}`; }));
   gv.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openDrawer(b.dataset.open)));
+  gv.querySelectorAll(".rmore").forEach(b => b.addEventListener("click", () => { const open = b.closest(".rooms").classList.toggle("open"); b.textContent = open ? "Show less" : `+${b.dataset.n} more`; b.setAttribute("aria-expanded", open); }));
   gv.querySelectorAll(".mcard").forEach(c => { const v = c.querySelector(".mm>video"); if (!v) return;
     const on = () => { if (!v.getAttribute("src")) v.src = v.dataset.src; v.currentTime = 0; v.play().catch(()=>{}); }, off = () => v.pause();
     c.addEventListener("mouseenter", on); c.addEventListener("mouseleave", off); });
