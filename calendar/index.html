@@ -433,6 +433,10 @@ a.plat:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
 .gtile small{display:block;margin-top:6px;font:500 12.5px/1.4 var(--body);color:var(--faint)}
 .gtile.warn{border-color:rgba(227,164,75,.5);background:linear-gradient(180deg,rgba(227,164,75,.1),rgba(26,26,26,.4))}
 .gtile.warn b{color:var(--warn)}
+.ghow{display:none;margin-top:16px;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ghow>div{border:1px solid rgba(245,245,245,.12);border-radius:16px;padding:18px 20px;background:rgba(26,26,26,.5)}
+.ghow b{display:block;font:700 12px/1.35 var(--display);letter-spacing:.18em;text-transform:uppercase;color:var(--blue-lit)}
+.ghow p{margin:8px 0 0;font:500 14.5px/1.5 var(--body);color:#D9DBDF}
 .gsec{margin-top:56px}
 .gsec .h2{font-size:28px}
 .gsec .lead{margin:10px 0 0;max-width:920px;font:500 16px/1.55 var(--body);color:var(--muted)}
@@ -548,6 +552,7 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
 .dacts .btn{height:48px;padding:0 22px;font-size:12px}
 .dbody .notebox{padding:12px 16px;font:500 14px/1.5 var(--body)}
 @media (max-width:999px){
+  .ghead{position:static}
   .ghead .gwrap{gap:12px;padding-top:10px;padding-bottom:10px}
   .ghead .gmark{width:120px}
   .mtabs{margin-left:0;width:100%}
@@ -555,7 +560,7 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
   .mtabs .wtab b{font-size:12px}
   .mtabs .wtab span{font-size:10px}
   .gbody{grid-template-columns:minmax(0,1fr);gap:0;padding-top:0}
-  .rail{position:sticky;top:var(--ghh,112px);z-index:15;flex-direction:row;overflow-x:auto;gap:8px;margin:0 calc(-1 * max(18px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(18px,env(safe-area-inset-left,0px)));padding:10px max(18px,env(safe-area-inset-left,0px));background:rgba(10,10,10,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);scrollbar-width:none}
+  .rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:15;flex-direction:row;overflow-x:auto;gap:8px;margin:0 calc(-1 * max(18px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(18px,env(safe-area-inset-left,0px)));padding:10px max(18px,env(safe-area-inset-left,0px));background:rgba(10,10,10,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);scrollbar-width:none}
   .rail::-webkit-scrollbar{display:none}
   .rail-h,.rail-note,.rail .btn{display:none}
   .vbtn{flex:0 0 auto;padding:9px 13px;row-gap:5px}
@@ -566,6 +571,8 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
   .ghero h1 i{width:13px;height:13px}
   .ghero p{font-size:15.5px}
   .gtiles{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .ghow{display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+  .ghow>div{padding:14px 16px}
   .gtile{padding:16px}
   .gtile b{font-size:30px}
   .gtile span{font-size:10.5px}
@@ -591,10 +598,16 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
   .capbox{font-size:15px;padding:16px}
 }
 @media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html,body{background:#0A0A0A}
   .ghead{position:static}
-  .rail{position:static}
-  .drawer{display:none}
-  .mcard .mm>video{display:none}
+  .ghead .modes{display:none}
+  .gbody{grid-template-columns:minmax(0,1fr);gap:0;padding-top:22px}
+  .rail,.drawer,.mcard .mm>video{display:none}
+  .gtile,.mcard,.slt tr,.gi,.gasks .item,.vblock,.gfoot{break-inside:avoid}
+  .gsec.pbreak{break-before:page}
+  .ghow{display:grid}
+  .gsec.menu,.vblock + .vblock{break-before:page}
 }
 @media (prefers-reduced-motion:reduce){.slide,.slide.on,.fan .phone{transition:none}.lightbar::after{animation:none!important}}
 </style>
@@ -1037,7 +1050,7 @@ function buildGroups(){
     + tile(S1.menu, "Posts on the menu", `${S1.ready} ready now · ${S1.posted} posted so far`); }
   const intro = !all && !S1.open ? `Every post below is ready. We just need a room to put them in: no one on our side can post in any of the ${S1.all} ${vi.label.toLowerCase()} groups yet.` : m.summary;
   const menuBlock = all
-    ? VS.map(v => { const items = m.menu.filter(x => x.v === v.id); return items.length ? `<div style="--vc:${v.color}"><div class="vtitle"><i></i>${v.label}<span>${items.length} posts</span></div><div class="mgrid">${items.map(mcard).join("")}</div></div>` : ""; }).join("")
+    ? VS.map(v => { const items = m.menu.filter(x => x.v === v.id); return items.length ? `<div class="vblock" style="--vc:${v.color}"><div class="vtitle"><i></i>${v.label}<span>${items.length} posts</span></div><div class="mgrid">${items.map(mcard).join("")}</div></div>` : ""; }).join("")
     : `<div class="mgrid">${m.menu.filter(x => x.v === vid).map(mcard).join("")}</div>`;
   const lists = vids.map(v => `<div style="--vc:${vinfo(v).color}">${all ? `<div class="vtitle"><i></i>${vinfo(v).label}<span>${vgroups(v).all.length} groups</span></div>` : ""}<div class="glist">${groupItems(v)}</div></div>`).join("");
   const asks = (m.asks || []).map(a => `<div class="item"><b>${esc(a.k)}</b><p>${esc(a.v)}${a.k === "Log every post" && H.postLog ? ` <a href="${H.postLog}" target="_blank" rel="noopener">Open the Group Post Log</a>` : ""}</p></div>`).join("");
@@ -1049,10 +1062,10 @@ function buildGroups(){
       <div class="rail-note"><b>How a month runs</b><p>Week 1: Post 1 goes into every sponsored group we can post in.</p><p>Week 3: whatever won week 1 reruns in the rooms that haven't seen it.</p><p>Every day: soldiers comment, answer questions and log what they see. They don't pitch.</p></div>
       ${H.postLog ? `<a class="btn ghost" href="${H.postLog}" target="_blank" rel="noopener">Group Post Log ${ARROW}</a>` : ""}${H.mastersheet ? `<a class="btn ghost" href="${H.mastersheet}" target="_blank" rel="noopener">Groups Mastersheet ${ARROW}</a>` : ""}</aside>
     <main class="gmain">
-      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div></section>
-      <section class="gsec"><h2 class="h2">The menu</h2><p class="lead">Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.</p>${menuBlock}</section>
-      <section class="gsec"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>
-      <section class="gsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>
+      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div><div class="ghow"><div><b>${m.weeks.w1.label} · ${m.weeks.w1.range}</b><p>Post 1 goes into every sponsored group we can post in.</p></div><div><b>${m.weeks.w3.label} · ${m.weeks.w3.range}</b><p>Whatever won week 1 reruns in the rooms that haven't seen it. Pick it by ${esc(m.decideBy)}.</p></div><div><b>Every day</b><p>Soldiers comment, answer questions and log each post in the Group Post Log. They don't pitch.</p></div></div></section>
+      <section class="gsec menu"><h2 class="h2">The menu</h2><p class="lead">Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.</p>${menuBlock}</section>
+      <section class="gsec pbreak"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>
+      <section class="gsec pbreak glsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>
       ${asks ? `<section class="gsec"><h2 class="h2">What we need from the Adit team</h2><div class="gasks">${asks}</div></section>` : ""}
       <footer class="gfoot"><div>Groups synced from the FB Groups Mastersheet${GL && GL.updated ? ` on ${stamp(GL.updated)}` : ""}. Results come from the Group Post Log.</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></footer>
     </main>
