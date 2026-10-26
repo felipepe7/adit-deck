@@ -59,8 +59,8 @@ button{font:inherit;color:inherit}
 .screen{position:relative;width:100%;height:100%;border-radius:10% / 5.6%;overflow:hidden;background:#000;container-type:inline-size}
 .screen video,.screen img{width:100%;height:100%;object-fit:cover;display:block}
 .car{position:absolute;inset:0;background:#000}
-.car img{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);width:100%;height:auto;opacity:0;transition:opacity .6s}
-.car img.on{opacity:1}
+.car .sl{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);width:100%;height:auto;opacity:0;transition:opacity .6s;display:block}
+.car .sl.on{opacity:1}
 .sdots{position:absolute;left:0;right:0;bottom:4.5%;display:flex;justify-content:center;gap:6px;z-index:3}
 .sdots i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.35);transition:background .3s}
 .sdots i.on{background:#fff}
@@ -374,7 +374,7 @@ function mock(kind, inCard){
 }
 function screenInner(w, d, opts){
   if (d.video) return `<video muted playsinline loop preload="${opts.preload||"metadata"}" poster="${w.media}${d.id}.jpg" src="${w.media}${d.id}.mp4"></video>`;
-  if (d.slides) return `<div class="car">${d.slides.map((s,i)=>`<img src="${w.media}${s}" class="${i?"":"on"}" alt="" loading="lazy">`).join("")}</div>${d.slides.length>1?`<div class="sdots">${d.slides.map((s,i)=>`<i class="${i?"":"on"}"></i>`).join("")}</div>`:""}`;
+  if (d.slides) return `<div class="car">${d.slides.map((s,i)=>/\.mp4$/.test(s)?`<video class="sl${i?"":" on"}" muted playsinline preload="none" poster="${w.media}${s.replace(/\.mp4$/,".jpg")}" data-src="${w.media}${s}"></video>`:`<img class="sl${i?"":" on"}" src="${w.media}${s}" alt="" loading="lazy">`).join("")}</div>${d.slides.length>1?`<div class="sdots">${d.slides.map((s,i)=>`<i class="${i?"":"on"}"></i>`).join("")}</div>`:""}`;
   if (d.cover) return `<img class="cov" src="${w.media}${d.cover}" alt="" loading="lazy">`;
   return mock(d.mock, opts.card);
 }
@@ -403,11 +403,11 @@ function weekTabs(cls){
   return WEEKS.map(w=>`<button class="wtab" type="button" role="tab" data-week="${w.id}" aria-selected="${w===week}"><b>${w.tab}</b><span>Week ${w.n} · ${w.state}</span></button>`).join("");
 }
 function syncSnd(scope){
-  const v = scope.querySelector("video"), b = scope.querySelector(".snd"); if (!v || !b) return;
+  const v = scope.querySelector("video:not(.sl)"), b = scope.querySelector(".snd"); if (!v || !b) return;
   const on = !v.muted; b.setAttribute("aria-pressed", on); b.innerHTML = (on?SPK_ON:SPK_OFF) + `<span>${on?"Sound on":"Tap for sound"}</span>`;
 }
 function wireVideo(scope, trackEl){
-  const v = scope.querySelector("video"); if (!v) return;
+  const v = scope.querySelector("video:not(.sl)"); if (!v) return;
   const toggle = ()=>{ soundOn = v.muted; v.muted = !soundOn; if (v.paused) v.play().catch(()=>{}); syncSnd(scope); };
   const b = scope.querySelector(".snd"); if (b) b.addEventListener("click", toggle);
   scope.querySelector(".phone").addEventListener("click", toggle);
@@ -415,14 +415,14 @@ function wireVideo(scope, trackEl){
   if (trackEl) v.addEventListener("timeupdate", ()=>{ if (v.duration) trackEl.style.width = (v.currentTime/v.duration*100)+"%"; });
 }
 function playScope(scope, withSound){
-  scope.querySelectorAll("video").forEach(v=>{
+  scope.querySelectorAll("video:not(.sl)").forEach(v=>{
     if (v.closest(".card")) return;
     v.muted = withSound ? !soundOn : true;
     const p = v.play(); if (p) p.catch(()=>{ v.muted = true; v.play().catch(()=>{}); syncSnd(scope); });
   });
   syncSnd(scope);
 }
-function stopScope(scope){ scope.querySelectorAll("video").forEach(v=>v.pause()); }
+function stopScope(scope){ scope.querySelectorAll("video:not(.sl)").forEach(v=>v.pause()); }
 
 /* ================= DESKTOP ================= */
 function buildDeck(){
@@ -561,14 +561,14 @@ function buildFeed(){
   const seg = app.querySelector(".seg"), selTab = seg && seg.querySelector('.wtab[aria-selected="true"]');
   if (seg && selTab) seg.scrollLeft = Math.max(0, selTab.offsetLeft - seg.offsetLeft - 18);
   const secs = [...app.querySelectorAll(".fday")];
-  secs.forEach(s=>{ if (s.querySelector("video")){ wireVideo(s, s.querySelector(".track i")); s.querySelector(".snd").addEventListener("click",()=>{ secs.forEach(o=>{ if(o!==s){ const v=o.querySelector("video"); if(v){ v.muted=true; syncSnd(o);} } }); }); } });
+  secs.forEach(s=>{ if (s.querySelector("video:not(.sl)")){ wireVideo(s, s.querySelector(".track i")); s.querySelector(".snd").addEventListener("click",()=>{ secs.forEach(o=>{ if(o!==s){ const v=o.querySelector("video:not(.sl)"); if(v){ v.muted=true; syncSnd(o);} } }); }); } });
   const links = [...app.querySelectorAll(".jump a")];
   if ("IntersectionObserver" in window){
     const vis = new Map();
     const io = new IntersectionObserver(es=>{
       es.forEach(e=>vis.set(e.target, e.intersectionRatio));
       let best=null, br=0; vis.forEach((r,el)=>{ if (r>br){ br=r; best=el; } });
-      secs.forEach(s=>{ const v = s.querySelector("video"); if (!v) return; const ph = s.querySelector(".phone");
+      secs.forEach(s=>{ const v = s.querySelector("video:not(.sl)"); if (!v) return; const ph = s.querySelector(".phone");
         if (ph===best && br>=.55){ if (v.paused){ v.muted = !soundOn; v.play().catch(()=>{ v.muted=true; v.play().catch(()=>{}); }); syncSnd(s);} } else if (!v.paused) v.pause(); });
       const cs = best && br>=.45 ? best.closest(".fday") : null;
       links.forEach(a=>a.classList.toggle("cur", !!cs && a.dataset.id===cs.dataset.id));
@@ -580,8 +580,13 @@ function buildFeed(){
 }
 
 /* carousels: auto-advance, tap to advance */
-function stepCar(car){ const im=[...car.querySelectorAll("img")]; if (im.length<2) return; const i=im.findIndex(x=>x.classList.contains("on")); const j=(i+1)%im.length; im[i].classList.remove("on"); im[j].classList.add("on"); const dots=car.parentElement.querySelectorAll(".sdots i"); dots.forEach((dd,k)=>dd.classList.toggle("on",k===j)); }
-setInterval(()=>{ document.querySelectorAll(".slide.on .car, .feed .car").forEach(stepCar); }, 3200);
+function stepCar(car, auto){ const im=[...car.querySelectorAll(".sl")]; if (im.length<2) return; const i=im.findIndex(x=>x.classList.contains("on")); const cur=im[i];
+  if (auto && cur.tagName==="VIDEO" && !cur.ended && !cur.paused) return;
+  const j=(i+1)%im.length, nx=im[j]; if (cur.tagName==="VIDEO") cur.pause();
+  cur.classList.remove("on"); nx.classList.add("on");
+  if (nx.tagName==="VIDEO"){ if (!nx.getAttribute("src")) nx.src = nx.dataset.src; nx.muted = true; try{ nx.currentTime = 0; }catch(e){} nx.play().catch(()=>{}); }
+  const dots=car.parentElement.querySelectorAll(".sdots i"); dots.forEach((dd,k)=>dd.classList.toggle("on",k===j)); }
+setInterval(()=>{ document.querySelectorAll(".slide.on .car, .feed .car").forEach(c=>stepCar(c,true)); }, 3200);
 document.addEventListener("click", e=>{ const ph = e.target.closest && e.target.closest(".phone"); if (!ph) return; const car = ph.querySelector(".car"); if (car) stepCar(car); });
 /* ================= router ================= */
 function isDesk(){ return innerWidth >= 900 && innerWidth > innerHeight * 1.05; }
