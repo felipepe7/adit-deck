@@ -39,3 +39,11 @@ Google Sheets, saved as returned (`{"values": [...]}`):
 ## Matching posts to calendar days
 
 `post-map.json` says which native post belongs to which day (`<week id>/<day id>`). Instagram matches by the `ig` link in `weeks.js` when there is one. Everything else is matched by date (the day before to four days after) and caption similarity, then written into `post-map.json`. Posts that are not part of the calendar (Adit's own event posts, testimonial uploads) go in `_ignore`. A day shows as Posted on the site as soon as it has numbers.
+
+# Card previews
+
+The glance cards (desktop deck and phone strip) and the Facebook Groups menu cards play small silent loops instead of the full videos. Each video in `calendar/media/<week>/` gets one at `calendar/media/<week>/p/<same name>.mp4`: 432px wide, no audio, a reel's first 8 seconds or a carousel's whole motion version, ending in a short dissolve so the loop never jumps.
+
+After adding or replacing any video, run `tools/previews.sh` (needs ffmpeg) and commit the new `p/` files. It only rebuilds previews that are missing or older than their video; `-f` rebuilds all. If a preview is missing the card falls back to the full file, so nothing breaks, it just loads heavier.
+
+A carousel day whose `slides` include an `.mp4` (the motion version) shows that video on its card. Image-only carousels crossfade on the card.

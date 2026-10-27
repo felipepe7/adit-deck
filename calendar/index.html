@@ -79,9 +79,9 @@ button{font:inherit;color:inherit}
 .btn.ghost{border:1px solid rgba(245,245,245,.35);color:var(--white)}
 .btn:hover{transform:translateY(-2px)}
 .lightbar{position:relative;height:2px;background:linear-gradient(90deg,transparent,rgba(110,152,204,.35) 20%,rgba(245,245,245,.55) 50%,rgba(110,152,204,.35) 80%,transparent);overflow:hidden}
-.lightbar::after{content:"";position:absolute;top:-3px;bottom:-3px;width:22%;left:-22%;background:linear-gradient(90deg,transparent,#fff 50%,transparent);filter:blur(2px)}
-.on .lightbar::after,.feed .lightbar::after{animation:sweep 2.6s cubic-bezier(.6,0,.2,1) .35s 1 both}
-@keyframes sweep{to{left:100%}}
+.lightbar::after{content:"";position:absolute;top:-3px;bottom:-3px;width:22%;left:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,#fff 50%,transparent);filter:blur(2px)}
+.on .lightbar::after,.feed .lightbar::after{animation:sweep 6.5s cubic-bezier(.6,0,.2,1) .35s infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}40%,100%{transform:translateX(454.5%)}}
 .results{display:flex;gap:2.2em}
 .results div{display:flex;flex-direction:column;gap:.35em}
 .results b{font-family:var(--display);font-weight:800;color:var(--white);font-variant-numeric:tabular-nums}
@@ -124,15 +124,19 @@ button{font:inherit;color:inherit}
 .mock .stats span{font-size:4.6cqw;font-weight:500;margin-top:1cqw}
 .mock .slides{position:absolute;left:0;right:0;bottom:3.5cqw;display:flex;justify-content:center;gap:1.6cqw}
 .mock .slides i{width:1.8cqw;height:1.8cqw;border-radius:50%;background:#C9D3DA}
-.mock .slides i:first-child{background:var(--a-blue)}
+.mock .slides i{transition:background .4s}
 .mock.dark .slides i{background:rgba(255,255,255,.3)}
+.mock .slides i.on{background:var(--a-blue)}
+.mock.dark .slides i.on{background:#fff}
 .mock .prod{position:absolute;top:9cqw;right:5cqw;font-size:3cqw;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:1.4cqw 2.6cqw;border-radius:99px;background:rgba(9,42,61,.08);color:var(--a-navy)}
 .mock.dark .prod{background:rgba(255,255,255,.14);color:#fff}
 
 /* ================= DESKTOP DECK ================= */
 .deck{position:fixed;inset:0;background:var(--black);overflow:hidden}
 .stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center;overflow:hidden;background:var(--black)}
-.grid{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;opacity:.35;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%)}
+.grid::before{content:"";position:absolute;left:-96px;top:-96px;right:0;bottom:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;animation:gdrift 36s linear infinite}
+@keyframes gdrift{to{transform:translate(96px,96px)}}
+.grid{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.35;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%)}
 .slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateX(40px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1),visibility 0s linear .5s}
 .slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
 .slide.before{transform:translateX(-40px)}
@@ -185,9 +189,7 @@ button{font:inherit;color:inherit}
 .card{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:12px;min-width:0}
 .card .thumb{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--charcoal);box-shadow:0 0 0 1px rgba(245,245,245,.12) inset;container-type:inline-size}
 .card .thumb>img,.card .thumb>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.card .thumb>img.fit{object-fit:contain;background:#000}
-.card .thumb>video{opacity:0;transition:opacity .3s}
-.card:hover .thumb>video,.card:focus-visible .thumb>video{opacity:1}
+.card .thumb>.fit{object-fit:contain}
 .card .thumb::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:0 0 0 2px var(--blue-lit) inset;opacity:0;transition:opacity .25s;z-index:4}
 .card:hover .thumb::after,.card:focus-visible .thumb::after{opacity:1}
 .card .mock{padding:14cqw 7cqw 9cqw}
@@ -451,8 +453,6 @@ a.plat:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
 .mcard:hover .mm::after,.mcard:focus-visible .mm::after{opacity:1}
 .mcard:focus-visible{outline:none}
 .mcard .mm>img,.mcard .mm>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.mcard .mm>video{opacity:0;transition:opacity .3s}
-.mcard:hover .mm>video{opacity:1}
 .mcard .mm .mock{padding:14cqw 7cqw 9cqw}
 .mcard .mid{display:flex;align-items:center;gap:8px;margin-top:4px;font:700 13px/1 var(--display);letter-spacing:.18em;color:var(--vc)}
 .mcard .mid span{color:var(--faint);font:600 10.5px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
@@ -629,6 +629,87 @@ a.room.off:hover{border-color:rgba(245,245,245,.5);background:rgba(245,245,245,.
   .dbody h2{font-size:23px}
   .capbox{font-size:15px;padding:16px}
 }
+/* ================= BREATHING: everything moves, nothing plays offscreen ================= */
+/* card media: the poster sits underneath and the preview loop fades in once it is really playing */
+.pv{opacity:0;transition:opacity .5s ease}
+.pv.live{opacity:1}
+.card .thumb>.bk,.mcard .mm>.bk,.tcar .bk{position:absolute;left:-12%;top:-12%;right:auto;bottom:auto;width:124%;height:124%;object-fit:cover;filter:blur(14px) brightness(.5) saturate(1.2)}
+.tcar{position:absolute;inset:0;overflow:hidden}
+.tcar .tsl{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.tcar .tsl.on{opacity:1}
+.tcar .tsl>.fg{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;animation:kb 8s ease-in-out infinite alternate}
+.tcar .tsl:nth-child(even)>.fg{animation-direction:alternate-reverse}
+.kb{animation:kb 9s ease-in-out infinite alternate}
+@keyframes kb{from{scale:1}to{scale:1.08}}
+.card .thumb,.mcard .mm{transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.card:hover .thumb,.card:focus-visible .thumb,.mcard:hover .mm,.mcard:focus-visible .mm{transform:translateY(-5px)}
+/* today */
+.now{position:absolute;left:9px;top:9px;z-index:5;display:inline-flex;align-items:center;gap:6px;padding:5px 9px 5px 8px;border-radius:999px;background:rgba(10,10,10,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(245,245,245,.24);font:700 10px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:#fff}
+.now i{position:relative;width:7px;height:7px;border-radius:50%;background:var(--blue-lit)}
+.now i::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:ping 1.8s cubic-bezier(0,0,.2,1) infinite}
+.card.today .thumb::after{opacity:1;animation:halo 2.8s ease-in-out infinite}
+@keyframes halo{50%{opacity:.35}}
+.strip .now{left:6px;top:6px;padding:4px 7px 4px 6px;gap:5px;font-size:8px}
+.strip .now i{width:6px;height:6px}
+/* live dots: anything still in motion pulses */
+.status i{position:relative}
+.status:not([data-s="Posted"]) i::after,.rt i::after,.ghero h1 i::after,.vbtn[aria-pressed="true"] i::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:ping 2.4s cubic-bezier(0,0,.2,1) infinite}
+.rt i,.ghero h1 i,.vbtn i{position:relative}
+@keyframes ping{0%{transform:scale(1);opacity:.7}75%,100%{transform:scale(2.7);opacity:0}}
+/* ambient light */
+.cover .glow,.close .glow,.fhero::before,.fclose::before{animation:breathe 8s ease-in-out infinite alternate}
+@keyframes breathe{from{opacity:.7;transform:scale(1)}to{opacity:1;transform:scale(1.07)}}
+.slide.on .fan .phone{animation:bob 6.5s ease-in-out infinite alternate;animation-delay:calc(var(--k,0) * -1.3s)}
+@keyframes bob{from{translate:0 6px}to{translate:0 -9px}}
+/* slides breathe in: content rises in order every time a slide comes up */
+@keyframes rise{from{opacity:0;transform:translateY(22px)}}
+@keyframes phin{from{opacity:0;transform:translateY(26px) scale(.97)}}
+.slide.on .card{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(var(--k,0) * 70ms + 140ms)}
+.slide.on.glance .head,.slide.on .wrapc>.h2,.slide.on .wrapc>.lead,.slide.on .wrapc>.upd,.slide.on .wrapc>.next{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.slide.on .wrapc>.lead{animation-delay:.08s}
+.slide.on.cover .left>*,.slide.on.day .col>*,.slide.on .tiles>.tile,.slide.on .list>.item,.slide.on .sb tbody tr,.slide.on .sb tfoot tr,.slide.on.close .inner>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(1){animation-delay:.1s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(2){animation-delay:.17s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(3){animation-delay:.24s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(4){animation-delay:.31s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(5){animation-delay:.38s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(6){animation-delay:.45s}
+.slide.on :is(.left,.col,.tiles,.list,tbody,.inner)>:nth-child(n+7){animation-delay:.52s}
+.slide.on .sb tfoot tr{animation-delay:.6s}
+.slide.on.day .ph{animation:phin .85s cubic-bezier(.2,.7,.2,1) both}
+.on .share,.feed .share.in{animation:fill 1.4s cubic-bezier(.2,.7,.2,1) .35s both}
+@keyframes fill{from{clip-path:inset(0 100% 0 0)}}
+/* the feed and the groups page rise in as you scroll */
+.rvon .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.rvon .rv.in{opacity:1;transform:none}
+/* Adit mocks come alive: CTA breathes, bars refill, a light sheen passes, the clock ticks (script) */
+.mock .cta{animation:cta 2.8s ease-in-out infinite}
+@keyframes cta{0%,100%{scale:1}50%{scale:1.05}}
+.mock .row .bar i{transform-origin:left center;animation:bar 7s cubic-bezier(.2,.7,.2,1) infinite}
+@keyframes bar{0%{transform:scaleX(0)}24%,86%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+.mock::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.13) 50%,transparent 60%);transform:translateX(-110%);animation:sheen 7s ease-in-out 1.5s infinite}
+.mock.light::after{background:linear-gradient(105deg,transparent 40%,rgba(37,168,224,.13) 50%,transparent 60%)}
+@keyframes sheen{0%{transform:translateX(-110%)}32%,100%{transform:translateX(110%)}}
+.mock .prod::before{content:"";display:inline-block;width:1.3cqw;height:1.3cqw;margin-right:1.3cqw;border-radius:50%;background:var(--a-orange);vertical-align:.12em;animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.mock .clock b,.mock .stats b,.gtile b,.tile b,.sharekey b,.vw b{font-variant-numeric:tabular-nums}
+/* groups: testimonial thumbs drift, play rings ripple, stars twinkle, coming-soon stripes run */
+.ytm .fg{animation:kb 10s ease-in-out infinite alternate}
+.ytm .bg{animation:kb 13s ease-in-out infinite alternate-reverse}
+.playg::before{content:"";position:absolute;inset:-1px;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);animation:ring 2.6s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(1.8);opacity:0}}
+.comingm{background:var(--charcoal);overflow:hidden}
+.comingm::before{content:"";position:absolute;top:0;bottom:0;left:-40cqw;right:-40cqw;background:repeating-linear-gradient(135deg,rgba(245,245,245,.05) 0 6cqw,transparent 6cqw 12cqw);animation:stripes 3.5s linear infinite}
+@keyframes stripes{to{transform:translateX(16.97cqw)}}
+.comingm>*{position:relative}
+.comingm svg{animation:cta 3.2s ease-in-out infinite}
+.room.sp>svg:first-child,.rkey .k.sp svg{animation:twinkle 3.4s ease-in-out infinite;animation-delay:calc(var(--i,0) * -.41s)}
+@keyframes twinkle{0%,100%{scale:1;rotate:0deg}50%{scale:1.22;rotate:18deg}}
+@media print{
+  *,*::before,*::after{animation:none!important}
+  .rv{opacity:1!important;transform:none!important;transition:none!important}
+  .pv,.now{display:none!important}
+}
 @media print{
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
   html,body{background:#0A0A0A}
@@ -643,7 +724,7 @@ a.room.off:hover{border-color:rgba(245,245,245,.5);background:rgba(245,245,245,.
   .ghow{display:grid}
   .gsec.menu,.vblock + .vblock{break-before:page}
 }
-@media (prefers-reduced-motion:reduce){.slide,.slide.on,.fan .phone{transition:none}.lightbar::after{animation:none!important}.room{animation:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}.slide,.slide.on,.fan .phone,.card .thumb,.mcard .mm{transition:none}.rvon .rv{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
@@ -766,7 +847,7 @@ function mock(kind, inCard, o){
     const rows = [["@dr.jesse_cook",37],["@aliddin58",19],["@breezeortho",16],["@sammiecappello",13],["@ms.laurielynn",12]];
     return `<div class="mock light">${prod}${WM}<span class="tag">Review Challenge</span><div class="h"><em>5 days</em><br>left</div><div class="sub">The board heading into the final week</div>
       <div class="rows">${rows.map((r,i)=>`<div class="row"><span class="r">${i+1}</span><span>${r[0]}</span><span class="p">${r[1]}</span><span class="bar"><i style="width:${Math.round(r[1]/37*100)}%"></i></span></div>`).join("")}</div>
-      <div class="cta">Comment CHALLENGE</div><div class="slides"><i></i><i></i><i></i></div></div>`;
+      <div class="cta">Comment CHALLENGE</div><div class="slides"><i class="on"></i><i></i><i></i></div></div>`;
   }
   if (kind === "finalday"){
     return `<div class="mock dark">${inCard?"":'<span class="prod">In production</span>'}${WM}<span class="tag">Oct 31 · Halloween</span><div class="h">Final<br><em>day</em></div><div class="sub">The challenge ends at midnight</div>
@@ -777,7 +858,7 @@ function mock(kind, inCard, o){
   if (kind === "numbers"){
     return `<div class="mock light">${prod}${WM}<span class="tag">October by the numbers</span>
       <div class="stats"><div><b>19</b><span>practices entered</span></div><div><b>119</b><span>new Google reviews</span></div><div><b>1</b><span>month</span></div></div>
-      <div class="cta">${o.groups ? "Join November" : "Winners tomorrow"}</div><div class="slides"><i></i><i></i><i></i><i></i></div></div>`;
+      <div class="cta">${o.groups ? "Join November" : "Winners tomorrow"}</div><div class="slides"><i class="on"></i><i></i><i></i><i></i></div></div>`;
   }
   return "";
 }
@@ -787,11 +868,65 @@ function screenInner(w, d, opts){
   if (d.cover) return `<img class="cov" src="${w.media}${d.cover}" alt="" loading="lazy">`;
   return mock(d.mock, opts.card);
 }
+/* ---------- breathing: card previews, live dots, counters, reveals ---------- */
+const RM = window.matchMedia ? matchMedia("(prefers-reduced-motion: reduce)") : { matches: false };
+const still = () => RM.matches;
+/* every video has a small silent loop at <week>/p/<name>.mp4 (tools/previews.sh); the full file is the fallback */
+const pvSrc = s => s.replace(/([^/]+)$/, "p/$1");
+function loopVid(src, cls){ return `<video class="pv${cls ? " " + cls : ""}" muted playsinline loop preload="none" disableremoteplayback aria-hidden="true"><source data-src="${pvSrc(src)}" type="video/mp4"><source data-src="${src}" type="video/mp4"></video>`; }
+function arm(v){ if (v.dataset.armed) return; v.dataset.armed = "1"; v.querySelectorAll("source[data-src]").forEach(s => s.src = s.dataset.src); v.addEventListener("playing", () => v.classList.add("live")); v.load(); }
+function spin(v, force){ if ((still() && !force) || document.hidden) return; arm(v); v.muted = true; const p = v.play(); if (p) p.catch(()=>{}); }
+function rest(v){ if (!v.paused) v.pause(); }
+function liveIn(scope, on){
+  scope.querySelectorAll(".thumb,.mm").forEach(el => el.classList.toggle("vis", on));
+  scope.querySelectorAll("video.pv").forEach(v => on ? spin(v) : rest(v));
+}
+const TODAY = (() => { try { const p = new Intl.DateTimeFormat("en-US", { timeZone: "America/Los_Angeles", year: "numeric", month: "numeric", day: "numeric" }).formatToParts(new Date()), g = t => p.find(x => x.type === t).value; return { md: `${g("month")}/${g("day")}`, y: g("year") }; } catch(e){ return null; } })();
+const isToday = (w, d) => !!TODAY && d.date === TODAY.md && (!w.cover || !w.cover.year || String(w.cover.year) === TODAY.y);
+const nowTag = (w, d) => isToday(w, d) ? `<span class="now"><i></i>Today</span>` : "";
 function thumbInner(w, d, lazy){
-  if (d.video) return `<img src="${w.media}${d.id}.jpg" alt=""${lazy?' loading="lazy"':""}>${lazy?"":`<video muted playsinline loop preload="none" data-src="${w.media}${d.id}.mp4"></video>`}`;
-  if (d.slides) return `<img class="fit" src="${w.media}${d.slides[0]}" alt=""${lazy?' loading="lazy"':""}>`;
-  if (d.cover) return `<img src="${w.media}${d.cover}" alt=""${lazy?' loading="lazy"':""}>`;
+  const M = w.media, L = lazy ? ' loading="lazy"' : "";
+  if (d.video) return `<img src="${M}${d.id}.jpg" alt=""${L}>${loopVid(M + d.id + ".mp4")}`;
+  if (d.slides){
+    const mv = d.slides.find(s => /\.mp4$/.test(s));
+    if (mv){ const po = M + mv.replace(/\.mp4$/, ".jpg"); return `<img class="bk" src="${po}" alt=""${L}><img class="fit" src="${po}" alt=""${L}>${loopVid(M + mv, "fit")}`; }
+    if (d.slides.length > 1) return `<div class="tcar">${d.slides.map((s, i) => `<div class="tsl${i ? "" : " on"}"><img class="bk" src="${M}${s}" alt=""${L}><img class="fg" src="${M}${s}" alt=""${L}></div>`).join("")}</div>`;
+    return `<img class="bk" src="${M}${d.slides[0]}" alt=""${L}><img class="fit kb" src="${M}${d.slides[0]}" alt=""${L}>`;
+  }
+  if (d.cover) return `<img class="kb" src="${M}${d.cover}" alt=""${L}>`;
   return mock(d.mock, true);
+}
+/* numbers roll up to their value when they come into view */
+const COUNT = ".plat b,.results b,.sb td,.tile b,.gtile b,.mock .stats b,.vw b,.sharekey b";
+const NUMRX = /^([$~]?)(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?([KMxs%]?)$/;
+function countUp(el, again){
+  if (still() || (el.dataset.cu && !again)) return;
+  const tn = [...el.childNodes].find(n => n.nodeType === 3 && n.nodeValue.trim()); if (!tn) return;
+  const raw = el.dataset.raw || tn.nodeValue, m = raw.trim().match(NUMRX); if (!m) return;
+  const dec = m[3] ? m[3].length - 1 : 0, to = parseFloat(m[2].replace(/,/g, "") + (m[3] || "")); if (!(to > 0)) return;
+  const pre = raw.match(/^\s*/)[0], post = raw.match(/\s*$/)[0], comma = m[2].includes(",");
+  const fmt = x => pre + m[1] + (comma ? Math.round(x).toLocaleString("en-US") : x.toFixed(dec)) + m[4] + post;
+  el.dataset.cu = "1"; el.dataset.raw = raw;
+  const run = (el._cu = {}), t0 = performance.now(), dur = 1000 + Math.min(500, to * 3);
+  tn.nodeValue = fmt(0);
+  const step = t => { if (el._cu !== run) return; const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3);
+    tn.nodeValue = k < 1 ? fmt(to * e) : raw; if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+/* feed + groups: watch cards (play while visible), numbers (roll once) and blocks (rise in once) */
+function watchLive(root, revealSel){
+  if (!("IntersectionObserver" in window)) { root.querySelectorAll("video.pv").forEach(v => spin(v)); return; }
+  const lio = new IntersectionObserver(es => es.forEach(e => { const el = e.target, on = e.isIntersecting; el.classList.toggle("vis", on); const v = el.querySelector("video.pv"); if (v) on ? spin(v) : rest(v); }), { threshold: .2 });
+  root.querySelectorAll(".thumb,.mm").forEach(el => lio.observe(el));
+  const cio = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; countUp(e.target); cio.unobserve(e.target); }), { threshold: .6 });
+  root.querySelectorAll(COUNT).forEach(el => cio.observe(el));
+  cleanup.push(() => { lio.disconnect(); cio.disconnect(); });
+  if (still() || !revealSel) return;
+  const els = [...root.querySelectorAll(revealSel)]; if (!els.length) return;
+  root.classList.add("rvon"); els.forEach(el => el.classList.add("rv"));
+  const rio = new IntersectionObserver(es => { let k = 0; es.forEach(e => { if (!e.isIntersecting) return; const el = e.target; el.style.transitionDelay = Math.min(k++, 6) * 70 + "ms"; el.classList.add("in"); rio.unobserve(el); setTimeout(() => { el.style.transitionDelay = ""; }, 1400); }); }, { rootMargin: "0px 0px -6% 0px", threshold: .06 });
+  els.forEach(el => rio.observe(el));
+  cleanup.push(() => rio.disconnect());
 }
 function phone(w, d, cls, opts){ opts = opts||{}; return `<div class="phone ${cls||""}"><div class="screen"><span class="island"></span>${screenInner(w,d,opts)}</div></div>`; }
 function status(s){ return `<span class="status" data-s="${esc(s)}"><i></i>${esc(s)}</span>`; }
@@ -844,7 +979,7 @@ function buildDeck(){
   const fan = fanSrc.map((d,i)=>{
     const [x,h,r] = pos[i]; const mid = (pos.length-1)/2; const z = 10 - Math.abs(i-mid);
     const op = Math.abs(i-mid) < 1 ? 1 : (Math.abs(i-mid) < 2 ? .92 : .78);
-    return `<div class="phone" style="left:${x}px;height:${h}px;bottom:${Math.round(Math.abs(i-mid))*24}px;z-index:${Math.round(z)};opacity:${op};transform:rotateY(${r}deg)"><div class="screen"><span class="island"></span>${screenInner(w,d,{card:true,preload:"metadata"})}</div></div>`;
+    return `<div class="phone" style="--k:${i};left:${x}px;height:${h}px;bottom:${Math.round(Math.abs(i-mid))*24}px;z-index:${Math.round(z)};opacity:${op};transform:rotateY(${r}deg)"><div class="screen"><span class="island"></span>${screenInner(w,d,{card:true,preload:"metadata"})}</div></div>`;
   }).join("");
   S.push({t:"cover", h:`<section class="slide cover"><div class="glow"></div>
     <div class="left"><div class="logo">${LOGO}</div><div class="eyebrow">Week ${w.n} · ${esc(w.theme)} · ${w.state}</div><div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><div class="sub">${esc(w.summary)}</div></div>
@@ -852,8 +987,8 @@ function buildDeck(){
     <div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Adit</div></div></section>`});
   S.push({t:"week", h:`<section class="slide glance"><div class="head"><div><h2 class="h2">Week ${w.n} at a Glance</h2><p>${esc(w.glanceNote)}</p></div>
     <a class="btn ghost" style="height:58px;padding:0 28px;font-size:15px" href="${HUB.folder}" target="_blank" rel="noopener">All reels + covers ${ARROW}</a></div>
-    <div class="cards n${n}" style="grid-template-columns:repeat(${n},${n<=4?"260px":n<=6?"minmax(0,262px)":"1fr"});${n>=5&&n<=6?"justify-content:space-between;":""}${n>=7?"top:320px":""}">${w.days.map((d,i)=>`<button class="card" type="button" data-go="${i+2}">
-      <div class="thumb">${thumbInner(w,d,false)}</div>
+    <div class="cards n${n}" style="grid-template-columns:repeat(${n},${n<=4?"260px":n<=6?"minmax(0,262px)":"1fr"});${n>=5&&n<=6?"justify-content:space-between;":""}${n>=7?"top:320px":""}">${w.days.map((d,i)=>`<button class="card${isToday(w,d)?" today":""}" type="button" data-go="${i+2}" style="--k:${i}">
+      <div class="thumb">${thumbInner(w,d,false)}${nowTag(w,d)}</div>
       <div class="d">${d.short} · ${niceDate(d)}</div><div class="t">${esc(d.title)}</div><div class="b">${esc(d.bucket)}</div><div class="srow">${status(dayStatus(w,d))}${cardViews(w,d)}</div></button>`).join("")}</div></section>`});
   w.days.forEach(d=>{
     const st = stat(w,d), posted = hasStats(st), half = d.jump && /\b(AM|PM)$/.test(d.jump) ? ` · ${d.jump.split(" ").pop()}` : "";
@@ -901,8 +1036,10 @@ function buildDeck(){
     i = Math.max(0, Math.min(slides.length-1, i)); if (i === cur) return;
     const prev = cur; cur = i;
     slides.forEach((s,k)=>{ s.classList.toggle("on",k===i); s.classList.toggle("before",k<i); });
-    if (prev >= 0) stopScope(slides[prev]);
+    if (prev >= 0){ stopScope(slides[prev]); liveIn(slides[prev], false); }
     playScope(slides[i], slides[i].classList.contains("day"));
+    liveIn(slides[i], true);
+    slides[i].querySelectorAll(COUNT).forEach(el => countUp(el, true));
     deck.classList.toggle("hide-mark", ["cover","thanks"].includes(S[i].t) || slides[i].classList.contains("day"));
     bars.forEach((b,k)=>{ b.classList.toggle("cur",k===i); b.classList.toggle("done",k<i); });
     document.getElementById("count").textContent = String(i+1).padStart(2,"0")+" / "+String(slides.length).padStart(2,"0");
@@ -912,10 +1049,10 @@ function buildDeck(){
   document.getElementById("next").onclick = ()=>go(cur+1);
   document.getElementById("prev").onclick = ()=>go(cur-1);
   deck.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(+b.dataset.go)));
+  /* cards play on their own while the glance slide is up; with reduced motion they wait for a hover */
   deck.querySelectorAll(".card").forEach(c=>{
-    const v = c.querySelector("video"); if (!v) return;
-    const on = ()=>{ if(!v.src) v.src = v.dataset.src; v.currentTime = 0; v.play().catch(()=>{}); };
-    const off = ()=>v.pause();
+    const v = c.querySelector("video.pv"); if (!v) return;
+    const on = ()=>{ if (still()) spin(v, true); }, off = ()=>{ if (still()) rest(v); };
     c.addEventListener("mouseenter",on); c.addEventListener("mouseleave",off); c.addEventListener("focus",on); c.addEventListener("blur",off);
   });
   slides.forEach(s=>{ if (s.classList.contains("day")) wireVideo(s, s.querySelector(".track i")); });
@@ -954,7 +1091,7 @@ function buildFeed(){
     <div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><p class="sub">${esc(w.summary)}</p>
     <div class="lightbar"></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></div></section>
   <section class="fsec"><div class="wrap"><h2 class="h2">Week ${w.n} at a glance</h2><p class="lead">${esc(w.glanceNote)}</p>
-    <div class="strip">${w.days.map(d=>`<a class="card" href="#${w.id}-${d.id}"><div class="thumb">${thumbInner(w,d,true)}</div><span class="d">${d.short} · ${niceDate(d)}</span><span class="t">${esc(d.title)}</span>${status(dayStatus(w,d))}</a>`).join("")}</div></div></section>
+    <div class="strip">${w.days.map(d=>`<a class="card${isToday(w,d)?" today":""}" href="#${w.id}-${d.id}"><div class="thumb">${thumbInner(w,d,true)}${nowTag(w,d)}</div><span class="d">${d.short} · ${niceDate(d)}</span><span class="t">${esc(d.title)}</span>${status(dayStatus(w,d))}</a>`).join("")}</div></div></section>
   ${w.days.map(d=>{ const st = stat(w,d), posted = hasStats(st), half = d.jump && /\b(AM|PM)$/.test(d.jump) ? ` · ${d.jump.split(" ").pop()}` : ""; return `<section class="fday" id="${w.id}-${d.id}" data-id="${d.id}"><div class="wrap">
     <div class="dayname">${d.day} <span>${niceDate(d)}${half}</span></div>
     <div class="tags"><span class="chip">${esc(d.bucket)}</span>${status(dayStatus(w,d))}<span class="fmt">${esc(d.format)}</span></div>
@@ -986,14 +1123,18 @@ function buildFeed(){
     const io = new IntersectionObserver(es=>{
       es.forEach(e=>vis.set(e.target, e.intersectionRatio));
       let best=null, br=0; vis.forEach((r,el)=>{ if (r>br){ br=r; best=el; } });
-      secs.forEach(s=>{ const v = s.querySelector("video:not(.sl)"); if (!v) return; const ph = s.querySelector(".phone");
-        if (ph===best && br>=.55){ if (v.paused){ v.muted = !soundOn; v.play().catch(()=>{ v.muted=true; v.play().catch(()=>{}); }); syncSnd(s);} } else if (!v.paused) v.pause(); });
+      /* every phone on screen plays; sound (when it's on) follows the one you're looking at */
+      secs.forEach(s=>{ const v = s.querySelector("video:not(.sl)"); if (!v) return; const ph = s.querySelector(".phone"), r = vis.get(ph) || 0, lead = ph===best && br>=.55;
+        if (lead || (r >= .15 && !still())){ const m = !(lead && soundOn); if (v.muted !== m){ v.muted = m; syncSnd(s); }
+          if (v.paused && !document.hidden) v.play().catch(()=>{ v.muted=true; v.play().catch(()=>{}); syncSnd(s); }); }
+        else if (!v.paused) v.pause(); });
       const cs = best && br>=.45 ? best.closest(".fday") : null;
       links.forEach(a=>a.classList.toggle("cur", !!cs && a.dataset.id===cs.dataset.id));
-    }, {threshold:[0,.25,.45,.55,.75,1]});
+    }, {threshold:[0,.15,.25,.45,.55,.75,1]});
     secs.forEach(s=>io.observe(s.querySelector(".phone")));
     cleanup.push(()=>io.disconnect());
   }
+  watchLive(app.querySelector(".feed"), ".fhero .wrap>*,.fsec .wrap>:not(.ftiles),.fday .wrap>*,.ftiles>.tile,.fclose .wrap>*");
   const d = dayFromHash(); if (d){ const el = document.getElementById(`${w.id}-${d}`); if (el) setTimeout(()=>el.scrollIntoView(), 60); }
 }
 
@@ -1004,7 +1145,18 @@ function stepCar(car, auto){ const im=[...car.querySelectorAll(".sl")]; if (im.l
   cur.classList.remove("on"); nx.classList.add("on");
   if (nx.tagName==="VIDEO"){ if (!nx.getAttribute("src")) nx.src = nx.dataset.src; nx.muted = true; try{ nx.currentTime = 0; }catch(e){} nx.play().catch(()=>{}); }
   const dots=car.parentElement.querySelectorAll(".sdots i"); dots.forEach((dd,k)=>dd.classList.toggle("on",k===j)); }
-setInterval(()=>{ document.querySelectorAll(".slide.on .car, .feed .car").forEach(c=>stepCar(c,true)); }, 3200);
+setInterval(()=>{ if (document.hidden || still()) return; document.querySelectorAll(".slide.on .car, .feed .car").forEach(c=>stepCar(c,true)); }, 3200);
+/* the heartbeat: mock clocks tick down, mock carousel dots step, thumbnail carousels turn (only where you can see them) */
+const CLK0 = 11*3600 + 59*60 + 59; let clk = CLK0, beat = 0;
+setInterval(()=>{
+  if (document.hidden || still()) return;
+  beat++; clk = clk > 0 ? clk - 1 : CLK0;
+  const hh = String(Math.floor(clk / 3600)), mm = String(Math.floor(clk / 60) % 60).padStart(2, "0"), ss = String(clk % 60).padStart(2, "0");
+  document.querySelectorAll(".mock .clock").forEach(c => { const b = c.querySelectorAll("b"); if (b.length === 3){ b[0].textContent = hh; b[1].textContent = mm; b[2].textContent = ss; } });
+  if (beat % 2 === 0) document.querySelectorAll(".mock .slides").forEach(s => { const d = [...s.children], i = d.findIndex(x => x.classList.contains("on")); d.forEach((x, k) => x.classList.toggle("on", k === (i + 1) % d.length)); });
+  if (beat % 3 === 0) document.querySelectorAll(".tcar").forEach(c => { if (!c.closest(".vis")) return; const s = [...c.children], i = s.findIndex(x => x.classList.contains("on")); s.forEach((x, k) => x.classList.toggle("on", k === (i + 1) % s.length)); });
+}, 1000);
+document.addEventListener("visibilitychange", ()=>{ document.querySelectorAll("video.pv").forEach(v => { if (document.hidden) rest(v); else if (v.closest(".vis")) spin(v); }); });
 document.addEventListener("click", e=>{ const ph = e.target.closest && e.target.closest(".phone"); if (!ph) return; const car = ph.querySelector(".car"); if (car) stepCar(car); });
 /* ================= FACEBOOK GROUPS ================= */
 const vinfo = id => VS.find(v => v.id === id) || { id, label: id, color: "#6E98CC" };
@@ -1024,7 +1176,7 @@ function vsum(m, vid){
 function resBits(e){ return [["views", e.views], ["comments", e.comments], ["reactions", e.reactions]].filter(x => x[1] !== undefined && x[1] !== null).map(x => `<span>${fmtN(x[1])}<em>${x[0]}</em></span>`).join(""); }
 function gMedia(x){
   const md = x.media || {};
-  if (md.type === "video") return `<img src="${md.poster}" alt="" loading="lazy"><video muted playsinline loop preload="none" data-src="${md.src}"></video>`;
+  if (md.type === "video") return `<img src="${md.poster}" alt="" loading="lazy">${loopVid(md.src)}`;
   if (md.type === "youtube"){ const th = `https://i.ytimg.com/vi/${md.id}/hqdefault.jpg`; return `<div class="ytm"><img class="bg" src="${th}" alt="" loading="lazy"><img class="fg" src="${th}" alt="" loading="lazy"><span class="playg"></span><span class="yl"><b>Testimonial</b>${esc(x.talent)}</span></div>`; }
   if (md.type === "mock") return mock(md.kind, true, { groups: true });
   return `<div class="comingm">${CAM}<b>${esc(x.status)}</b><span>${esc(md.line || "")}</span></div>`;
@@ -1128,9 +1280,10 @@ function buildGroups(){
   gv.querySelectorAll(".vbtn").forEach(b => b.addEventListener("click", () => { const v = b.dataset.v; location.hash = `groups-${m.id}${v === "all" ? "" : "-" + v}`; }));
   gv.querySelectorAll("[data-open]").forEach(b => b.addEventListener("click", () => openDrawer(b.dataset.open)));
   gv.querySelectorAll(".rmore").forEach(b => b.addEventListener("click", () => { const open = b.closest(".rooms").classList.toggle("open"); b.textContent = open ? "Show less" : `+${b.dataset.n} more`; b.setAttribute("aria-expanded", open); }));
-  gv.querySelectorAll(".mcard").forEach(c => { const v = c.querySelector(".mm>video"); if (!v) return;
-    const on = () => { if (!v.getAttribute("src")) v.src = v.dataset.src; v.currentTime = 0; v.play().catch(()=>{}); }, off = () => v.pause();
-    c.addEventListener("mouseenter", on); c.addEventListener("mouseleave", off); });
+  /* menu cards play while they're on screen (hover to play when reduced motion is on) */
+  gv.querySelectorAll(".mcard").forEach(c => { const v = c.querySelector("video.pv"); if (!v) return;
+    c.addEventListener("mouseenter", () => { if (still()) spin(v, true); }); c.addEventListener("mouseleave", () => { if (still()) rest(v); }); });
+  watchLive(gv, ".ghero>*,.gsec>.h2,.gsec>.lead,.mcard,.vtitle,.slt,.glsec .rooms,.gasks .item,.gfoot");
   const rl = gv.querySelector(".rail"), sel = rl && rl.querySelector('.vbtn[aria-pressed="true"]');
   if (sel && rl.scrollWidth > rl.clientWidth) rl.scrollLeft = Math.max(0, sel.offsetLeft - 18);
 }
@@ -1210,7 +1363,7 @@ function parseHash(){
 function render(){
   cleanup.forEach(f=>f()); cleanup = [];
   closeDrawer();
-  app.querySelectorAll("video").forEach(v=>{ v.pause(); v.removeAttribute("src"); v.load(); });
+  app.querySelectorAll("video").forEach(v=>{ v.pause(); v.removeAttribute("src"); v.querySelectorAll("source").forEach(s=>s.removeAttribute("src")); v.load(); });
   if (view === "groups"){ mode = "groups"; document.title = `Adit Facebook Groups · ${gmonth.tab} | PuroFlow Media`; buildGroups(); return; }
   mode = isDesk() ? "desk" : "feed";
   document.title = `Adit Content Calendar · Week ${week.n} | PuroFlow Media`;
@@ -1239,6 +1392,7 @@ function switchWeek(id){
 })();
 addEventListener("resize", ()=>{ if (view === "organic" && (isDesk()?"desk":"feed") !== mode) render(); });
 addEventListener("hashchange", route);
+if (RM.addEventListener) RM.addEventListener("change", ()=>render());
 </script>
 </body>
 </html>
