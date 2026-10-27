@@ -264,8 +264,9 @@ const WEEKS = [
     glanceNote: "Close the challenge with proof, not more announcements. Every post runs under a minute, and every non-challenge post carries a one-line PS until Saturday.",
     media: "media/w2/",
     days: [
-      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Scheduled", format: "Carousel · 4 videos scored to Latch · 9:43 PM PT",
+      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Posted", format: "Carousel · 4 videos scored to Latch · 9:43 PM PT",
         title: "Leaderboard: 5 Days Left", bucket: "Challenge / Community", slides: ["mon-1.jpg", "mon-2.jpg", "mon-3.jpg", "mon-4.mp4"],
+        ig: "https://www.instagram.com/p/De_BzIGlSJG/",
         hook: "5 days left. The podium is still up for grabs 🏆",
         caption: [
           "The Adit Review Challenge ends Saturday, Oct 31 at midnight. Here's the board heading into the final week 👇",
