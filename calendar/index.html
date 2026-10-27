@@ -163,6 +163,9 @@ button{font:inherit;color:inherit}
 .fs{all:unset;cursor:pointer;font:600 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--faint);padding:10px 0}
 .fs:hover{color:var(--white)}
 
+.socials{display:flex;gap:10px;align-items:center}.socials a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--muted);transition:color .2s,border-color .2s,background .2s}.socials a:hover,.socials a:focus-visible{color:#fff;border-color:var(--blue-lit);background:rgba(30,58,95,.45)}.socials svg{width:18px;height:18px}
+.cover .foot .socials{margin-left:24px}.cover .foot .who{margin-left:auto}
+.fhead .frow{display:flex;align-items:center;justify-content:space-between;gap:10px}.socials.fm{margin-top:22px;flex-wrap:wrap}.socials.sm{gap:6px}.socials.sm a{width:30px;height:30px}.socials.sm svg{width:14px;height:14px}
 /* cover */
 .cover .glow{position:absolute;inset:0;background:radial-gradient(ellipse 45% 60% at 74% 55%,rgba(30,58,95,.75),transparent 70%),radial-gradient(ellipse 30% 30% at 12% 90%,rgba(30,58,95,.35),transparent 70%)}
 .cover .left{position:absolute;left:140px;top:170px;width:800px;display:flex;flex-direction:column}
@@ -969,6 +972,14 @@ function playScope(scope, withSound){
 }
 function stopScope(scope){ scope.querySelectorAll("video:not(.sl)").forEach(v=>v.pause()); }
 
+const SOCIAL = [
+  ["Instagram","https://www.instagram.com/get_adit/",'<path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.6 5.4a1 1 0 1 0 1 1 1 1 0 0 0-1-1z"/>'],
+  ["TikTok","https://www.tiktok.com/@get_adit",'<path d="M16.6 2h-3.3v13.2a2.8 2.8 0 1 1-2.8-2.8 2.9 2.9 0 0 1 .8.1V9.1a6.2 6.2 0 1 0 5.3 6.1V8.6a7.8 7.8 0 0 0 4.4 1.4V6.7a4.5 4.5 0 0 1-4.4-4.7z"/>'],
+  ["Facebook","https://www.facebook.com/aditadv",'<path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1a22 22 0 0 0-2.5-.1c-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V22z"/>'],
+  ["LinkedIn","https://www.linkedin.com/company/grow-with-adit",'<path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/>'],
+  ["YouTube","https://www.youtube.com/@aditsoftware",'<path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.8 15.1V8.9L15.2 12z"/>']
+];
+const socials = cls => `<nav class="socials ${cls||""}" aria-label="Adit on social">${SOCIAL.map(([n,u,p])=>`<a href="${u}" target="_blank" rel="noopener" aria-label="Adit on ${n}" title="Adit on ${n}"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">${p}</svg></a>`).join("")}</nav>`;
 /* ================= DESKTOP ================= */
 function buildDeck(){
   const w = week, n = w.days.length;
@@ -981,7 +992,7 @@ function buildDeck(){
   S.push({t:"cover", h:`<section class="slide cover"><div class="glow"></div>
     <div class="left"><div class="logo">${LOGO}</div><div class="eyebrow">Week ${w.n} · ${esc(w.theme)} · ${w.state}</div><div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><div class="sub">${esc(w.summary)}</div></div>
     <div class="fan" title="Drag or click to see the next post">${fan}</div><div class="lightbar"></div>
-    <div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Adit</div></div></section>`});
+    <div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Adit</div>${socials()}</div></section>`});
   S.push({t:"week", h:`<section class="slide glance"><div class="head"><div><h2 class="h2">Week ${w.n} at a Glance</h2><p>${esc(w.glanceNote)}</p></div>
     <a class="btn ghost" style="height:58px;padding:0 28px;font-size:15px" href="${HUB.folder}" target="_blank" rel="noopener">All reels + covers ${ARROW}</a></div>
     <div class="cards n${n}" style="grid-template-columns:repeat(${n},${n<=4?"260px":n<=6?"minmax(0,262px)":"1fr"});${n>=5&&n<=6?"justify-content:space-between;":""}${n>=7?"top:320px":""}">${w.days.map((d,i)=>`<button class="card${isToday(w,d)?" today":""}" type="button" data-go="${i+2}" style="--k:${i}">
@@ -1058,33 +1069,37 @@ function buildDeck(){
   const fanEl = deck.querySelector(".cover .fan");
   if (fanEl){
     const fps = [...fanEl.querySelectorAll(".phone.fp")], N = fps.length;
-    const SLOTS = [[0,470,18],[130,580,12],[298,700,0],[500,580,-12],[662,470,-18]];
+    /* lazy susan: phones sit on a turning circle; dragging spins it, release snaps to the nearest phone */
+    const R = 360, CX = 298 + 700*9/16/2, STEP = 150, ARC = 34;
     let center = Math.min(Math.floor(N/2), N-1);
-    const layout = (shift)=>{
-      shift = shift || 0;
+    const wrapOff = o => { while (o > N/2) o -= N; while (o < -N/2) o += N; return o; };
+    const layout = (spin)=>{
+      spin = spin || 0;
       fps.forEach((p,i)=>{
-        let off = i - center; if (off > N/2) off -= N; if (off < -N/2) off += N;
-        const slot = off + 2, vis = slot >= 0 && slot <= 4 && Math.abs(off) <= 2;
-        const [x,h,r] = vis ? SLOTS[slot] : [298 + Math.sign(off)*240, 420, -Math.sign(off)*22];
-        const a = Math.abs(off);
-        p.style.left = (x + shift) + "px"; p.style.height = h + "px"; p.style.bottom = (vis ? a*24 : 60) + "px";
-        p.style.zIndex = vis ? 10 - a : 1; p.style.opacity = vis ? (a < 1 ? 1 : a < 2 ? .92 : .78) : 0;
-        p.style.transform = `rotateY(${r}deg)`; p.style.pointerEvents = vis ? "" : "none";
-        p.classList.toggle("front", off === 0);
-        const v = p.querySelector("video");
-        if (v){ if (off === 0 && slides[cur] && slides[cur].classList.contains("on")){ const pp = v.play(); if (pp) pp.catch(()=>{}); } }
+        const f = wrapOff(i - center) + spin, a = Math.abs(f), th = f * ARC * Math.PI/180;
+        const vis = a < 2.6, depth = Math.cos(Math.min(Math.abs(th), Math.PI/2));
+        const h = 470 + 230 * depth, wpx = h * 9/16;
+        p.style.left = (CX + R*Math.sin(th) - wpx/2) + "px"; p.style.height = h + "px";
+        p.style.bottom = (a * 24) + "px";
+        p.style.zIndex = Math.round(100 - a*10);
+        p.style.opacity = vis ? Math.max(0, Math.min(1, a < 1 ? 1 : 1 - (a-1)*.18 - Math.max(0, a-2)*1.2)) : 0;
+        p.style.transform = `rotateY(${-f*ARC*.55}deg)`; p.style.pointerEvents = vis ? "" : "none";
+        p.classList.toggle("front", Math.round(f) === 0 && a < .5);
       });
     };
-    const roll = d => { center = (center + d + N) % N; layout(); };
+    const playFront = ()=>{ fps.forEach((p,i)=>{ const v = p.querySelector("video"); if (!v) return; if (i === center && slides[cur] && slides[cur].classList.contains("cover")){ const pp = v.play(); if (pp) pp.catch(()=>{}); } }); };
+    const roll = d => { center = ((center + d) % N + N) % N; layout(); playFront(); };
     layout();
     let fx = null, fy = null, moved = 0, tgt = null;
+    const k = ()=> Math.min(innerWidth/1920, innerHeight/1080) || 1;
     fanEl.addEventListener("pointerdown", e=>{ e.stopPropagation(); fx = e.clientX; fy = e.clientY; moved = 0; tgt = e.target.closest(".phone.fp"); fanEl.classList.add("dragging"); try{ fanEl.setPointerCapture(e.pointerId); }catch(_){} });
-    fanEl.addEventListener("pointermove", e=>{ if (fx === null) return; const k = Math.min(innerWidth/1920, innerHeight/1080) || 1; moved = (e.clientX - fx)/k; layout(Math.max(-220, Math.min(220, moved*.6))); });
+    fanEl.addEventListener("pointermove", e=>{ if (fx === null) return; moved = (e.clientX - fx)/k(); layout(moved/STEP); });
     const end = e=>{
       if (fx === null) return; e.stopPropagation(); fanEl.classList.remove("dragging");
       const dist = Math.hypot(e.clientX - fx, e.clientY - fy); fx = null;
-      if (Math.abs(moved) > 50) roll(moved < 0 ? 1 : -1);
-      else if (dist < 8 && tgt){ const i = +tgt.dataset.fi; let off = i - center; if (off > N/2) off -= N; if (off < -N/2) off += N; if (off) roll(off); else layout(); }
+      const steps = Math.round(moved/STEP);
+      if (Math.abs(moved) > 40) { layout(moved/STEP); requestAnimationFrame(()=>roll(steps ? -steps : (moved < 0 ? 1 : -1))); }
+      else if (dist < 8 && tgt){ const off = wrapOff(+tgt.dataset.fi - center); if (off) roll(off); else layout(); }
       else layout();
     };
     fanEl.addEventListener("pointerup", end); fanEl.addEventListener("pointercancel", end);
@@ -1122,7 +1137,7 @@ function buildFeed(){
   </div></header>
   <section class="fhero"><div class="wrap"><div class="logo">${LOGO}</div><div class="eyebrow">Week ${w.n} · ${esc(w.theme)} · ${w.state}</div>
     <div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><p class="sub">${esc(w.summary)}</p>
-    <div class="lightbar"></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></div></section>
+    <div class="lightbar"></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div>${socials("fm")}</div></section>
   <section class="fsec"><div class="wrap"><h2 class="h2">Week ${w.n} at a glance</h2><p class="lead">${esc(w.glanceNote)}</p>
     <div class="strip">${w.days.map(d=>`<a class="card${isToday(w,d)?" today":""}" href="#${w.id}-${d.id}"><div class="thumb">${thumbInner(w,d,true)}${nowTag(w,d)}</div><span class="d">${d.short} · ${niceDate(d)}</span><span class="t">${esc(d.title)}</span>${status(dayStatus(w,d))}</a>`).join("")}</div></div></section>
   ${w.days.map(d=>{ const st = stat(w,d), posted = hasStats(st), half = d.jump && /\b(AM|PM)$/.test(d.jump) ? ` · ${d.jump.split(" ").pop()}` : ""; return `<section class="fday" id="${w.id}-${d.id}" data-id="${d.id}"><div class="wrap">
