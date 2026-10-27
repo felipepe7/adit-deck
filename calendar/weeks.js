@@ -264,19 +264,19 @@ const WEEKS = [
     glanceNote: "Close the challenge with proof, not more announcements. Every post runs under a minute, and every non-challenge post carries a one-line PS until Saturday.",
     media: "media/w2/",
     days: [
-      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "In design", format: "Carousel · 3 slides",
-        title: "Leaderboard: 5 Days Left", bucket: "Challenge / Community", mock: "leaderboard",
+      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Scheduled", format: "Carousel · 3 slides, video finale · 9:00 PM PT",
+        title: "Leaderboard: 5 Days Left", bucket: "Challenge / Community", slides: ["mon-1.jpg", "mon-2.jpg", "mon-3.jpg", "mon-4.mp4"],
         hook: "5 days left. The podium is still up for grabs 🏆",
         caption: [
           "The Adit Review Challenge ends Saturday, Oct 31 at midnight. Here's the board heading into the final week 👇",
-          "🥇 @dr.jesse_cook 37 · 🥈 @aliddin58 19 · 🥉 @breezeortho 16 · 4️⃣ @sammiecappello 13 · 5️⃣ @ms.laurielynn 12",
-          "#2 and #3 are three points apart. Three new reviews flips the podium 😳 Swipe for ranks 6 to 15."
+          "🥇 @dr.jesse_cook 39 · 🥈 @breezeortho 26 · 🥉 @aliddin58 20 · 4️⃣ @ms.laurielynn 13 · 5️⃣ @sammiecappello 13, then all 15 contestants tagged in rank order",
+          "Breeze just jumped to #2 with 10 new Google reviews since Thursday 👀 and 4th and 5th are tied at 13. Five days is plenty of time to flip this board 😳"
         ],
         thought: "Momentum without another Josh announcement. A carousel breaks the run of challenge reels, the tight race does the selling, and tagging all 15 practices pulls each of their followers into the post.",
         cta: "Comment CHALLENGE to get in, and tag up to 10 doctors or office managers for extra points 🙌",
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #PracticeGrowth",
-        notes: ["Points refresh from the tracking sheet Monday morning before it posts.", "Format: ranks 1 to 5, 6 to 10, 11 to 15 (Miro mockup)."],
-        ask: "5 days left, #2 and #3 three points apart" },
+        notes: ["Every contestant's Google reviews recounted Oct 26, 8:30 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Scheduled on Metricool: Instagram 9:00 PM, Facebook 9:10, LinkedIn 9:20 (swipeable PDF), TikTok 9:30 (photo carousel), YouTube Short 9:40 (the motion version)."],
+        ask: "5 days left, Breeze jumps to #2" },
       { id: "tue", day: "Tuesday", short: "Tue", date: "10/27", status: "Needs Adit approval", format: "Reel · 37s",
         title: "You Don't Need to Rip Out Your EHR", bucket: "Optometry / Product", video: true,
         talent: "Steven Marinkovich",
