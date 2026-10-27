@@ -266,6 +266,7 @@ const WEEKS = [
     days: [
       { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Scheduled", format: "Carousel · 3 slides, video finale · 9:32 PM PT",
         title: "Leaderboard: 5 Days Left", bucket: "Challenge / Community", slides: ["mon-1.jpg", "mon-2.jpg", "mon-3.jpg", "mon-4.mp4"],
+        ig: "https://www.instagram.com/p/De_Ah7xk5TO/",
         hook: "5 days left. The podium is still up for grabs 🏆",
         caption: [
           "The Adit Review Challenge ends Saturday, Oct 31 at midnight. Here's the board heading into the final week 👇",
