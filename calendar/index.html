@@ -179,6 +179,7 @@ button{font:inherit;color:inherit}
 .cover .who{font:600 14px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
 .fan{position:absolute;right:70px;top:170px;width:900px;height:700px;perspective:2200px}
 .fan .phone{position:absolute;bottom:0;transition:transform .9s cubic-bezier(.2,.7,.2,1),opacity .9s}
+.fan{cursor:grab;touch-action:pan-y;user-select:none}.fan.dragging{cursor:grabbing}.fan .phone.fp{transition:left .6s cubic-bezier(.2,.7,.2,1),height .6s cubic-bezier(.2,.7,.2,1),bottom .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1),opacity .6s}.fan.dragging .phone.fp{transition:none}.fan .phone.fp video,.fan .phone.fp img{pointer-events:none;-webkit-user-drag:none}
 .slide:not(.on) .fan .phone{transform:translateY(60px) scale(.96)!important}
 
 /* glance */
@@ -974,16 +975,12 @@ function buildDeck(){
   const S = [];
   const fanDays = w.days.slice(0, 5);
   const POS = {1:[[298,700,0]], 2:[[180,640,8],[440,640,-8]], 3:[[130,580,12],[298,700,0],[500,580,-12]], 4:[[40,540,14],[220,660,6],[440,660,-6],[640,540,-14]], 5:[[0,470,18],[130,580,12],[298,700,0],[500,580,-12],[662,470,-18]]};
-  const fanSrc = n >= 7 ? w.days.slice(1,6) : w.days.slice(0,5);
-  const pos = POS[fanSrc.length];
-  const fan = fanSrc.map((d,i)=>{
-    const [x,h,r] = pos[i]; const mid = (pos.length-1)/2; const z = 10 - Math.abs(i-mid);
-    const op = Math.abs(i-mid) < 1 ? 1 : (Math.abs(i-mid) < 2 ? .92 : .78);
-    return `<div class="phone" style="--k:${i};left:${x}px;height:${h}px;bottom:${Math.round(Math.abs(i-mid))*24}px;z-index:${Math.round(z)};opacity:${op};transform:rotateY(${r}deg)"><div class="screen"><span class="island"></span>${screenInner(w,d,{card:true,preload:"metadata"})}</div></div>`;
-  }).join("");
+  /* every post sits in the fan; 5 are visible, the rest wait behind the middle. Drag or click to roll it. */
+  const fanSrc = w.days.filter(d => d.video || d.slides || d.cover || d.mock);
+  const fan = fanSrc.map((d,i)=>`<div class="phone fp" data-fi="${i}" style="--k:${i}"><div class="screen"><span class="island"></span>${screenInner(w,d,{card:true,preload:"metadata"})}</div></div>`).join("");
   S.push({t:"cover", h:`<section class="slide cover"><div class="glow"></div>
     <div class="left"><div class="logo">${LOGO}</div><div class="eyebrow">Week ${w.n} · ${esc(w.theme)} · ${w.state}</div><div class="weekof">WEEK OF</div><div class="big">${w.cover.big}</div><div class="to">${w.cover.to} <span>${w.cover.year}</span></div><div class="sub">${esc(w.summary)}</div></div>
-    <div class="fan">${fan}</div><div class="lightbar"></div>
+    <div class="fan" title="Drag or click to see the next post">${fan}</div><div class="lightbar"></div>
     <div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Adit</div></div></section>`});
   S.push({t:"week", h:`<section class="slide glance"><div class="head"><div><h2 class="h2">Week ${w.n} at a Glance</h2><p>${esc(w.glanceNote)}</p></div>
     <a class="btn ghost" style="height:58px;padding:0 28px;font-size:15px" href="${HUB.folder}" target="_blank" rel="noopener">All reels + covers ${ARROW}</a></div>
@@ -1057,6 +1054,42 @@ function buildDeck(){
   });
   slides.forEach(s=>{ if (s.classList.contains("day")) wireVideo(s, s.querySelector(".track i")); });
   deck.querySelectorAll(".wtab").forEach(t=>t.addEventListener("click",()=>switchWeek(t.dataset.week)));
+  /* ---- cover fan: drag or click to roll through every post ---- */
+  const fanEl = deck.querySelector(".cover .fan");
+  if (fanEl){
+    const fps = [...fanEl.querySelectorAll(".phone.fp")], N = fps.length;
+    const SLOTS = [[0,470,18],[130,580,12],[298,700,0],[500,580,-12],[662,470,-18]];
+    let center = Math.min(Math.floor(N/2), N-1);
+    const layout = (shift)=>{
+      shift = shift || 0;
+      fps.forEach((p,i)=>{
+        let off = i - center; if (off > N/2) off -= N; if (off < -N/2) off += N;
+        const slot = off + 2, vis = slot >= 0 && slot <= 4 && Math.abs(off) <= 2;
+        const [x,h,r] = vis ? SLOTS[slot] : [298 + Math.sign(off)*240, 420, -Math.sign(off)*22];
+        const a = Math.abs(off);
+        p.style.left = (x + shift) + "px"; p.style.height = h + "px"; p.style.bottom = (vis ? a*24 : 60) + "px";
+        p.style.zIndex = vis ? 10 - a : 1; p.style.opacity = vis ? (a < 1 ? 1 : a < 2 ? .92 : .78) : 0;
+        p.style.transform = `rotateY(${r}deg)`; p.style.pointerEvents = vis ? "" : "none";
+        p.classList.toggle("front", off === 0);
+        const v = p.querySelector("video");
+        if (v){ if (off === 0 && slides[cur] && slides[cur].classList.contains("on")){ const pp = v.play(); if (pp) pp.catch(()=>{}); } }
+      });
+    };
+    const roll = d => { center = (center + d + N) % N; layout(); };
+    layout();
+    let fx = null, fy = null, moved = 0, tgt = null;
+    fanEl.addEventListener("pointerdown", e=>{ e.stopPropagation(); fx = e.clientX; fy = e.clientY; moved = 0; tgt = e.target.closest(".phone.fp"); fanEl.classList.add("dragging"); try{ fanEl.setPointerCapture(e.pointerId); }catch(_){} });
+    fanEl.addEventListener("pointermove", e=>{ if (fx === null) return; const k = Math.min(innerWidth/1920, innerHeight/1080) || 1; moved = (e.clientX - fx)/k; layout(Math.max(-220, Math.min(220, moved*.6))); });
+    const end = e=>{
+      if (fx === null) return; e.stopPropagation(); fanEl.classList.remove("dragging");
+      const dist = Math.hypot(e.clientX - fx, e.clientY - fy); fx = null;
+      if (Math.abs(moved) > 50) roll(moved < 0 ? 1 : -1);
+      else if (dist < 8 && tgt){ const i = +tgt.dataset.fi; let off = i - center; if (off > N/2) off -= N; if (off < -N/2) off += N; if (off) roll(off); else layout(); }
+      else layout();
+    };
+    fanEl.addEventListener("pointerup", end); fanEl.addEventListener("pointercancel", end);
+    fanEl.addEventListener("wheel", e=>{ if (Math.abs(e.deltaX) > 30){ e.preventDefault(); roll(e.deltaX > 0 ? 1 : -1); } }, {passive:false});
+  }
   const key = e=>{
     if (e.target.closest && e.target.closest("button,a") && (e.key===" "||e.key==="Enter")) return;
     if (["ArrowRight","ArrowDown","PageDown"," "].includes(e.key)) { e.preventDefault(); go(cur+1); }
