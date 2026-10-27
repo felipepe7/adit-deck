@@ -264,7 +264,7 @@ const WEEKS = [
     glanceNote: "Close the challenge with proof, not more announcements. Every post runs under a minute, and every non-challenge post carries a one-line PS until Saturday.",
     media: "media/w2/",
     days: [
-      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Scheduled", format: "Carousel · 3 slides, video finale · 9:00 PM PT",
+      { id: "mon", day: "Monday", short: "Mon", date: "10/26", status: "Scheduled", format: "Carousel · 3 slides, video finale · 9:32 PM PT",
         title: "Leaderboard: 5 Days Left", bucket: "Challenge / Community", slides: ["mon-1.jpg", "mon-2.jpg", "mon-3.jpg", "mon-4.mp4"],
         hook: "5 days left. The podium is still up for grabs 🏆",
         caption: [
@@ -275,7 +275,7 @@ const WEEKS = [
         thought: "Momentum without another Josh announcement. A carousel breaks the run of challenge reels, the tight race does the selling, and tagging all 15 practices pulls each of their followers into the post.",
         cta: "Comment CHALLENGE to get in, and tag up to 10 doctors or office managers for extra points 🙌",
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #PracticeGrowth",
-        notes: ["Every contestant's Google reviews recounted Oct 26, 8:30 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Scheduled on Metricool: Instagram 9:00 PM, Facebook 9:10, LinkedIn 9:20 (swipeable PDF), TikTok 9:30 (photo carousel), YouTube Short 9:40 (the motion version)."],
+        notes: ["Every contestant's Google reviews recounted Oct 26, 8:30 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Scheduled on Metricool: Facebook 9:10 PM (photos), TikTok 9:30 (photo carousel), Instagram 9:32 (carousel with the motion video, scored to Latch instrumental), YouTube Short 9:45 and LinkedIn 9:50 (the motion video)."],
         ask: "5 days left, Breeze jumps to #2" },
       { id: "tue", day: "Tuesday", short: "Tue", date: "10/27", status: "Needs Adit approval", format: "Reel · 37s",
         title: "You Don't Need to Rip Out Your EHR", bucket: "Optometry / Product", video: true,
