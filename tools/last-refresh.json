@@ -1,17 +1,29 @@
 {
-  "at": "2026-10-27T13:00:19.355Z",
+  "at": "2026-10-28T12:53:25.014Z",
   "autoMatched": [
     {
       "net": "fb",
-      "url": "https://facebook.com/847463824059774/posts/1693417316131083",
+      "url": "https://www.facebook.com/reel/1542488287686082/",
+      "day": "oct-26/tue",
+      "score": 0.94
+    },
+    {
+      "net": "li",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7520923470713495552",
+      "day": "oct-26/tue",
+      "score": 0.86
+    },
+    {
+      "net": "li",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7520708529616494592",
       "day": "oct-26/mon",
-      "score": 0.46
+      "score": 0.45
     },
     {
       "net": "tt",
-      "url": "https://www.tiktok.com/@get_adit/video/7701200293509238030",
-      "day": "oct-26/mon",
-      "score": 0.46
+      "url": "https://www.tiktok.com/@get_adit/video/7701484978789567757",
+      "day": "oct-26/tue",
+      "score": 0.8
     }
   ],
   "unmatched": []
