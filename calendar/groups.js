@@ -28,7 +28,7 @@ const GROUP_MONTHS = [
       /* ---------------- DENTAL ---------------- */
       { id: "D1", v: "dental", status: "Needs Adit approval", kind: "Post 1 · Debate", room: "Office manager rooms",
         title: "Would Your Front Desk Have Answered That Call?", talent: "Shelley Bostrom, Align My Practice",
-        media: { type: "video", src: "media/w2/wed.mp4", poster: "media/w2/wed.jpg" }, format: "Native video · about 60s",
+        media: { type: "video", src: "media/w2/shelley-ai-call.mp4", poster: "media/w2/shelley-ai-call.jpg" }, format: "Native video · about 60s",
         caption: [
           "Quick one for the office managers in here.",
           "At WOCON in Monterey, Shelley Bostrom (Align My Practice) picked up her phone on stage and called an AI receptionist as a brand-new patient, in front of a full room.",
@@ -37,7 +37,7 @@ const GROUP_MONTHS = [
         ],
         firstComment: "Full disclosure, I work with Adit, the system on that call. Happy to show anyone how offices set up the call rules.",
         why: "Office managers are our best audience in the groups, and missed calls are lane one in the playbook. The proof comes from an outside consultant on stage, not from us, so it reads like a story instead of a pitch, and the question gets every OM sharing their own number.",
-        notes: ["Same clip as Wednesday 10/28 on Instagram. Post the 60s cut."],
+        notes: ["Post the 60s cut. Instagram ran a different Shelley reel on Wed 10/28, so this clip is still fresh."],
         drive: "https://drive.google.com/file/d/1v-b-hOl-1277sK4K7CSlLFGj7Kp_5F3m/view?usp=drive_link" },
 
       { id: "D2", v: "dental", status: "Ready", kind: "Post 1 · Debate", room: "Owner rooms",
@@ -96,7 +96,7 @@ const GROUP_MONTHS = [
 
       { id: "C2", v: "chiro", status: "Needs Adit approval", kind: "Post 1 · Debate", room: "Solo doc rooms",
         title: "Who Answers the Phone While You're Adjusting?", talent: "Shelley Bostrom, Align My Practice",
-        media: { type: "video", src: "media/w2/wed.mp4", poster: "media/w2/wed.jpg" }, format: "Native video · about 60s",
+        media: { type: "video", src: "media/w2/shelley-ai-call.mp4", poster: "media/w2/shelley-ai-call.jpg" }, format: "Native video · about 60s",
         caption: [
           "Question for the solo docs: who answers the phone while you're mid-adjustment?",
           "This was filmed live on stage at a practice conference. A consultant called an AI receptionist as a brand-new patient. It answered right away, handled \"I don't have insurance,\" and booked her before she hung up.",
@@ -206,7 +206,7 @@ const GROUP_MONTHS = [
 
       { id: "R3", v: "ortho", status: "No group access", kind: "Post 2 · Debate", room: "Office manager rooms",
         title: "The 3 to 5 PM Phone Rush", talent: "Shelley Bostrom, Align My Practice",
-        media: { type: "video", src: "media/w2/wed.mp4", poster: "media/w2/wed.jpg" }, format: "Native video · about 60s",
+        media: { type: "video", src: "media/w2/shelley-ai-call.mp4", poster: "media/w2/shelley-ai-call.jpg" }, format: "Native video · about 60s",
         caption: [
           "3 to 5 PM in an ortho office: every chair is full of kids and the phone won't stop.",
           "At WOCON, Shelley Bostrom called an AI receptionist on stage as a brand-new patient. It answered right away and booked her consult before she hung up.",
