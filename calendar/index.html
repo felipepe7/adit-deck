@@ -214,17 +214,18 @@ button{font:inherit;color:inherit}
 .day .tags .chip{height:42px;padding:0 20px;font-size:14px}
 .day .tags .status{height:42px;padding:0 18px;font-size:13px}
 .day .tags .fmt{font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-left:6px}
-.day h2{margin:26px 0 0;font:800 54px/1.08 var(--display);letter-spacing:.02em;text-transform:uppercase;text-wrap:balance;max-width:1040px}
-.day .hook{margin-top:28px;display:flex;flex-direction:column;gap:12px}
+/* --dz < 1 is set by fitDays() on a day whose copy would otherwise run under the notes */
+.day h2{margin:26px 0 0;font:800 calc(54px*var(--dz,1))/1.08 var(--display);letter-spacing:.02em;text-transform:uppercase;text-wrap:balance;max-width:1040px}
+.day .hook{margin-top:calc(28px*var(--dz,1));display:flex;flex-direction:column;gap:12px}
 .day .label{font-size:14px}
-.day .hook p{margin:0;font:600 28px/1.35 var(--body);text-wrap:balance}
-.day .two{margin-top:32px;display:grid;grid-template-columns:1.1fr 1fr;gap:60px;min-height:0}
+.day .hook p{margin:0;font:600 calc(28px*var(--dz,1))/1.35 var(--body);text-wrap:balance}
+.day .two{margin-top:calc(32px*var(--dz,1));display:grid;grid-template-columns:1.1fr 1fr;gap:60px;min-height:0}
 .day .blk{display:flex;flex-direction:column;gap:12px;min-width:0}
-.day .blk + .blk{margin-top:28px}
-.day .txt p{margin:0 0 10px;font:400 18.5px/1.58 var(--body);color:#D9DBDF}
+.day .blk + .blk{margin-top:calc(28px*var(--dz,1))}
+.day .txt p{margin:0 0 10px;font:400 calc(18.5px*var(--dz,1))/1.58 var(--body);color:#D9DBDF}
 .day .txt p:last-child{margin-bottom:0}
-.day .hash{font:500 16px/1.55 var(--body);color:var(--faint);margin:0}
-.day .notebox{padding:14px 18px;font:500 16px/1.5 var(--body)}
+.day .hash{font:500 calc(16px*var(--dz,1))/1.55 var(--body);color:var(--faint);margin:0}
+.day .notebox{padding:calc(14px*var(--dz,1)) 18px;font:500 calc(16px*var(--dz,1))/1.5 var(--body)}
 .day .foot{margin-top:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .day .foot .btn{height:60px;padding:0 30px;font-size:16px}
 .day .foot .notebox{flex:1 1 380px}
@@ -1040,6 +1041,18 @@ function buildDeck(){
   let cur = -1;
   const fit = ()=>{ const k = Math.min(innerWidth/1920, innerHeight/1080); stage.style.transform = `translate(-50%,-50%) scale(${k})`; };
   fit(); addEventListener("resize", fit); cleanup.push(()=>removeEventListener("resize", fit));
+  /* a day with long copy steps its type down until caption, thought and CTA sit above the notes instead of under them */
+  const fitDays = ()=> slides.forEach(s=>{
+    if (!s.classList.contains("day")) return;
+    const col = s.querySelector(".col"), foot = s.querySelector(".foot"), blks = [...s.querySelectorAll(".two .blk")];
+    if (!col || !foot || !blks.length) return;
+    /* layout boxes only, summed up to the column (a revealing block can become its own offsetParent): the copy has to end 18px above the notes */
+    const yIn = el => { let y = 0; for (let e = el; e && e !== col; e = e.offsetParent) y += e.offsetTop; return y; };
+    const over = ()=> Math.max(...blks.map(b => yIn(b) + b.offsetHeight)) > yIn(foot) - 18 || yIn(foot) + foot.offsetHeight > col.clientHeight + 1;
+    col.style.removeProperty("--dz");
+    for (let z = 0.96; z >= 0.72 && over(); z -= 0.04) col.style.setProperty("--dz", z.toFixed(2));
+  });
+  fitDays(); if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitDays);
   function go(i){
     i = Math.max(0, Math.min(slides.length-1, i)); if (i === cur) return;
     const prev = cur; cur = i;
