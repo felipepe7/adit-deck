@@ -307,7 +307,7 @@ const WEEKS = [
         cta: "What does your team do that new patients never forget? 👇",
         tags: "#Orthodontics #OrthoPractice #PatientExperience #NewPatientConsult #TreatmentCoordinator #WOCON #PracticeGrowth",
         manychat: "Every comment on this reel gets the Review Challenge DM, so each commenter's info is captured.",
-        notes: ["Re-edited Oct 27: the throat-exam stock shot under \"better experience\" is now an orthodontist walking a patient through braces, with Yash's light leak and captions rebuilt to match.", "On Metricool at each platform's best Wednesday hour: Instagram 8:00 AM PT (Shelley as collaborator), LinkedIn 11:00 AM, Facebook 12:00 PM, YouTube 4:00 PM. TikTok Mon 11/2 at noon, the next open slot in the one-a-day queue.", "The live AI call clip stays in the Facebook Groups menu (D1, C2, R3), still unposted."],
+        notes: ["Re-edited Oct 27: an orthodontist walking a patient through braces replaces the throat-exam stock shot under \"better experience\".", "Metricool, each platform's best Wednesday hour: Instagram 8 AM PT (Shelley as collaborator), LinkedIn 11 AM, Facebook 12 PM, YouTube 4 PM. TikTok Mon 11/2 at noon (one a day)."],
         ask: "What do new patients never forget?" },
       { id: "thu", day: "Thursday", short: "Thu", date: "10/29", status: "Ready", format: "Reel · 45s cut (from 63s)",
         title: "7 Fastest Ways Practices Lose Money", bucket: "Thought Leadership / Halloween", video: true,
