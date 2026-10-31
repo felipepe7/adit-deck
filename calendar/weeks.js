@@ -324,9 +324,10 @@ const WEEKS = [
         tags: "#DentalPractice #PracticeManagement #DentalBusiness #NoShows #GoogleReviews #Halloween",
         notes: ["Trim to about 45s. Our record ranking video ran 52s; last week's 105s list held 6%."],
         ask: "Which one costs you the most?" },
-      { id: "fri", day: "Friday", short: "Fri", date: "10/30", status: "Ready", format: "Reel · 22s · 8:25 PM PT",
+      { id: "fri", day: "Friday", short: "Fri", date: "10/30", status: "Posted", format: "Reel · 22s · 8:25 PM PT",
         title: "Every Practice Has Gaps to Close", bucket: "Partner / Event Energy", video: true,
         talent: "Shelley Bostrom",
+        ig: "https://www.instagram.com/reel/DfJL7_WjyN0/",
         drive: "https://drive.google.com/file/d/1DvjBE1Q1mb85TjH5ynE62ux07DIUmLP8/view?usp=drive_link",
         hook: "A full room at WOCON, and one line every practice needed to hear 🎤",
         caption: [
