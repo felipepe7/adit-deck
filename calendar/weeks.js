@@ -257,7 +257,7 @@ const WEEKS = [
     close: { kind: "thanks" }
   },
   {
-    id: "oct-26", n: 5, tab: "Oct 26", range: "Oct 26 to Nov 1", state: "Planned",
+    id: "oct-26", n: 5, tab: "Oct 26", range: "Oct 26 to Nov 1", state: "Posted",
     theme: "Challenge Final Week + New Faces",
     cover: { big: "OCT 26", to: "TO NOV 1", year: "2026" },
     summary: "7 posts, one every day. The challenge gets the bookends, and the middle of the week goes to new faces, optometry and live proof.",
@@ -341,7 +341,7 @@ const WEEKS = [
         manychat: "Every comment on this reel gets the Review Challenge DM, so each commenter's info is captured.",
         notes: ["Scheduled Oct 30, 10 minutes apart: Instagram 8:25 PM PT (Shelley as collaborator), Facebook 8:35, YouTube 8:45, LinkedIn 8:55, TikTok 9:05."],
         ask: "What's your biggest new patient gap?" },
-      { id: "sat", day: "Saturday", short: "Sat", date: "10/31", status: "In production", format: "Reel · 15 to 20s",
+      { id: "sat", day: "Saturday", short: "Sat", date: "10/31", status: "Not posted", format: "Reel · 15 to 20s",
         title: "Final Day: Ends at Midnight", bucket: "Challenge / Halloween", mock: "finalday",
         hook: "🎃 Happy Halloween. The Adit Review Challenge ends at midnight.",
         caption: [
@@ -352,10 +352,11 @@ const WEEKS = [
         thought: "Last-day urgency in a short, text-led reel instead of another talking head, since Friday's announcement had our lowest watch time (4.9s). Live top 5, a countdown and WOCON crowd B-roll. Halloween makes the urgency feel fun instead of salesy.",
         cta: "Comment CHALLENGE before midnight and tag your team 🙌",
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Halloween",
-        notes: ["Built from the live board plus WOCON crowd and booth B-roll. No talking head."],
+        notes: ["Didn't go out on Oct 31. The last-day push ran in Friday's PS and the challenge DM, and the close went to Sunday's winners post."],
         ask: "Comment CHALLENGE before midnight" },
-      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "Scheduled", format: "Carousel · 5 videos scored to Latch · 9:45 PM PT",
+      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "Posted", format: "Carousel · 5 videos scored to Latch · 9:29 PM PT",
         title: "And the Winners Are...", bucket: "Challenge / Community", slides: ["sun-1.jpg", "sun-2.jpg", "sun-3.jpg", "sun-4.jpg", "sun-5.mp4"],
+        ig: "https://www.instagram.com/p/DfOjzg6AO1a/",
         hook: "We have our winners! 🏆",
         caption: [
           "31 days. 184 new Google reviews. One photo finish. Here's the final podium of the Adit Review Challenge 👇",
@@ -366,7 +367,7 @@ const WEEKS = [
         cta: "Comment CHALLENGE to get on the waitlist for the next challenge, with over $5,000 in prizes 🏆",
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth",
         manychat: "Comments and challenge DMs now get a waitlist message for the next challenge (both flows updated Nov 1), so every commenter's practice and email still get captured.",
-        notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Slides: the winners podium, the final top 5, 6th to 10th, 11th to 20th, then the motion reveal (counts down 20th to 4th top to bottom, Breeze lands on Latch's drop, ends on the $5,000+ next-challenge card).", "Scheduled on Metricool, 10 minutes apart: Instagram 9:45 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:55 (photos), YouTube Short 10:05 and LinkedIn 10:15 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day); Shelley's TikTok moved to Wed 11/4."],
+        notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Slides: the winners podium, the final top 5, 6th to 10th, 11th to 20th, then the motion reveal (counts down 20th to 4th top to bottom, Breeze lands on Latch's drop, ends on the $5,000+ next-challenge card).", "Posted Nov 1, 10 minutes apart: Instagram 9:29 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:39 (photos), YouTube Short 9:49 and LinkedIn 9:59 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day)."],
         ask: "Breeze wins by 3 points" }
     ],
     close: {

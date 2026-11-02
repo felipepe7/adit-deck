@@ -839,8 +839,8 @@ function mock(kind, inCard, o){
   o = o || {};
   const prod = inCard ? "" : '<span class="prod">In design</span>';
   if (kind === "chirotop"){
-    return `<div class="mock dark">${prod}${WM}<span class="tag">October Review Challenge</span><div class="h">Chiro<br><em>on top</em></div><div class="sub">A chiropractic office led the board from the first leaderboard to the last</div>
-      <div class="stats"><div><b>19</b><span>practices, 4 verticals</span></div><div><b>1st</b><span>Cook Chiropractic</span></div></div>
+    return `<div class="mock dark">${prod}${WM}<span class="tag">October Review Challenge</span><div class="h">Chiro<br><em>led it</em></div><div class="sub">Cook Chiropractic led every leaderboard and finished 2nd in a photo finish</div>
+      <div class="stats"><div><b>4</b><span>leaderboards led</span></div><div><b>2nd</b><span>of 20 practices</span></div></div>
       <div class="cta">How do you ask?</div></div>`;
   }
   if (kind === "optodata"){
@@ -862,8 +862,8 @@ function mock(kind, inCard, o){
   }
   if (kind === "numbers"){
     return `<div class="mock light">${prod}${WM}<span class="tag">October by the numbers</span>
-      <div class="stats"><div><b>19</b><span>practices entered</span></div><div><b>119</b><span>new Google reviews</span></div><div><b>1</b><span>month</span></div></div>
-      <div class="cta">${o.groups ? "Join November" : "Winners tomorrow"}</div><div class="slides"><i class="on"></i><i></i><i></i><i></i></div></div>`;
+      <div class="stats"><div><b>184</b><span>new Google reviews</span></div><div><b>20</b><span>practices on the final board</span></div><div><b>31</b><span>days</span></div></div>
+      <div class="cta">Join the waitlist</div><div class="slides"><i class="on"></i><i></i><i></i><i></i></div></div>`;
   }
   return "";
 }

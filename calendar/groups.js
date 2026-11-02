@@ -37,7 +37,7 @@ const GROUP_MONTHS = [
         ],
         firstComment: "Full disclosure, I work with Adit, the system on that call. Happy to show anyone how offices set up the call rules.",
         why: "Office managers are our best audience in the groups, and missed calls are lane one in the playbook. The proof comes from an outside consultant on stage, not from us, so it reads like a story instead of a pitch, and the question gets every OM sharing their own number.",
-        notes: ["Post the 60s cut. Instagram ran a different Shelley reel on Wed 10/28, so this clip is still fresh."],
+        notes: ["Post the 60s cut. The same clip is planned for the Instagram feed on Thu 11/5 if Adit approves, so the groups and the feed land together."],
         drive: "https://drive.google.com/file/d/1v-b-hOl-1277sK4K7CSlLFGj7Kp_5F3m/view?usp=drive_link" },
 
       { id: "D2", v: "dental", status: "Ready", kind: "Post 1 · Debate", room: "Owner rooms",
@@ -66,15 +66,17 @@ const GROUP_MONTHS = [
         notes: ["Soldier posts have no monthly cap in sponsored groups, so this doesn't use a slot.", "Whoever posts it owes the group the list. That's the research loop."],
         ig: "https://www.instagram.com/reel/Dd11WMfkZ04/" },
 
-      { id: "D4", v: "dental", status: "Waiting on Adit", kind: "Post 2 · Offer", room: "All dental rooms",
-        title: "October by the Numbers + November's Challenge", talent: "Adit Review Challenge",
+      { id: "D4", v: "dental", status: "Ready", kind: "Post 2 · Offer", room: "All dental rooms",
+        title: "October by the Numbers + the Waitlist", talent: "Adit Review Challenge",
         media: { type: "mock", kind: "numbers" }, format: "Image post",
         caption: [
-          "In October, 19 dental, ortho, chiro and optometry practices turned asking for Google reviews into a team sport, and added 119 new reviews in one month.",
-          "We're running it again in November. If your office wants in, comment CHALLENGE and I'll send you the details as soon as it opens."
+          "In October, 20 dental, ortho, perio and chiropractic practices turned asking for Google reviews into a team sport, and added 184 new reviews in 31 days.",
+          "The winner, Breeze Orthodontics, added 20 of them in the final week and won by 3 points.",
+          "Adit's next challenge has over $5,000 in prizes. If your office wants first access, comment CHALLENGE and I'll send you the waitlist."
         ],
-        why: "Practices that never saw the Instagram contest get a reason to follow Adit, which is the whole point of the monthly challenges. Every CHALLENGE comment becomes a DM and a practice contact.",
-        notes: ["Counts are as of Oct 25. Final numbers go in after the Oct 31 close.", "Needs Adit's green light on November's challenge and prize."] },
+        variant: "In The Business of Dentistry we can't reply, so end it with: \"If your office wants first access, send me a DM and I'll add you to the waitlist.\"",
+        why: "Practices that never saw the Instagram contest get proof that asking works, and a reason to get on the list before the next one opens. Every CHALLENGE comment becomes a DM and a practice contact.",
+        notes: ["Final count at the Oct 31 midnight close, the same numbers as the Instagram winners post.", "Same image as Wednesday's October by the Numbers carousel (slide 1)."] },
 
       { id: "D5", v: "dental", status: "Filming in November", kind: "Coming", room: "Dental rooms",
         title: "Periodontist Office Shoot", talent: "A periodontist in California",
@@ -83,16 +85,16 @@ const GROUP_MONTHS = [
         notes: ["The shoot plan goes to the doctor before we film, built from the best-performing doctor reels."] },
 
       /* ---------------- CHIRO ---------------- */
-      { id: "C1", v: "chiro", status: "After Nov 2", kind: "Post 1 · Story", room: "Chiro marketing rooms",
-        title: "A Chiropractic Office Led the Board", talent: "Cook Chiropractic",
+      { id: "C1", v: "chiro", status: "Ready", kind: "Post 1 · Story", room: "Chiro marketing rooms",
+        title: "The Chiro Office That Led Every Leaderboard", talent: "Cook Chiropractic",
         media: { type: "mock", kind: "chirotop" }, format: "Image post",
         caption: [
-          "Fun one for the chiro docs in here. Adit ran a Google review challenge in October with 19 dental, ortho, optometry and chiropractic practices.",
-          "The office that led the board from the first leaderboard to the last was a chiropractic office: Cook Chiropractic.",
+          "Fun one for the chiro docs in here. Adit ran a Google review challenge in October with 20 dental, ortho, perio and chiropractic practices.",
+          "A chiropractic office, Cook Chiropractic, led every leaderboard we posted. An ortho office passed them in the final days, and they finished second by 3 points, ahead of 18 dental, ortho and perio offices.",
           "So I'm curious how chiro offices ask for reviews. At checkout? A text after the visit? The doctor in the room? What actually works with your patients?"
         ],
-        why: "A chiro office beating every dental practice is a story chiro rooms want to hear, and the question underneath it is pure peer advice. No pitch needed.",
-        notes: ["Post after winners are verified Monday, Nov 2. Use the final practice count.", "Get Dr. Jesse Cook's OK to name the practice."] },
+        why: "A chiro office out-asking 18 dental, ortho and perio practices is a story chiro rooms want to hear, and the photo finish makes it better. The question underneath it is pure peer advice. No pitch needed.",
+        notes: ["Final results: Breeze Orthodontics 46, Cook Chiropractic 43, Canton Orthodontics 20 (posted on Instagram Nov 1).", "Get Dr. Jesse Cook's OK to name the practice."] },
 
       { id: "C2", v: "chiro", status: "Needs Adit approval", kind: "Post 1 · Debate", room: "Solo doc rooms",
         title: "Who Answers the Phone While You're Adjusting?", talent: "Shelley Bostrom, Align My Practice",
