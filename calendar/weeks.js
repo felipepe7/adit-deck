@@ -354,19 +354,20 @@ const WEEKS = [
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Halloween",
         notes: ["Built from the live board plus WOCON crowd and booth B-roll. No talking head."],
         ask: "Comment CHALLENGE before midnight" },
-      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "In design", format: "Carousel · 4 slides",
-        title: "October by the Numbers", bucket: "Community / Proof", mock: "numbers",
-        hook: "One month. 19 practices. 119 new Google reviews. ⭐",
+      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "Scheduled", format: "Carousel · 5 videos scored to Latch · 9:10 PM PT",
+        title: "And the Winners Are...", bucket: "Challenge / Community", slides: ["sun-1.jpg", "sun-2.jpg", "sun-3.jpg", "sun-4.jpg", "sun-5.mp4"],
+        hook: "We have our winners! 🏆",
         caption: [
-          "That's what happened when dental, ortho, chiro and optometry practices across the country made asking for reviews a team sport this October.",
-          "We're verifying every count today. Winners go live tomorrow 🏆",
-          "Missed this one? Adit runs a new challenge every month."
+          "31 days. 184 new Google reviews. One photo finish. Here's the final podium of the Adit Review Challenge 👇",
+          "🥇 @breezeortho 46 · 🥈 @dr.jesse_cook 43 · 🥉 @aliddin58 20, then the rest of the top 20 tagged in placement order",
+          "Breeze started the final week in 2nd, then added 20 new Google reviews to win by just 3 points 🔥"
         ],
-        thought: "Turns the contest into proof that asking works, gives every practice that entered some credit, and builds suspense for Monday's winners. It also opens the list for November's challenge so the momentum doesn't stop on Nov 1.",
-        cta: "Want first access to November's challenge? DM us your email 📩",
-        tags: "#AditReviewChallenge #GoogleReviews #PracticeGrowth #DentalMarketing",
-        notes: ["Counts shown are as of Oct 25. Final numbers go in after Saturday's close."],
-        ask: "Winners tomorrow, DM for November" }
+        thought: "The payoff for a month of leaderboards. The cover is the podium, not a list, and the motion version saves 1st place for Latch's drop. Tagging the top 20 pulls every practice and its followers back into the post, and 184 new Google reviews in 31 days turns the challenge into proof that asking works.",
+        cta: "Missed this one? The next challenge drops soon. Follow us so you're first in 📩",
+        tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth",
+        manychat: "Comments and challenge DMs now get a waitlist message for the next challenge (both flows updated Nov 1), so every commenter's practice and email still get captured.",
+        notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Scheduled on Metricool, 10 minutes apart: Instagram 9:10 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:20 (photos), YouTube Short 9:30 and LinkedIn 9:40 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day); Shelley's TikTok moved to Wed 11/4."],
+        ask: "Breeze wins by 3 points" }
     ],
     close: {
       kind: "asks",
@@ -374,10 +375,10 @@ const WEEKS = [
       items: [
         { k: "Approve", v: "Shelley's packed-room clip (Fri). Wednesday is now Shelley's best-experience reel, already scheduled." },
         { k: "ManyChat", v: "What the EHR comment DM should say and where it should send optometrists." },
-        { k: "Winners", v: "Confirm Monday, Nov 2 for the winners announcement, and who on the Adit side presents the prizes." },
+        { k: "Winners", v: "Winners went live Sunday night: Breeze $1,000, Cook $500, Canton $250. Who on the Adit side sends the prizes, and when?" },
         { k: "November", v: "Green light on the next monthly challenge so Sunday's post can open the waitlist." }
       ],
-      next: "Next week: winners reveal Monday Nov 2, then November's challenge kickoff."
+      next: "Next week: TikTok winners reveal Monday at noon, then the next challenge kickoff once Adit gives the green light."
     }
   }
 ];
