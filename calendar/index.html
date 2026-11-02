@@ -860,6 +860,11 @@ function mock(kind, inCard, o){
       <div class="podium"><div><span>1 · @dr.jesse_cook</span><b>37</b></div><div><span>2 · @aliddin58</span><b>19</b></div><div><span>3 · @breezeortho</span><b>16</b></div></div>
       <div class="cta">Comment CHALLENGE</div></div>`;
   }
+  if (kind === "december"){
+    return `<div class="mock dark">${prod}${WM}<span class="tag">Next challenge · December</span><div class="h">The prize<br><em>is a shoot</em></div><div class="sub">$5,000+ in photo and video shoots for the top 3 offices</div>
+      <div class="podium"><div><span>Full photo + video shoot</span><b>1st</b></div><div><span>Hero video + office photos</span><b>2nd</b></div><div><span>Office photo shoot</span><b>3rd</b></div></div>
+      <div class="cta">Comment CHALLENGE</div></div>`;
+  }
   if (kind === "numbers"){
     return `<div class="mock light">${prod}${WM}<span class="tag">October by the numbers</span>
       <div class="stats"><div><b>184</b><span>new Google reviews</span></div><div><b>20</b><span>practices on the final board</span></div><div><b>31</b><span>days</span></div></div>

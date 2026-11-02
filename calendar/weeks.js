@@ -370,16 +370,150 @@ const WEEKS = [
         notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Slides: the winners podium, the final top 5, 6th to 10th, 11th to 20th, then the motion reveal (counts down 20th to 4th top to bottom, Breeze lands on Latch's drop, ends on the $5,000+ next-challenge card).", "Posted Nov 1, 10 minutes apart: Instagram 9:29 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:39 (photos), YouTube Short 9:49 and LinkedIn 9:59 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day)."],
         ask: "Breeze wins by 3 points" }
     ],
+    learnings: [
+      { k: "821", v: "views for Steven's EHR reel across five platforms, the best of the week. A new face and a new vertical beat another challenge post." },
+      { k: "12.4s", v: "average Instagram watch on Josh's 45s money list, our longest of the week. Short ranked lists hold people to the end." },
+      { k: "226", v: "Facebook views on Friday's 22s Shelley clip, more than Instagram (97). Facebook is carrying the short event clips." }
+    ],
+    close: { kind: "thanks" }
+  },
+  {
+    id: "nov-2", n: 6, tab: "Nov 2", range: "Nov 2 to 8", state: "Planned",
+    theme: "Waitlist Week + Josh's Playbook",
+    cover: { big: "NOV 2", to: "TO NOV 8", year: "2026" },
+    summary: "8 posts, two a day on Tuesday, Thursday and Friday. Josh's playbook opens every weekday, and the evening posts build the waitlist for the December challenge.",
+    glanceNote: "November builds the waitlist. Every post ends on the same ask, comment CHALLENGE for first access to $5,000+ in prizes, and the waitlist DM captures each practice. Josh's finished reels now carry the waitlist sticker and end card.",
+    media: "media/w3/",
+    days: [
+      { id: "mon", day: "Monday", short: "Mon", date: "11/2", status: "Ready", format: "Reel · 57s · Tier list · 10:00 AM PT",
+        title: "Ranking Practice Time-Wasters", bucket: "Thought Leadership / Tier List", video: true,
+        talent: "Josh Gosnell",
+        hook: "Josh ranked the biggest time-wasters in a practice, S tier to F tier ⏳",
+        caption: [
+          "📞 Manual missed-call recovery: F tier. Why spend your team's time on something you can automate?",
+          "🛡️ Insurance verification: F tier for a doctor, C tier for the team · 👥 Unnecessary meetings: C tier (keep the morning huddle) · 📅 Manual appointment confirmations: C tier · 💳 Manual payment collection: B tier, because sometimes a personal touch gets the collection",
+          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "Tier lists are our record format (Sep 18: 1,849 views, 18 shares), and this one runs 57s, close to the record's 52s. Most of the board (missed-call recovery, confirmations, payment collection) is work Adit automates, and the reel never has to say so.",
+        cta: "Which one eats the most hours in your office? 👇",
+        tags: "#DentalPractice #PracticeManagement #FrontDesk #DentalOffice #TierList #PracticeGrowth",
+        manychat: "Every comment gets the waitlist DM (both flows switched Nov 1), so each commenter's practice and email get captured.",
+        notes: ["Josh's tier list cut from Oct 19, re-versioned Nov 1: the $1,000 sticker and end card are now the $5,000+ waitlist version, with the same motion.", "Facebook, LinkedIn and YouTube follow at their best hours. TikTok Thu 11/5 at noon (one a day)."],
+        ask: "Which one eats the most hours?" },
+      { id: "tue-a", day: "Tuesday", short: "Tue", jump: "Tue AM", date: "11/3", status: "Ready", format: "Reel · 60s · 10:00 AM PT",
+        title: "Convert More Patients in 5 Steps", bucket: "Thought Leadership / Framework", video: true,
+        talent: "Josh Gosnell",
+        hook: "Doctors, here's how to convert more patients in 5 steps 📈",
+        caption: [
+          "1️⃣ Understand why the patient called · 2️⃣ Ask better questions before offering an appointment · 3️⃣ Connect the visit to the patient's desired outcome · 4️⃣ Remove doubt around scheduling, insurance and payment · 5️⃣ Confirm the next step and follow up",
+          "Josh's take: a lot of patients drop off because nobody properly follows up with the lead 👀",
+          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "A framework a front desk can use on the very next call, so it gets saved and shared. Steps 4 and 5 are where Adit lives (scheduling, insurance, payments, follow-up), and Josh gets there on his own.",
+        cta: "Which step does your team skip most? Drop the number 👇",
+        tags: "#DentalPractice #NewPatients #FrontDesk #PatientExperience #PracticeGrowth #DentalOffice",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Josh's five-step cut from Oct 19, re-versioned Nov 1 with the waitlist sticker and end card.", "TikTok Fri 11/6 at noon."],
+        ask: "Which step does your team skip?" },
+      { id: "tue-b", day: "Tuesday", short: "Tue", jump: "Tue PM", date: "11/3", status: "In design", format: "Carousel · 4 slides · 6:00 PM PT",
+        title: "October by the Numbers", bucket: "Challenge / Waitlist", mock: "numbers",
+        hook: "184 new Google reviews in 31 days 📈",
+        caption: [
+          "That's what 20 practices did in October when asking for reviews became a team sport. 17 of them grew their Google reviews, and the top 3 added 94 between them:",
+          "🥇 Breeze Orthodontics +40 · 🥈 Cook Chiropractic +37 · 🥉 Canton Orthodontics of Roswell +17",
+          "The pattern Josh keeps coming back to: the best ask is still a personal, one-on-one ask from your team 🙌 Next up, a challenge with over $5,000 in prizes 🏆"
+        ],
+        thought: "Sunday's post celebrated the practices. This one shows everyone who didn't compete what one month of asking did, so the next challenge sells itself and the only CTA is the waitlist.",
+        cta: "Comment CHALLENGE to get on the waitlist 👇",
+        tags: "#GoogleReviews #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth #AditReviewChallenge",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Numbers from the final count (Oct 31 midnight close, rechecked Nov 1), the same figures as the Facebook groups D4 post.", "Slides: the 184 headline, the top 3 gains, Josh's one-line lesson, the $5,000+ waitlist card."],
+        ask: "Comment CHALLENGE for the waitlist" },
+      { id: "wed", day: "Wednesday", short: "Wed", date: "11/4", status: "Ready", format: "Reel · 51s · Say this, not that · 10:00 AM PT",
+        title: "Front-Desk Words to Stop Using", bucket: "Front Desk / Say This, Not That", video: true,
+        talent: "Josh Gosnell",
+        hook: "Doctors, stop saying these words to patients 🚫",
+        caption: [
+          "❌ That's our policy → ✅ Let me see what options we have available · ❌ You need treatment → ✅ The doctor recommends · ❌ It costs this much → ✅ The investment will be · ❌ We're completely booked → ✅ Our first available appointment is",
+          "❌ We'll have to call you back → ✅ Someone on my team will follow up with you · ❌ I don't know → ✅ Let me find that answer for you · ❌ That's not my department → ✅ Let me connect you to someone who can answer that · ❌ You missed your appointment → ✅ We miss seeing you",
+          "Save this for your next team huddle 📌 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "Office managers are our best audience, and \"say this, not that\" is the most saveable format we have: a team can use it on the next call. Eight swaps in 51 seconds keeps the pace up.",
+        cta: "Which one does your front desk still say? 👇",
+        tags: "#FrontDesk #OfficeManager #DentalOffice #PatientExperience #DentalPractice #CustomerService",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Josh's cut from Oct 19, re-versioned Nov 1 with the waitlist sticker and end card. Kept off the Facebook groups (reel bank note).", "TikTok Sat 11/7 at noon."],
+        ask: "Which one does your desk still say?" },
+      { id: "thu-a", day: "Thursday", short: "Thu", jump: "Thu AM", date: "11/5", status: "Ready", format: "Reel · 65s · Countdown · 10:00 AM PT",
+        title: "3 Changes That Transform a Practice", bucket: "Leadership / Countdown", video: true,
+        talent: "Josh Gosnell",
+        hook: "The 3 changes Josh would make to transform any practice 🔁",
+        caption: [
+          "3️⃣ Focus on the patient, not the practice. Everyone wants the most convenient experience, and the success of the practice follows the patient experience.",
+          "2️⃣ Give ownership to every outcome. Someone on your team should own every result · 1️⃣ You can't manage what you can't measure. Know your KPIs, not just production at the end of the month.",
+          "Josh: that's what takes a practice from $500K to $1M, or $1M to $2M 💡 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "A countdown holds people to number one, and number one (know your numbers) picks up where Josh's KPI reel left off on Oct 20. Built for owners: every change is a leadership habit, not a feature.",
+        cta: "Which of the 3 is hardest in your practice? 👇",
+        tags: "#PracticeGrowth #DentalPractice #PracticeOwner #Leadership #KPIs #PatientExperience",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Josh's countdown cut from Oct 19, re-versioned Nov 1 with the waitlist sticker and end card.", "TikTok Sun 11/8 at noon."],
+        ask: "Which change is hardest?" },
+      { id: "thu-b", day: "Thursday", short: "Thu", jump: "Thu PM", date: "11/5", status: "Needs Adit approval", format: "Reel · about 60s · 6:00 PM PT",
+        title: "Would Your Front Desk Have Answered That Call?", bucket: "Product Proof / Live Call", video: true,
+        talent: "Shelley Bostrom",
+        hook: "She called an AI receptionist live on stage, as a brand-new patient 📞",
+        caption: [
+          "At WOCON in Monterey, Shelley Bostrom of @alignmypractice picked up her phone in front of a full room and called an AI front desk as a new patient.",
+          "It answered right away, took her name and date of birth, handled \"I don't have insurance,\" and booked her into the next open consult. The whole call is in the video.",
+          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "The strongest product proof we have: a live call, an outside consultant and a full room. Office manager groups get the same clip Thursday (groups post D1), so the feed and the groups land together.",
+        cta: "Honest question: on a busy afternoon, how many rings before your front desk picks up? 👇",
+        tags: "#FrontDesk #MissedCalls #AIReceptionist #Orthodontics #DentalOffice #WOCON",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Needs Adit's OK: it shows the AI receptionist on a live call. Shelley as collaborator and people tag.", "Trimming to about 60s for the feed and the groups (this preview is the full 102s)."],
+        ask: "How many rings before you pick up?" },
+      { id: "fri-a", day: "Friday", short: "Fri", jump: "Fri AM", date: "11/6", status: "Ready", format: "Reel · 57s · 10:00 AM PT",
+        title: "3 Books Every Practice Owner Should Read", bucket: "Leadership / Personal", video: true,
+        talent: "Josh Gosnell",
+        hook: "3 books Josh says every practice owner should read 📚",
+        caption: [
+          "1️⃣ Extreme Ownership, Jocko Willink: when something goes wrong, don't ask who to blame. Ask what you can do differently as a leader.",
+          "2️⃣ Atomic Habits, James Clear: extraordinary results come from doing the right things consistently, 1% better every day · 3️⃣ Good to Great, Jim Collins: the best strategy fails without the right people in the right positions.",
+          "Your weekend reading list 🙌 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+        ],
+        thought: "An easy Friday save that shows the person behind the VP title. Book lists are evergreen and reach owners who don't follow dental tech accounts yet.",
+        cta: "What's the one book you'd add? 👇",
+        tags: "#PracticeOwner #Leadership #BookRecommendations #DentalPractice #ExtremeOwnership #AtomicHabits",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Josh's cut from Oct 19, re-versioned Nov 1 with the waitlist sticker and end card.", "TikTok Mon 11/9 at noon."],
+        ask: "What book would you add?" },
+      { id: "fri-b", day: "Friday", short: "Fri", jump: "Fri PM", date: "11/6", status: "Needs Adit approval", format: "Motion reel · about 15s · scored to Latch · 6:00 PM PT",
+        title: "The Next Prize Is a Shoot", bucket: "Challenge / Waitlist", mock: "december",
+        hook: "The next Adit challenge comes with a film crew 🎬",
+        caption: [
+          "Starting in December, the top 3 practices win a professional shoot of their office:",
+          "🥇 A full branded photo and video shoot · 🥈 A hero video plus office photos · 🥉 An office photo shoot",
+          "Over $5,000 in prizes. The details go to the waitlist first 👀"
+        ],
+        thought: "Gift cards got practices in the door in October. A shoot is worth more to a practice than a gift card, Puro Flow produces it so Adit isn't paying production costs, and while we're in each winner's office we film Adit testimonials and reels. Showing the prize now gives the waitlist all of November to grow.",
+        cta: "Comment CHALLENGE to get on the waitlist 👇",
+        tags: "#AditChallenge #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth #PracticeMarketing",
+        manychat: "Every comment gets the waitlist DM.",
+        notes: ["Needs Adit's green light on the December challenge and these prizes before it's built.", "Built in the winners post style, scored to Latch, with the same $5,000+ end card."],
+        ask: "Comment CHALLENGE for the waitlist" }
+    ],
     close: {
       kind: "asks",
       title: "What we need from the Adit team",
       items: [
-        { k: "Approve", v: "Shelley's packed-room clip (Fri). Wednesday is now Shelley's best-experience reel, already scheduled." },
-        { k: "ManyChat", v: "What the EHR comment DM should say and where it should send optometrists." },
-        { k: "Winners", v: "Winners went live Sunday night: Breeze $1,000, Cook $500, Canton $250. Who on the Adit side sends the prizes, and when?" },
-        { k: "November", v: "Green light on the next monthly challenge so Sunday's post can open the waitlist." }
+        { k: "Winner stories", v: "We're getting Breeze, Cook and Canton to each record a short video in their own office: what the challenge was like, what worked, what didn't, and why reviews matter. They post as collabs with @get_adit as they come in." },
+        { k: "December", v: "Green light on the December challenge. 1st place: a full branded photo and video shoot. 2nd: a hero video plus office photos. 3rd: an office photo shoot. Puro Flow produces the shoots, so Adit isn't paying production costs, and we film Adit content in each office while we're there." },
+        { k: "Approve", v: "Shelley's live AI call (Thu) and the December prize reveal (Fri)." },
+        { k: "Prizes", v: "Who on the Adit side sends October's gift cards ($1,000, $500, $250), and when? The winners will ask." }
       ],
-      next: "Next week: TikTok winners reveal Monday at noon, then the next challenge kickoff once Adit gives the green light."
+      next: "Next week: the first winner stories and Josh's case acceptance words. Facebook groups round 2 starts Nov 16."
     }
   }
 ];

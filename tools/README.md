@@ -47,3 +47,12 @@ The glance cards (desktop deck and phone strip) and the Facebook Groups menu car
 After adding or replacing any video, run `tools/previews.sh` (needs ffmpeg) and commit the new `p/` files. It only rebuilds previews that are missing or older than their video; `-f` rebuilds all. If a preview is missing the card falls back to the full file, so nothing breaks, it just loads heavier.
 
 A carousel day whose `slides` include an `.mp4` (the motion version) shows that video on its card. Image-only carousels crossfade on the card.
+
+# Waitlist re-versions of Josh's reels
+
+`waitlist_patch.py` takes one of Josh's finished Dan Martell-style reels (the Oct 18 to 19 cuts in `Adit Reel Work/josh/dm` on Felipe's Mac) and swaps the old "$1,000" CHALLENGE sticker and end card for the waitlist version ("Comment the word CHALLENGE to join the waitlist · $5,000+ in prizes"). It redraws both with the exact geometry and motion of the original compositor, finds where the old sticker and end card sit in that reel (position, start frame, end card frame), and covers them frame by frame, so the old graphics never show. Audio is copied untouched.
+
+    python3 tools/waitlist_patch.py "<reel v1>.mp4" out.mp4            # writes out.mp4 + out.mp4.json (detected timings)
+    python3 tools/waitlist_patch.py "<reel v1>.mp4" out.mp4 --detect-only
+
+It needs the fonts, Font Awesome and the flat Adit logo from `Adit Reel Work/josh/dm/pipeline/adit_reel_pipeline.tgz`, unpacked into a `pipe/` folder next to the script (`pipe/fonts`, `pipe/fa`, `pipe/broll`), plus numpy, scipy and Pillow. Run one reel at a time on a small machine; each run holds about 1.4 GB. Re-versioned Nov 1: C7673, C7674, C7675, C7680, C7681, C7683.
