@@ -244,6 +244,7 @@ button{font:inherit;color:inherit}
 .asks .item b{font:800 20px/1.3 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-lit)}
 .asks .item p{margin:0;font:500 21px/1.5 var(--body);color:#E3E5E8}
 .asks .next{margin-top:44px;font:600 20px/1.4 var(--body);letter-spacing:.06em;color:var(--muted)}
+.asks .item p a.asklink,.tile.ask p a.asklink{color:var(--blue-lit);font-weight:700;text-decoration:none;white-space:nowrap}
 .asks .flowline,.learn .flowline{position:absolute;left:140px;bottom:118px;font-size:16px;letter-spacing:.5em}
 
 /* close */
@@ -743,6 +744,7 @@ const LOGO = `<svg class="logo-svg" role="img" aria-label="PuroFlow Media" xmlns
 const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17L17 7M9 7h8v8"/></svg>';
 const SPK_OFF = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M22 9l-6 6M16 9l6 6"/></svg>';
 const SPK_ON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5L6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 010 7M18.5 5.5a9 9 0 010 13"/></svg>';
+const askLink = it => it.link ? ` <a class="asklink" href="${it.link}" target="_blank" rel="noopener">${esc(it.linkText || "Open")} &rarr;</a>` : "";
 const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
 const app = document.getElementById("app");
 let soundOn = false, mode = null, week = null, cleanup = [];
@@ -861,7 +863,7 @@ function mock(kind, inCard, o){
       <div class="cta">Comment CHALLENGE</div></div>`;
   }
   if (kind === "december"){
-    return `<div class="mock dark">${prod}${WM}<span class="tag">Next challenge · December</span><div class="h">The prize<br><em>is a shoot</em></div><div class="sub">$5,000+ in photo and video shoots for the top 3 offices</div>
+    return `<div class="mock dark">${prod}${WM}<span class="tag">Next challenge · December</span><div class="h">The prize<br><em>is a shoot</em></div><div class="sub">$10,000+ in photo and video shoots for the top 3 offices</div>
       <div class="podium"><div><span>Full photo + video shoot</span><b>1st</b></div><div><span>Hero video + office photos</span><b>2nd</b></div><div><span>Office photo shoot</span><b>3rd</b></div></div>
       <div class="cta">Comment CHALLENGE</div></div>`;
   }
@@ -1026,7 +1028,7 @@ function buildDeck(){
   if (w.learnings) S.push({t:"learnings", h:`<section class="slide learn"><div class="wrapc"><h2 class="h2">What Week ${w.n} Told Us</h2><p class="lead">Instagram numbers from Metricool. This is what shaped the plan for the following week.</p>
     <div class="tiles" style="grid-template-columns:repeat(${Math.max(w.learnings.length,3)},1fr)">${w.learnings.map(l=>`<div class="tile"><b>${l.k}</b><p>${esc(l.v)}</p></div>`).join("")}</div></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></section>`});
   if (w.close.kind === "asks") S.push({t:"asks", h:`<section class="slide asks"><div class="wrapc"><h2 class="h2">${esc(w.close.title)}</h2>
-    <div class="list">${w.close.items.map(it=>`<div class="item"><b>${esc(it.k)}</b><p>${esc(it.v)}</p></div>`).join("")}</div><div class="next">${esc(w.close.next)}</div></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></section>`});
+    <div class="list">${w.close.items.map(it=>`<div class="item"><b>${esc(it.k)}</b><p>${esc(it.v)}${askLink(it)}</p></div>`).join("")}</div><div class="next">${esc(w.close.next)}</div></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></section>`});
   S.push({t:"thanks", h:`<section class="slide close"><div class="glow"></div><div class="inner"><div class="logo">${LOGO}</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div>
     <div class="thanks">Thank you, Adit team</div><div class="ask">Ideas or edits for next week? Drop them in <b>${HUB.feedback}</b>.</div></div><div class="lightbar"></div></section>`});
 
@@ -1174,7 +1176,7 @@ function buildFeed(){
   </div></section>`; }).join("")}
   ${scoreRows(w).length ? `<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">Week ${w.n} scoreboard</h2><p class="lead">${scoreLead(w)}</p>${shareBar(w)}<div class="fsb">${scoreTable(w)}</div><p class="upd">Views are plays on videos and impressions on image posts. Live from Metricool${updatedLabel() ? `, updated ${updatedLabel()}` : ""}.</p></div></section>` : ""}
   ${w.learnings?`<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">What week ${w.n} told us</h2><p class="lead">Instagram numbers from Metricool.</p><div class="ftiles">${w.learnings.map(l=>`<div class="tile"><b>${l.k}</b><p>${esc(l.v)}</p></div>`).join("")}</div></div></section>`:""}
-  ${w.close.kind==="asks"?`<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">${esc(w.close.title)}</h2><p class="lead">${esc(w.close.next)}</p><div class="ftiles">${w.close.items.map(it=>`<div class="tile ask"><b>${esc(it.k)}</b><p>${esc(it.v)}</p></div>`).join("")}</div></div></section>`:""}
+  ${w.close.kind==="asks"?`<section class="fsec" style="border-top:1px solid var(--line);padding-top:30px"><div class="wrap"><h2 class="h2">${esc(w.close.title)}</h2><p class="lead">${esc(w.close.next)}</p><div class="ftiles">${w.close.items.map(it=>`<div class="tile ask"><b>${esc(it.k)}</b><p>${esc(it.v)}${askLink(it)}</p></div>`).join("")}</div></div></section>`:""}
   <section class="fclose"><div class="wrap"><div class="logo">${LOGO}</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="lightbar"></div>
     <div class="thanks">Thank you, Adit team</div><p class="ask">Ideas or edits for next week? Drop them in <b>${HUB.feedback}</b>.</p></div></section>
   </div>`;

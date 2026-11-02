@@ -382,7 +382,7 @@ const WEEKS = [
     theme: "Waitlist Week + Josh's Playbook",
     cover: { big: "NOV 2", to: "TO NOV 8", year: "2026" },
     summary: "8 posts, two a day on Tuesday, Thursday and Friday. Josh's playbook opens every weekday, and the evening posts build the waitlist for the December challenge.",
-    glanceNote: "November builds the waitlist. Every post ends on the same ask, comment CHALLENGE for first access to $5,000+ in prizes, and the waitlist DM captures each practice. Josh's finished reels now carry the waitlist sticker and end card.",
+    glanceNote: "November builds the waitlist. Every post ends on the same ask, comment CHALLENGE for first access to $10,000+ in prizes, and the waitlist DM captures each practice. Josh's finished reels now carry the waitlist sticker and end card.",
     media: "media/w3/",
     days: [
       { id: "mon", day: "Monday", short: "Mon", date: "11/2", status: "Ready", format: "Reel · 57s · Tier list · 10:00 AM PT",
@@ -392,13 +392,13 @@ const WEEKS = [
         caption: [
           "📞 Manual missed-call recovery: F tier. Why spend your team's time on something you can automate?",
           "🛡️ Insurance verification: F tier for a doctor, C tier for the team · 👥 Unnecessary meetings: C tier (keep the morning huddle) · 📅 Manual appointment confirmations: C tier · 💳 Manual payment collection: B tier, because sometimes a personal touch gets the collection",
-          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "Tier lists are our record format (Sep 18: 1,849 views, 18 shares), and this one runs 57s, close to the record's 52s. Most of the board (missed-call recovery, confirmations, payment collection) is work Adit automates, and the reel never has to say so.",
         cta: "Which one eats the most hours in your office? 👇",
         tags: "#DentalPractice #PracticeManagement #FrontDesk #DentalOffice #TierList #PracticeGrowth",
         manychat: "Every comment gets the waitlist DM (both flows switched Nov 1), so each commenter's practice and email get captured.",
-        notes: ["Josh's tier list cut from Oct 19, re-versioned Nov 1: the $1,000 sticker and end card are now the $5,000+ waitlist version, with the same motion.", "Facebook, LinkedIn and YouTube follow at their best hours. TikTok Thu 11/5 at noon (one a day)."],
+        notes: ["Josh's tier list cut from Oct 19, re-versioned Nov 1: the $1,000 sticker and end card are now the $10,000+ waitlist version, with the same motion.", "Facebook, LinkedIn and YouTube follow at their best hours. TikTok Thu 11/5 at noon (one a day)."],
         ask: "Which one eats the most hours?" },
       { id: "tue-a", day: "Tuesday", short: "Tue", jump: "Tue AM", date: "11/3", status: "Ready", format: "Reel · 60s · 10:00 AM PT",
         title: "Convert More Patients in 5 Steps", bucket: "Thought Leadership / Framework", video: true,
@@ -407,7 +407,7 @@ const WEEKS = [
         caption: [
           "1️⃣ Understand why the patient called · 2️⃣ Ask better questions before offering an appointment · 3️⃣ Connect the visit to the patient's desired outcome · 4️⃣ Remove doubt around scheduling, insurance and payment · 5️⃣ Confirm the next step and follow up",
           "Josh's take: a lot of patients drop off because nobody properly follows up with the lead 👀",
-          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "A framework a front desk can use on the very next call, so it gets saved and shared. Steps 4 and 5 are where Adit lives (scheduling, insurance, payments, follow-up), and Josh gets there on his own.",
         cta: "Which step does your team skip most? Drop the number 👇",
@@ -421,13 +421,13 @@ const WEEKS = [
         caption: [
           "That's what 20 practices did in October when asking for reviews became a team sport. 17 of them grew their Google reviews, and the top 3 added 94 between them:",
           "🥇 Breeze Orthodontics +40 · 🥈 Cook Chiropractic +37 · 🥉 Canton Orthodontics of Roswell +17",
-          "The pattern Josh keeps coming back to: the best ask is still a personal, one-on-one ask from your team 🙌 Next up, a challenge with over $5,000 in prizes 🏆"
+          "The pattern Josh keeps coming back to: the best ask is still a personal, one-on-one ask from your team 🙌 Next up, a challenge with over $10,000 in prizes 🏆"
         ],
         thought: "Sunday's post celebrated the practices. This one shows everyone who didn't compete what one month of asking did, so the next challenge sells itself and the only CTA is the waitlist.",
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#GoogleReviews #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth #AditReviewChallenge",
         manychat: "Every comment gets the waitlist DM.",
-        notes: ["Numbers from the final count (Oct 31 midnight close, rechecked Nov 1), the same figures as the Facebook groups D4 post.", "Slides: the 184 headline, the top 3 gains, Josh's one-line lesson, the $5,000+ waitlist card."],
+        notes: ["Numbers from the final count (Oct 31 midnight close, rechecked Nov 1), the same figures as the Facebook groups D4 post.", "Slides: the 184 headline, the top 3 gains, Josh's one-line lesson, the $10,000+ waitlist card."],
         ask: "Comment CHALLENGE for the waitlist" },
       { id: "wed", day: "Wednesday", short: "Wed", date: "11/4", status: "Ready", format: "Reel · 51s · Say this, not that · 10:00 AM PT",
         title: "Front-Desk Words to Stop Using", bucket: "Front Desk / Say This, Not That", video: true,
@@ -436,7 +436,7 @@ const WEEKS = [
         caption: [
           "❌ That's our policy → ✅ Let me see what options we have available · ❌ You need treatment → ✅ The doctor recommends · ❌ It costs this much → ✅ The investment will be · ❌ We're completely booked → ✅ Our first available appointment is",
           "❌ We'll have to call you back → ✅ Someone on my team will follow up with you · ❌ I don't know → ✅ Let me find that answer for you · ❌ That's not my department → ✅ Let me connect you to someone who can answer that · ❌ You missed your appointment → ✅ We miss seeing you",
-          "Save this for your next team huddle 📌 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "Save this for your next team huddle 📌 🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "Office managers are our best audience, and \"say this, not that\" is the most saveable format we have: a team can use it on the next call. Eight swaps in 51 seconds keeps the pace up.",
         cta: "Which one does your front desk still say? 👇",
@@ -451,7 +451,7 @@ const WEEKS = [
         caption: [
           "3️⃣ Focus on the patient, not the practice. Everyone wants the most convenient experience, and the success of the practice follows the patient experience.",
           "2️⃣ Give ownership to every outcome. Someone on your team should own every result · 1️⃣ You can't manage what you can't measure. Know your KPIs, not just production at the end of the month.",
-          "Josh: that's what takes a practice from $500K to $1M, or $1M to $2M 💡 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "Josh: that's what takes a practice from $500K to $1M, or $1M to $2M 💡 🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "A countdown holds people to number one, and number one (know your numbers) picks up where Josh's KPI reel left off on Oct 20. Built for owners: every change is a leadership habit, not a feature.",
         cta: "Which of the 3 is hardest in your practice? 👇",
@@ -466,7 +466,7 @@ const WEEKS = [
         caption: [
           "At WOCON in Monterey, Shelley Bostrom of @alignmypractice picked up her phone in front of a full room and called an AI front desk as a new patient.",
           "It answered right away, took her name and date of birth, handled \"I don't have insurance,\" and booked her into the next open consult. The whole call is in the video.",
-          "🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "The strongest product proof we have: a live call, an outside consultant and a full room. Office manager groups get the same clip Thursday (groups post D1), so the feed and the groups land together.",
         cta: "Honest question: on a busy afternoon, how many rings before your front desk picks up? 👇",
@@ -481,7 +481,7 @@ const WEEKS = [
         caption: [
           "1️⃣ Extreme Ownership, Jocko Willink: when something goes wrong, don't ask who to blame. Ask what you can do differently as a leader.",
           "2️⃣ Atomic Habits, James Clear: extraordinary results come from doing the right things consistently, 1% better every day · 3️⃣ Good to Great, Jim Collins: the best strategy fails without the right people in the right positions.",
-          "Your weekend reading list 🙌 🏆 PS: The next Adit challenge has over $5,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "Your weekend reading list 🙌 🏆 PS: The next Adit challenge has over $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
         ],
         thought: "An easy Friday save that shows the person behind the VP title. Book lists are evergreen and reach owners who don't follow dental tech accounts yet.",
         cta: "What's the one book you'd add? 👇",
@@ -494,14 +494,14 @@ const WEEKS = [
         hook: "The next Adit challenge comes with a film crew 🎬",
         caption: [
           "Starting in December, the top 3 practices win a professional shoot of their office:",
-          "🥇 A full branded photo and video shoot · 🥈 A hero video plus office photos · 🥉 An office photo shoot",
-          "Over $5,000 in prizes. The details go to the waitlist first 👀"
+          "🥇 A full branded photo and video shoot, a $5,000 value · 🥈 A hero video plus office photos · 🥉 An office photo shoot",
+          "Over $10,000 in prizes. The details go to the waitlist first 👀"
         ],
         thought: "Gift cards got practices in the door in October. A shoot is worth more to a practice than a gift card, Puro Flow produces it so Adit isn't paying production costs, and while we're in each winner's office we film Adit testimonials and reels. Showing the prize now gives the waitlist all of November to grow.",
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#AditChallenge #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth #PracticeMarketing",
         manychat: "Every comment gets the waitlist DM.",
-        notes: ["Needs Adit's green light on the December challenge and these prizes before it's built.", "Built in the winners post style, scored to Latch, with the same $5,000+ end card."],
+        notes: ["Needs Adit's green light on the December challenge and these prizes before it's built.", "Built in the winners post style, scored to Latch, with the same $10,000+ end card."],
         ask: "Comment CHALLENGE for the waitlist" }
     ],
     close: {
@@ -509,7 +509,7 @@ const WEEKS = [
       title: "What we need from the Adit team",
       items: [
         { k: "Winner stories", v: "We're getting Breeze, Cook and Canton to each record a short video in their own office: what the challenge was like, what worked, what didn't, and why reviews matter. They post as collabs with @get_adit as they come in." },
-        { k: "December", v: "Green light on the December challenge. 1st place: a full branded photo and video shoot. 2nd: a hero video plus office photos. 3rd: an office photo shoot. Puro Flow produces the shoots, so Adit isn't paying production costs, and we film Adit content in each office while we're there." },
+        { k: "December", v: "Green light on the December challenge and the plan. Over $10,000 in prizes. 1st place: a full branded photo and video shoot, a $5,000 value. 2nd: a hero video plus office photos. 3rd: an office photo shoot. Puro Flow produces the shoots, so Adit isn't paying production costs, and we film Adit content in each office while we're there.", link: "files/Adit-December-Challenge-Plan.pdf", linkText: "Open the December plan" },
         { k: "Approve", v: "Shelley's live AI call (Thu) and the December prize reveal (Fri)." },
         { k: "Prizes", v: "Who on the Adit side sends October's gift cards ($1,000, $500, $250), and when? The winners will ask." }
       ],
