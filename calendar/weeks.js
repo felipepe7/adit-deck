@@ -385,9 +385,9 @@ const WEEKS = [
     glanceNote: "November builds the waitlist. Every post ends on the same ask, comment CHALLENGE for first access to $10,000 in prizes, and the waitlist DM captures each practice. Josh's finished reels now carry the waitlist sticker and end card.",
     media: "media/w3/",
     days: [
-      { id: "mon", day: "Monday", short: "Mon", date: "11/2", status: "Ready", format: "Reel · 57s · Tier list · 10:00 AM PT",
+      { id: "mon", day: "Monday", short: "Mon", date: "11/2", status: "Posted", format: "Reel · 57s · Tier list · 3:11 PM PT",
         title: "Ranking Practice Time-Wasters", bucket: "Thought Leadership / Tier List", video: true,
-        talent: "Josh Gosnell",
+        talent: "Josh Gosnell", ig: "https://www.instagram.com/reel/DfQdTBdjU2d/",
         hook: "Josh ranked the biggest time-wasters in a practice, S tier to F tier ⏳",
         caption: [
           "📞 Manual missed-call recovery: F tier. Why spend your team's time on something you can automate?",
@@ -398,7 +398,7 @@ const WEEKS = [
         cta: "Which one eats the most hours in your office? 👇",
         tags: "#DentalPractice #PracticeManagement #FrontDesk #DentalOffice #TierList #PracticeGrowth",
         manychat: "Every comment gets the waitlist DM (both flows switched Nov 1), so each commenter's practice and email get captured.",
-        notes: ["Josh's tier list cut from Oct 19, re-versioned for the waitlist: the $1,000 sticker and end card now say $10,000 in prizes (re-cut Nov 2), with the same motion.", "Facebook, LinkedIn and YouTube follow at their best hours. TikTok Thu 11/5 at noon (one a day)."],
+        notes: ["Josh's tier list cut from Oct 19, re-versioned for the waitlist: the $1,000 sticker and end card now say $10,000 in prizes (re-cut Nov 2), with the same motion.", "Posted Nov 2, 15 minutes apart: Instagram 3:11 PM PT, Facebook 3:26, YouTube Short 3:41, LinkedIn 3:56, TikTok 4:11 (moved up from Thursday). Cover: Josh cutout, Ranking Practice Time-Wasters."],
         ask: "Which one eats the most hours?" },
       { id: "tue-a", day: "Tuesday", short: "Tue", jump: "Tue AM", date: "11/3", status: "Ready", format: "Reel · 60s · 10:00 AM PT",
         title: "Convert More Patients in 5 Steps", bucket: "Thought Leadership / Framework", video: true,
