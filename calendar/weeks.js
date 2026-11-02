@@ -354,7 +354,7 @@ const WEEKS = [
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Halloween",
         notes: ["Built from the live board plus WOCON crowd and booth B-roll. No talking head."],
         ask: "Comment CHALLENGE before midnight" },
-      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "Scheduled", format: "Carousel · 5 videos scored to Latch · 9:10 PM PT",
+      { id: "sun", day: "Sunday", short: "Sun", date: "11/1", status: "Scheduled", format: "Carousel · 5 videos scored to Latch · 9:45 PM PT",
         title: "And the Winners Are...", bucket: "Challenge / Community", slides: ["sun-1.jpg", "sun-2.jpg", "sun-3.jpg", "sun-4.jpg", "sun-5.mp4"],
         hook: "We have our winners! 🏆",
         caption: [
@@ -363,10 +363,10 @@ const WEEKS = [
           "Breeze started the final week in 2nd, then added 20 new Google reviews to win by just 3 points 🔥"
         ],
         thought: "The payoff for a month of leaderboards. The cover is the podium, not a list, and the motion version saves 1st place for Latch's drop. Tagging the top 20 pulls every practice and its followers back into the post, and 184 new Google reviews in 31 days turns the challenge into proof that asking works.",
-        cta: "Missed this one? The next challenge drops soon. Follow us so you're first in 📩",
+        cta: "Comment CHALLENGE to get on the waitlist for the next challenge, with over $5,000 in prizes 🏆",
         tags: "#AditReviewChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #PracticeGrowth",
         manychat: "Comments and challenge DMs now get a waitlist message for the next challenge (both flows updated Nov 1), so every commenter's practice and email still get captured.",
-        notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Scheduled on Metricool, 10 minutes apart: Instagram 9:10 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:20 (photos), YouTube Short 9:30 and LinkedIn 9:40 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day); Shelley's TikTok moved to Wed 11/4."],
+        notes: ["Final count: every practice's Google reviews at the Oct 31 midnight close, rechecked Nov 1 at 5:50 PM PT. Points = reviews since Oct 1 + tag points + 1 sign-up point.", "Slides: the winners podium, the final top 5, 6th to 10th, 11th to 20th, then the motion reveal (counts down 20th to 4th top to bottom, Breeze lands on Latch's drop, ends on the $5,000+ next-challenge card).", "Scheduled on Metricool, 10 minutes apart: Instagram 9:45 PM PT (every slide a video scored to Latch, motion reveal last), Facebook 9:55 (photos), YouTube Short 10:05 and LinkedIn 10:15 (the motion reveal with the podium cover). TikTok Mon 11/2 at noon (one a day); Shelley's TikTok moved to Wed 11/4."],
         ask: "Breeze wins by 3 points" }
     ],
     close: {
