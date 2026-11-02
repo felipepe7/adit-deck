@@ -1,6 +1,7 @@
 # Re-versions a finished Josh Dan Martell reel for the waitlist: covers the old "$1,000" CTA sticker and end card
 # with new ones drawn with the exact same geometry and motion as the original compositor (tier_dm.py), so the old
 # graphics never show. Usage: python3 waitlist_patch.py <in.mp4> <out.mp4> [--detect-only]
+# The prize line reads "<PRIZE> in prizes"; set PRIZE in the environment to change it (default "$10,000").
 import sys, os, json, math, subprocess, numpy as np
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from scipy import ndimage
@@ -9,6 +10,7 @@ S = os.path.dirname(os.path.abspath(__file__)) + '/pipe/'
 FU = S + 'fonts/Ubuntu-%s.ttf'; FA = S + 'fa/package/webfonts/fa-solid-900.ttf'; LOGO = S + 'broll/adit_logo_flat.png'
 W, H = 1080, 1920; FPS = 30000 / 1001; F1 = 1 / FPS
 NAVYT = (9, 42, 61); ORANGE = (242, 136, 32); BLUE = (37, 168, 224)
+PRIZE = os.environ.get('PRIZE', '$10,000')
 fu = lambda w, sz: ImageFont.truetype(FU % w, sz)
 def ease(x): x = min(1, max(0, x)); return x * x * (3 - 2 * x)
 def eob(x): x = min(1, max(0, x)); c = 1.5; return 1 + (c + 1) * (x - 1) ** 3 + c * (x - 1) ** 2
@@ -106,9 +108,9 @@ def endcard(L, te):
 # ---------------- new copy ----------------
 def pick_new_sticker():
     w0, h0 = OLD['size']
-    opts = [([('to join the waitlist', NAVYT)], [('$5,000+', ORANGE), (' in prizes', NAVYT)], 40),
-            ([('to join the waitlist', NAVYT)], [('$5,000+', ORANGE), (' in prizes', NAVYT)], 36),
-            ([('to join the waitlist', NAVYT)], [('$5,000+', ORANGE), (' prizes', NAVYT)], 40)]
+    opts = [([('to join the waitlist', NAVYT)], [(PRIZE, ORANGE), (' in prizes', NAVYT)], 40),
+            ([('to join the waitlist', NAVYT)], [(PRIZE, ORANGE), (' in prizes', NAVYT)], 36),
+            ([('to join the waitlist', NAVYT)], [(PRIZE, ORANGE), (' prizes', NAVYT)], 40)]
     for l3, l4, fs in opts:
         P = sticker_parts(l3, l4, f3size=fs)
         if P['nat'][0] <= w0 and P['nat'][1] <= h0:
@@ -117,7 +119,7 @@ def pick_new_sticker():
 
 def new_endcard_layers():
     line_b = [('to join the waitlist for', NAVYT)]
-    parts = [('$5,000+ ', ORANGE), ('in prizes', NAVYT)]
+    parts = [(PRIZE + ' ', ORANGE), ('in prizes', NAVYT)]
     for sz in (112, 104, 96, 90):
         if fu('Bold', sz).getlength(''.join(p for p, _ in parts)) <= 940: return ec_layers(line_b, parts, sz), sz
     return ec_layers(line_b, parts, 90), 90

@@ -72,7 +72,7 @@ const GROUP_MONTHS = [
         caption: [
           "In October, 20 dental, ortho, perio and chiropractic practices turned asking for Google reviews into a team sport, and added 184 new reviews in 31 days.",
           "The winner, Breeze Orthodontics, added 20 of them in the final week and won by 3 points.",
-          "Adit's next challenge has over $10,000 in prizes. If your office wants first access, comment CHALLENGE and I'll send you the waitlist."
+          "Adit's next challenge has $10,000 in prizes. If your office wants first access, comment CHALLENGE and I'll send you the waitlist."
         ],
         variant: "In The Business of Dentistry we can't reply, so end it with: \"If your office wants first access, send me a DM and I'll add you to the waitlist.\"",
         why: "Practices that never saw the Instagram contest get proof that asking works, and a reason to get on the list before the next one opens. Every CHALLENGE comment becomes a DM and a practice contact.",
