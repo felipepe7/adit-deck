@@ -398,7 +398,7 @@ const WEEKS = [
         cta: "Which one eats the most hours in your office? 👇",
         tags: "#DentalPractice #PracticeManagement #FrontDesk #DentalOffice #TierList #PracticeGrowth",
         manychat: "Every comment gets the waitlist DM (both flows switched Nov 1), so each commenter's practice and email get captured.",
-        notes: ["Josh's tier list cut from Oct 19, re-versioned for the waitlist: the $1,000 sticker and end card now say $10,000 in prizes (re-cut Nov 2), with the same motion.", "Posted Nov 2, 15 minutes apart: Instagram 3:11 PM PT, Facebook 3:26, YouTube Short 3:41, LinkedIn 3:56, TikTok 4:11 (moved up from Thursday). Cover: Josh cutout, Ranking Practice Time-Wasters."],
+        notes: ["Josh's tier list cut from Oct 19, re-versioned for the waitlist: the $1,000 sticker and end card now say $10,000 in prizes (re-cut Nov 2), with the same motion.", "Posted Nov 2, 15 minutes apart: Instagram 3:11 PM PT, Facebook 3:26, YouTube Short 3:41, LinkedIn 3:56, TikTok flagged a second upload the same day as spam risk, so it posts Thu 11/5 at noon. Cover: Josh cutout, Ranking Practice Time-Wasters."],
         ask: "Which one eats the most hours?" },
       { id: "tue-a", day: "Tuesday", short: "Tue", jump: "Tue AM", date: "11/3", status: "Ready", format: "Reel · 60s · 10:00 AM PT",
         title: "Convert More Patients in 5 Steps", bucket: "Thought Leadership / Framework", video: true,
