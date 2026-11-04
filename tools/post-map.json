@@ -130,10 +130,20 @@
     "ig": "https://www.instagram.com/p/DfOjzg6AO1a/",
     "fb": "https://facebook.com/847463824059774/posts/1700310355441779",
     "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7522900239914299393",
-    "tt": "https://www.tiktok.com/@get_adit/video/7703666999242607885"
+    "tt": "https://www.tiktok.com/@get_adit/video/7703666999242607885",
+    "yt": "https://www.youtube.com/watch?v=3VW8eyFJFmo"
   },
   "nov-2/mon": {
     "ig": "https://www.instagram.com/reel/DfQdTBdjU2d/",
-    "fb": "https://www.facebook.com/reel/1635098961390017/"
+    "fb": "https://www.facebook.com/reel/1635098961390017/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523171345791225856"
+  },
+  "nov-2/tue-a": {
+    "ig": "https://www.instagram.com/reel/DfTIIPoFKLS/",
+    "fb": "https://www.facebook.com/reel/1410109881290909/"
+  },
+  "nov-2/tue-b": {
+    "ig": "https://www.instagram.com/p/DfTVyKeDIWu/",
+    "fb": "https://facebook.com/847463824059774/posts/1702363575236457"
   }
 }

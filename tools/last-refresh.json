@@ -1,5 +1,30 @@
 {
-  "at": "2026-11-03T13:41:44.779Z",
-  "autoMatched": [],
+  "at": "2026-11-04T13:41:41.724Z",
+  "autoMatched": [
+    {
+      "net": "fb",
+      "url": "https://www.facebook.com/reel/1410109881290909/",
+      "day": "nov-2/tue-a",
+      "score": 0.95
+    },
+    {
+      "net": "fb",
+      "url": "https://facebook.com/847463824059774/posts/1702363575236457",
+      "day": "nov-2/tue-b",
+      "score": 0.93
+    },
+    {
+      "net": "li",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523171345791225856",
+      "day": "nov-2/mon",
+      "score": 0.83
+    },
+    {
+      "net": "yt",
+      "url": "https://www.youtube.com/watch?v=3VW8eyFJFmo",
+      "day": "oct-26/sun",
+      "score": 0.38
+    }
+  ],
   "unmatched": []
 }
