@@ -1,5 +1,48 @@
 {
-  "at": "2026-11-05T13:44:55.167Z",
-  "autoMatched": [],
+  "at": "2026-11-06T13:41:08.811Z",
+  "autoMatched": [
+    {
+      "net": "ig",
+      "url": "https://www.instagram.com/reel/DfXoq8Sj70P/",
+      "day": "nov-2/thu-a",
+      "score": 0.97
+    },
+    {
+      "net": "fb",
+      "url": "https://www.facebook.com/reel/1023889240722950/",
+      "day": "nov-2/thu-a",
+      "score": 0.95
+    },
+    {
+      "net": "li",
+      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7524185351914127360",
+      "day": "nov-2/thu-a",
+      "score": 0.8
+    },
+    {
+      "net": "tt",
+      "url": "https://www.tiktok.com/@get_adit/video/7704779920286747917",
+      "day": "nov-2/mon",
+      "score": 0.75
+    },
+    {
+      "net": "yt",
+      "url": "https://www.youtube.com/watch?v=P8C_DrpJ_Jw",
+      "day": "nov-2/tue-b",
+      "score": 0.47
+    },
+    {
+      "net": "yt",
+      "url": "https://www.youtube.com/watch?v=J2OJxyRReyU",
+      "day": "nov-2/tue-a",
+      "score": 0.48
+    },
+    {
+      "net": "yt",
+      "url": "https://www.youtube.com/watch?v=L3PdqopBuoY",
+      "day": "nov-2/mon",
+      "score": 0.72
+    }
+  ],
   "unmatched": []
 }

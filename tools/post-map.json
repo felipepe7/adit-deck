@@ -137,21 +137,30 @@
   "nov-2/mon": {
     "ig": "https://www.instagram.com/reel/DfQdTBdjU2d/",
     "fb": "https://www.facebook.com/reel/1635098961390017/",
-    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523171345791225856"
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523171345791225856",
+    "tt": "https://www.tiktok.com/@get_adit/video/7704779920286747917",
+    "yt": "https://www.youtube.com/watch?v=L3PdqopBuoY"
   },
   "nov-2/tue-a": {
     "ig": "https://www.instagram.com/reel/DfTIIPoFKLS/",
     "fb": "https://www.facebook.com/reel/1410109881290909/",
-    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523583882676383744"
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523583882676383744",
+    "yt": "https://www.youtube.com/watch?v=J2OJxyRReyU"
   },
   "nov-2/tue-b": {
     "ig": "https://www.instagram.com/p/DfTVyKeDIWu/",
     "fb": "https://facebook.com/847463824059774/posts/1702363575236457",
-    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523572577009856513"
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523572577009856513",
+    "yt": "https://www.youtube.com/watch?v=P8C_DrpJ_Jw"
   },
   "nov-2/wed": {
     "ig": "https://www.instagram.com/reel/DfVD_xmiJkp/",
     "fb": "https://www.facebook.com/reel/2526110957882192/",
     "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7523822710012174336"
+  },
+  "nov-2/thu-a": {
+    "ig": "https://www.instagram.com/reel/DfXoq8Sj70P/",
+    "fb": "https://www.facebook.com/reel/1023889240722950/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7524185351914127360"
   }
 }
