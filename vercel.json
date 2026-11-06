@@ -1,44 +1,8 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookjosh.puroflowmedia.com"
-        }
-      ],
-      "destination": "/josh/index.html"
-    },
-    {
-      "source": "/:path((?!josh/).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "bookjosh.puroflowmedia.com"
-        }
-      ],
-      "destination": "/josh/:path"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "booksteven.puroflowmedia.com"
-        }
-      ],
-      "destination": "/steven/index.html"
-    },
-    {
-      "source": "/:path((?!steven/).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "booksteven.puroflowmedia.com"
-        }
-      ],
-      "destination": "/steven/:path"
-    }
+  "routes": [
+    { "src": "^/$", "has": [{ "type": "host", "value": "bookjosh.puroflowmedia.com" }], "dest": "/josh/index.html" },
+    { "src": "^/(?!josh/)(.*)$", "has": [{ "type": "host", "value": "bookjosh.puroflowmedia.com" }], "dest": "/josh/$1" },
+    { "src": "^/$", "has": [{ "type": "host", "value": "booksteven.puroflowmedia.com" }], "dest": "/steven/index.html" },
+    { "src": "^/(?!steven/)(.*)$", "has": [{ "type": "host", "value": "booksteven.puroflowmedia.com" }], "dest": "/steven/$1" }
   ]
 }
