@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/", "has": [{ "type": "host", "value": "bookjosh.puroflowmedia.com" }], "destination": "/josh/index.html" },
+    { "source": "/:path((?!josh/).*)", "has": [{ "type": "host", "value": "bookjosh.puroflowmedia.com" }], "destination": "/josh/:path" }
+  ]
+}
