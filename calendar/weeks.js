@@ -488,7 +488,7 @@ const WEEKS = [
         cta: "What's the one book you'd add? 👇",
         tags: "#PracticeOwner #Leadership #BookRecommendations #DentalPractice #ExtremeOwnership #AtomicHabits",
         manychat: "Every comment gets the waitlist DM.",
-        notes: ["Josh's cut from Oct 19, re-versioned with the waitlist sticker and end card, which say $10,000 in prizes (re-cut Nov 2).", "Scheduled for each platform's best Friday hour (Metricool): Instagram 10:00 AM PT, LinkedIn 11:00, Facebook 12:00 PM, YouTube Short 4:00. Cover: Josh on the garden set, 3 Books Every Practice Owner Should Read.", "TikTok Mon 11/9 at noon."],
+        notes: ["Josh's cut from Oct 19, re-versioned with the waitlist sticker and end card, which say $10,000 in prizes (re-cut Nov 2).", "Re-edited Nov 6 (v2): each book cover pops up big on screen the moment Josh names it, then shrinks into its spot on the list (Dan Martell style), scored to Timeless (instrumental) under Josh's voice.", "Reposted Nov 6 with the v2 edit: Instagram 11:20 AM PT, LinkedIn 11:25, Facebook 11:35, YouTube Short 11:45. Cover: Josh on the garden set, 3 Books Every Practice Owner Should Read.", "TikTok Mon 11/9 at noon."],
         ask: "What book would you add?" },
       { id: "fri-b", day: "Friday", short: "Fri", jump: "Fri PM", date: "11/6", status: "Needs Adit approval", format: "Motion reel · about 15s · scored to Latch · 6:00 PM PT",
         title: "The Next Prize Is a Shoot", bucket: "Challenge / Waitlist", mock: "december",
