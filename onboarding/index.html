@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Client Onboarding | Puro Flow Media</title>
+<meta name="description" content="Puro Flow Media client onboarding: website, testimonial and shoot day details.">
+<meta property="og:title" content="Client Onboarding | Puro Flow Media">
+<meta property="og:description" content="Website, testimonial and shoot day details, all in one place.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0A0A0A;--charcoal:#1A1A1A;--card:#141414;--steel:#555555;--muted:#9A9A9A;
+  --off:#F5F5F5;--deep:#1E3A5F;--flow:#5286C2;--line:rgba(245,245,245,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--black);color:var(--off);font-family:Montserrat,system-ui,sans-serif;line-height:1.55;
+  background-image:radial-gradient(1200px 600px at 50% -200px,rgba(82,134,194,.18),transparent 70%)}
+.wrap{max-width:760px;margin:0 auto;padding:40px 16px 80px}
+header{text-align:center;padding:24px 0 36px}
+header img{width:240px;max-width:70%;height:auto}
+.kicker{margin-top:28px;font-size:12px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--flow)}
+h1{font-family:Orbitron,sans-serif;font-weight:800;font-size:clamp(26px,6vw,40px);letter-spacing:.04em;margin-top:10px;line-height:1.15}
+.lede{color:var(--muted);max-width:560px;margin:14px auto 0;font-size:15px}
+.progress{position:sticky;top:0;z-index:5;background:rgba(10,10,10,.88);backdrop-filter:blur(8px);padding:12px 0;margin-bottom:8px}
+.bar{height:4px;background:var(--charcoal);border-radius:4px;overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--deep),var(--flow));transition:width .3s}
+.ptxt{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px;text-align:right}
+section{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px 22px;margin-top:22px}
+section h2{font-size:12px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--flow);display:flex;align-items:center;gap:12px}
+section h2 b{font-family:Orbitron,sans-serif;font-size:13px;color:var(--off);background:var(--deep);border-radius:8px;padding:4px 9px;letter-spacing:.06em}
+section p.sub{color:var(--muted);font-size:14px;margin-top:8px}
+.field{margin-top:22px}
+label{display:block;font-weight:600;font-size:15px}
+label .opt{font-weight:400;color:var(--muted);font-size:13px;margin-left:6px}
+.hint{color:var(--muted);font-size:13px;margin-top:3px}
+input[type=text],input[type=email],input[type=tel],input[type=url],input[type=date],textarea,select{
+  width:100%;margin-top:9px;background:var(--black);color:var(--off);border:1px solid #2A2A2A;border-radius:10px;
+  padding:13px 14px;font:inherit;font-size:16px;outline:none;transition:border-color .2s,box-shadow .2s}
+textarea{min-height:96px;resize:vertical}
+input:focus,textarea:focus,select:focus{border-color:var(--flow);box-shadow:0 0 0 3px rgba(82,134,194,.22)}
+input[type=date]{color-scheme:dark}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.row{grid-template-columns:1fr}}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips label{font-weight:500;font-size:14px;cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;padding:9px 14px;border:1px solid #2A2A2A;border-radius:999px;background:var(--black);transition:all .15s}
+.chips input:checked+span{background:var(--deep);border-color:var(--flow);color:#fff}
+.chips input:focus-visible+span{box-shadow:0 0 0 3px rgba(82,134,194,.35)}
+.submit{margin-top:30px;text-align:center}
+button{appearance:none;border:0;cursor:pointer;font-family:Orbitron,sans-serif;font-weight:800;letter-spacing:.12em;font-size:15px;
+  color:#fff;background:linear-gradient(135deg,var(--deep),var(--flow));padding:18px 34px;border-radius:12px;width:100%;max-width:420px;
+  box-shadow:0 10px 30px rgba(82,134,194,.25);transition:transform .15s,opacity .15s}
+button:hover{transform:translateY(-1px)}
+button:disabled{opacity:.55;cursor:wait;transform:none}
+.note{color:var(--muted);font-size:13px;margin-top:12px}
+.err{color:#E5A54B;font-size:14px;margin-top:12px;display:none}
+.done{display:none;text-align:center;padding:60px 10px}
+.done h2{font-family:Orbitron,sans-serif;font-size:28px;letter-spacing:.04em;margin-top:18px}
+.done p{color:var(--muted);margin-top:12px}
+.check{width:72px;height:72px;border-radius:50%;margin:0 auto;display:grid;place-items:center;background:var(--deep);border:2px solid var(--flow)}
+footer{text-align:center;margin-top:48px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--steel)}
+.hp{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.png" alt="Puro Flow Media" width="712" height="137">
+    <div class="kicker">Client Onboarding</div>
+    <h1>LET'S BUILD YOUR BRAND</h1>
+    <p class="lede">Answer what you can. Every answer helps us design your website, film your testimonials and plan your shoot day. Skip anything you don't know yet.</p>
+  </header>
+
+  <div class="progress"><div class="bar"><span id="pbar"></span></div><div class="ptxt" id="ptxt">0% complete</div></div>
+
+  <form id="f" novalidate>
+    <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off">
+
+    <section>
+      <h2><b>01</b> The Basics</h2>
+      <div class="row">
+        <div class="field"><label for="name">Your name</label><input id="name" name="Name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="biz">Business name</label><input id="biz" name="Business Name" type="text" required></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="email">Best email</label><input id="email" name="Email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="phone">Business phone</label><input id="phone" name="Phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="field"><label for="addr">Showroom / business address</label><input id="addr" name="Address" type="text" autocomplete="street-address"></div>
+      <div class="row">
+        <div class="field"><label for="hours">Business hours</label><input id="hours" name="Hours" type="text" placeholder="Mon to Fri 8am to 5pm, Sat 9am to 2pm"></div>
+        <div class="field"><label for="area">Service area</label><input id="area" name="Service Area" type="text" placeholder="San Diego County, Tijuana..."></div>
+      </div>
+    </section>
+
+    <section>
+      <h2><b>02</b> Your Business</h2>
+      <div class="field"><label for="what">In one or two sentences, what do you do?</label><textarea id="what" name="What You Do"></textarea></div>
+      <div class="field"><label>Products and services you want on the site</label>
+        <div class="chips" data-name="Products / Services">
+          <label><input type="checkbox" value="Luxury Vinyl Plank (LVP)"><span>Luxury Vinyl Plank</span></label>
+          <label><input type="checkbox" value="Laminate"><span>Laminate</span></label>
+          <label><input type="checkbox" value="Hardwood"><span>Hardwood</span></label>
+          <label><input type="checkbox" value="Engineered Wood"><span>Engineered Wood</span></label>
+          <label><input type="checkbox" value="Tile"><span>Tile</span></label>
+          <label><input type="checkbox" value="Carpet"><span>Carpet</span></label>
+          <label><input type="checkbox" value="Installation"><span>Installation</span></label>
+          <label><input type="checkbox" value="Underlayment & Supplies"><span>Underlayment and Supplies</span></label>
+          <label><input type="checkbox" value="Contractor / Wholesale Pricing"><span>Contractor Pricing</span></label>
+        </div>
+        <input name="Other Products / Services" type="text" placeholder="Anything else?">
+      </div>
+      <div class="field"><label for="brands">Brands you carry <span class="opt">optional</span></label><input id="brands" name="Brands Carried" type="text"></div>
+      <div class="field"><label>Who is your main customer?</label>
+        <div class="chips" data-name="Main Customer">
+          <label><input type="checkbox" value="Contractors"><span>Contractors</span></label>
+          <label><input type="checkbox" value="Homeowners"><span>Homeowners</span></label>
+          <label><input type="checkbox" value="Builders / Developers"><span>Builders and Developers</span></label>
+          <label><input type="checkbox" value="Property Managers"><span>Property Managers</span></label>
+          <label><input type="checkbox" value="Designers"><span>Designers</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="diff">What makes you different from other flooring suppliers?</label><textarea id="diff" name="What Makes You Different"></textarea></div>
+      <div class="field"><label for="story">How did you start? Your story in a few sentences</label><textarea id="story" name="Your Story"></textarea></div>
+    </section>
+
+    <section>
+      <h2><b>03</b> Website</h2>
+      <div class="field"><label for="domain">Do you own a domain? Which one?</label><input id="domain" name="Domain" type="text" placeholder="jovicflooring.com or 'No'"></div>
+      <div class="row">
+        <div class="field"><label for="registrar">Where is it registered? <span class="opt">GoDaddy, Google...</span></label><input id="registrar" name="Domain Registrar" type="text"></div>
+        <div class="field"><label for="cursite">Current website <span class="opt">if any</span></label><input id="cursite" name="Current Website" type="text"></div>
+      </div>
+      <div class="field"><label>Main goal for website visitors</label>
+        <div class="chips" data-name="Main Goal">
+          <label><input type="checkbox" value="Call us"><span>Call us</span></label>
+          <label><input type="checkbox" value="Request a quote"><span>Request a quote</span></label>
+          <label><input type="checkbox" value="Visit the showroom"><span>Visit the showroom</span></label>
+          <label><input type="checkbox" value="Open a contractor account"><span>Open a contractor account</span></label>
+          <label><input type="checkbox" value="Text / WhatsApp"><span>Text or WhatsApp</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="likes">Websites you like the look of <span class="opt">any industry</span></label><textarea id="likes" name="Websites You Like"></textarea></div>
+      <div class="field"><label for="colors">Brand colors and logo</label><div class="hint">Share a Google Drive or Dropbox link to your logo files, or describe your colors.</div><input id="colors" name="Logo / Brand Colors" type="text"></div>
+      <div class="field"><label for="photos">Photos of your work or showroom <span class="opt">link</span></label><input id="photos" name="Photos Link" type="text"></div>
+      <div class="field"><label>Languages for the site</label>
+        <div class="chips" data-name="Site Languages">
+          <label><input type="checkbox" value="English"><span>English</span></label>
+          <label><input type="checkbox" value="Spanish"><span>Spanish</span></label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2><b>04</b> Social and Reviews</h2>
+      <div class="row">
+        <div class="field"><label for="ig">Instagram</label><input id="ig" name="Instagram" type="text" placeholder="@"></div>
+        <div class="field"><label for="tt">TikTok</label><input id="tt" name="TikTok" type="text" placeholder="@"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label for="fb">Facebook</label><input id="fb" name="Facebook" type="text"></div>
+        <div class="field"><label for="gbp">Google Business Profile</label><input id="gbp" name="Google Business Profile" type="text" placeholder="Name or link"></div>
+      </div>
+      <div class="field"><label for="yelp">Yelp or other review pages <span class="opt">optional</span></label><input id="yelp" name="Other Reviews" type="text"></div>
+    </section>
+
+    <section>
+      <h2><b>05</b> Testimonials</h2>
+      <p class="sub">Who are 2 or 3 happy clients who would go on camera for a short testimonial?</p>
+      <div class="field"><label for="t1">Client 1 <span class="opt">name, company, phone</span></label><input id="t1" name="Testimonial Client 1" type="text"></div>
+      <div class="field"><label for="t2">Client 2</label><input id="t2" name="Testimonial Client 2" type="text"></div>
+      <div class="field"><label for="t3">Client 3</label><input id="t3" name="Testimonial Client 3" type="text"></div>
+      <div class="field"><label for="tnote">Any project of theirs we should feature?</label><textarea id="tnote" name="Testimonial Notes"></textarea></div>
+    </section>
+
+    <section>
+      <h2><b>06</b> Shoot Day</h2>
+      <div class="row">
+        <div class="field"><label for="d1">Preferred date</label><input id="d1" name="Shoot Date (1st choice)" type="date"></div>
+        <div class="field"><label for="d2">Backup date</label><input id="d2" name="Shoot Date (2nd choice)" type="date"></div>
+      </div>
+      <div class="field"><label>Best time of day</label>
+        <div class="chips" data-name="Best Time">
+          <label><input type="checkbox" value="Morning"><span>Morning</span></label>
+          <label><input type="checkbox" value="Midday"><span>Midday</span></label>
+          <label><input type="checkbox" value="Afternoon"><span>Afternoon</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="locs">Locations to film</label><div class="hint">Showroom, warehouse, a job site, a finished install...</div><textarea id="locs" name="Shoot Locations"></textarea></div>
+      <div class="field"><label for="feature">Who should be on camera?</label><input id="feature" name="On Camera" type="text" placeholder="You, your team, your installers..."></div>
+    </section>
+
+    <section>
+      <h2><b>07</b> Anything Else</h2>
+      <div class="field"><label for="goals">What does a win look like for you in the next 90 days?</label><textarea id="goals" name="90-Day Win"></textarea></div>
+      <div class="field"><label for="else">Anything else we should know?</label><textarea id="else" name="Anything Else"></textarea></div>
+    </section>
+
+    <div class="submit">
+      <button type="submit" id="btn">SUBMIT</button>
+      <div class="err" id="err"></div>
+      <p class="note">Your answers go straight to the Puro Flow Media team.</p>
+    </div>
+  </form>
+
+  <div class="done" id="done">
+    <div class="check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F5F5F5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <h2>YOU'RE ALL SET</h2>
+    <p>We got your answers. The Puro Flow Media team will follow up with next steps.</p>
+  </div>
+
+  <footer>Puro Flow Media · Create in Flow State.</footer>
+</div>
+<script>
+(function(){
+  var f=document.getElementById('f'),KEY='pfm-onboarding-draft';
+  function fields(){return Array.prototype.slice.call(f.querySelectorAll('input[name]:not(.hp),textarea[name]'));}
+  function collect(){
+    var o={};
+    fields().forEach(function(el){o[el.name]=el.value.trim();});
+    Array.prototype.forEach.call(f.querySelectorAll('.chips'),function(c){
+      o[c.getAttribute('data-name')]=Array.prototype.slice.call(c.querySelectorAll('input:checked')).map(function(i){return i.value;}).join(', ');
+    });
+    return o;
+  }
+  function progress(){
+    var o=collect(),keys=Object.keys(o),n=keys.filter(function(k){return o[k];}).length,p=Math.round(n/keys.length*100);
+    document.getElementById('pbar').style.width=p+'%';document.getElementById('ptxt').textContent=p+'% complete';
+  }
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(collect()));}catch(e){}}
+  function load(){
+    var d;try{d=JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){}
+    if(!d)return;
+    fields().forEach(function(el){if(d[el.name])el.value=d[el.name];});
+    Array.prototype.forEach.call(f.querySelectorAll('.chips'),function(c){
+      var v=(d[c.getAttribute('data-name')]||'').split(', ');
+      Array.prototype.forEach.call(c.querySelectorAll('input'),function(i){i.checked=v.indexOf(i.value)>-1;});
+    });
+  }
+  load();progress();
+  f.addEventListener('input',function(){progress();save();});
+  f.addEventListener('change',function(){progress();save();});
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('err'),btn=document.getElementById('btn');err.style.display='none';
+    var o=collect();
+    if(!o['Name']||!o['Email']){err.textContent='Please add your name and email so we can follow up.';err.style.display='block';
+      (o['Name']?document.getElementById('email'):document.getElementById('name')).focus();return;}
+    if(f._honey.value)return;
+    btn.disabled=true;btn.textContent='SENDING...';
+    o._subject='New Onboarding Form: '+(o['Business Name']||o['Name']);
+    o._template='table';o._captcha='false';o._replyto=o['Email'];
+    fetch('https://formsubmit.co/ajax/felipe@puroflowmedia.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(o)})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){if(!r.ok)throw new Error(j.message||'Error');return j;});})
+      .then(function(){f.style.display='none';document.querySelector('.progress').style.display='none';
+        document.getElementById('done').style.display='block';window.scrollTo(0,0);try{localStorage.removeItem(KEY);}catch(e){}})
+      .catch(function(){btn.disabled=false;btn.textContent='SUBMIT';
+        err.textContent='Something went wrong sending your answers. They are saved on this device, so please try again in a moment.';err.style.display='block';});
+  });
+})();
+</script>
+</body>
+</html>

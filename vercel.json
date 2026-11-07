@@ -5,6 +5,26 @@
    "has": [
     {
      "type": "host",
+     "value": "onboarding.puroflowmedia.com"
+    }
+   ],
+   "dest": "/onboarding/index.html"
+  },
+  {
+   "src": "^/(?!onboarding/)(.*)$",
+   "has": [
+    {
+     "type": "host",
+     "value": "onboarding.puroflowmedia.com"
+    }
+   ],
+   "dest": "/onboarding/$1"
+  },
+  {
+   "src": "^/$",
+   "has": [
+    {
+     "type": "host",
      "value": "bookjosh.puroflowmedia.com"
     }
    ],
