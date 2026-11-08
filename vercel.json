@@ -79,6 +79,26 @@
     }
    ],
    "dest": "/phillip/$1"
+  },
+  {
+   "src": "^/$",
+   "has": [
+    {
+     "type": "host",
+     "value": "booklaurie.puroflowmedia.com"
+    }
+   ],
+   "dest": "/laurie/index.html"
+  },
+  {
+   "src": "^/(?!laurie/)(.*)$",
+   "has": [
+    {
+     "type": "host",
+     "value": "booklaurie.puroflowmedia.com"
+    }
+   ],
+   "dest": "/laurie/$1"
   }
  ]
 }
