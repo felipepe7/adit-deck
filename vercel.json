@@ -99,6 +99,26 @@
     }
    ],
    "dest": "/laurie/$1"
+  },
+  {
+   "src": "^/$",
+   "has": [
+    {
+     "type": "host",
+     "value": "bookshelly.puroflowmedia.com"
+    }
+   ],
+   "dest": "/shelley/index.html"
+  },
+  {
+   "src": "^/(?!shelley/)(.*)$",
+   "has": [
+    {
+     "type": "host",
+     "value": "bookshelly.puroflowmedia.com"
+    }
+   ],
+   "dest": "/shelley/$1"
   }
  ]
 }
