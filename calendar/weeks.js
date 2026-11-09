@@ -539,7 +539,7 @@ const WEEKS = [
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#AditChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #Optometry #PracticeGrowth",
         manychat: "CHALLENGE (and every other comment) gets the waitlist DM: follow @get_adit, then practice type, practice name, email, current Adit client yes or no, and cell for ranking texts.",
-        notes: ["v3 cut: the opening is now Josh in the studio (no glasses, arched wall set), replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45, TikTok at noon. Pin to the top of Instagram and TikTok right after it posts."],
+        notes: ["v4 cut: the opening is now Josh in the studio (no glasses, arched wall set) and Shelley with the team waving in front of the Align My Practice booth, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45, TikTok at noon. Pin to the top of Instagram and TikTok right after it posts."],
         ask: "Comment CHALLENGE" },
       { id: "tue", day: "Tuesday", short: "Tue", date: "11/10", status: "Ready", format: "Reel · 35s · Say this, not that · 10:00 AM PT",
         title: "Words That Hurt Case Acceptance", bucket: "Thought Leadership / Say This, Not That", video: true,
