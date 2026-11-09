@@ -525,7 +525,7 @@ const WEEKS = [
     glanceNote: "This is the week the December challenge goes public: $10,000 in prizes, starts Dec 1. The launch reel and the how-it-works carousel get pinned to the top of @get_adit, so every visitor sees them first, and every comment on any post gets the waitlist DM. Josh's new posts come from the indoor studio shoot.",
     media: "media/w4/",
     days: [
-      { id: "mon", day: "Monday", short: "Mon", date: "11/9", status: "Ready", format: "Reel · 34s · scored to Latch · 10:00 AM PT · Pin",
+      { id: "mon", day: "Monday", short: "Mon", date: "11/9", status: "Scheduled", format: "Reel · 34s · scored to Latch · 10:00 AM PT · Pin",
         title: "The Next Adit Challenge Starts Dec 1", bucket: "Challenge / Launch", video: true,
         talent: "Josh Gosnell",
         hook: "The next Adit Challenge starts December 1 🏆",
@@ -539,7 +539,7 @@ const WEEKS = [
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#AditChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #Optometry #PracticeGrowth",
         manychat: "CHALLENGE (and every other comment) gets the waitlist DM: follow @get_adit, then practice type, practice name, email, current Adit client yes or no, and cell for ranking texts.",
-        notes: ["v5 cut: the opening is now Josh in the studio (no glasses, arched wall set), then Shelley with the team waving in front of the Align My Practice booth, then Josh again, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45, TikTok at noon. Pin to the top of Instagram and TikTok right after it posts."],
+        notes: ["v5 cut: the opening is now Josh in the studio (no glasses, arched wall set), then Shelley with the team waving in front of the Align My Practice booth, then Josh again, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Scheduled in Metricool: Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45. TikTok Tue 11/10 at noon (Monday noon already has Josh's 3 Books). Pinned as the top-left post on Instagram right after it goes live."],
         ask: "Comment CHALLENGE" },
       { id: "tue", day: "Tuesday", short: "Tue", date: "11/10", status: "Ready", format: "Reel · 35s · Say this, not that · 10:00 AM PT",
         title: "Words That Hurt Case Acceptance", bucket: "Thought Leadership / Say This, Not That", video: true,
