@@ -530,8 +530,8 @@ const WEEKS = [
         talent: "Josh Gosnell",
         hook: "The next Adit Challenge starts December 1 🏆",
         caption: [
-          "$10,000 in prizes for the top 3 practices, and every prize is a professional shoot of your office 🎬",
-          "🥇 A full branded photo and video shoot ($5,000 value) · 🥈 A hero video plus office photos ($3,500 value) · 🥉 An office photo shoot ($1,500 value)",
+          "$10,000 in prizes for the top 3 practices, and every prize is a custom video content package 🎬",
+          "🥇 7 hero videos (vertical + horizontal) + 10 reels for Instagram, Facebook, TikTok, YouTube and LinkedIn ($5,000 value) · 🥈 3 hero videos + 10 reels ($3,500 value) · 🥉 1 hero video + office and team photos ($1,500 value)",
           "How it works: 1 point for every new Google review in December, bonus points for tagging other practices, rankings every Monday, winners in January.",
           "Comment CHALLENGE to get on the waitlist. The waitlist hears everything first 👇"
         ],
@@ -539,7 +539,7 @@ const WEEKS = [
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#AditChallenge #GoogleReviews #DentalPractice #Orthodontics #Chiropractic #Optometry #PracticeGrowth",
         manychat: "CHALLENGE (and every other comment) gets the waitlist DM: follow @get_adit, then practice type, practice name, email, current Adit client yes or no, and cell for ranking texts.",
-        notes: ["v5 cut: the opening is now Josh in the studio (no glasses, arched wall set), then Shelley with the team waving in front of the Align My Practice booth, then Josh again, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Scheduled in Metricool: Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45. TikTok Tue 11/10 at noon (Monday noon already has Josh's 3 Books). Pinned as the top-left post on Instagram right after it goes live."],
+        notes: ["v6 (Nov 9): new prize cards. 1st: 7 hero videos (vertical + horizontal) + 10 reels for IG, FB, TikTok, YouTube and LinkedIn. 2nd: 3 hero videos + 10 reels. 3rd: 1 hero video + office and team photos. Josh's caption now says every prize is a custom video content package. Swapped into every scheduled post.", "v5 cut: the opening is now Josh in the studio (no glasses, arched wall set), then Shelley with the team waving in front of the Align My Practice booth, then Josh again, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Scheduled in Metricool: Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45. TikTok Tue 11/10 at noon (Monday noon already has Josh's 3 Books). Pinned as the top-left post on Instagram right after it goes live."],
         ask: "Comment CHALLENGE" },
       { id: "tue", day: "Tuesday", short: "Tue", date: "11/10", status: "Ready", format: "Reel · 35s · Say this, not that · 10:00 AM PT",
         title: "Words That Hurt Case Acceptance", bucket: "Thought Leadership / Say This, Not That", video: true,
