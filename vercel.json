@@ -18,6 +18,26 @@
       "has": [
         {
           "type": "host",
+          "value": "howtoedit.puroflowmedia.com"
+        }
+      ],
+      "dest": "/howtoedit/index.html"
+    },
+    {
+      "src": "^/(?!howtoedit/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "howtoedit.puroflowmedia.com"
+        }
+      ],
+      "dest": "/howtoedit/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
           "value": "onboarding.puroflowmedia.com"
         }
       ],

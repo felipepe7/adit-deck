@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>How To Edit</title>
+<meta name="description" content="Puro Flow Media's editing library: shot-by-shot breakdowns of our best reels, covering shot selection, color grade, AI renderings and captions.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{--bg:#0A0A0A;--panel:#141518;--line:#2A2D33;--text:#F5F5F5;--muted:#9AA3AE;--blue-hi:#7FA3CF;
+--display:"Orbitron","Arial Black",sans-serif;--body:"Montserrat","Helvetica Neue",Arial,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--text);font-family:var(--body);margin:0;line-height:1.55}
+a{color:var(--blue-hi);text-decoration:none;font-weight:600}
+a:focus-visible{outline:2px solid var(--blue-hi);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.top img{height:22px;width:auto;display:block}
+.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.24em;font-size:11px;color:var(--blue-hi)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,6vw,58px);line-height:1.04;margin:40px 0 12px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--blue-hi)}
+.lead{color:var(--muted);font-size:16px;max-width:62ch;margin:0}
+.pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.pillars span{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 13px;font-size:12px}
+h2{font-family:var(--display);font-size:20px;margin:56px 0 16px}
+.feature{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--text)}
+.feature:hover{border-color:var(--blue-hi)}
+.feature img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block}
+.feature h3{font-family:var(--display);font-size:clamp(20px,3vw,28px);margin:8px 0 10px;line-height:1.15}
+.feature p{color:var(--muted);font-size:14px;margin:0 0 14px}
+.meta{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:18px}
+.meta b{color:var(--text)}
+.go{display:inline-block;background:var(--blue-hi);color:#0A0A0A;border-radius:999px;padding:10px 18px;font-weight:800;font-size:13px}
+.next{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.next div{border:1px dashed var(--line);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--muted)}
+.next div b{display:block;color:var(--text);font-size:13.5px;margin-bottom:2px}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
+@media (max-width:700px){.feature{grid-template-columns:1fr}.feature img{aspect-ratio:4/5}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><img src="logo_w.png" alt="Puro Flow Media"><span class="eyebrow">Editor library</span></div>
+  <div class="eyebrow" style="margin-top:40px">Puro Flow Media · How To Edit</div>
+  <h1 style="margin-top:10px">Our best reels,<br><em>taken apart.</em></h1>
+  <p class="lead">Every breakdown picks one of our strongest videos and shows exactly how it was built, shot by shot, so every editor on the team can hit the same standard.</p>
+  <div class="pillars"><span>Shot selection</span><span>Camera movement</span><span>Color grade</span><span>AI renderings</span><span>Captions + titles</span><span>Transitions + sound</span></div>
+
+  <h2>Breakdowns</h2>
+  <a class="feature" href="dr-ahn-local-tour/">
+    <img src="dr-ahn-local-tour/img/card.jpg" alt="Rendered Smile Design studio from the Dr. Ahn tour">
+    <div>
+      <div class="eyebrow">Breakdown 01 · Tour</div>
+      <h3>Dr. Katherine Ahn: Aviara Local Tour</h3>
+      <p>A raw construction site becomes a finished Beverly Hills clinic, one room at a time. The standard for every tour we edit: stable, angled, no digital zooms, and a render for every room.</p>
+      <div class="meta"><span><b>2:33</b> runtime</span><span><b>31</b> shots</span><span><b>8</b> AI renders</span><span><b>3</b> grade looks</span></div>
+      <span class="go">Open the breakdown</span>
+    </div>
+  </a>
+
+  <h2>Up next</h2>
+  <div class="next">
+    <div><b>Aviara #1</b>Dr. Ahn, Beverly Hills #1</div>
+    <div><b>Aviara #2</b>Dr. Ahn, Aviara video</div>
+    <div><b>Aviara #4</b>Vertical video, LED screen</div>
+    <div><b>Aviara #5</b>Patient case explanation</div>
+    <div><b>Aviara #6</b>Dr. Ahn and Micah, podcast episode</div>
+    <div><b>Aviara #7 to #10</b>Patient testimonials</div>
+  </div>
+
+  <footer><span>Puro Flow Media · How To Edit</span><span>Create in flow state</span></footer>
+</div>
+</body>
+</html>

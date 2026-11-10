@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dr. Ahn Tour Breakdown</title>
+<meta name="description" content="How To Edit, Breakdown 01: shot selection, color grade, AI renderings and captions from Dr. Katherine Ahn's Aviara #3 local tour.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+:root{
+  --bg:#0A0A0A; --panel:#141518; --panel2:#1A1C20; --line:#2A2D33;
+  --text:#F5F5F5; --muted:#9AA3AE; --blue:#1E3A5F; --blue-hi:#7FA3CF;
+  --display:"Orbitron","Eurostile","Arial Black",sans-serif;
+  --body:"Montserrat","Helvetica Neue",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);margin:0;line-height:1.55}
+a{color:var(--blue-hi);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue-hi);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.top img{height:22px;width:auto;display:block}
+.top a.crumb{font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--blue-hi)}
+.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.24em;font-size:11px;color:var(--blue-hi)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(30px,5vw,48px);line-height:1.06;margin:10px 0 12px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--blue-hi)}
+h2{font-family:var(--display);font-weight:900;font-size:clamp(22px,3vw,28px);margin:6px 0 8px;text-wrap:balance}
+h3{font-weight:800}
+.lead{color:var(--muted);font-size:15px;max-width:66ch;margin:0}
+section{padding-top:60px;scroll-margin-top:16px}
+.mono{font-family:var(--mono)}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+nav.toc a{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 13px;font-size:12px;color:var(--text)}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:36px;align-items:start;padding-top:32px}
+.reel{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#000;aspect-ratio:9/16;max-width:100%}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.sound{position:absolute;right:12px;bottom:12px;background:rgba(10,10,10,.78);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:700 12px var(--body);cursor:pointer}
+.reelcap{font-size:12px;color:var(--muted);margin-top:8px}
+.info{display:grid;gap:18px;min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-width:0}
+.kv{display:grid;grid-template-columns:110px minmax(0,1fr);gap:6px 14px;font-size:14px;margin:0}
+.kv dt{color:var(--muted);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding-top:3px}
+.kv dd{margin:0;overflow-wrap:anywhere}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.stat{border:1px solid var(--line);border-radius:10px;padding:12px}
+.stat b{font-family:var(--display);font-size:24px;display:block;font-variant-numeric:tabular-nums}
+.stat span{font-size:11.5px;color:var(--muted);line-height:1.35;display:block;margin-top:4px}
+/* rules */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:22px}
+.rule{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;border-left:3px solid var(--blue-hi)}
+.rule.no{border-left-color:#C9A227}
+.rule h3{margin:0 0 6px;font-size:15px}
+.rule p{margin:0;font-size:13.5px;color:var(--muted)}
+.rule p b{color:var(--text)}
+/* beats */
+.beats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:20px}
+.beat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;border-top:3px solid var(--blue-hi)}
+.beat h3{font-size:14px;margin:0}
+.beat .t{font-family:var(--mono);font-size:11px;color:var(--blue-hi);margin:3px 0 6px}
+.beat p{font-size:12.5px;color:var(--muted);margin:0;line-height:1.45}
+.bar{display:flex;height:30px;border-radius:7px;overflow:hidden;margin-top:18px;font-size:10.5px;font-weight:700;letter-spacing:.06em}
+.bar div{display:flex;align-items:center;justify-content:center;white-space:nowrap;overflow:hidden;color:var(--text)}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:6px}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.strip{display:flex;height:16px;border-radius:5px;overflow:hidden;margin-top:14px;gap:1px;background:var(--line)}
+.strip span{display:block;height:100%}
+/* shots */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.filters button{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:7px 13px;font:600 12px var(--body);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue-hi)}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px;margin-top:18px}
+.shot{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.shot .media{position:relative}
+.shot video,.shot img{width:100%;aspect-ratio:9/16;object-fit:cover;display:block;background:#000;max-height:440px}
+.tag{position:absolute;left:10px;top:10px;font:700 10px var(--body);letter-spacing:.14em;text-transform:uppercase;padding:5px 8px;border-radius:5px;background:rgba(10,10,10,.8);border:1px solid var(--line)}
+.tag.ai{color:#E7C873;border-color:#6B5A2A}
+.shot .body{padding:14px 16px 16px;display:grid;gap:8px}
+.shot .head{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.shot h3{font-size:14.5px;margin:0;line-height:1.3}
+.shot .tc{font-family:var(--mono);font-size:11px;color:var(--blue-hi);white-space:nowrap}
+.shot .n{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.shot .vo{font-size:12.5px;font-style:italic;color:var(--text);opacity:.85;margin:0}
+.shot p{margin:0;font-size:12.8px;color:var(--muted);line-height:1.5}
+.shot p b{color:var(--text);font-size:10px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:1px}
+/* grade */
+.looks{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.look img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;display:block;max-height:300px}
+.look h3{margin:12px 0 2px;font-size:15px}
+.look .where{font-family:var(--mono);font-size:11px;color:var(--blue-hi)}
+.sw{display:flex;height:26px;border-radius:6px;overflow:hidden;margin:10px 0}
+.sw span{flex:1}
+.look ul{margin:0;padding-left:18px;font-size:13px;color:var(--muted);display:grid;gap:5px}
+.look ul b{color:var(--text)}
+.meter{display:grid;grid-template-columns:90px minmax(0,1fr) 44px;gap:8px;align-items:center;font-size:11px;color:var(--muted);margin-top:6px}
+.meter .track{height:6px;background:var(--panel2);border-radius:3px;overflow:hidden}
+.meter .fill{height:100%;background:var(--blue-hi)}
+.meter .v{font-family:var(--mono);text-align:right}
+/* ai */
+.pair{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:20px}
+.pair figure{margin:0}
+.pair img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:8px;display:block}
+.pair figcaption{font-size:11.5px;color:var(--muted);margin-top:6px;line-height:1.35}
+.pair figcaption b{color:var(--text)}
+.steps{counter-reset:s;display:grid;gap:10px;margin:0;padding:0;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:12px 14px 12px 50px;background:var(--panel);border:1px solid var(--line);border-radius:10px;font-size:13.5px;color:var(--muted)}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:14px;top:12px;font-family:var(--mono);font-weight:700;color:var(--blue-hi)}
+.steps li b{color:var(--text)}
+pre{background:#000;border:1px solid var(--line);border-radius:10px;padding:14px 16px;font:500 12.5px/1.6 var(--mono);color:#DCE3EA;white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0 0}
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:22px}
+.two h3{font-size:15px;margin:0 0 8px}
+ul.clean{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ul.clean li{font-size:13.5px;padding-left:16px;position:relative;color:var(--muted)}
+ul.clean li b{color:var(--text)}
+ul.clean li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--blue-hi)}
+.caps{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.caps span{border:1px solid var(--line);background:#000;padding:7px 12px;border-radius:6px;font-size:14px;font-weight:300}
+.caps span b{font-weight:800}
+.tablewrap{overflow-x:auto;margin-top:18px;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:13.5px;background:var(--panel)}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);background:var(--panel2)}
+td.mono{color:var(--blue-hi);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.check{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px;margin-top:18px}
+.check label{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:11px 13px;cursor:pointer}
+.check input{margin-top:3px;accent-color:#7FA3CF}
+.check label b{color:var(--text)}
+footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
+@media (max-width:900px){.hero{grid-template-columns:1fr}.reel{max-width:360px}.beats{grid-template-columns:repeat(3,minmax(0,1fr))}.looks{grid-template-columns:1fr}.look img{max-height:none;aspect-ratio:4/5}.pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.beats{grid-template-columns:repeat(2,minmax(0,1fr))}.two,.rules,.check{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.kv{grid-template-columns:90px minmax(0,1fr)}.bar div{font-size:0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.sound,.filters,nav.toc{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <img src="../logo_w.png" alt="Puro Flow Media">
+    <a class="crumb" href="../">How To Edit · Library</a>
+  </div>
+
+  <div class="hero">
+    <div>
+      <div class="reel">
+        <video id="reel" src="clips/reel.mp4" poster="img/poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <button class="sound" id="sound" type="button">Tap for sound</button>
+      </div>
+      <div class="reelcap">Final export, 2:33 · <a href="https://drive.google.com/file/d/18y9am6hG2f4KqIZCi_Q2-_fTRwJ7mUX8/view" target="_blank" rel="noopener">open the 4K original in Drive</a></div>
+    </div>
+    <div class="info">
+      <div>
+        <div class="eyebrow">How To Edit · Breakdown 01</div>
+        <h1>The premium tour.<br><em>Shot by shot.</em></h1>
+        <p class="lead">This is the standard for every tour we edit from here on. Dr. Katherine Ahn walks us through a suite that is still under construction, and every raw room is answered by a rendering of the finished room on the exact word she names it. Study the angles, the grade, the renders and the captions, then build ours the same way.</p>
+      </div>
+      <div class="card">
+        <dl class="kv">
+          <dt>Client</dt><dd>Dr. Katherine Ahn · Aviara Aesthetic, Beverly Hills</dd>
+          <dt>Video</dt><dd>Aviara #3: Dr. Ahn, Local Tour (Video 6 of 13)</dd>
+          <dt>Format</dt><dd>9:16 vertical · 2160×3840 · 23.976 fps</dd>
+          <dt>Runtime</dt><dd>2:33</dd>
+          <dt>For</dt><dd>Every Puro Flow editor (Yash, Adrian and the team)</dd>
+        </dl>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>31</b><span>shots in 2:33</span></div>
+        <div class="stat"><b>4.9s</b><span>average shot length</span></div>
+        <div class="stat"><b>8</b><span>AI renderings of finished rooms</span></div>
+        <div class="stat"><b>~11 dB</b><span>music sits under the voice</span></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Sections">
+    <a href="#rules">The rules</a><a href="#structure">Structure</a><a href="#shots">31 shots</a><a href="#grade">Color grade</a><a href="#ai">AI renderings</a><a href="#text">Captions + transitions</a><a href="#checklist">Export checklist</a>
+  </nav>
+
+  <section id="rules">
+    <div class="eyebrow">The standard</div>
+    <h2>Four rules for every tour</h2>
+    <p class="lead">When we follow someone through a space, the camera has to feel expensive. That means stable, angled and moving for a reason.</p>
+    <div class="rules">
+      <div class="rule"><h3>Stable, always</h3><p>Gimbal or locked off. If a clip shakes, stabilize it or cut it. <b>No shaky handheld in a tour.</b></p></div>
+      <div class="rule no"><h3>Never flat</h3><p>Never park the camera square on the subject against a flat wall. Swing to a <b>3/4 angle</b>, put something in the foreground (ladder, doorframe, scaffolding) and place them off-center.</p></div>
+      <div class="rule no"><h3>No slow zoom in or out</h3><p>No scale keyframes, no Ken Burns push in the edit. It reads boring and cheap. <b>Movement comes from the camera</b> (follow, arc, slide, reveal) or from the render, never from a digital zoom.</p></div>
+      <div class="rule"><h3>New room, new angle</h3><p>Every time she names a space, cut. Back-to-back shots never share a framing, and every raw room gets its render.</p></div>
+    </div>
+  </section>
+
+  <section id="structure">
+    <div class="eyebrow">The structure</div>
+    <h2>Place, then before and after, then the why</h2>
+    <p class="lead">Six beats. The tour earns the message: by the time she explains her philosophy, we have already seen the space become real.</p>
+    <div class="beats">
+      <div class="beat"><h3>Establish</h3><div class="t">0:00–0:03</div><p>Two drone shots: Beverly Hills at golden hour, then the building. No voice yet.</p></div>
+      <div class="beat"><h3>Arrive</h3><div class="t">0:03–0:13</div><p>Wide in the raw suite, punch in for "little tour", back wide for the entrance.</p></div>
+      <div class="beat"><h3>Raw → render</h3><div class="t">0:13–0:46</div><p>Reception, video wall, storefront. Each raw room cuts to its finished render.</p></div>
+      <div class="beat"><h3>The why</h3><div class="t">0:46–1:15</div><p>Consultation room. A black and white cutaway shows "most clinics", then root causes.</p></div>
+      <div class="beat"><h3>Clinical suite</h3><div class="t">1:15–2:08</div><p>The grade drops to low-key amber. Lab, treatment #2 and #3, each with a render.</p></div>
+      <div class="beat"><h3>Close</h3><div class="t">2:08–2:33</div><p>One 22 second talking head carries the message. Logo card on white curtains.</p></div>
+    </div>
+    <div class="bar" role="img" aria-label="Timeline of the six beats across 153 seconds">
+      <div style="width:1.8%;background:#000"></div><div style="width:6.5%;background:#2A2D33">ARRIVE</div><div style="width:21.4%;background:#1E3A5F">RAW → RENDER</div><div style="width:19.6%;background:#2C527F">THE WHY</div><div style="width:34.1%;background:#3A3F47">CLINICAL SUITE</div><div style="width:16.6%;background:#4A5260">CLOSE</div>
+    </div>
+    <div class="ticks"><span>0:00</span><span>0:30</span><span>1:00</span><span>1:30</span><span>2:00</span><span>2:33</span></div>
+    <div class="strip" id="strip" role="img" aria-label="Every shot in order, colored by type"></div>
+    <div class="legend"><span><i style="background:#7FA3CF"></i>Dr. Ahn on camera</span><span><i style="background:#E7C873"></i>AI rendering</span><span><i style="background:#5C6470"></i>Drone, B-roll, cutaway</span><span><i style="background:#F5F5F5"></i>Logo card</span></div>
+  </section>
+
+  <section id="shots">
+    <div class="eyebrow">Shot by shot</div>
+    <h2>31 shots, each one playing</h2>
+    <p class="lead">Every clip below loops the actual shot from the final edit. Read the camera note for what the shooter did and the edit note for what we did with it.</p>
+    <div class="filters" role="group" aria-label="Filter shots">
+      <button type="button" data-f="all" aria-pressed="true">All 31</button>
+      <button type="button" data-f="talent" aria-pressed="false">Dr. Ahn on camera</button>
+      <button type="button" data-f="ai" aria-pressed="false">AI renderings</button>
+      <button type="button" data-f="broll" aria-pressed="false">Drone + B-roll</button>
+    </div>
+    <div class="shots" id="shotgrid"></div>
+  </section>
+
+  <section id="grade">
+    <div class="eyebrow">Color grade</div>
+    <h2>Three looks, one warm thread</h2>
+    <p class="lead">The grade changes with the room, but it is never cold. Every shot reads warm (red above blue), whites go cream instead of blue, and the darkest room drops almost to black. The swatches and meters below are measured from the final export, darkest to brightest.</p>
+    <div class="looks" id="looks"></div>
+    <div class="card" style="margin-top:16px"><ul class="clean">
+      <li><b>Match renders to their room.</b> The renders measure the same warmth as the high-key cream look, so they cut against the real footage without a jump.</li>
+      <li><b>One exception on purpose:</b> the "most clinics focus on treatment" cutaway at 0:59 is fully desaturated. Black and white means "the old way". Color comes back the moment she says what we do differently.</li>
+      <li><b>The mood shift is the story.</b> Bright and golden while we explore, low-key amber once we are inside the clinical suite. Grade the change in on the cut, not with a slow fade.</li>
+    </ul></div>
+  </section>
+
+  <section id="ai">
+    <div class="eyebrow">AI renderings · Claude + Higgsfield</div>
+    <h2>Show the room before it exists</h2>
+    <p class="lead">The move that makes this video: she stands in a construction site, says the name of a room, and we cut to the finished room. Eight renders in 2:33. Here is how each pairing is built and how we make ours.</p>
+    <div class="pair">
+      <figure><img src="img/s08.jpg" alt="Dr. Ahn beside a taped raw wall" loading="lazy"><figcaption><b>Raw · 0:17</b> "to the right of me is our video wall"</figcaption></figure>
+      <figure><img src="img/s09.jpg" alt="Rendered video wall showing fashion imagery" loading="lazy"><figcaption><b>Render · 0:19</b> the finished video wall, cut on "video wall"</figcaption></figure>
+      <figure><img src="img/s11.jpg" alt="Dr. Ahn in the storefront with yellow scaffolding" loading="lazy"><figcaption><b>Raw · 0:27</b> "this storefront right here area"</figcaption></figure>
+      <figure><img src="img/s12.jpg" alt="Rendered arched retail shelves" loading="lazy"><figcaption><b>Render · 0:32</b> the arched shelves, cut on "products"</figcaption></figure>
+    </div>
+    <div class="two">
+      <div>
+        <h3>The workflow</h3>
+        <ol class="steps">
+          <li><b>Shoot a clean plate.</b> On shoot day, grab 5 seconds of every raw room with nobody in it, from the angle she will talk about it.</li>
+          <li><b>Claude writes the prompt.</b> Give Claude the design brief and the script line. It writes a render prompt with materials, light and palette, so every room matches.</li>
+          <li><b>Higgsfield renders the room.</b> Image to image from the plate, keep the walls and windows where they are, finish the space. Make 4 to 6 options and pick one.</li>
+          <li><b>Higgsfield animates it.</b> Image to video with one slow lateral slide, 3 to 5 seconds. Slide the same direction as the shot before it. No zoom.</li>
+          <li><b>Grade and place it.</b> Grade to the room's look, add the same grain as the camera footage, and cut in on the exact word that names the room.</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Starter prompt (edit per room)</h3>
+<pre>Photoreal interior of a luxury aesthetic and
+wellness clinic, [ROOM NAME], Beverly Hills.
+Keep the exact walls, window and ceiling from
+the reference image. Finishes: warm cream
+plaster, travertine and onyx accents, arched
+niches, oak, soft 3000K cove lighting, one
+olive tree. Calm, editorial, no people.
+Vertical 9:16, eye level, 24mm lens look.</pre>
+<pre>Motion: slow lateral dolly left to right,
+3-5 seconds, steady, no zoom, no camera shake,
+light stays still, cinematic.</pre>
+        <ul class="clean" style="margin-top:14px">
+          <li><b>Use the brand's real logo</b> on signage only when we have the file. Never let the AI invent lettering.</li>
+          <li><b>Check every frame</b> for warped lines, melted furniture and fake text before it goes in the timeline.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="text">
+    <div class="eyebrow">Captions, titles, transitions, sound</div>
+    <h2>The finishing layer</h2>
+    <div class="two">
+      <div class="card"><h3>Captions</h3><ul class="clean">
+        <li><b>Two to three words at a time,</b> white, thin sans serif, centered in the lower third. Never a full sentence on screen.</li>
+        <li><b>Bold one key word</b> per line: breathe, live, smile, sterilization, laboratory, foundation. The weight swap does the emphasis, no color.</li>
+        <li><b>Big titles name the place:</b> "little tour", "video wall", "treatment #2", "treatment #3". They fade up, hold, then ghost out.</li>
+        <li><b>Hand-drawn marks</b> for the big ideas: a circle around "root causes" (1:07), a scribble under "improve" (1:12).</li>
+      </ul>
+      <div class="caps"><span><b>breathe</b> better,</span><span><b>live</b> better,</span><span>and <b>smile</b></span><span>the <b>foundation</b></span></div>
+      </div>
+      <div class="card"><h3>Transitions and sound</h3><ul class="clean">
+        <li><b>Hard cuts are the default.</b> Effects are saved for room changes.</li>
+        <li><b>Light leaks</b> carry us between spaces (0:10, 0:14, 0:31).</li>
+        <li><b>Whip blur</b> moves us from the storefront to the consultation room (0:45).</li>
+        <li><b>Foreground wipes:</b> a dark doorframe passes the lens to enter the clinical suite (1:15) and treatment #2 (1:45).</li>
+        <li><b>Practical flare</b> sweeps across the dark room at 1:28.</li>
+        <li><b>Voice first.</b> The music bed measures about 11 dB under her voice and only comes up when she stops talking: the opening drones and the logo card.</li>
+      </ul></div>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Time</th><th>Move</th><th>Why it works</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">0:00</td><td>Open on two drone shots, no voice</td><td>Beverly Hills at golden hour says luxury before she says a word.</td></tr>
+          <tr><td class="mono">0:08</td><td>Punch in on "little tour"</td><td>Same moment, new angle. The cut resets attention without leaving the room.</td></tr>
+          <tr><td class="mono">0:13</td><td>First raw room to render</td><td>Sets the pattern in the first 15 seconds, so the viewer waits for every reveal.</td></tr>
+          <tr><td class="mono">0:59</td><td>Black and white cutaway</td><td>Contrasts "most clinics" with her approach without saying anyone's name.</td></tr>
+          <tr><td class="mono">1:15</td><td>Grade drops to low-key</td><td>Tells you we are in the serious, clinical part of the space.</td></tr>
+          <tr><td class="mono">2:08</td><td>Longest shot saved for last</td><td>22 seconds on her message. The tour already earned the attention.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="checklist">
+    <div class="eyebrow">Before you export</div>
+    <h2>Editor checklist</h2>
+    <p class="lead">Run every tour edit through this list before you post it for review. Checks stay on this device only.</p>
+    <div class="check" id="check"></div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h3 style="margin:0 0 6px;font-size:16px">Questions?</h3>
+      <p style="margin:0;color:var(--muted);font-size:14px">Watch the full video once with sound, then once with this page open. Drop your questions in Slack, tag Felipe, and include the shot number you are asking about.</p>
+    </div>
+  </section>
+
+  <footer><span>Puro Flow Media · How To Edit</span><span>Breakdown 01 · Create in flow state</span></footer>
+</div>
+
+<script>
+const SHOTS=[
+ ["broll","0:00.0","0:01.2","Drone: Beverly Hills, golden hour","","High drone over a palm-lined boulevard with the sun on the horizon. Slow forward drift, perfectly smooth.","Cold open. No title and no voice for the first 2.7 seconds, just music.","Location sells the brand before she says a word."],
+ ["broll","0:01.2","0:02.8","Drone: the building","","Drone holds on the courtyard of the building, warm late light on the brick and arches.","Hard cut from the wide city to this one building.","City, then address. Two shots and we know exactly where we are."],
+ ["talent","0:02.8","0:08.5","Wide: inside the raw suite","So we are now inside the Aviara aesthetic suite","Wide from a low position, ladder in the left foreground, Dr. Ahn small in frame among the raw walls. Stable.","First caption appears with her first word.","We show the space honestly as a construction site. The ladder adds depth so it never looks flat."],
+ ["talent","0:08.5","0:10.6","Punch in at 3/4: little tour","I'm going to give you a little tour","Medium shot from a new angle, roughly 45° off her, so she is never square to the lens.","Big bold \"little tour\" title with a sparkle, then a warm light leak carries us out.","Same moment, new angle. The cut resets attention without leaving the room."],
+ ["talent","0:10.6","0:12.8","Back wide: the entrance","So this is the entrance.","Back to the wide, arms open to present the room.","Cut on her gesture, so the move does the work.","Her open arms make the reveal feel welcoming."],
+ ["ai","0:12.8","0:14.2","Render: reception","And our reception desk","Finished entrance with glass doors, chandelier and desk chair. Slow lateral slide.","Cut in on \"And our\", out with a light leak.","First render. Sets the pattern: raw room, then the finished room."],
+ ["ai","0:14.2","0:16.9","Render: the Aviara desk","will be right there","Reception desk with the Aviara logo, cove light, an olive tree. Slow slide that reveals the plant.","Held long enough to read the logo.","The brand shows up on the wall of the room she is describing."],
+ ["talent","0:16.9","0:19.4","Follow: to the video wall","And to the right of me is our video wall","She walks right toward a taped raw wall. The camera pans with her on the gimbal.","\"video wall\" big bold title, which ghosts out as we cut.","Movement leads the eye to the empty wall we are about to fill."],
+ ["ai","0:19.4","0:23.3","Render: the video wall","This video wall will be used to educate our patients","The finished wall of screens playing fashion imagery, framed by plants.","\"educate\" sits bold above \"our patients\".","The empty wall from the shot before is now real."],
+ ["talent","0:23.3","0:26.7","Negative space: the raw wall","on all the important ... that we have to offer.","She sits low in the bottom right of frame, the raw wall and hanging conduit fill the top.","Captions sit beside her, not over her face.","Off-center framing is the opposite of flat. The space is the subject."],
+ ["talent","0:26.8","0:31.5","Follow from behind: the storefront","So this storefront right here area will focus on","Camera follows behind her shoulder into the storefront, she turns and points. Yellow scaffolding frames the shot.","Light flash out of the shot.","Following from behind puts the viewer in the room with her."],
+ ["ai","0:31.7","0:38.8","Render: the arched shelves","products that will help our patients breathe better, live better, and smile better","Arched retail niches with warm under-shelf light. Slow lateral slide.","Key words go bold on each beat: breathe, live, smile.","The longest render, because it carries the promise of the brand."],
+ ["talent","0:38.8","0:45.5","Medium: three arches","so that's why we have three arches representing the three pillars of the foundation of health.","Medium wide, she gestures to the three raw arch openings behind her.","Whip blur out to the next room.","The raw arches pay off the render we just saw. The design has meaning."],
+ ["talent","0:45.6","0:56.7","High-key MCU: consultation room","and consultation room. And to me this is the most important room","Bright, creamy room. Medium close-up at 3/4, she turns to show the room and back to us. Smooth gimbal.","\"important room\" in bold.","The brightest room is the most important room. The light says it too."],
+ ["broll","0:56.7","0:59.1","Insert: across the raw room","most wellness clinics.","Pan across a raw wall with fixtures to the scaffolding.","B-roll over her voice.","Gives the eye a rest before the contrast beat."],
+ ["broll","0:59.1","1:01.9","Black and white cutaway","focus on treatment, but...","A clinic consult in full black and white.","Huge bold \"treatment\", then \"but...\".","Black and white means the old way. She never has to name anyone."],
+ ["talent","1:01.9","1:15.5","Back in color: root causes","what we really need is to understand the patient's problems, their root causes","Same consultation room setup, she turns into the lens as she makes the point.","Hand-drawn circle around \"root causes\", scribble under \"improve\".","Color returns with her answer. The marks make the big idea stick."],
+ ["talent","1:15.5","1:21.5","Doorframe reveal: clinical suite","now we're inside our clinical suite, and right side, we have our","A dark doorframe passes the lens and reveals her face in low light. She turns and leads us deeper.","The grade drops to low-key amber on this cut.","Foreground wipe plus a mood change says we entered a new kind of room."],
+ ["ai","1:21.5","1:24.3","Render: esthetic and longevity suite","esthetic and longevity suite.","Treatment chair against onyx shelving. Slow slide left.","\"esthetic\" and \"longevity suite.\" in bold.","The render stays bright, which lifts the dark section."],
+ ["ai","1:24.3","1:27.9","Render: the cabinetry","So here we will focus on all the natural regenerative approaches to","Second render of the same suite, sliding across the cabinetry.","Two renders back to back for one room.","A second angle makes the room feel real, not like a single still."],
+ ["broll","1:27.9","1:30.3","Flare pass","health and beauty.","Dark room with green tile, a practical light flares across the lens.","Used as the transition into the lab.","An in-camera transition, no plugin needed."],
+ ["talent","1:30.3","1:34.7","Side light: the lab","This is our sterilization and laboratory.","Medium in a dark doorway, one soft window light from the side. She gestures into the room.","\"sterilization\" and \"laboratory.\" in bold.","One motivated light source. That is what makes low-key look expensive."],
+ ["talent","1:34.7","1:40.6","Same setup, tighter","to be able to design smiles, print models,","Slightly tighter on the same setup.","A cut in instead of a zoom.","We get closer by cutting, never by scaling the clip."],
+ ["talent","1:40.6","1:45.2","The Smile Design Laboratory","custom smile design. All of that work will be done in the Smile Design Laboratory.","Holds on the same angle as she names the lab.","\"Smile Design Laboratory.\" in bold. Short whip out.","Naming the room is the payoff of the lab section."],
+ ["talent","1:45.2","1:48.5","Doorframe wipe: treatment #2","Yes. This is treatment #2","She steps toward a doorway, the dark frame wipes the lens.","\"treatment #2\" title fades up big, then ghosts.","Titles work like chapter markers so viewers never get lost."],
+ ["ai","1:48.5","1:53.5","Render: treatment room #2","And in this room, we will be able to help our patients with a","High angle on a white treatment bed in a bright room. Slow slide.","Cut in on \"room\".","Raw room, then render. The pattern holds all the way through."],
+ ["talent","1:53.5","1:57.7","Low-key MCU","lot of the facial and oral health rejuvenation.","Medium close-up, a doorframe edge in the foreground, warm side light.","Captions only, no title.","Foreground edge keeps even a simple talking shot layered."],
+ ["talent","1:57.7","1:59.3","Title beat: treatment #3","This is treatment #3","Same low-key look, quick beat.","\"treatment #3\" title.","A short beat that sets up the last reveal."],
+ ["ai","1:59.3","2:07.6","Render: Smile Design studio","It's where all of the smile design work will be done in this room. So this is my Smile Design studio.","Dental chair against an onyx wall. Long lateral slide that reveals an olive tree.","Held for 8 seconds, the longest look at any room.","The last room is her signature room, so it gets the most time."],
+ ["talent","2:07.6","2:29.5","The close: her philosophy","Naturally, our teeth should already be beautiful... support better breathing and optimal wellness.","The one frontal shot in the video, saved for the close. Background falls to black, warm light from one side, gentle drift.","\"foundation\" in bold. 22 seconds, no cutaways.","The tour earned this. Side light keeps the frontal shot from ever looking flat."],
+ ["logo","2:29.5","2:33.1","Logo card","","Aviara logo over sheer white curtains.","The logo fades up, the music finishes the video.","Ends on the brand, clean and quiet."]
+];
+const TYPE={talent:"On camera",ai:"AI render",broll:"Drone / B-roll",logo:"Logo"};
+const COL={talent:"#7FA3CF",ai:"#E7C873",broll:"#5C6470",logo:"#F5F5F5"};
+const toS=t=>{const[m,s]=t.split(":");return +m*60+ +s};
+const strip=document.getElementById("strip");
+const grid=document.getElementById("shotgrid");
+const io=("IntersectionObserver" in window)?new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})}else v.pause()}),{rootMargin:"200px"}):null;
+SHOTS.forEach((s,i)=>{
+  const [type,a,b,title,vo,cam,edit,why]=s, n=String(i+1).padStart(2,"0"), dur=(toS(b)-toS(a)).toFixed(1);
+  const sp=document.createElement("span");sp.style.flex=dur;sp.style.background=COL[type];sp.title=`${n} ${title}`;strip.appendChild(sp);
+  const el=document.createElement("article");el.className="shot";el.dataset.type=type;
+  el.innerHTML=`<div class="media"><video muted loop playsinline preload="none" poster="img/s${n}.jpg" data-src="clips/shot${n}.mp4" aria-label="Shot ${n}: ${title}"></video><span class="tag ${type==="ai"?"ai":""}">${TYPE[type]}</span></div>
+  <div class="body"><div class="head"><span class="n">${n}</span><span class="tc">${a}–${b} · ${dur}s</span></div><h3>${title}</h3>${vo?`<p class="vo">"${vo}"</p>`:""}
+  <p><b>Camera</b>${cam}</p><p><b>Edit</b>${edit}</p><p><b>Why it works</b>${why}</p></div>`;
+  grid.appendChild(el);
+  const v=el.querySelector("video"); if(io) io.observe(v); else {v.src=v.dataset.src;}
+});
+document.querySelectorAll(".filters button").forEach(btn=>btn.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===btn));
+  const f=btn.dataset.f; grid.querySelectorAll(".shot").forEach(c=>c.hidden=!(f==="all"||c.dataset.type===f||(f==="broll"&&c.dataset.type==="logo")));
+}));
+const LOOKS=[
+ {name:"Golden raw space",where:"Shots 3 to 5, 11, 13",img:"s13",sw:["#422D19","#75522F","#8D6D44","#A68861","#D2B79A"],bright:0.41,warm:0.26,sat:0.54,tips:["<b>Warmest look</b> in the video. Push white balance toward amber.","Let the construction stay honest: raw wood, yellow scaffolding, red floor covering.","Keep highlights creamy, never clipped."]},
+ {name:"High-key cream",where:"Shots 14, 17 and every render",img:"s14",sw:["#7E6C5A","#A39481","#C0B1A1","#D8C7B8","#F0E3DB"],bright:0.76,warm:0.11,sat:0.15,tips:["<b>Bright and soft.</b> Lift exposure, lower contrast.","Pull saturation way down. Skin and walls go cream.","Whites must read warm. A blue white breaks the look."]},
+ {name:"Low-key amber",where:"Shots 18, 22 to 30",img:"s30",sw:["#070504","#281D11","#4E3823","#71543F","#AE8F7E"],bright:0.20,warm:0.12,sat:0.37,tips:["<b>Let the shadows go almost black.</b> Do not lift them.","One motivated light from the side, protect the skin tones.","Brightness drops to about a quarter of the cream look."]}
+];
+const looks=document.getElementById("looks");
+const meter=(l,v,max)=>`<div class="meter"><span>${l}</span><span class="track"><span class="fill" style="width:${Math.round(v/max*100)}%;display:block"></span></span><span class="v">${v.toFixed(2)}</span></div>`;
+LOOKS.forEach(L=>{const d=document.createElement("div");d.className="card look";
+ d.innerHTML=`<img src="img/${L.img}.jpg" alt="${L.name} example frame" loading="lazy"><h3>${L.name}</h3><div class="where">${L.where}</div><div class="sw">${L.sw.map(c=>`<span style="background:${c}" title="${c}"></span>`).join("")}</div>${meter("Brightness",L.bright,1)}${meter("Warmth",L.warm,0.3)}${meter("Saturation",L.sat,0.6)}<ul style="margin-top:12px">${L.tips.map(t=>`<li>${t}</li>`).join("")}</ul>`;looks.appendChild(d)});
+const CHECK=["<b>Stable:</b> no shaky handheld in any tour shot","<b>No flat frames:</b> subject at 3/4, off-center, something in the foreground","<b>No digital zoom:</b> zero scale keyframes, push in by cutting","<b>New room, new angle:</b> no two shots in a row share a framing","<b>Every raw room has its render,</b> cut in on the word that names it","<b>Renders checked</b> for warped lines, melted furniture and fake text","<b>Grade:</b> warm whites, cream not blue, low-key rooms go dark","<b>Captions:</b> 2 to 3 words, one bold key word, lower third","<b>Titles name the place</b> (tour, room, treatment number)","<b>Music about 10 dB under the voice,</b> up only when she stops talking","<b>Average shot around 5 seconds;</b> long holds only for the close","<b>End on the logo card,</b> about 3 seconds"];
+const ck=document.getElementById("check");let saved={};try{saved=JSON.parse(localStorage.getItem("hte-ahn-check")||"{}")}catch(e){}
+CHECK.forEach((c,i)=>{const l=document.createElement("label");l.innerHTML=`<input type="checkbox" ${saved[i]?"checked":""}><span>${c}</span>`;l.querySelector("input").addEventListener("change",e=>{saved[i]=e.target.checked;try{localStorage.setItem("hte-ahn-check",JSON.stringify(saved))}catch(err){}});ck.appendChild(l)});
+const reel=document.getElementById("reel"),snd=document.getElementById("sound");
+snd.addEventListener("click",()=>{reel.muted=!reel.muted;if(!reel.muted){reel.currentTime=0;reel.play().catch(()=>{})}snd.textContent=reel.muted?"Tap for sound":"Mute"});
+</script>
+</body>
+</html>
