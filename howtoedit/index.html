@@ -4,73 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>How To Edit</title>
-<meta name="description" content="Puro Flow Media's editing library: shot-by-shot breakdowns of our best reels, covering shot selection, color grade, AI renderings and captions.">
+<meta name="description" content="Puro Flow Media's editing library: shot-by-shot breakdowns of our best videos, covering shots, pace, color grade, music and sound.">
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Montserrat:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/hte.css">
 <style>
-:root{--bg:#0A0A0A;--panel:#141518;--line:#2A2D33;--text:#F5F5F5;--muted:#9AA3AE;--blue-hi:#7FA3CF;
---display:"Orbitron","Arial Black",sans-serif;--body:"Montserrat","Helvetica Neue",Arial,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace;color-scheme:dark}
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--text);font-family:var(--body);margin:0;line-height:1.55}
-a{color:var(--blue-hi);text-decoration:none;font-weight:600}
-a:focus-visible{outline:2px solid var(--blue-hi);outline-offset:3px;border-radius:6px}
-.wrap{max-width:1120px;margin:0 auto;padding:28px max(16px,env(safe-area-inset-right,0px)) 64px max(16px,env(safe-area-inset-left,0px))}
-.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.top img{height:22px;width:auto;display:block}
-.eyebrow{font-weight:800;text-transform:uppercase;letter-spacing:.24em;font-size:11px;color:var(--blue-hi)}
-h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,6vw,58px);line-height:1.04;margin:40px 0 12px;text-wrap:balance}
-h1 em{font-style:normal;color:var(--blue-hi)}
-.lead{color:var(--muted);font-size:16px;max-width:62ch;margin:0}
+.hubh1{font-family:var(--display);font-weight:900;font-size:clamp(32px,6vw,58px);line-height:1.04;margin:14px 0 12px;text-wrap:balance}
+.hubh1 em{font-style:normal;color:var(--blue-hi)}
 .pillars{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .pillars span{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 13px;font-size:12px}
-h2{font-family:var(--display);font-size:20px;margin:56px 0 16px}
-.feature{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--text)}
-.feature:hover{border-color:var(--blue-hi)}
-.feature img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:10px;display:block}
-.feature h3{font-family:var(--display);font-size:clamp(20px,3vw,28px);margin:8px 0 10px;line-height:1.15}
-.feature p{color:var(--muted);font-size:14px;margin:0 0 14px}
-.meta{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:12px;color:var(--muted);margin-bottom:18px}
-.meta b{color:var(--text)}
-.go{display:inline-block;background:var(--blue-hi);color:#0A0A0A;border-radius:999px;padding:10px 18px;font-weight:800;font-size:13px}
-.next{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-.next div{border:1px dashed var(--line);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--muted)}
-.next div b{display:block;color:var(--text);font-size:13.5px;margin-bottom:2px}
-footer{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:700}
-@media (max-width:700px){.feature{grid-template-columns:1fr}.feature img{aspect-ratio:4/5}}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+@media (max-width:700px){.how{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="top"><img src="logo_w.png" alt="Puro Flow Media"><span class="eyebrow">Editor library</span></div>
   <div class="eyebrow" style="margin-top:40px">Puro Flow Media · How To Edit</div>
-  <h1 style="margin-top:10px">Our best reels,<br><em>taken apart.</em></h1>
-  <p class="lead">Every breakdown picks one of our strongest videos and shows exactly how it was built, shot by shot, so every editor on the team can hit the same standard.</p>
-  <div class="pillars"><span>Shot selection</span><span>Camera movement</span><span>Color grade</span><span>AI renderings</span><span>Captions + titles</span><span>Transitions + sound</span></div>
-
-  <h2>Breakdowns</h2>
-  <a class="feature" href="dr-ahn-local-tour/">
-    <img src="dr-ahn-local-tour/img/card.jpg" alt="Rendered Smile Design studio from the Dr. Ahn tour">
-    <div>
-      <div class="eyebrow">Breakdown 01 · Tour</div>
-      <h3>Dr. Katherine Ahn: Aviara Local Tour</h3>
-      <p>A raw construction site becomes a finished Beverly Hills clinic, one room at a time. The standard for every tour we edit: stable, angled, no digital zooms, and a render for every room.</p>
-      <div class="meta"><span><b>2:33</b> runtime</span><span><b>31</b> shots</span><span><b>8</b> AI renders</span><span><b>3</b> grade looks</span></div>
-      <span class="go">Open the breakdown</span>
-    </div>
-  </a>
-
-  <h2>Up next</h2>
-  <div class="next">
-    <div><b>Aviara #1</b>Dr. Ahn, Beverly Hills #1</div>
-    <div><b>Aviara #2</b>Dr. Ahn, Aviara video</div>
-    <div><b>Aviara #4</b>Vertical video, LED screen</div>
-    <div><b>Aviara #5</b>Patient case explanation</div>
-    <div><b>Aviara #6</b>Dr. Ahn and Micah, podcast episode</div>
-    <div><b>Aviara #7 to #10</b>Patient testimonials</div>
+  <h1 class="hubh1">Our best videos,<br><em>taken apart.</em></h1>
+  <p class="lead">Every breakdown takes one finished video and shows exactly how it was made: every shot playing, the pace, the color grade, the music, the sound mix, the drone shots, transitions and flickers. Start with the collection below, then make yours match.</p>
+  <div class="pillars"><span>Shot selection</span><span>Pace</span><span>Color grade</span><span>Music choice</span><span>Sound engineering</span><span>Drone + transitions</span><span>Captions</span><span>Export checklist</span></div>
+  <div class="how">
+    <div class="card"><h3 style="margin:0 0 6px;font-size:15px">1. Watch it once</h3><p style="margin:0;color:var(--muted);font-size:13.5px">Play the full video with sound before reading anything.</p></div>
+    <div class="card"><h3 style="margin:0 0 6px;font-size:15px">2. Go shot by shot</h3><p style="margin:0;color:var(--muted);font-size:13.5px">Every clip loops the real shot, with what the camera did and what we did in the edit.</p></div>
+    <div class="card"><h3 style="margin:0 0 6px;font-size:15px">3. Run the checklist</h3><p style="margin:0;color:var(--muted);font-size:13.5px">Before you post an edit for review, tick every box at the bottom of the page.</p></div>
   </div>
-
+  <section style="padding-top:44px">
+    <div class="eyebrow">Collection 01</div>
+    <h2>Dr. Katherine Ahn · Aviara Aesthetic</h2>
+    <p class="lead" style="margin-bottom:18px">All 13 videos from the Aviara launch, in delivery order: brand stings, reels, a tour, a case explainer, a podcast episode and four patient testimonials.</p>
+    <div class="libgrid"><a class="lib" href="o2-doctor-logo-reveal/"><img src="o2-doctor-logo-reveal/img/poster.jpg" alt="" loading="lazy"><div><small>01 · Logo reveal · 0:10 · 12 shots</small><h3>Extra Branded Video #1: O2 Doctor, Dra Ahn</h3><p>A 10 second brand sting for O2 Doctor.</p></div></a><a class="lib" href="aviara-coming-soon/"><img src="aviara-coming-soon/img/poster.jpg" alt="" loading="lazy"><div><small>02 · Teaser · 0:15 · 4 shots</small><h3>Extra Video #2: Aviara Aesthetic Story</h3><p>A 15 second announcement made from one continuous shot of moving fabric and four type cards.</p></div></a><a class="lib h" href="website-hero-loop/"><img src="website-hero-loop/img/poster.jpg" alt="" loading="lazy"><div><small>03 · Website loop · 0:26 · 4 shots</small><h3>Website Asset: Dr. Ahn</h3><p>A 26 second muted loop for the top of Dr. Ahn's website.</p></div></a><a class="lib" href="aviara-beverly-hills-welcome/"><img src="aviara-beverly-hills-welcome/img/poster.jpg" alt="" loading="lazy"><div><small>04 · Brand intro · 0:28 · 15 shots</small><h3>Aviara #1: Dr. Ahn, Beverly Hills</h3><p>The first reel that introduces Aviara and Dr. Ahn.</p></div></a><a class="lib" href="aviara-new-office-reveal/"><img src="aviara-new-office-reveal/img/poster.jpg" alt="" loading="lazy"><div><small>05 · Space reveal · 0:29 · 13 shots</small><h3>Aviara #2: Dra Ahn, Aviara Video</h3><p>A 29 second reel that announces the new office before it is built.</p></div></a><a class="lib" href="dr-ahn-local-tour/"><img src="dr-ahn-local-tour/img/poster.jpg" alt="" loading="lazy"><div><small>06 · Tour · 2:33 · 31 shots</small><h3>Aviara #3: Dr. Ahn, Local Tour</h3><p>This is the standard for every tour we edit from here on.</p></div></a><a class="lib" href="led-video-wall/"><img src="led-video-wall/img/poster.jpg" alt="" loading="lazy"><div><small>07 · LED wall loop · 0:33 · 8 shots</small><h3>Aviara #4: Aviara Aesthetic Vertical Video, LED Screen</h3><p>A 33 second vertical piece built for the video wall inside the clinic.</p></div></a><a class="lib" href="patient-case-explanation/"><img src="patient-case-explanation/img/poster.jpg" alt="" loading="lazy"><div><small>08 · Case explainer · 1:45 · 34 shots</small><h3>Aviara #5: Patient Case Explanation by Dr. Ahn</h3><p>Dr. Ahn explains a patient's oral appliance with the device in her hands, intercut with the patient's visit, stock close-ups, an airway diagram and fabric resets.</p></div></a><a class="lib h" href="podcast-dr-ahn-micah/"><img src="podcast-dr-ahn-micah/img/poster.jpg" alt="" loading="lazy"><div><small>09 · Podcast · 5:03 · 35 shots</small><h3>Aviara #6: Dr. Ahn & Micah, Podcast Interview Episode</h3><p>A five minute sit-down between Dr. Ahn and her patient Micah.</p></div></a><a class="lib h" href="testimonial-riley-stevens/"><img src="testimonial-riley-stevens/img/poster.jpg" alt="" loading="lazy"><div><small>10 · Testimonial · 1:05 · 20 shots</small><h3>Aviara #7: Testimonial, Riley Stevens</h3><p>Riley talks about her chronic migraines and how Dr. Ahn looked at her whole body, not just her jaw.</p></div></a><a class="lib h" href="testimonial-deneen-mercado/"><img src="testimonial-deneen-mercado/img/poster.jpg" alt="" loading="lazy"><div><small>11 · Testimonial · 1:06 · 23 shots</small><h3>Aviara #8: Testimonial, Deneen Mercado</h3><p>Deneen opens with "If I could go back" and the edit proves every line with B-roll from her visit: the front desk, the hallway, the handshake, the exam and a real laugh with Dr. Ahn at the end.</p></div></a><a class="lib h" href="testimonial-anne-nieto/"><img src="testimonial-anne-nieto/img/poster.jpg" alt="" loading="lazy"><div><small>12 · Testimonial · 1:03 · 17 shots</small><h3>Aviara #9: Testimonial, Anne Nieto</h3><p>Anne came from Cyprus with years of jaw pain.</p></div></a><a class="lib h" href="testimonial-denise-riley/"><img src="testimonial-denise-riley/img/poster.jpg" alt="" loading="lazy"><div><small>13 · Testimonial · 2:17 · 21 shots</small><h3>Aviara #10: Testimonial, Denise Riley</h3><p>The longest testimonial at 2:17.</p></div></a></div>
+  </section>
   <footer><span>Puro Flow Media · How To Edit</span><span>Create in flow state</span></footer>
 </div>
 </body>
