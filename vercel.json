@@ -1,144 +1,157 @@
 {
- "routes": [
-  {
-   "src": "^/$",
-   "has": [
+  "routes": [
     {
-     "type": "host",
-     "value": "onboarding.puroflowmedia.com"
-    }
-   ],
-   "dest": "/onboarding/index.html"
-  },
-  {
-   "src": "^/(?!onboarding/)(.*)$",
-   "has": [
+      "src": "^/blake(/(index\\.html)?)?$",
+      "missing": [
+        {
+          "type": "host",
+          "value": "bookblake.puroflowmedia.com"
+        }
+      ],
+      "status": 301,
+      "headers": {
+        "Location": "https://bookblake.puroflowmedia.com/"
+      }
+    },
     {
-     "type": "host",
-     "value": "onboarding.puroflowmedia.com"
-    }
-   ],
-   "dest": "/onboarding/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "onboarding.puroflowmedia.com"
+        }
+      ],
+      "dest": "/onboarding/index.html"
+    },
     {
-     "type": "host",
-     "value": "bookjosh.puroflowmedia.com"
-    }
-   ],
-   "dest": "/josh/index.html"
-  },
-  {
-   "src": "^/(?!josh/)(.*)$",
-   "has": [
+      "src": "^/(?!onboarding/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "onboarding.puroflowmedia.com"
+        }
+      ],
+      "dest": "/onboarding/$1"
+    },
     {
-     "type": "host",
-     "value": "bookjosh.puroflowmedia.com"
-    }
-   ],
-   "dest": "/josh/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookjosh.puroflowmedia.com"
+        }
+      ],
+      "dest": "/josh/index.html"
+    },
     {
-     "type": "host",
-     "value": "booksteven.puroflowmedia.com"
-    }
-   ],
-   "dest": "/steven/index.html"
-  },
-  {
-   "src": "^/(?!steven/)(.*)$",
-   "has": [
+      "src": "^/(?!josh/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookjosh.puroflowmedia.com"
+        }
+      ],
+      "dest": "/josh/$1"
+    },
     {
-     "type": "host",
-     "value": "booksteven.puroflowmedia.com"
-    }
-   ],
-   "dest": "/steven/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "booksteven.puroflowmedia.com"
+        }
+      ],
+      "dest": "/steven/index.html"
+    },
     {
-     "type": "host",
-     "value": "bookphillip.puroflowmedia.com"
-    }
-   ],
-   "dest": "/phillip/index.html"
-  },
-  {
-   "src": "^/(?!phillip/)(.*)$",
-   "has": [
+      "src": "^/(?!steven/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "booksteven.puroflowmedia.com"
+        }
+      ],
+      "dest": "/steven/$1"
+    },
     {
-     "type": "host",
-     "value": "bookphillip.puroflowmedia.com"
-    }
-   ],
-   "dest": "/phillip/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookphillip.puroflowmedia.com"
+        }
+      ],
+      "dest": "/phillip/index.html"
+    },
     {
-     "type": "host",
-     "value": "bookblake.puroflowmedia.com"
-    }
-   ],
-   "dest": "/blake/index.html"
-  },
-  {
-   "src": "^/(?!blake/)(.*)$",
-   "has": [
+      "src": "^/(?!phillip/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookphillip.puroflowmedia.com"
+        }
+      ],
+      "dest": "/phillip/$1"
+    },
     {
-     "type": "host",
-     "value": "bookblake.puroflowmedia.com"
-    }
-   ],
-   "dest": "/blake/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookblake.puroflowmedia.com"
+        }
+      ],
+      "dest": "/blake/index.html"
+    },
     {
-     "type": "host",
-     "value": "booklaurie.puroflowmedia.com"
-    }
-   ],
-   "dest": "/laurie/index.html"
-  },
-  {
-   "src": "^/(?!laurie/)(.*)$",
-   "has": [
+      "src": "^/(?!blake/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookblake.puroflowmedia.com"
+        }
+      ],
+      "dest": "/blake/$1"
+    },
     {
-     "type": "host",
-     "value": "booklaurie.puroflowmedia.com"
-    }
-   ],
-   "dest": "/laurie/$1"
-  },
-  {
-   "src": "^/$",
-   "has": [
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "booklaurie.puroflowmedia.com"
+        }
+      ],
+      "dest": "/laurie/index.html"
+    },
     {
-     "type": "host",
-     "value": "bookshelly.puroflowmedia.com"
-    }
-   ],
-   "dest": "/shelley/index.html"
-  },
-  {
-   "src": "^/(?!shelley/)(.*)$",
-   "has": [
+      "src": "^/(?!laurie/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "booklaurie.puroflowmedia.com"
+        }
+      ],
+      "dest": "/laurie/$1"
+    },
     {
-     "type": "host",
-     "value": "bookshelly.puroflowmedia.com"
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookshelly.puroflowmedia.com"
+        }
+      ],
+      "dest": "/shelley/index.html"
+    },
+    {
+      "src": "^/(?!shelley/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookshelly.puroflowmedia.com"
+        }
+      ],
+      "dest": "/shelley/$1"
     }
-   ],
-   "dest": "/shelley/$1"
-  }
- ]
+  ]
 }
