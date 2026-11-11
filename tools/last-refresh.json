@@ -1,24 +1,5 @@
 {
-  "at": "2026-11-10T13:42:10.194Z",
-  "autoMatched": [
-    {
-      "net": "fb",
-      "url": "https://www.facebook.com/reel/1713063840305819/",
-      "day": "nov-9/mon",
-      "score": 0.95
-    },
-    {
-      "net": "li",
-      "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525606074541092864",
-      "day": "nov-9/mon",
-      "score": 0.92
-    },
-    {
-      "net": "tt",
-      "url": "https://www.tiktok.com/@get_adit/video/7706264294605835534",
-      "day": "nov-2/fri-a",
-      "score": 0.55
-    }
-  ],
+  "at": "2026-11-11T13:38:09.612Z",
+  "autoMatched": [],
   "unmatched": []
 }
