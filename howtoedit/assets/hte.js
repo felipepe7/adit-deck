@@ -174,4 +174,11 @@ body.appendChild(el("footer","band",`<div class="wrap"><span>Puro Flow Media · 
 const reel=$("#reel"),snd=$("#sound");if(snd)snd.addEventListener("click",()=>{reel.muted=!reel.muted;if(!reel.muted){reel.currentTime=0;reel.play().catch(()=>{})}snd.textContent=reel.muted?"🔊 Tap for sound":"Mute"});
 reel.play().catch(()=>{});
 if("IntersectionObserver" in window){const links=[...nav.querySelectorAll("a")];const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}}),{rootMargin:"-40% 0px -55% 0px"});document.querySelectorAll("main section").forEach(x=>so.observe(x))}
+// kick: keep every on-screen video playing (blocked autoplay, background tabs, low power)
+const _on=v=>{const r=v.getBoundingClientRect();return r.width>0&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth};
+const kick=()=>{if(document.hidden)return;document.querySelectorAll("video").forEach(v=>{if(!_on(v))return;if(v.id!=="reel"||reel.muted)v.muted=true;if(!v.src&&v.dataset.src)v.src=v.dataset.src;if(v.paused)v.play().catch(()=>{})})};
+document.addEventListener("visibilitychange",kick);addEventListener("pageshow",kick);addEventListener("load",kick);
+["pointerdown","touchstart","keydown","wheel"].forEach(t=>addEventListener(t,kick,{passive:true}));
+addEventListener("scroll",()=>{clearTimeout(kick.t);kick.t=setTimeout(kick,150)},{passive:true});
+setTimeout(kick,600);setTimeout(kick,2000);
 })();
