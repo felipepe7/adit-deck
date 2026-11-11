@@ -4,7 +4,7 @@ const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"
 const fmt=t=>{t=+t;const m=Math.floor(t/60),s=(t-m*60);return m+":"+(s<10?"0":"")+s.toFixed(1)};
 const fmt0=t=>{t=Math.round(+t);return Math.floor(t/60)+":"+String(t%60).padStart(2,"0")};
 const TYPE={talent:"On camera",ai:"AI render",broll:"B-roll",drone:"Drone",gfx:"Graphics",logo:"Logo",stock:"Stock",split:"Split screen",guest:"Guest"};
-const COL={talent:"#5286C2",ai:"#D9A21B",broll:"#8A929D",drone:"#2F7D68",gfx:"#8B6CC4",logo:"#0A0A0A",stock:"#9A6B4F",split:"#1E3A5F",guest:"#C2734A"};
+const COL={talent:"#5286C2",ai:"#D9A21B",broll:"#8A929D",drone:"#2F7D68",gfx:"#8B6CC4",logo:"#F5F5F5",stock:"#9A6B4F",split:"#1E3A5F",guest:"#C2734A"};
 // The editor's move vocabulary. Each shot's Edit/Camera notes are matched against these.
 const MOVES=[
  {k:"logo",ic:"✦",t:"Logo fade in",h:"Fade the logo up over 8 to 12 frames, keep it small and centered, and hold it at least 1.5 seconds so it can be read.",re:/logo[^.]*(fade|fades|holds|up)|fades up and holds/i},
@@ -39,7 +39,7 @@ const body=document.body;body.innerHTML="";
 // ---------- dark band: nav + hero
 const band=el("header","band");body.appendChild(band);
 const bw=el("div","wrap");band.appendChild(bw);
-bw.appendChild(el("div","top",`<a href="../"><img src="../logo_w.png" alt="Puro Flow Media"></a><div class="navlinks"><a href="../">← Library</a><span>${String(D.num).padStart(2,"0")} / ${D.of}</span></div>`));
+bw.appendChild(el("div","top",`<a href="../"><img src="../logo_w.png" alt="Puro Flow Media"></a><div class="navlinks"><a href="../">← Library</a><a href="../#v${D.num}">Deck view</a><span>${String(D.num).padStart(2,"0")} / ${D.of}</span></div>`));
 const hero=el("div","hero"+H);
 hero.innerHTML=`<div><div class="reel${H}"><video id="reel" src="clips/reel.mp4" poster="img/poster.jpg" autoplay muted loop playsinline preload="auto"></video>${D.silent?"":`<button class="sound" id="sound" type="button">🔊 Tap for sound</button>`}</div>
 <div class="reelcap">Final export, ${fmt0(D.dur)} · <a href="${D.drive}" target="_blank" rel="noopener">4K original in Drive</a> · <a href="${D.pdf}" download>PDF</a></div></div>
@@ -115,7 +115,7 @@ s=sec("structure","The structure",D.structTitle,D.structLead);
 const nb=D.beats.length;
 const beats=el("div","beats");beats.style.gridTemplateColumns=`repeat(${Math.min(nb,6)},minmax(0,1fr))`;
 beats.innerHTML=D.beats.map(b=>`<div class="beat"><h3>${b.n}</h3><div class="t">${fmt0(b.a)}–${fmt0(b.b)}</div><p>${b.d}</p></div>`).join("");s.appendChild(beats);
-const shades=["#1E3A5F","#5286C2","#0A0A0A","#3E6FA6","#555B63","#2C527F"];
+const shades=["#1E3A5F","#2C527F","#3A3F47","#4A5260","#2A2D33","#355C88"];
 s.appendChild(el("div","bar",D.beats.map((b,i)=>`<div style="width:${((b.b-b.a)/D.dur*100).toFixed(2)}%;background:${shades[i%shades.length]}">${b.n.toUpperCase()}</div>`).join("")));
 const tk=[];for(let i=0;i<=5;i++)tk.push(`<span>${fmt0(D.dur*i/5)}</span>`);s.appendChild(el("div","ticks",tk.join("")));
 const strip=el("div","strip");strip.setAttribute("role","img");strip.setAttribute("aria-label","Every shot in order, colored by type");
@@ -125,10 +125,10 @@ s.appendChild(el("div","legend",used.map(t=>`<span><i style="background:${COL[t]
 s=sec("pace","Pace",D.pace.title,D.pace.lead);
 const P=D.shots.map(x=>x[2]-x[1]),mx=Math.max(...P),cw=1000,ch=200,bwd=cw/n;
 let svg=`<svg viewBox="0 0 ${cw} ${ch+24}" role="img" aria-label="Length of every shot in order">`;
-[0.25,0.5,0.75,1].forEach(f=>{const y=ch-ch*f;svg+=`<line x1="0" x2="${cw}" y1="${y}" y2="${y}" stroke="#E3E7EC" stroke-width="1"/><text x="2" y="${y-3}" fill="#5B6470" font-size="11" font-family="JetBrains Mono,monospace">${(mx*f).toFixed(1)}s</text>`});
+[0.25,0.5,0.75,1].forEach(f=>{const y=ch-ch*f;svg+=`<line x1="0" x2="${cw}" y1="${y}" y2="${y}" stroke="rgba(245,245,245,.10)" stroke-width="1"/><text x="2" y="${y-3}" fill="#A7ABB2" font-size="11" font-family="JetBrains Mono,monospace">${(mx*f).toFixed(1)}s</text>`});
 P.forEach((p,i)=>{const h=Math.max(2,p/mx*ch);svg+=`<rect x="${(i*bwd+bwd*0.12).toFixed(1)}" y="${(ch-h).toFixed(1)}" width="${(bwd*0.76).toFixed(1)}" height="${h.toFixed(1)}" rx="2" fill="${COL[D.shots[i][0]]||"#8A929D"}"><title>Shot ${i+1}: ${p.toFixed(1)}s, ${esc(D.shots[i][3])}</title></rect>`});
-const avg=P.reduce((a,b)=>a+b,0)/n,ya=ch-avg/mx*ch;svg+=`<line x1="0" x2="${cw}" y1="${ya}" y2="${ya}" stroke="#0A0A0A" stroke-dasharray="5 5" stroke-width="1.2"/><text x="${cw-4}" y="${ya-5}" text-anchor="end" fill="#0A0A0A" font-size="12" font-family="JetBrains Mono,monospace">avg ${avg.toFixed(1)}s</text>`;
-svg+=`<text x="0" y="${ch+18}" fill="#5B6470" font-size="11" font-family="Montserrat,sans-serif">Shot 1</text><text x="${cw}" y="${ch+18}" text-anchor="end" fill="#5B6470" font-size="11" font-family="Montserrat,sans-serif">Shot ${n}</text></svg>`;
+const avg=P.reduce((a,b)=>a+b,0)/n,ya=ch-avg/mx*ch;svg+=`<line x1="0" x2="${cw}" y1="${ya}" y2="${ya}" stroke="#F5F5F5" stroke-dasharray="5 5" stroke-width="1.2"/><text x="${cw-4}" y="${ya-5}" text-anchor="end" fill="#F5F5F5" font-size="12" font-family="JetBrains Mono,monospace">avg ${avg.toFixed(1)}s</text>`;
+svg+=`<text x="0" y="${ch+18}" fill="#A7ABB2" font-size="11" font-family="Montserrat,sans-serif">Shot 1</text><text x="${cw}" y="${ch+18}" text-anchor="end" fill="#A7ABB2" font-size="11" font-family="Montserrat,sans-serif">Shot ${n}</text></svg>`;
 s.appendChild(el("div","chart",svg+`<div class="cap">Each bar is one shot, in order. Height is how long it stays on screen.</div>`));
 const sorted=[...P].sort((a,b)=>a-b),med=sorted[Math.floor(n/2)];
 const li=P.indexOf(mx),si=P.indexOf(Math.min(...P));
@@ -151,11 +151,11 @@ s.appendChild(el("div","kpis",S.kpis.map(k=>`<div class="kpi${k[2]?" flag":""}">
 if(S.rms&&S.rms.length){const r=S.rms.map(v=>Math.max(-60,v)),lw=1000,lh=150,st=lw/(r.length-1||1);
  let p="";r.forEach((v,i)=>{const y=lh-(v+60)/60*lh;p+=(i?"L":"M")+(i*st).toFixed(1)+" "+y.toFixed(1)});
  let g=`<svg viewBox="0 0 ${lw} ${lh+22}" role="img" aria-label="Loudness over time">`;
- [-12,-24,-36,-48].forEach(db=>{const y=lh-(db+60)/60*lh;g+=`<line x1="0" x2="${lw}" y1="${y}" y2="${y}" stroke="#E3E7EC"/><text x="2" y="${y-3}" fill="#5B6470" font-size="11" font-family="JetBrains Mono,monospace">${db} dB</text>`});
- D.shots.forEach(x=>{const xx=x[1]/D.dur*lw;g+=`<line x1="${xx.toFixed(1)}" x2="${xx.toFixed(1)}" y1="0" y2="${lh}" stroke="#5286C2" stroke-opacity=".22"/>`});
- g+=`<path d="${p}" fill="none" stroke="#0A0A0A" stroke-width="1.8"/>`;
- g+=`<text x="0" y="${lh+16}" fill="#5B6470" font-size="11" font-family="JetBrains Mono,monospace">0:00</text><text x="${lw}" y="${lh+16}" text-anchor="end" fill="#5B6470" font-size="11" font-family="JetBrains Mono,monospace">${fmt0(D.dur)}</text></svg>`;
- s.appendChild(el("div","chart",g+`<div class="cap">Black line: loudness every half second. Faint blue lines: every cut.</div>`));}
+ [-12,-24,-36,-48].forEach(db=>{const y=lh-(db+60)/60*lh;g+=`<line x1="0" x2="${lw}" y1="${y}" y2="${y}" stroke="rgba(245,245,245,.10)"/><text x="2" y="${y-3}" fill="#A7ABB2" font-size="11" font-family="JetBrains Mono,monospace">${db} dB</text>`});
+ D.shots.forEach(x=>{const xx=x[1]/D.dur*lw;g+=`<line x1="${xx.toFixed(1)}" x2="${xx.toFixed(1)}" y1="0" y2="${lh}" stroke="#F5F5F5" stroke-opacity=".12"/>`});
+ g+=`<path d="${p}" fill="none" stroke="#6E98CC" stroke-width="1.8"/>`;
+ g+=`<text x="0" y="${lh+16}" fill="#A7ABB2" font-size="11" font-family="JetBrains Mono,monospace">0:00</text><text x="${lw}" y="${lh+16}" text-anchor="end" fill="#A7ABB2" font-size="11" font-family="JetBrains Mono,monospace">${fmt0(D.dur)}</text></svg>`;
+ s.appendChild(el("div","chart",g+`<div class="cap">Blue line: loudness every half second. Faint blue lines: every cut.</div>`));}
 s.appendChild(el("div","card",`<ul class="clean">${S.notes.map(x=>`<li>${x}</li>`).join("")}</ul>`)).style.marginTop="16px";
 // ---------- moves
 if(D.moves&&D.moves.length){s=sec("moves","Drone, transitions, flickers",D.movesTitle||"Every move, timestamped",(D.movesLead?D.movesLead+" ":"")+"Tap one to see that shot.");
