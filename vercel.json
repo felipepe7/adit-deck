@@ -205,6 +205,26 @@
         }
       ],
       "dest": "/shelley/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookkevin.puroflowmedia.com"
+        }
+      ],
+      "dest": "/kevin/index.html"
+    },
+    {
+      "src": "^/(?!kevin/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookkevin.puroflowmedia.com"
+        }
+      ],
+      "dest": "/kevin/$1"
     }
   ]
 }
