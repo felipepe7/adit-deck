@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book Kevin Escobar | We Scale Contractors</title>
-<meta name="description" content="Book a quick call, a client check-in or a strategy session with Kevin Escobar at We Scale Contractors, growth partners for painting companies.">
+<meta name="description" content="Book a quick call, a client check-in, a strategy session or a podcast recording with Kevin Escobar at We Scale Contractors, growth partners for painting companies.">
 <meta name="theme-color" content="#0A0A0A">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Book time with Kevin Escobar | We Scale Contractors">
@@ -61,6 +61,11 @@
   .vmedia{position:relative;flex:0 0 38%;min-height:190px;overflow:hidden;background:var(--ink);display:flex;align-items:center;justify-content:center;
     background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px}
   .vmedia img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .vmedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .vmedia .dur{position:absolute;bottom:10px;left:10px;z-index:2;background:var(--red);color:#fff;font-weight:700;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:5px 8px;border-radius:3px}
+  .vcard.land{flex-direction:column}
+  .vcard.land .vmedia{flex:none;aspect-ratio:16/9;min-height:0}
+  .corner{z-index:2}
   .vmedia .big{position:relative;font-weight:700;font-style:italic;color:#fff;font-size:clamp(44px,13vw,68px);line-height:.9;text-align:center}
   .vmedia .big small{display:block;font-size:12px;letter-spacing:.3em;font-style:normal;color:var(--red);margin-top:8px}
   .corner{position:absolute;width:18px;height:18px;border-color:var(--red);border-style:solid}
@@ -141,7 +146,7 @@
     <div class="label" id="book"><b>//</b> Book a call</div>
     <section class="book">
       <a class="vcard" href="https://calendar.app.google/aSxQ9cB82K73zXG57" target="_blank" rel="noopener" aria-label="Book a 15 minute quick call with Kevin">
-        <div class="vmedia"><span class="corner c1"></span><span class="corner c2"></span><div class="big">15<small>MIN</small></div></div>
+        <div class="vmedia"><video src="media/quick.mp4" poster="media/quick.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="corner c1"></span><span class="corner c2"></span><span class="dur">15 min</span></div>
         <div class="vbody">
           <span class="chip">Quick Call</span>
           <h2>One question, a straight answer</h2>
@@ -151,7 +156,7 @@
       </a>
 
       <a class="vcard" href="https://calendar.app.google/AF7a74scA7MGf91eA" target="_blank" rel="noopener" aria-label="Book a 30 minute client check-in with Kevin">
-        <div class="vmedia"><span class="corner c1"></span><span class="corner c2"></span><div class="big">30<small>MIN</small></div></div>
+        <div class="vmedia"><video src="media/checkin.mp4" poster="media/checkin.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="corner c1"></span><span class="corner c2"></span><span class="dur">30 min</span></div>
         <div class="vbody">
           <span class="chip">Client Check-In</span>
           <h2>Your numbers, your next move</h2>
@@ -161,9 +166,9 @@
       </a>
 
       <a class="vcard" href="https://calendar.app.google/qAi9qbfBRyfU383NA" target="_blank" rel="noopener" aria-label="Book a 60 minute strategy session with Kevin">
-        <div class="vmedia"><img src="painter.jpg" alt="" aria-hidden="true"><span class="corner c1"></span><span class="corner c2"></span></div>
+        <div class="vmedia"><video src="media/strategy.mp4" poster="media/strategy.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="corner c1"></span><span class="corner c2"></span><span class="dur">60 min</span></div>
         <div class="vbody">
-          <span class="chip">Strategy Session · 60 min</span>
+          <span class="chip">Strategy Session</span>
           <h2>Fill your calendar with jobs you want</h2>
           <p>For painting company owners ready to grow: paid ads, CRM and sales process, speed-to-lead and follow-up, mapped to your market.</p>
           <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -171,6 +176,20 @@
       </a>
     </section>
     <p class="note">Calls are on Google Meet. Book at least 2 hours ahead, weekends included, and fill out the short form so Kevin comes prepared.</p>
+
+
+    <div class="label"><b>//</b> Be a guest on Kevin's podcast</div>
+    <section class="book">
+      <a class="vcard land" href="https://calendar.app.google/q7swDSsc2ZnZXXeA8" target="_blank" rel="noopener" aria-label="Book a podcast recording with Kevin">
+        <div class="vmedia"><video src="media/podcast.mp4" poster="media/podcast.jpg" autoplay muted loop playsinline preload="metadata"></video><span class="corner c1"></span><span class="corner c2"></span><span class="dur">90 min</span></div>
+        <div class="vbody">
+          <span class="chip">Podcast Guest</span>
+          <h2>Talk shop with Kevin on camera</h2>
+          <p>For contractors, operators and industry partners: real numbers, hiring crews, running ads and scaling a trades business. Multi-camera video, clean audio and clips for your own socials.</p>
+          <span class="cta">Pick a recording date <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
 
     <div class="label"><b>//</b> How we scale</div>
     <section class="panel">
@@ -213,7 +232,7 @@
   <div class="in">
     <div class="label">How it works</div>
     <ol class="how">
-      <li>Pick the option that fits: a quick call, a client check-in or a strategy session.</li>
+      <li>Pick the option that fits: a quick call, a client check-in, a strategy session or a podcast recording.</li>
       <li>Fill out the short form so Kevin knows your company, your market and what you want to cover.</li>
       <li>You get a calendar invite with a Google Meet link. Join from a quiet spot where you can focus.</li>
     </ol>
