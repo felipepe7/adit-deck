@@ -225,6 +225,26 @@
         }
       ],
       "dest": "/kevin/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookjoseph.puroflowmedia.com"
+        }
+      ],
+      "dest": "/joseph/index.html"
+    },
+    {
+      "src": "^/(?!joseph/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookjoseph.puroflowmedia.com"
+        }
+      ],
+      "dest": "/joseph/$1"
     }
   ]
 }
