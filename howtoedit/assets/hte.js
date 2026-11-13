@@ -39,7 +39,7 @@ const body=document.body;body.innerHTML="";
 // ---------- dark band: nav + hero
 const band=el("header","band");body.appendChild(band);
 const bw=el("div","wrap");band.appendChild(bw);
-bw.appendChild(el("div","top",`<a href="../"><img src="../logo_w.png" alt="Puro Flow Media"></a><div class="navlinks"><a href="../">← Library</a><a href="../#v${D.num}">Deck view</a><span>${String(D.num).padStart(2,"0")} / ${D.of}</span></div>`));
+bw.appendChild(el("div","top",`<a href="../"><img src="../logo_d.png" alt="Puro Flow Media"></a><div class="navlinks"><a href="../">← Library</a><a href="../#v${D.num}">Deck view</a><span>${String(D.num).padStart(2,"0")} / ${D.of}</span></div>`));
 const hero=el("div","hero"+H);
 hero.innerHTML=`<div><div class="reel${H}"><video id="reel" src="clips/reel.mp4" poster="img/poster.jpg" autoplay muted loop playsinline preload="auto"></video>${D.silent?"":`<button class="sound" id="sound" type="button">🔊 Tap for sound</button>`}</div>
 <div class="reelcap">Final export, ${fmt0(D.dur)} · <a href="${D.drive}" target="_blank" rel="noopener">4K original in Drive</a> · <a href="${D.pdf}" download>PDF</a></div></div>

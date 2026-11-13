@@ -222,3 +222,19 @@ nav.toc a.on{background:var(--black);border-color:var(--black);color:#fff}
 .mv .ic,.dothis .ic{background:var(--black)}
 .dobox{background:var(--black)}
 .player{border-radius:26px}
+/* light header + footer bands (no dark sections) */
+.band{background:#FFFFFF;color:var(--black);background-image:radial-gradient(900px 420px at 85% -80px,rgba(82,134,194,.16),transparent 70%);border-bottom:1px solid var(--line)}
+.band .lead{color:var(--muted)}
+.band .eyebrow,.band h1 em{color:var(--flow)}
+.band .eyebrow::before{background:var(--flow)}
+.top .navlinks a,.top .navlinks span{color:var(--muted)}
+.top .navlinks a:hover{color:var(--black)}
+.reelcap{color:var(--muted)}.reelcap a{color:var(--deep)}
+.reel{box-shadow:0 20px 50px rgba(30,58,95,.18)}
+.band .card{background:var(--off);border-color:var(--line)}
+.kv dt{color:var(--muted)}
+.stat{border-color:var(--line);background:var(--white)}
+.stat span{color:var(--muted)}
+footer.band{border-top:1px solid var(--line);border-bottom:0}
+footer.band .wrap{color:var(--muted)}
+footer.band b{color:var(--flow)}
