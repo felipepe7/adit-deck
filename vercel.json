@@ -31,6 +31,26 @@
       "has": [
         {
           "type": "host",
+          "value": "medianvedits.puroflowmedia.com"
+        }
+      ],
+      "dest": "/medianvedits/index.html"
+    },
+    {
+      "src": "^/(?!medianvedits/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "medianvedits.puroflowmedia.com"
+        }
+      ],
+      "dest": "/medianvedits/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
           "value": "edit.puroflowmedia.com"
         }
       ],
