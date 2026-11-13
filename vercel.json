@@ -47,6 +47,39 @@
       "dest": "/medianvedits/$1"
     },
     {
+      "src": "^/medianv$",
+      "has": [
+        {
+          "type": "host",
+          "value": "edit.puroflowmedia.com"
+        }
+      ],
+      "status": 308,
+      "headers": {
+        "Location": "/medianv/"
+      }
+    },
+    {
+      "src": "^/medianv/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "edit.puroflowmedia.com"
+        }
+      ],
+      "dest": "/medianvedits/index.html"
+    },
+    {
+      "src": "^/medianv/(.+)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "edit.puroflowmedia.com"
+        }
+      ],
+      "dest": "/medianvedits/$1"
+    },
+    {
       "src": "^/$",
       "has": [
         {
