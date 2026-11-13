@@ -4,235 +4,533 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Media NV Edits · Puro Flow Media</title>
-<meta name="description" content="Editor reference for Media NV: who they are, their brand, caption rules, and every Media NV video we've made, plus partner interview references.">
+<meta name="description" content="Editor reference for Media NV: every Media NV video we've cut, ready to preview, plus their brand and caption rules.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#F5F5F5">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Puro Flow Media">
 <meta property="og:title" content="Media NV Edits 🎬 Puro Flow Media">
-<meta property="og:description" content="Brand kit, caption rules and every Media NV video we've cut. Start here before you edit anything for Media NV.">
+<meta property="og:description" content="Every Media NV video we've cut, ready to preview, plus their brand and caption rules.">
 <meta property="og:url" content="https://edits.medianv.puroflowmedia.com/">
-<meta property="og:image" content="https://edits.medianv.puroflowmedia.com/og.jpg?v=1">
+<meta property="og:image" content="https://edit.puroflowmedia.com/medianv/og.jpg?v=2">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--black:#0A0A0A;--charcoal:#1A1A1A;--steel:#555555;--off:#F5F5F5;--deep:#1E3A5F;--flow:#5286C2;--white:#FFFFFF;--teal:#00A7B5;
---hair:rgba(10,10,10,.08);--shadow:0 1px 2px rgba(0,0,0,.05),0 10px 30px rgba(10,10,10,.10);
---display:Orbitron,Eurostile,"Arial Black",sans-serif;--body:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;color-scheme:light}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--off);color:var(--black);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
-a{color:inherit}
-.wrap{max-width:1120px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
-nav{position:sticky;top:0;z-index:20;background:rgba(245,245,245,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--hair)}
-nav .wrap{display:flex;align-items:center;gap:8px;height:58px;overflow-x:auto;scrollbar-width:none}
-nav .wrap::-webkit-scrollbar{display:none}
-.brand{font-family:var(--display);font-weight:800;letter-spacing:.14em;font-size:11px;white-space:nowrap;color:var(--black);text-decoration:none;margin-right:8px}
-.brand b{color:var(--flow)}
-nav a.l{flex:none;font-family:var(--display);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;white-space:nowrap;font-weight:700;color:var(--black);background:var(--white);border:1px solid var(--hair);border-radius:999px;padding:8px 13px}
-nav a.l:hover{border-color:var(--flow)}
-header{background:radial-gradient(900px 420px at 85% -80px,rgba(82,134,194,.16),transparent 70%),var(--white);color:var(--black);border-bottom:1px solid var(--hair);padding:44px 0 56px;position:relative;overflow:hidden}
-header .logo{display:flex;align-items:center;gap:14px;margin-bottom:34px}
-header .logo img{width:170px;height:auto;display:block}
-header .logo span{font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--steel)}
-.eyebrow{font-family:var(--display);font-size:11px;letter-spacing:.26em;color:var(--flow);font-weight:700;text-transform:uppercase;display:flex;align-items:center;gap:.9em}
-.eyebrow::before{content:"";width:1.9em;height:2px;background:var(--flow);flex:none}
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>:root{--black:#F5F5F5;--charcoal:#1A1A1A;--steel:#555555;--white:#0A0A0A;--blue:#1E3A5F;--blue-lit:#5286C2;--muted:#555B63;--faint:#6B7280;--line:rgba(10,10,10,.08);--ok:#5FBF8A;
+--display:"Orbitron","Eurostile","Arial Black",sans-serif;--body:"Montserrat","Helvetica Neue",Arial,sans-serif;color-scheme:light}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html{background:var(--black);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--black);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}button{font:inherit;color:inherit}
+.label{display:flex;align-items:center;gap:.9em;font-family:var(--display);font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-lit)}
+.label::before{content:"";width:1.9em;height:2px;background:var(--blue-lit);flex:none}
+.flowline{font-family:var(--display);font-weight:600;color:var(--white)}
+.flowline em{font-style:normal;color:var(--blue-lit)}
+.chip{display:inline-flex;align-items:center;border-radius:999px;background:var(--blue);color:#fff;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.status{display:inline-flex;align-items:center;gap:.6em;border-radius:999px;border:1px solid rgba(10,10,10,.18);font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:var(--white)}
+.status i{width:.62em;height:.62em;border-radius:50%;background:var(--ok);flex:none}
+.phone{position:relative;aspect-ratio:9/16;border-radius:12% / 6.75%;padding:2.6%;background:linear-gradient(160deg,#2a2a2a,#0f0f0f 40%,#1c1c1c);box-shadow:0 0 0 1px rgba(10,10,10,.16) inset,0 30px 70px rgba(0,0,0,.6)}
+.screen{position:relative;width:100%;height:100%;border-radius:10% / 5.6%;overflow:hidden;background:#000}
+.screen video,.screen img{width:100%;height:100%;object-fit:cover;display:block}
+.island{position:absolute;top:3.2%;left:50%;transform:translateX(-50%);width:30%;height:3.4%;border-radius:20px;background:#000;z-index:3}
+.mon{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 0 0 1px rgba(10,10,10,.16) inset,0 30px 70px rgba(0,0,0,.6);border:10px solid #161616}
+.mon video{width:100%;height:100%;object-fit:cover;display:block}
+.snd{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:.6em;border-radius:999px;border:1px solid rgba(10,10,10,.3);font-weight:600;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.snd:hover{background:rgba(10,10,10,.08)}
+.snd svg{width:1.2em;height:1.2em}
+.snd[aria-pressed="true"]{background:var(--blue);border-color:var(--blue)}
+.track{flex:1;height:3px;border-radius:2px;background:rgba(10,10,10,.15);overflow:hidden}
+.track i{display:block;height:100%;width:0;background:var(--blue-lit)}
+.btn{all:unset;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:.8em;border-radius:999px;font-family:var(--body);font-weight:700;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:transform .2s,background .2s}
+.btn svg{width:1.05em;height:1.05em}
+.btn.solid{background:var(--white);color:var(--black)}
+.btn.ghost{border:1px solid rgba(10,10,10,.35);color:var(--white)}
+.btn:hover{transform:translateY(-2px)}
+.btn:focus-visible,.snd:focus-visible,.wtab:focus-visible,.nav:focus-visible,.card:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
+.lightbar{position:relative;height:2px;background:linear-gradient(90deg,transparent,rgba(110,152,204,.35) 20%,rgba(10,10,10,.55) 50%,rgba(110,152,204,.35) 80%,transparent);overflow:hidden}
+.lightbar::after{content:"";position:absolute;top:-3px;bottom:-3px;width:22%;left:0;transform:translateX(-100%);background:linear-gradient(90deg,transparent,#fff 50%,transparent);filter:blur(2px)}
+.on .lightbar::after,.feed .lightbar::after{animation:sweep 6.5s cubic-bezier(.6,0,.2,1) .35s infinite}
+@keyframes sweep{0%{transform:translateX(-100%)}40%,100%{transform:translateX(454.5%)}}
+/* deck */
+.deck{position:fixed;inset:0;background:var(--black);overflow:hidden}
+.stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center;overflow:hidden;background:var(--black)}
+.grid{position:absolute;inset:0;pointer-events:none;overflow:hidden;opacity:.35;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 50% 45%,#000 20%,transparent 75%)}
+.grid::before{content:"";position:absolute;left:-96px;top:-96px;right:0;bottom:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:96px 96px;animation:gdrift 36s linear infinite}
+@keyframes gdrift{to{transform:translate(96px,96px)}}
+.slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:translateX(40px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1),visibility 0s linear .5s}
+.slide.on{opacity:1;visibility:visible;transform:none;transition:opacity .5s ease,transform .5s cubic-bezier(.2,.7,.2,1)}
+.slide.before{transform:translateX(-40px)}
+.top{position:absolute;left:140px;right:140px;top:44px;height:64px;display:flex;justify-content:space-between;align-items:center;z-index:6}
+.top .mark{width:200px;transition:opacity .3s}
+.deck.hide-mark .top .mark{opacity:0}
+.wtabs{display:flex;gap:10px;margin-left:auto}
+.wtab{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:6px;padding:11px 16px;border-radius:14px;border:1px solid rgba(10,10,10,.14);background:rgba(10,10,10,.6);transition:border-color .2s,background .2s}
+.wtab:hover{border-color:rgba(10,10,10,.4)}
+.wtab b{font:700 15px/1 var(--display);letter-spacing:.2em;text-transform:uppercase}
+.wtab span{font:600 12px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.wtab[aria-selected="true"]{background:var(--blue);border-color:var(--blue)}
+.wtab[aria-selected="true"] span{color:#C9D6E6}
+.bottom{position:absolute;left:140px;right:140px;bottom:40px;display:flex;align-items:center;gap:26px;z-index:6}
+.bars{display:flex;gap:8px;flex:1}
+.bars button{all:unset;cursor:pointer;flex:1;height:22px;display:flex;align-items:center}
+.bars button i{display:block;width:100%;height:3px;background:rgba(10,10,10,.14);border-radius:2px;transition:background .3s}
+.bars button.done i{background:rgba(10,10,10,.45)}
+.bars button.cur i{background:var(--blue-lit)}
+.count{font:600 16px/1 var(--display);letter-spacing:.18em;color:var(--muted);font-variant-numeric:tabular-nums;min-width:96px;text-align:center}
+.nav{all:unset;cursor:pointer;width:54px;height:54px;border-radius:50%;border:1px solid rgba(10,10,10,.22);display:grid;place-items:center}
+.nav:hover{background:rgba(10,10,10,.08)}
+.nav svg{width:22px;height:22px}
+.fs{all:unset;cursor:pointer;font:600 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--faint);padding:10px 0}
+.fs:hover{color:var(--white)}
+/* cover */
+.cover .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.32;filter:saturate(.8)}
+.cover .glow{position:absolute;inset:0;background:linear-gradient(90deg,rgba(245,245,245,.97) 0%,rgba(245,245,245,.9) 40%,rgba(245,245,245,.6) 70%,rgba(245,245,245,.8) 100%),radial-gradient(ellipse 45% 60% at 74% 55%,rgba(82,134,194,.22),transparent 70%)}
+.cover .left{position:absolute;left:140px;top:170px;width:820px;display:flex;flex-direction:column}
+.cover .logo img{width:340px;display:block}
+.cover .eyebrow{margin-top:70px;font:600 16px/1.4 var(--body);letter-spacing:.34em;text-transform:uppercase;color:var(--muted)}
+.cover .weekof{margin-top:26px;font:600 38px/1 var(--display);letter-spacing:.24em}
+.cover .big{margin-top:14px;font:900 200px/.9 var(--display);white-space:nowrap}
+.cover .to{margin-top:22px;font:600 34px/1.15 var(--display);letter-spacing:.06em}
+.cover .to span{color:var(--blue-lit)}
+.cover .sub{margin-top:32px;font:500 22px/1.5 var(--body);color:#3F4650;max-width:680px}
+.cover .lightbar{position:absolute;left:0;right:0;bottom:168px}
+.cover .foot{position:absolute;left:140px;right:140px;bottom:112px;display:flex;justify-content:space-between;align-items:center}
+.cover .foot .flowline{font-size:18px;letter-spacing:.5em}
+.who{font:600 14px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--faint)}
+.fan{position:absolute;right:70px;top:170px;width:900px;height:700px;perspective:2200px;cursor:grab;touch-action:pan-y;user-select:none}
+.fan.dragging{cursor:grabbing}
+.fan .phone{position:absolute;bottom:0;transition:left .6s cubic-bezier(.2,.7,.2,1),height .6s cubic-bezier(.2,.7,.2,1),bottom .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1),opacity .6s}
+.fan.dragging .phone{transition:none}
+.fan .phone video{pointer-events:none}
+.fan .hint{position:absolute;left:50%;bottom:-22px;transform:translateX(-50%);font:600 13px/1 var(--body);letter-spacing:.24em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+/* glance */
+.head{position:absolute;left:140px;right:140px;top:150px;display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.h2{margin:0;font:800 54px/1.05 var(--display);letter-spacing:.04em;text-transform:uppercase;text-wrap:balance}
+.head p{max-width:1080px;margin:16px 0 0;font:500 21px/1.5 var(--body);color:var(--muted)}
+.head .btn{height:58px;padding:0 28px;font-size:15px;flex:none}
+.cards{position:absolute;left:140px;right:140px;top:330px;display:grid;gap:26px}
+.card{all:unset;cursor:pointer;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card .thumb{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--charcoal);box-shadow:0 0 0 1px rgba(10,10,10,.12) inset}
+.card .thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.card .thumb::after{content:"";position:absolute;inset:0;border-radius:22px;box-shadow:0 0 0 2px var(--blue-lit) inset;opacity:0;transition:opacity .25s;z-index:4}
+.card:hover .thumb::after,.card:focus-visible .thumb::after{opacity:1}
+.card .len{position:absolute;right:10px;top:10px;font:700 12px/1 var(--display);letter-spacing:.1em;background:rgba(10,10,10,.7);padding:6px 8px;border-radius:999px;z-index:3}
+.card .d{font:700 15px/1 var(--display);letter-spacing:.2em;color:var(--blue-lit);text-transform:uppercase;margin-top:4px}
+.card .t{font:700 19px/1.28 var(--body);text-wrap:balance}
+.card .b{font:600 12px/1.3 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card .status{font-size:11px;padding:6px 10px;align-self:flex-start}
+/* day */
+.day .ph{position:absolute;left:170px;top:140px;height:750px}
+.day .ph .phone{height:100%}
+.day.wide .ph{left:140px;top:250px;width:760px;height:auto}
+.day .ctrl{position:absolute;left:170px;top:912px;width:422px;display:flex;align-items:center;gap:18px}
+.day.wide .ctrl{left:140px;top:720px;width:760px}
+.day .ctrl .snd{height:46px;padding:0 20px;font-size:14px}
+.day .col{position:absolute;left:740px;right:140px;top:140px;bottom:118px;display:flex;flex-direction:column}
+.day.wide .col{left:980px}
+.dayname{font:800 22px/1 var(--display);letter-spacing:.2em;text-transform:uppercase}
+.dayname span{color:var(--blue-lit);font-weight:600;font-size:18px;letter-spacing:.16em;margin-left:10px}
+.day .tags{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.day .tags .chip{height:42px;padding:0 20px;font-size:14px}
+.day .tags .status{height:42px;padding:0 18px;font-size:13px}
+.day .tags .fmt{font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-left:6px}
+.day .tags .file{margin-left:auto;display:inline-flex;align-items:center;gap:.5em;font:600 14px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--blue-lit);text-decoration:none}
+.day .tags .file svg{width:16px;height:16px}
+.day h2{margin:24px 0 0;font:800 46px/1.08 var(--display);letter-spacing:.02em;text-transform:uppercase;text-wrap:balance;max-width:1040px}
+.day h2 em{font-style:normal;color:var(--blue-lit)}
+.day.wide h2{font-size:40px}
+.day .hook{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.day .label{font-size:14px}
+.day .hook p{margin:0;font:500 20px/1.5 var(--body);color:#2B3038;max-width:1000px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.day .two{margin-top:28px;display:grid;grid-template-columns:1.05fr 1fr;gap:50px;min-height:0}
+.day .blk{display:flex;flex-direction:column;gap:14px;min-width:0}
+.dos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dos li{display:flex;gap:12px;align-items:center;border:1px solid rgba(10,10,10,.12);border-radius:14px;padding:10px 12px;background:rgba(10,10,10,.03);min-width:0}
+.dos .ic{flex:none;width:40px;height:40px;border-radius:10px;background:var(--blue);display:grid;place-items:center;font-size:18px}
+.dos b{display:block;font:700 16px/1.2 var(--body)}
+.dos small{display:block;font:600 12px/1.3 var(--body);letter-spacing:.08em;color:var(--blue-lit);margin-top:3px}
+.more{margin:0;font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.rules{display:grid;gap:12px}
+.rl{border-left:3px solid var(--blue-lit);padding:2px 0 2px 14px}
+.rl b{font:700 16px/1.3 var(--body)}
+.rl p{margin:4px 0 0;font:400 15px/1.5 var(--body);color:#3F4650;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.day .foot{margin-top:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.day .foot .btn{height:60px;padding:0 30px;font-size:16px}
+.day.wide .two{grid-template-columns:1fr}
+.day.wide .two>.blk:nth-child(2){display:none}
+/* moves */
+.tiles{position:absolute;left:140px;right:140px;top:300px;bottom:130px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));grid-auto-rows:1fr;gap:14px}
+.tile{border:1px solid rgba(10,10,10,.12);border-radius:16px;padding:12px 14px;overflow:hidden;background:rgba(10,10,10,.03);display:flex;flex-direction:column;gap:6px;min-width:0}
+.th{display:flex;align-items:center;gap:10px}
+.tile .ic{flex:none;width:34px;height:34px;border-radius:10px;background:var(--blue);display:grid;place-items:center;font-size:17px}
+.tile b{font:700 15px/1.2 var(--body)}
+.tile p{margin:0;font:400 12.5px/1.45 var(--body);color:#4A5059;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.seen{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto;padding-top:4px}
+.seen button,.seen a{all:unset;cursor:pointer;font:700 10px/1 var(--display);letter-spacing:.08em;border:1px solid rgba(10,10,10,.22);border-radius:999px;padding:4px 7px;color:var(--blue-lit)}
+.seen button:hover,.seen a:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
+/* close */
+.close .glow{position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 50% 50%,rgba(82,134,194,.16),transparent 70%)}
+.close .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:28px}
+.close .logo img{width:300px}
+.close .h2{font-size:72px}
+.close p{margin:0;max-width:900px;font:500 22px/1.5 var(--body);color:var(--muted)}
+.close .row{display:flex;gap:18px}
+.close .btn{height:62px;padding:0 32px;font-size:16px}
+.close .flowline{margin-top:30px;font-size:18px;letter-spacing:.5em}
+/* entrance */
+.slide.on .card,.slide.on .tile,.slide.on .dos li{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}
+.slide.on .card{animation-delay:calc(var(--k,0)*60ms)}
+@keyframes rise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+/* ---------- mobile feed ---------- */
+.feed{display:none}
+@media (max-width:900px),(max-aspect-ratio:1/1){
+ .deck{display:none}.feed{display:block}
+ body{overflow-x:hidden}
+ .feed .wrap{padding:0 max(16px,env(safe-area-inset-left,0px))}
+ .fhead{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:12px 0 10px}
+ .frow{display:flex;justify-content:space-between;align-items:center}.fl{width:130px}
+ .fhead .wtabs{margin:12px 0 0;overflow-x:auto;scrollbar-width:none;gap:8px}.fhead .wtabs::-webkit-scrollbar{display:none}
+ .fhead .wtab{padding:9px 12px;border-radius:12px;flex:none;text-decoration:none}
+ .fhead .wtab b{font-size:12px}.fhead .wtab span{font-size:10px}
+ .fhero{position:relative;overflow:hidden;padding:56px 0 40px}
+ .fhero .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+ .fhero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(245,245,245,.72),rgba(245,245,245,.94)),radial-gradient(ellipse 80% 60% at 70% 40%,rgba(82,134,194,.18),transparent 70%);z-index:1}
+ .fhero .wrap{position:relative;z-index:2}
+ .fhero .eyebrow{font:600 11px/1.5 var(--body);letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+ .fhero .weekof{margin-top:20px;font:600 22px/1 var(--display);letter-spacing:.24em}
+ .fhero .big{font:900 96px/.95 var(--display);margin-top:8px}
+ .fhero .to{font:600 20px/1.2 var(--display);letter-spacing:.05em;margin-top:10px}.fhero .to span{color:var(--blue-lit)}
+ .fhero .sub{color:#3F4650;font-size:15px;line-height:1.55;margin:18px 0 24px}
+ .fhero .flowline{margin-top:18px;font-size:12px;letter-spacing:.4em}
+ .fsec{padding:36px 0}.fsec .h2{font-size:26px;margin-bottom:16px}
+ .gl{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;scrollbar-width:none}.gl::-webkit-scrollbar{display:none}
+ .gl .card{width:42vw;max-width:200px;flex:none;scroll-snap-align:start;text-decoration:none}
+ .gl .card .t{font-size:14px}.gl .card .d{font-size:11px}
+ .fday{padding:34px 0;border-top:1px solid var(--line);scroll-margin-top:110px}
+ .fday .dayname{font-size:16px}.fday .dayname span{font-size:12px;display:block;margin:6px 0 0}
+ .fday .phone{width:min(72vw,320px);margin:18px auto 0}
+ .fday .mon{margin-top:18px;border-width:6px}
+ .fday .tags{display:flex;gap:8px;margin-top:18px;flex-wrap:wrap}
+ .fday .chip,.fday .status{height:32px;padding:0 12px;font-size:11px}
+ .fday h2{font:800 26px/1.12 var(--display);text-transform:uppercase;margin:16px 0 10px}.fday h2 em{font-style:normal;color:var(--blue-lit)}
+ .fday .lead{color:#3F4650;font-size:15px;line-height:1.55;margin:0 0 20px}
+ .fday .label{font-size:11px;margin-bottom:12px}
+ .fday .dos{grid-template-columns:1fr}.fday .dos b{font-size:14px}
+ .fday .row{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+ .fday .btn{height:50px;padding:0 20px;font-size:13px}
+ .ftiles{display:grid;gap:10px}.ftiles .tile p{-webkit-line-clamp:unset}
+ .ffoot{border-top:1px solid var(--line);padding:30px 0 40px}.ffoot .wrap{display:flex;flex-direction:column;gap:12px}.ffoot .flowline{font-size:12px;letter-spacing:.4em}
+}
+@media (prefers-reduced-motion:reduce){.slide,.slide.on{transition:none}.grid::before,.lightbar::after{animation:none!important}.slide.on .card,.slide.on .tile,.slide.on .dos li{animation:none}}
 
-h1{font-family:var(--display);font-size:clamp(32px,6vw,64px);line-height:1.04;margin:14px 0 18px;font-weight:800;text-transform:uppercase;letter-spacing:.01em;text-wrap:balance}
-h1 span{color:var(--flow)}
-.lede{font-size:clamp(15px,1.9vw,18px);color:var(--steel);max-width:760px;margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.chip{border:1px solid var(--hair);background:var(--off);padding:8px 13px;border-radius:999px;font-size:13px;font-weight:600;color:var(--black);text-decoration:none}
-a.chip:hover{border-color:var(--flow);background:rgba(82,134,194,.1)}
-section{padding:56px 0;scroll-margin-top:64px}
-section+section{border-top:1px solid var(--hair)}
-h2{font-family:var(--display);font-size:clamp(22px,3.2vw,32px);margin:10px 0 10px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:1.15;text-wrap:balance}
-.sub{color:var(--steel);margin:0 0 26px;max-width:760px}
-.grid{display:grid;gap:14px}
-.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
-.g3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.card{background:var(--white);border-radius:18px;padding:22px 20px;box-shadow:var(--shadow)}
-.card h3{margin:6px 0 8px;font-family:var(--display);font-size:16px;font-weight:700;line-height:1.3}
-.card p{margin:0;color:var(--steel);font-size:14.5px}
-.card ul{margin:8px 0 0;padding-left:18px;color:var(--steel);font-size:14.5px}
-.card li{margin:5px 0}.card li strong{color:var(--black)}
-.card a{color:var(--deep);font-weight:600}
-.num{font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--flow)}
-.sw{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.s{width:120px;border-radius:12px;overflow:hidden;border:1px solid var(--hair);background:var(--white)}
-.s i{display:block;height:64px;border-bottom:1px solid var(--hair)}
-.s div{padding:8px 10px;font-size:12px;color:var(--steel)}
-.s div b{display:block;color:var(--black);font-size:12.5px}
-.cap{margin-top:0;border-radius:18px;overflow:hidden;position:relative;aspect-ratio:16/9;background:linear-gradient(135deg,#2a3b3d,#0c1213);box-shadow:var(--shadow);color:#fff}
-.cap .bar{position:absolute;left:50%;bottom:16%;transform:translateX(-50%);background:rgba(0,0,0,.78);padding:8px 14px;border-radius:8px;font-weight:700;font-size:clamp(14px,2vw,20px);white-space:nowrap}
-.cap .bar em{font-style:normal;background:var(--teal);padding:0 6px;border-radius:4px}
-.cap .lg{position:absolute;top:12px;left:14px;font-weight:700;font-size:13px;letter-spacing:.02em}
-.cap .lg:before{content:"♡ "}
-.do{color:#1E6B45}.dont{color:#A33A2B}
-.vgroup{margin-top:34px}
-.vgroup h3{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--steel);font-weight:700;margin:0 0 14px;display:flex;align-items:center;gap:12px}
-.vgroup h3::after{content:"";flex:1;height:1px;background:var(--hair)}
-.vids{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
-.v{background:var(--white);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
-.v:hover{transform:translateY(-2px);box-shadow:0 1px 2px rgba(0,0,0,.06),0 16px 40px rgba(10,10,10,.16)}
-.v .th{position:relative;aspect-ratio:4/5;display:flex;align-items:flex-end;padding:16px;color:#fff;background:linear-gradient(160deg,var(--c1,#1E3A5F),var(--c2,#0A0A0A) 80%)}
-.v .th:after{content:"";position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='white' d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px no-repeat;border:1px solid rgba(255,255,255,.35)}
-.v .th b{position:relative;z-index:1;font-family:var(--display);font-size:17px;line-height:1.2;font-weight:700}
-.v .tag{position:absolute;top:12px;left:12px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:rgba(0,0,0,.45);padding:5px 9px;border-radius:999px}
-.v .meta{position:absolute;top:12px;right:12px;font-size:11px;font-weight:700;color:#fff;background:var(--flow);padding:5px 10px;border-radius:999px}
-.v .bd{padding:14px 16px 16px;font-size:13.5px;color:var(--steel);flex:1}
-.v .bd strong{color:var(--black);font-weight:700}
-.t-promo{--c1:#5286C2}.t-recap{--c1:#1E3A5F}.t-talk{--c1:#3A5F8A}.t-test{--c1:#2b2b2b}.t-ref{--c1:#555555}.t-brand{--c1:#1A1A1A}
-.callout{background:rgba(82,134,194,.08);border-left:3px solid var(--flow);border-radius:0 14px 14px 0;padding:16px 18px}
-.callout p{margin:0;color:var(--black);font-size:14.5px}
-footer{background:var(--white);border-top:1px solid var(--hair);color:var(--steel);padding:34px 0 44px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-align:center}
-footer img{width:140px;display:block;margin:0 auto 14px}
-@media (max-width:560px){header{padding:34px 0 40px}section{padding:42px 0}.s{width:calc(50% - 5px)}.v .th{aspect-ratio:16/9}}
+/* moving example clip behind every move tile */
+.tile{position:relative}
+.tile .tv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.34;z-index:0;pointer-events:none}
+.tile::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.30),rgba(10,10,10,.82));z-index:0;pointer-events:none}
+.tile>*:not(.tv){position:relative;z-index:1}
+.tile .ex{position:absolute!important;top:10px;right:12px;font:600 10px/1 var(--body);letter-spacing:.08em;color:rgba(10,10,10,.75);z-index:2}
+.close .bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.26;filter:saturate(.8)}
+.close .glow,.close .grid,.close .inner{z-index:1}
+
+/* light mode fixes */
+.wtab{background:#fff;border-color:rgba(10,10,10,.1);box-shadow:0 1px 2px rgba(10,10,10,.05)}
+.wtab[aria-selected="true"]{background:#0A0A0A;border-color:#0A0A0A;color:#fff}
+.wtab[aria-selected="true"] span{color:#C9D6E6}
+.snd[aria-pressed="true"]{color:#fff}
+.btn.solid{background:#0A0A0A;color:#fff}
+.card .len{background:rgba(10,10,10,.72);color:#fff}
+.card .thumb{box-shadow:0 1px 2px rgba(10,10,10,.06),0 10px 30px rgba(30,58,95,.12)}
+.tile,.dos li{background:#fff;box-shadow:0 1px 2px rgba(10,10,10,.05),0 10px 30px rgba(30,58,95,.08)}
+.tile::after{background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.92))}
+.tile .tv{opacity:.5}
+.tile .ex{color:#555B63}
+.dos .ic,.tile .ic{background:#0A0A0A;color:#fff}
+.seen button:hover,.seen a:hover{color:#fff}
+.lightbar{background:linear-gradient(90deg,transparent,rgba(82,134,194,.35) 20%,rgba(30,58,95,.55) 50%,rgba(82,134,194,.35) 80%,transparent)}
+.fhead{background:rgba(245,245,245,.92)}
+.phone{background:linear-gradient(160deg,#2a2a2a,#0f0f0f 40%,#1c1c1c)}
+
+.card.h .thumb{aspect-ratio:auto;height:100%;max-height:none}
+.cards{align-items:start}
+.card.h .thumb{aspect-ratio:16/9}
+.dv{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.mon .dv{position:static;width:100%;height:100%}
+.thumb .dv{pointer-events:none}
+.tiles.rules4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tile .ic{color:#fff}
+.cover .to{font-size:44px}
+.screen video:not([src]),.thumb video:not([src]),.mon video:not([src]){background:linear-gradient(160deg,#1E3A5F,#0A0A0A)}
 </style>
 </head>
 <body>
-<nav><div class="wrap">
-<a class="brand" href="#top">PURO FLOW <b>×</b> MEDIA NV</a>
-<a class="l" href="#who">Who they are</a>
-<a class="l" href="#brand">Brand kit</a>
-<a class="l" href="#captions">Captions</a>
-<a class="l" href="#formats">Formats</a>
-<a class="l" href="#style">Signature moves</a>
-<a class="l" href="#library">Video library</a>
-<a class="l" href="#refs">Partner refs</a>
-</div></nav>
+<div class="deck" id="deck"><div class="stage" id="stage">
+<div class="top"><img class="mark" src="logo_d.png" alt="Puro Flow Media"><div class="wtabs" role="tablist" aria-label="Sections"><button class="wtab" type="button" role="tab" data-tab="start" aria-selected="false"><b>Media NV</b><span>Editor reference</span></button><button class="wtab" type="button" role="tab" data-tab="pdc" aria-selected="false"><b>PDC Vancouver</b><span>01 – 09</span></button><button class="wtab" type="button" role="tab" data-tab="refs" aria-selected="false"><b>Partner refs</b><span>10 – 11</span></button><button class="wtab" type="button" role="tab" data-tab="spear" aria-selected="false"><b>SPEAR San Diego</b><span>12 – 15</span></button><button class="wtab" type="button" role="tab" data-tab="rules" aria-selected="false"><b>Edit rules</b><span>Brand + captions</span></button></div></div>
+<div class="slides"><section class="slide cover"><div class="glow"></div><div class="grid"></div>
+<div class="left"><div class="logo"><img src="logo_d.png" alt="Puro Flow Media"></div><div class="eyebrow">Editor reference · Partner agency · Media NV</div><div class="weekof">HOW TO</div><div class="big">EDIT</div><div class="to">FOR <span>MEDIA NV</span></div><div class="sub">Every Media NV video we've cut, ready to preview. Watch them, steal the moves, then cut today's testimonials and partner videos the same way.</div></div>
+<div class="fan" title="Drag or click to see the next video"><div class="phone fp" data-fi="0"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="1"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="2"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="3"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="4"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="5"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="6"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="7"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="8"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="9"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AArYH9sU3-TEBLJcHC3lQ1w/The%20Center%20of%20Dental%20Artistry%20(Deliverables)/Taylor-TOKUYAMA%20INTERVIEW.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div><div class="phone fp" data-fi="10"><div class="screen"><span class="island"></span><video class="" muted loop playsinline preload="metadata" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ADi_RtJU4kjlIq0lUGgRQFw/Cental%20for%20Dental%20Artistry%20-%20Dr.%20Chan.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div></div><div class="lightbar"></div>
+<div class="foot"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><div class="who">PuroFlow Media × Media NV</div></div></section><section class="slide glance"><div class="head"><div><h2 class="h2">PDC Vancouver reels</h2><p>Promo, recaps, talking heads and micro clips from the Pacific Dental Conference. Tap any video to open it.</p></div><a class="btn ghost" href="#rules" data-go="rules">The edit rules <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="cards" style="grid-template-columns:repeat(6,minmax(0,1fr))"><button class="card" type="button" data-go="v1" style="--k:0"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;raw=1#t=0.5"></video><span class="len">0:54</span></div>
+<div class="d">01 · Promo reel</div><div class="t">PDC 2026 Promo Reel</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v2" style="--k:1"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;raw=1#t=0.5"></video><span class="len">0:55</span></div>
+<div class="d">02 · Recap</div><div class="t">PDC 2026 Day 1</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v3" style="--k:2"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;raw=1#t=0.5"></video><span class="len">0:27</span></div>
+<div class="d">03 · Recap</div><div class="t">PDC 2026 Event Recap</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v4" style="--k:3"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;raw=1#t=0.5"></video><span class="len">0:20</span></div>
+<div class="d">04 · Talking head</div><div class="t">Talking Head 1</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v5" style="--k:4"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;raw=1#t=0.5"></video><span class="len">0:24</span></div>
+<div class="d">05 · Talking head</div><div class="t">Talking Head 2</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v6" style="--k:5"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;raw=1#t=0.5"></video><span class="len">0:23</span></div>
+<div class="d">06 · Micro clip</div><div class="t">Micro Clips Short Reel</div><span class="status"><i></i>Ready to preview</span></button></div></section><section class="slide glance"><div class="head"><div><h2 class="h2">Testimonials + partner refs</h2><p>The PDC client testimonials plus the two references for today's partner videos: Taylor × Tokuyama and Dr. Chan.</p></div><a class="btn ghost" href="#rules" data-go="rules">The edit rules <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="cards" style="grid-template-columns:repeat(6,minmax(0,1fr))"><button class="card" type="button" data-go="v7" style="--k:0"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;raw=1#t=0.5"></video><span class="len">0:54</span></div>
+<div class="d">07 · Testimonial</div><div class="t">PDC Testimonial 1</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v8" style="--k:1"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;raw=1#t=0.5"></video></div>
+<div class="d">08 · Testimonial</div><div class="t">PDC Testimonial 2</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v9" style="--k:2"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;raw=1#t=0.5"></video></div>
+<div class="d">09 · Testimonial</div><div class="t">PDC Testimonial 3</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v10" style="--k:3"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AArYH9sU3-TEBLJcHC3lQ1w/The%20Center%20of%20Dental%20Artistry%20(Deliverables)/Taylor-TOKUYAMA%20INTERVIEW.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video><span class="len">1:37</span></div>
+<div class="d">10 · Partner interview</div><div class="t">Felipe × Taylor Nelson · Tokuyama</div><span class="status"><i></i>Ready to preview</span></button><button class="card" type="button" data-go="v11" style="--k:4"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ADi_RtJU4kjlIq0lUGgRQFw/Cental%20for%20Dental%20Artistry%20-%20Dr.%20Chan.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video><span class="len">0:57</span></div>
+<div class="d">11 · Event highlight</div><div class="t">Dr. Chan · Northwest Smile Designs</div><span class="status"><i></i>Ready to preview</span></button></div></section><section class="slide glance"><div class="head"><div><h2 class="h2">SPEAR Summit, San Diego</h2><p>The horizontal testimonial, both recap cuts and the brand footage for their website.</p></div><a class="btn ghost" href="#rules" data-go="rules">The edit rules <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<div class="cards" style="grid-template-columns:minmax(0,1.9fr) minmax(0,1.9fr) minmax(0,1.9fr) minmax(0,1.9fr)"><button class="card h" type="button" data-go="v12" style="--k:0"><div class="thumb"><iframe class="dv" src="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/preview" allow="autoplay" loading="lazy" title="Dr. Jeffrey Ellenberg, DMD"></iframe><span class="len">1:15</span></div>
+<div class="d">12 · Testimonial</div><div class="t">Dr. Jeffrey Ellenberg, DMD</div><span class="status"><i></i>Ready to preview</span></button><button class="card h" type="button" data-go="v13" style="--k:1"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;raw=1#t=0.5"></video></div>
+<div class="d">13 · Recap</div><div class="t">Event Recap San Diego 1</div><span class="status"><i></i>Ready to preview</span></button><button class="card h" type="button" data-go="v14" style="--k:2"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;raw=1#t=0.5"></video></div>
+<div class="d">14 · Recap</div><div class="t">Event Recap San Diego 2</div><span class="status"><i></i>Ready to preview</span></button><button class="card h" type="button" data-go="v15" style="--k:3"><div class="thumb"><video class="pv" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;raw=1#t=0.5"></video></div>
+<div class="d">15 · Brand film</div><div class="t">Company Brand Footage</div><span class="status"><i></i>Ready to preview</span></button></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 01 <span>Promo reel · 0:54</span></div>
+<div class="tags"><span class="chip">Promo reel</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:54</span><a class="file" href="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>The booth promo. <em>One word at a time.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>The final approved promo from Vancouver. Booth talking heads carried by one bold keyword per line (&quot;NEW PATIENTS&quot;, &quot;VERIFIED LEADS&quot;) with fast expo floor B-roll in between.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">Aa</span><div><b>Keyword captions</b><small>Teal box on 1 word</small></div></li><li><span class="ic">♡</span><div><b>Logo watermark</b><small>Top-left, every shot</small></div></li><li><span class="ic">⚡</span><div><b>Floor B-roll</b><small>Cut on the beat</small></div></li><li><span class="ic">🎤</span><div><b>Booth talking head</b><small>Teal wall behind</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>One keyword per line</b><p>Only the money word gets the teal box. Everything else stays white on the dark caption bar.</p></div><div class="rl"><b>Never lose the booth</b><p>Every talking head has the Media NV wall or logo behind it. That is the brand.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 02 <span>Recap · 0:55</span></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:55</span><a class="file" href="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Day 1 recap. <em>Open on the city.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Vancouver drone skyline with the logo, then the expo floor, stage talks, a night skyline and the networking dinner. A whole day in under a minute.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🚁</span><div><b>Drone opener</b><small>Logo over the city</small></div></li><li><span class="ic">🎤</span><div><b>Stage moments</b><small>Speakers mid-sentence</small></div></li><li><span class="ic">🌃</span><div><b>Night skyline</b><small>Bridge to the evening</small></div></li><li><span class="ic">🥂</span><div><b>Networking</b><small>Close on people</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Location first</b><p>The first 2 seconds tell you where we are. City, venue sign or event banner.</p></div><div class="rl"><b>Day to night arc</b><p>Morning floor, afternoon stage, evening dinner. Keep the story in order.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 03 <span>Recap · 0:27</span></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:27</span><a class="file" href="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Event recap. <em>Short and punchy.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Teal &quot;Pacific Dental Conference&quot; title card, booth conversations, a clean logo end card. 27 seconds, no dead air.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event title card</b><small>Teal, first 2 seconds</small></div></li><li><span class="ic">🤝</span><div><b>Booth conversations</b><small>Real moments</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered, 2 seconds</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Under 30 seconds</b><p>Recaps are for the feed. Get in, show the energy, end on the logo.</p></div><div class="rl"><b>Title card in their teal</b><p>Event name on #00A7B5 with the white mark.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 04 <span>Talking head · 0:20</span></div>
+<div class="tags"><span class="chip">Talking head</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:20</span><a class="file" href="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Talking head 1. <em>The approved captions.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Version 3, after Media NV sent back caption notes. This is the caption style they signed off on: dark box, lower third, word for word.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">Aa</span><div><b>Word-for-word captions</b><small>Synced to audio</small></div></li><li><span class="ic">⬛</span><div><b>Dark caption box</b><small>Lower third</small></div></li><li><span class="ic">♡</span><div><b>Logo watermark</b><small>Top-left</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Match this caption style</b><p>Every Media NV talking head uses this exact look from now on.</p></div><div class="rl"><b>Captions never cover faces</b><p>Lower third only. Move them up only if the speaker is low in frame.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 05 <span>Talking head · 0:24</span></div>
+<div class="tags"><span class="chip">Talking head</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:24</span><a class="file" href="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Talking head 2. <em>Explain the offer.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>&quot;Introducing our new patient…&quot; explained at the booth with B-roll cutaways of the team on dashboards, closing on &quot;Ready to grow your practice?&quot;</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🎤</span><div><b>Booth talking head</b><small>Medium shot</small></div></li><li><span class="ic">💻</span><div><b>Dashboard B-roll</b><small>Over the explanation</small></div></li><li><span class="ic">❓</span><div><b>Question close</b><small>Ready to grow?</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Show what they say</b><p>When he says &quot;verified names and phone numbers&quot;, cut to the dashboard.</p></div><div class="rl"><b>End on a question</b><p>Close with a direct question on screen, then the logo.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 06 <span>Micro clip · 0:23</span></div>
+<div class="tags"><span class="chip">Micro clip</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:23</span><a class="file" href="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Micro clip. <em>The booth is the hook.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Opens on the &quot;Data Driven Dental Marketing&quot; booth sign, then quick team conversations, closing on &quot;Real results for real practices&quot;.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🪧</span><div><b>Sign as hook</b><small>Their slogan first</small></div></li><li><span class="ic">🤝</span><div><b>Team moments</b><small>Quick cuts</small></div></li><li><span class="ic">Aa</span><div><b>Lower text line</b><small>Small, clean</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Lead with their slogan</b><p>The booth sign says what they do in 3 words. Use it.</p></div><div class="rl"><b>Keep it under 25 seconds</b><p>Micro clips are quick hits for Stories and Reels.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 07 <span>Testimonial · 0:54</span></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:54</span><a class="file" href="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Client testimonial. <em>Let them talk.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>&quot;Client Experience&quot; title card, then the client centered with the booth behind her, small clean captions and booth B-roll over the cuts.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Before they speak</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Booth behind</small></div></li><li><span class="ic">🎬</span><div><b>B-roll over cuts</b><small>Hide every jump</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Results first</b><p>Lead with the strongest line about what changed for their practice.</p></div><div class="rl"><b>Hide the jump cuts</b><p>Every cut in the interview gets booth or floor B-roll over it.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 08 <span>Testimonial</span></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical</span><a class="file" href="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Testimonial 2. <em>Same template.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Same testimonial template, different client. The series should feel like one set when they post back to back.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Same as #1</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Same framing</small></div></li><li><span class="ic">🎬</span><div><b>B-roll over cuts</b><small>Booth + floor</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Consistency wins</b><p>Same title card, same caption style, same end card on every testimonial.</p></div><div class="rl"><b>45 to 75 seconds</b><p>Long enough for the story, short enough to finish.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 09 <span>Testimonial</span></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical</span><a class="file" href="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Testimonial 3. <em>Watch all three.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Third in the PDC series. Watch 1, 2 and 3 back to back before you cut the new Florida testimonials.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Same as #1</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Same framing</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Pacing reference</b><p>Use these three for pacing on today’s podiatry testimonials.</p></div><div class="rl"><b>No Puro Flow branding</b><p>Media NV deliverables end on their logo only.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AArYH9sU3-TEBLJcHC3lQ1w/The%20Center%20of%20Dental%20Artistry%20(Deliverables)/Taylor-TOKUYAMA%20INTERVIEW.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 10 <span>Partner interview · 1:37</span></div>
+<div class="tags"><span class="chip">Partner interview</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 1:37</span><a class="file" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AIEdp2a2ODnp285xi03z4-c/The%20Center%20of%20Dental%20Artistry%20%28Deliverables%29?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Taylor-TOKUYAMA+INTERVIEW.mp4" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>The partner video. <em>Two people, one frame.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>This is the look for the Media NV partner videos: interviewer and partner both in frame, quick questions, brand color card inserts and hands-on product B-roll.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">👥</span><div><b>Two-shot</b><small>Both in frame</small></div></li><li><span class="ic">🟪</span><div><b>Brand color card</b><small>Partner’s color</small></div></li><li><span class="ic">🦷</span><div><b>Product B-roll</b><small>Hands-on close-ups</small></div></li><li><span class="ic">Aa</span><div><b>Clean captions</b><small>Lower third</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Keep both people in frame</b><p>Cut to singles only for the best answers.</p></div><div class="rl"><b>Use the partner’s brand color</b><p>Insert cards in their color, then back to the conversation.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AIEdp2a2ODnp285xi03z4-c/The%20Center%20of%20Dental%20Artistry%20%28Deliverables%29?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Taylor-TOKUYAMA+INTERVIEW.mp4" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day"><div class="ph"><div class="phone"><div class="screen"><span class="island"></span><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ADi_RtJU4kjlIq0lUGgRQFw/Cental%20for%20Dental%20Artistry%20-%20Dr.%20Chan.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 11 <span>Event highlight · 0:57</span></div>
+<div class="tags"><span class="chip">Event highlight</span><span class="status"><i></i>Ready to preview</span><span class="fmt">9:16 vertical · 0:57</span><a class="file" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ANjz1PDLTqjbd2wNKjajsMo?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Cental+for+Dental+Artistry+-+Dr.+Chan.mp4" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Event highlight. <em>A full day in a minute.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Establishing sign shot, lecture, close-up hands-on work with loupes, dinner networking. The model for a conference day recap.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🪧</span><div><b>Establishing sign</b><small>Where we are</small></div></li><li><span class="ic">🎓</span><div><b>Lecture</b><small>Speaker + screen</small></div></li><li><span class="ic">🔬</span><div><b>Hands-on close-ups</b><small>Loupes, models</small></div></li><li><span class="ic">🥂</span><div><b>Dinner</b><small>End on people</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Wide, then close</b><p>Every room starts wide and ends on a detail.</p></div><div class="rl"><b>End on people</b><p>The last shot is faces, not a logo slide.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ANjz1PDLTqjbd2wNKjajsMo?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Cental+for+Dental+Artistry+-+Dr.+Chan.mp4" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day wide"><div class="ph wide"><div class="mon"><iframe class="dv" src="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/preview" allow="autoplay" loading="lazy" title="Dr. Jeffrey Ellenberg, DMD"></iframe></div></div>
 
-<header id="top"><div class="wrap">
-<div class="logo"><img src="pfm-logo-d.png" alt="Puro Flow Media"><span>× MEDIA NV</span></div>
-<div class="eyebrow">Editor reference · Media NV</div>
-<h1>Edit for <span>Media NV</span> like you've done it for years.</h1>
-<p class="lede">Media NV is a partner agency. We film their booth, their team, their clients and their partners at dental and podiatry conferences, then cut testimonials, partner videos, recaps and promo reels. Everything you need before you open the timeline is on this page.</p>
-<div class="chips">
-<a class="chip" href="https://www.medianv.com/" target="_blank" rel="noopener">🌐 medianv.com</a>
-<a class="chip" href="https://www.instagram.com/medianvmarketing/" target="_blank" rel="noopener">📸 @medianvmarketing</a>
-<a class="chip" href="https://www.facebook.com/p/Media-NV-100066870367158/" target="_blank" rel="noopener">Facebook</a>
-<a class="chip" href="https://www.linkedin.com/company/medianv/" target="_blank" rel="noopener">LinkedIn</a>
-<a class="chip" href="https://www.dropbox.com/scl/fo/g6ugvrl1hpn5scj8up1ut/AF8pUlmKh1d3VsjsyPrFdZ0?rlkey=eo5qw2p0p1rm8kwl7qlpyygjh&dl=0" target="_blank" rel="noopener">📂 Media NV outputs folder</a>
-<a class="chip" href="https://edit.puroflowmedia.com/" target="_blank" rel="noopener">🎬 Puro Flow editing standard</a>
-</div>
-</div></header>
-
-<section id="who"><div class="wrap">
-<div class="eyebrow">01 · Who they are</div>
-<h2>A marketing agency, not a software company</h2>
-<p class="sub">Think of it like our Adit work, with one big difference: Adit sells software, Media NV sells growth. Their videos should prove results: more patients, better rankings, more booked calls.</p>
-<div class="grid g3">
-<div class="card"><div class="num">WHAT THEY DO</div><h3>Data-driven healthcare marketing</h3><p>SEO and AI search, Google Ads, websites, social media, reputation and review generation, front desk coaching, video and photo.</p></div>
-<div class="card"><div class="num">WHO THEY SERVE</div><h3>Dental first, then more</h3><p>Dental, podiatry, med spa, chiropractic and optometry practices across Canada and the US.</p></div>
-<div class="card"><div class="num">WHERE</div><h3>Calgary + Seattle</h3><p>HQ in Calgary, Alberta, with an office in Seattle. Founded 2014. They show up at the big conferences: PDC, SPEAR, CDS, FDC and podiatry shows.</p></div>
-</div>
-<div class="callout" style="margin-top:14px"><p><strong>What we're filming now (Nov 2026, Florida podiatry conference):</strong> client testimonials and partner videos at the Media NV booth. Same playbook as Adit's testimonials, but the story is always "what changed for my practice after Media NV": patients, rankings, leads, peace of mind.</p></div>
-</div></section>
-
-<section id="brand"><div class="wrap">
-<div class="eyebrow">02 · Brand kit</div>
-<h2>Their colors, their logo, their voice</h2>
-<p class="sub">Pulled from medianv.com and the videos they already approved. Match this, not our Puro Flow palette.</p>
-<div class="grid g2">
-<div class="card"><h3>Colors</h3>
-<div class="sw">
-<div class="s"><i style="background:#00A7B5"></i><div><b>Media NV Teal</b>#00A7B5</div></div>
-<div class="s"><i style="background:#000000"></i><div><b>Black</b>#000000</div></div>
-<div class="s"><i style="background:#212121"></i><div><b>Charcoal</b>#212121</div></div>
-<div class="s"><i style="background:#FFFFFF"></i><div><b>White</b>#FFFFFF</div></div>
-</div>
-<p style="margin-top:12px">Teal is the accent: keyword highlights, title cards, end cards. Never use it as a full-frame background for long.</p></div>
-<div class="card"><h3>Type + logo</h3>
-<ul>
-<li>Font: <strong>Akkurat</strong> on their site. Use <strong>Inter Tight</strong> (Bold for captions, ExtraBold for titles) if you don't have it.</li>
-<li>Logo: white heart-check mark + "mediaNV" wordmark, <strong>top-left watermark</strong> on talking heads and testimonials. Grab it from the <a href="https://www.dropbox.com/scl/fo/g6ugvrl1hpn5scj8up1ut/AF8pUlmKh1d3VsjsyPrFdZ0?rlkey=eo5qw2p0p1rm8kwl7qlpyygjh&dl=0" target="_blank" rel="noopener">outputs folder</a> (Request ASSETS).</li>
-<li>End on the logo: centered mark + medianv.com.</li>
-<li>Voice: confident, data-driven, warm. Taglines they use on the booth: "Data Driven Dental Marketing", "Real results for real practices".</li>
-</ul></div>
-</div>
-</div></section>
-
-<section id="captions"><div class="wrap">
-<div class="eyebrow">03 · Caption rules (from their marketing team)</div>
-<h2>The #1 thing they've sent back for revisions</h2>
-<p class="sub">Media NV's marketing lead asked for these exact changes on the PDC batch. Get them right the first time.</p>
-<div class="grid g2">
-<div class="card">
-<ul>
-<li class="do">✔ Visible: white bold text on a <strong>dark box</strong> behind it</li>
-<li class="do">✔ Placed in the <strong>lower third</strong>, not the middle of the frame</li>
-<li class="do">✔ <strong>Word-for-word</strong>, synced to the audio. Spell everything right ("dentists", not "dentist")</li>
-<li class="do">✔ Sentence case is fine, doesn't need to be all caps</li>
-<li class="do">✔ Highlight 1 key word per line in teal</li>
-<li class="dont">✘ Centered captions covering faces</li>
-<li class="dont">✘ Paraphrased or off-beat captions</li>
-</ul>
-</div>
-<div class="cap"><div class="lg">mediaNV</div><div class="bar">More <em>patients</em> every single month</div></div>
-</div>
-</div></section>
-
-<section id="formats"><div class="wrap">
-<div class="eyebrow">04 · Formats + deliverables</div>
-<h2>Horizontal first, vertical second</h2>
-<div class="grid g3">
-<div class="card"><div class="num">PRIORITY</div><h3>16:9 horizontal</h3><p>YouTube, their homepage video and webinar pages. Interviews and the brand film go here first.</p></div>
-<div class="card"><div class="num">SECONDARY</div><h3>9:16 vertical</h3><p>Reels, Shorts, TikTok. Reframe from the horizontal master, keep the speaker centered and captions in the lower third.</p></div>
-<div class="card"><div class="num">EVERY EVENT</div><h3>What they expect</h3><ul><li>Edited, subtitled interviews (key figures, partners, clients)</li><li>All raw B-roll, organized</li><li>Recap + promo reels</li><li>Website photos in 1920×1080, 1080×1920, 1080×1080</li></ul></div>
-</div>
-</div></section>
-
-<section id="style"><div class="wrap">
-<div class="eyebrow">05 · Signature moves</div>
-<h2>What their approved videos have in common</h2>
-<div class="grid g3">
-<div class="card"><div class="num">OPEN</div><h3>Location or event title card</h3><p>Drone or skyline of the host city, or a teal "Pacific Dental Conference" style card with the Media NV mark. "CLIENT EXPERIENCE" title card before testimonials.</p></div>
-<div class="card"><div class="num">MIDDLE</div><h3>Booth energy</h3><p>Handshakes, team members walking doctors through dashboards, crowds on the expo floor, speakers on stage. Cut on the beat, keep it moving.</p></div>
-<div class="card"><div class="num">TALKING HEADS</div><h3>Stable, eye level, booth behind</h3><p>Medium shot, teal booth wall in the background, logo top-left, keyword captions ("VERIFIED LEADS", "NEW PATIENTS").</p></div>
-<div class="card"><div class="num">TESTIMONIALS</div><h3>Let the doctor talk</h3><p>One clean take straight to camera, cut the ums, punch in on the strongest line, B-roll over jump cuts. 45 to 75 seconds.</p></div>
-<div class="card"><div class="num">PARTNER VIDEOS</div><h3>Two-person, walk-and-talk</h3><p>Like the Taylor × Tokuyama interview below: both people in frame, quick questions, branded color card inserts, product or workshop B-roll.</p></div>
-<div class="card"><div class="num">CLOSE</div><h3>Logo end card</h3><p>Centered heart-check mark, medianv.com, 1.5 to 2 seconds. No Puro Flow branding on Media NV deliverables.</p></div>
-</div>
-</div></section>
-
-<section id="library"><div class="wrap">
-<div class="eyebrow">06 · Video library</div>
-<h2>Every Media NV video we've cut</h2>
-<p class="sub">Tap any card to watch it in Dropbox. Latest approved versions only.</p>
-
-<div class="vgroup"><h3>PDC 2026 · Pacific Dental Conference, Vancouver 🇨🇦</h3>
-<div class="vids">
-<a class="v t-promo" href="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Promo reel</span><span class="meta">0:54 · 9:16</span><b>PDC 2026 Promo Reel</b></div><div class="bd"><strong>Study:</strong> booth talking heads with one bold keyword per line in teal, logo watermark, fast floor B-roll.</div></a>
-<a class="v t-recap" href="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Recap</span><span class="meta">0:55 · 9:16</span><b>PDC 2026 Day 1</b></div><div class="bd"><strong>Study:</strong> city drone opener with the logo, expo floor, stage talks, night skyline, networking dinner.</div></a>
-<a class="v t-recap" href="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Recap</span><span class="meta">0:27 · 9:16</span><b>PDC 2026 Event Recap</b></div><div class="bd"><strong>Study:</strong> teal event title card, booth conversations, clean logo end card. Short and punchy.</div></a>
-<a class="v t-talk" href="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Talking head</span><span class="meta">0:20 · 9:16</span><b>Talking Head 1</b></div><div class="bd"><strong>Study:</strong> the approved caption style (V3) after their revision notes.</div></a>
-<a class="v t-talk" href="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Talking head</span><span class="meta">0:24 · 9:16</span><b>Talking Head 2</b></div><div class="bd"><strong>Study:</strong> "Introducing our new patient…" offer explained at the booth, B-roll cutaways, "Ready to grow your practice?" close.</div></a>
-<a class="v t-talk" href="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Micro clip</span><span class="meta">0:23 · 9:16</span><b>Micro Clips Short Reel</b></div><div class="bd"><strong>Study:</strong> "Data Driven Dental Marketing" booth sign as the hook, team conversations, "Real results for real practices".</div></a>
-<a class="v t-test" href="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Testimonial</span><span class="meta">0:54 · 9:16</span><b>PDC Testimonial 1</b></div><div class="bd"><strong>Study:</strong> "Client Experience" title card, client centered with the booth behind, booth B-roll over cuts.</div></a>
-<a class="v t-test" href="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Testimonial</span><span class="meta">9:16</span><b>PDC Testimonial 2</b></div><div class="bd"><strong>Study:</strong> same testimonial template, different client. Keep the series consistent.</div></a>
-<a class="v t-test" href="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Testimonial</span><span class="meta">9:16</span><b>PDC Testimonial 3</b></div><div class="bd"><strong>Study:</strong> third in the series. Watch all three back to back for pacing.</div></a>
+<div class="col"><div class="dayname">Video 12 <span>Testimonial · 1:15</span></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span><span class="fmt">16:9 horizontal · 1:15</span><a class="file" href="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/view" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Horizontal testimonial. <em>Rankings moved up.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Shot at the Media NV booth at SPEAR Summit. Dr. Ellenberg on what changed after Media NV, with booth and floor B-roll throughout. The horizontal format they want for YouTube and the homepage.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🖥️</span><div><b>16:9 master</b><small>YouTube + homepage</small></div></li><li><span class="ic">🎤</span><div><b>Booth interview</b><small>Seated, eye level</small></div></li><li><span class="ic">🎬</span><div><b>Floor B-roll</b><small>Over every cut</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Horizontal first</b><p>Cut the 16:9 master, then reframe to 9:16.</p></div><div class="rl"><b>Quote the result</b><p>Pull his best line (&quot;really, really moved up&quot;) as an on-screen quote.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/view" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day wide"><div class="ph wide"><div class="mon"><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;raw=1#t=0.5"></video></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 13 <span>Recap</span></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span><span class="fmt">16:9 horizontal</span><a class="file" href="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>SPEAR recap. <em>San Diego, cut 1.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>The SPEAR Summit recap. Study the structure and music pacing.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event open</b><small>Venue + logo</small></div></li><li><span class="ic">🤝</span><div><b>Booth moments</b><small>Team + doctors</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Same recap formula</b><p>Location, booth energy, people, logo.</p></div><div class="rl"><b>Music drives the cuts</b><p>Cut on the downbeats.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day wide"><div class="ph wide"><div class="mon"><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;raw=1#t=0.5"></video></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 14 <span>Recap</span></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span><span class="fmt">16:9 horizontal</span><a class="file" href="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>SPEAR recap. <em>San Diego, cut 2.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>Second cut of the SPEAR recap.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event open</b><small>Venue + logo</small></div></li><li><span class="ic">🤝</span><div><b>Booth moments</b><small>Team + doctors</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Two cuts, two lengths</b><p>Give them options: one for the feed, one for the website.</p></div><div class="rl"><b>Stay on brand</b><p>Teal accents only, no extra colors.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide day wide"><div class="ph wide"><div class="mon"><video class="main" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;raw=1#t=0.5"></video></div></div>
+<div class="ctrl"><button class="snd" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></button><div class="track"><i></i></div></div>
+<div class="col"><div class="dayname">Video 15 <span>Brand film</span></div>
+<div class="tags"><span class="chip">Brand film</span><span class="status"><i></i>Ready to preview</span><span class="fmt">16:9 horizontal</span><a class="file" href="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;dl=0" target="_blank" rel="noopener">Full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+<h2>Brand footage. <em>For their website.</em></h2>
+<div class="hook"><div class="label">Why it works</div><p>The B-roll package they use on their website. Clean, no captions, no music needed.</p></div>
+<div class="two"><div class="blk"><div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🎬</span><div><b>Clean B-roll</b><small>No text</small></div></li><li><span class="ic">🖥️</span><div><b>16:9</b><small>Website hero</small></div></li><li><span class="ic">🔇</span><div><b>No sound needed</b><small>Plays muted</small></div></li></ul></div>
+<div class="blk"><div class="label">What to steal</div><div class="rules"><div class="rl"><b>Deliver it clean</b><p>No captions, no logo burn-in. They place it on the site.</p></div><div class="rl"><b>Steady shots only</b><p>Website loops need slow, stable movement.</p></div></div></div></div>
+<div class="foot"><a class="btn solid" href="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><button class="btn ghost" type="button" data-go="rules">The edit rules</button></div></div></section><section class="slide learn"><div class="head"><div><h2 class="h2">The Media NV edit rules</h2><p>Their brand, the caption style they signed off on, and what they expect after every event. Read this before you open the timeline.</p></div><a class="btn ghost" href="https://www.medianv.com/" target="_blank" rel="noopener">medianv.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div><div class="tiles rules4"><div class="tile"><div class="th"><span class="ic">🏢</span><b>Who they are</b></div><p>A marketing agency for dental, podiatry, med spa, chiro and optometry. Calgary + Seattle. Every video proves results: patients, rankings, leads.</p></div><div class="tile"><div class="th"><span class="ic">🎨</span><b>Their colors</b></div><p>Teal #00A7B5 accent, black, charcoal #212121, white. Teal only for keywords, title cards and end cards.</p></div><div class="tile"><div class="th"><span class="ic">🔤</span><b>Their type</b></div><p>Akkurat on their site. Use Inter Tight Bold for captions, ExtraBold for titles.</p></div><div class="tile"><div class="th"><span class="ic">♡</span><b>Their logo</b></div><p>White heart-check mark + &quot;mediaNV&quot; top-left on talking heads and testimonials. Centered on the end card.</p></div><div class="tile"><div class="th"><span class="ic">⬛</span><b>Captions: dark box</b></div><p>White bold text on a dark box. Their #1 revision note last time.</p></div><div class="tile"><div class="th"><span class="ic">⬇️</span><b>Captions: lower third</b></div><p>Never in the middle of the frame, never over faces.</p></div><div class="tile"><div class="th"><span class="ic">Aa</span><b>Captions: word for word</b></div><p>Synced to the audio, spelled right. Sentence case is fine.</p></div><div class="tile"><div class="th"><span class="ic">🖥️</span><b>Horizontal first</b></div><p>16:9 master for YouTube and the homepage, then a 9:16 reframe for Reels and Shorts.</p></div><div class="tile"><div class="th"><span class="ic">🏷️</span><b>Title cards</b></div><p>&quot;CLIENT EXPERIENCE&quot; before testimonials. Event name card in teal before recaps.</p></div><div class="tile"><div class="th"><span class="ic">🎬</span><b>Hide every jump cut</b></div><p>Booth and floor B-roll over every cut in an interview.</p></div><div class="tile"><div class="th"><span class="ic">📦</span><b>What to deliver</b></div><p>Edited, subtitled interviews, all raw B-roll organized, recap and promo reels.</p></div><div class="tile"><div class="th"><span class="ic">🚫</span><b>No Puro Flow branding</b></div><p>Media NV deliverables end on their logo only.</p></div></div></section><section class="slide close"><div class="glow"></div><div class="grid"></div><div class="inner"><div class="logo"><img src="logo_d.png" alt="Puro Flow Media"></div><div class="h2">Make yours match.</div><p>Start with Talking Head 1 for captions and the Taylor × Tokuyama interview for partner videos. Questions go in #medianv-fabian.</p><div class="row"><button class="btn solid" type="button" data-go="v4">Open Talking Head 1 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button><button class="btn ghost" type="button" data-go="start">Back to the start</button></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></div></section></div>
+<div class="bottom"><div class="bars" id="bars"></div><button class="fs" id="fs" type="button">Full screen</button><span class="count" id="count"></span><button class="nav" id="prev" type="button" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button><button class="nav" id="next" type="button" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button></div>
 </div></div>
+<div class="feed"><header class="fhead"><div class="wrap"><div class="frow"><img class="fl" src="logo_d.png" alt="Puro Flow Media"><span class="who">× Media NV</span></div>
+<nav class="wtabs scrolly" aria-label="Jump to"><a class="wtab" href="#m-v1"><b>PDC Vancouver</b><span>01 – 09</span></a><a class="wtab" href="#m-v10"><b>Partner refs</b><span>10 – 11</span></a><a class="wtab" href="#m-v12"><b>SPEAR</b><span>12 – 15</span></a><a class="wtab" href="#m-rules"><b>Edit rules</b><span>Brand + captions</span></a></nav></div></header>
+<section class="fhero"><div class="wrap"><div class="eyebrow">Editor reference · Media NV</div><div class="weekof">HOW TO</div><div class="big">EDIT</div><div class="to">FOR <span>MEDIA NV</span></div><p class="sub">Every Media NV video we've cut, ready to preview. Watch them, steal the moves, then cut today's testimonials and partner videos the same way.</p><div class="lightbar"></div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></div></section>
+<section class="fsec"><div class="wrap"><h2 class="h2">At a glance</h2><div class="gl"><a class="card" href="#m-v1"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;raw=1#t=0.5"></video><span class="len">0:54</span></div><div class="d">01 · Promo reel</div><div class="t">PDC 2026 Promo Reel</div></a><a class="card" href="#m-v2"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;raw=1#t=0.5"></video><span class="len">0:55</span></div><div class="d">02 · Recap</div><div class="t">PDC 2026 Day 1</div></a><a class="card" href="#m-v3"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;raw=1#t=0.5"></video><span class="len">0:27</span></div><div class="d">03 · Recap</div><div class="t">PDC 2026 Event Recap</div></a><a class="card" href="#m-v4"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;raw=1#t=0.5"></video><span class="len">0:20</span></div><div class="d">04 · Talking head</div><div class="t">Talking Head 1</div></a><a class="card" href="#m-v5"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;raw=1#t=0.5"></video><span class="len">0:24</span></div><div class="d">05 · Talking head</div><div class="t">Talking Head 2</div></a><a class="card" href="#m-v6"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;raw=1#t=0.5"></video><span class="len">0:23</span></div><div class="d">06 · Micro clip</div><div class="t">Micro Clips Short Reel</div></a><a class="card" href="#m-v7"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;raw=1#t=0.5"></video><span class="len">0:54</span></div><div class="d">07 · Testimonial</div><div class="t">PDC Testimonial 1</div></a><a class="card" href="#m-v8"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;raw=1#t=0.5"></video></div><div class="d">08 · Testimonial</div><div class="t">PDC Testimonial 2</div></a><a class="card" href="#m-v9"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;raw=1#t=0.5"></video></div><div class="d">09 · Testimonial</div><div class="t">PDC Testimonial 3</div></a><a class="card" href="#m-v10"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AArYH9sU3-TEBLJcHC3lQ1w/The%20Center%20of%20Dental%20Artistry%20(Deliverables)/Taylor-TOKUYAMA%20INTERVIEW.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video><span class="len">1:37</span></div><div class="d">10 · Partner interview</div><div class="t">Felipe × Taylor Nelson · Tokuyama</div></a><a class="card" href="#m-v11"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ADi_RtJU4kjlIq0lUGgRQFw/Cental%20for%20Dental%20Artistry%20-%20Dr.%20Chan.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video><span class="len">0:57</span></div><div class="d">11 · Event highlight</div><div class="t">Dr. Chan · Northwest Smile Designs</div></a><a class="card" href="#m-v12"><div class="thumb"><iframe class="dv" src="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/preview" allow="autoplay" loading="lazy" title="Dr. Jeffrey Ellenberg, DMD"></iframe><span class="len">1:15</span></div><div class="d">12 · Testimonial</div><div class="t">Dr. Jeffrey Ellenberg, DMD</div></a><a class="card" href="#m-v13"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;raw=1#t=0.5"></video></div><div class="d">13 · Recap</div><div class="t">Event Recap San Diego 1</div></a><a class="card" href="#m-v14"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;raw=1#t=0.5"></video></div><div class="d">14 · Recap</div><div class="t">Event Recap San Diego 2</div></a><a class="card" href="#m-v15"><div class="thumb"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;raw=1#t=0.5"></video></div><div class="d">15 · Brand film</div><div class="t">Company Brand Footage</div></a></div></div></section>
+<section class="fday" id="m-v1"><div class="wrap"><div class="dayname">Video 01 <span>Promo reel · 0:54</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Promo reel</span><span class="status"><i></i>Ready to preview</span></div><h2>The booth promo. <em>One word at a time.</em></h2><p class="lead">The final approved promo from Vancouver. Booth talking heads carried by one bold keyword per line (&quot;NEW PATIENTS&quot;, &quot;VERIFIED LEADS&quot;) with fast expo floor B-roll in between.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">Aa</span><div><b>Keyword captions</b><small>Teal box on 1 word</small></div></li><li><span class="ic">♡</span><div><b>Logo watermark</b><small>Top-left, every shot</small></div></li><li><span class="ic">⚡</span><div><b>Floor B-roll</b><small>Cut on the beat</small></div></li><li><span class="ic">🎤</span><div><b>Booth talking head</b><small>Teal wall behind</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/0cj5f7tcetc6ex94s517f/MediaNV-PDC-2026-Promo-Reel-D4.mp4?rlkey=u0heng39go1et05p5q2p8q4p6&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v2"><div class="wrap"><div class="dayname">Video 02 <span>Recap · 0:55</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span></div><h2>Day 1 recap. <em>Open on the city.</em></h2><p class="lead">Vancouver drone skyline with the logo, then the expo floor, stage talks, a night skyline and the networking dinner. A whole day in under a minute.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🚁</span><div><b>Drone opener</b><small>Logo over the city</small></div></li><li><span class="ic">🎤</span><div><b>Stage moments</b><small>Speakers mid-sentence</small></div></li><li><span class="ic">🌃</span><div><b>Night skyline</b><small>Bridge to the evening</small></div></li><li><span class="ic">🥂</span><div><b>Networking</b><small>Close on people</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/gzlboaujb9hufj1fsisls/MediaNV-PDC-2026-Day-1.mp4?rlkey=ja4x6jusr3wcm5ofdly96o9bg&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v3"><div class="wrap"><div class="dayname">Video 03 <span>Recap · 0:27</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span></div><h2>Event recap. <em>Short and punchy.</em></h2><p class="lead">Teal &quot;Pacific Dental Conference&quot; title card, booth conversations, a clean logo end card. 27 seconds, no dead air.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event title card</b><small>Teal, first 2 seconds</small></div></li><li><span class="ic">🤝</span><div><b>Booth conversations</b><small>Real moments</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered, 2 seconds</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/g928zrhnbi6a0n8s6van7/Event-Recap-D2.mp4?rlkey=xttwrv8gk49ygc8r72oik6fwe&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v4"><div class="wrap"><div class="dayname">Video 04 <span>Talking head · 0:20</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Talking head</span><span class="status"><i></i>Ready to preview</span></div><h2>Talking head 1. <em>The approved captions.</em></h2><p class="lead">Version 3, after Media NV sent back caption notes. This is the caption style they signed off on: dark box, lower third, word for word.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">Aa</span><div><b>Word-for-word captions</b><small>Synced to audio</small></div></li><li><span class="ic">⬛</span><div><b>Dark caption box</b><small>Lower third</small></div></li><li><span class="ic">♡</span><div><b>Logo watermark</b><small>Top-left</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/os2lgk0smpqm5dogq05qf/Talking-1_CC_V3-D1.mp4?rlkey=jd0965s0927e6g6uv40dbl47w&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v5"><div class="wrap"><div class="dayname">Video 05 <span>Talking head · 0:24</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Talking head</span><span class="status"><i></i>Ready to preview</span></div><h2>Talking head 2. <em>Explain the offer.</em></h2><p class="lead">&quot;Introducing our new patient…&quot; explained at the booth with B-roll cutaways of the team on dashboards, closing on &quot;Ready to grow your practice?&quot;</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🎤</span><div><b>Booth talking head</b><small>Medium shot</small></div></li><li><span class="ic">💻</span><div><b>Dashboard B-roll</b><small>Over the explanation</small></div></li><li><span class="ic">❓</span><div><b>Question close</b><small>Ready to grow?</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/hsdwvqtikvpz97cmx1x57/Talking-2_CC_V2-D3.mp4?rlkey=h3eg5zzwffedga9fbvbs0dd88&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v6"><div class="wrap"><div class="dayname">Video 06 <span>Micro clip · 0:23</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Micro clip</span><span class="status"><i></i>Ready to preview</span></div><h2>Micro clip. <em>The booth is the hook.</em></h2><p class="lead">Opens on the &quot;Data Driven Dental Marketing&quot; booth sign, then quick team conversations, closing on &quot;Real results for real practices&quot;.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🪧</span><div><b>Sign as hook</b><small>Their slogan first</small></div></li><li><span class="ic">🤝</span><div><b>Team moments</b><small>Quick cuts</small></div></li><li><span class="ic">Aa</span><div><b>Lower text line</b><small>Small, clean</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/s4azh1qz6myglr6k2rmug/Media-MV-Micro-Clips-1-Short-Reels-PDC-Conference-Day-2.mp4?rlkey=ns8g7joicjftsu7do6h1g03fq&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v7"><div class="wrap"><div class="dayname">Video 07 <span>Testimonial · 0:54</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span></div><h2>Client testimonial. <em>Let them talk.</em></h2><p class="lead">&quot;Client Experience&quot; title card, then the client centered with the booth behind her, small clean captions and booth B-roll over the cuts.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Before they speak</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Booth behind</small></div></li><li><span class="ic">🎬</span><div><b>B-roll over cuts</b><small>Hide every jump</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/cel01goc9zsur50fxy8c3/MediaNV-PDC-2026-Testimonial-1-D2.mp4?rlkey=ifpp2ffy8ataw9eqlmltuk7vz&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v8"><div class="wrap"><div class="dayname">Video 08 <span>Testimonial</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span></div><h2>Testimonial 2. <em>Same template.</em></h2><p class="lead">Same testimonial template, different client. The series should feel like one set when they post back to back.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Same as #1</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Same framing</small></div></li><li><span class="ic">🎬</span><div><b>B-roll over cuts</b><small>Booth + floor</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/chb73chfmlp7dx0nox8zl/MediaNV-PDC-2026-Testimonial-2.mp4?rlkey=2ll70xnpji42yaxwim8zjc3ep&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v9"><div class="wrap"><div class="dayname">Video 09 <span>Testimonial</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span></div><h2>Testimonial 3. <em>Watch all three.</em></h2><p class="lead">Third in the PDC series. Watch 1, 2 and 3 back to back before you cut the new Florida testimonials.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Client Experience card</b><small>Same as #1</small></div></li><li><span class="ic">🎤</span><div><b>Centered client</b><small>Same framing</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/yrrru5jb0yihwiwuxwkyl/MediaNV-PDC-2026-Testimonial-3.mp4?rlkey=8cgpukbja5mt29721l06pc70n&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v10"><div class="wrap"><div class="dayname">Video 10 <span>Partner interview · 1:37</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AArYH9sU3-TEBLJcHC3lQ1w/The%20Center%20of%20Dental%20Artistry%20(Deliverables)/Taylor-TOKUYAMA%20INTERVIEW.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Partner interview</span><span class="status"><i></i>Ready to preview</span></div><h2>The partner video. <em>Two people, one frame.</em></h2><p class="lead">This is the look for the Media NV partner videos: interviewer and partner both in frame, quick questions, brand color card inserts and hands-on product B-roll.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">👥</span><div><b>Two-shot</b><small>Both in frame</small></div></li><li><span class="ic">🟪</span><div><b>Brand color card</b><small>Partner’s color</small></div></li><li><span class="ic">🦷</span><div><b>Product B-roll</b><small>Hands-on close-ups</small></div></li><li><span class="ic">Aa</span><div><b>Clean captions</b><small>Lower third</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AIEdp2a2ODnp285xi03z4-c/The%20Center%20of%20Dental%20Artistry%20%28Deliverables%29?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Taylor-TOKUYAMA+INTERVIEW.mp4" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v11"><div class="wrap"><div class="dayname">Video 11 <span>Event highlight · 0:57</span></div><div class="phone"><div class="screen"><span class="island"></span><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ADi_RtJU4kjlIq0lUGgRQFw/Cental%20for%20Dental%20Artistry%20-%20Dr.%20Chan.mp4?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;raw=1#t=0.5"></video></div></div>
+<div class="tags"><span class="chip">Event highlight</span><span class="status"><i></i>Ready to preview</span></div><h2>Event highlight. <em>A full day in a minute.</em></h2><p class="lead">Establishing sign shot, lecture, close-up hands-on work with loupes, dinner networking. The model for a conference day recap.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🪧</span><div><b>Establishing sign</b><small>Where we are</small></div></li><li><span class="ic">🎓</span><div><b>Lecture</b><small>Speaker + screen</small></div></li><li><span class="ic">🔬</span><div><b>Hands-on close-ups</b><small>Loupes, models</small></div></li><li><span class="ic">🥂</span><div><b>Dinner</b><small>End on people</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ANjz1PDLTqjbd2wNKjajsMo?rlkey=klrq4gu9pdfby9atvpakx3x70&amp;dl=0&amp;preview=Cental+for+Dental+Artistry+-+Dr.+Chan.mp4" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v12"><div class="wrap"><div class="dayname">Video 12 <span>Testimonial · 1:15</span></div><div class="mon"><iframe class="dv" src="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/preview" allow="autoplay" loading="lazy" title="Dr. Jeffrey Ellenberg, DMD"></iframe></div>
+<div class="tags"><span class="chip">Testimonial</span><span class="status"><i></i>Ready to preview</span></div><h2>Horizontal testimonial. <em>Rankings moved up.</em></h2><p class="lead">Shot at the Media NV booth at SPEAR Summit. Dr. Ellenberg on what changed after Media NV, with booth and floor B-roll throughout. The horizontal format they want for YouTube and the homepage.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🖥️</span><div><b>16:9 master</b><small>YouTube + homepage</small></div></li><li><span class="ic">🎤</span><div><b>Booth interview</b><small>Seated, eye level</small></div></li><li><span class="ic">🎬</span><div><b>Floor B-roll</b><small>Over every cut</small></div></li></ul><div class="row"><a class="btn solid" href="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/view" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v13"><div class="wrap"><div class="dayname">Video 13 <span>Recap</span></div><div class="mon"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;raw=1#t=0.5"></video></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span></div><h2>SPEAR recap. <em>San Diego, cut 1.</em></h2><p class="lead">The SPEAR Summit recap. Study the structure and music pacing.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event open</b><small>Venue + logo</small></div></li><li><span class="ic">🤝</span><div><b>Booth moments</b><small>Team + doctors</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v14"><div class="wrap"><div class="dayname">Video 14 <span>Recap</span></div><div class="mon"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;raw=1#t=0.5"></video></div>
+<div class="tags"><span class="chip">Recap</span><span class="status"><i></i>Ready to preview</span></div><h2>SPEAR recap. <em>San Diego, cut 2.</em></h2><p class="lead">Second cut of the SPEAR recap.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🏷️</span><div><b>Event open</b><small>Venue + logo</small></div></li><li><span class="ic">🤝</span><div><b>Booth moments</b><small>Team + doctors</small></div></li><li><span class="ic">♡</span><div><b>Logo end card</b><small>Centered</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section><section class="fday" id="m-v15"><div class="wrap"><div class="dayname">Video 15 <span>Brand film</span></div><div class="mon"><video class="lz" muted loop playsinline preload="none" data-src="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;raw=1#t=0.5"></video></div>
+<div class="tags"><span class="chip">Brand film</span><span class="status"><i></i>Ready to preview</span></div><h2>Brand footage. <em>For their website.</em></h2><p class="lead">The B-roll package they use on their website. Clean, no captions, no music needed.</p>
+<div class="label">Moves in this edit</div><ul class="dos"><li><span class="ic">🎬</span><div><b>Clean B-roll</b><small>No text</small></div></li><li><span class="ic">🖥️</span><div><b>16:9</b><small>Website hero</small></div></li><li><span class="ic">🔇</span><div><b>No sound needed</b><small>Plays muted</small></div></li></ul><div class="row"><a class="btn solid" href="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&amp;dl=0" target="_blank" rel="noopener">Watch full quality <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section>
+<section class="fsec" id="m-rules"><div class="wrap"><h2 class="h2">The Media NV edit rules</h2><div class="ftiles"><div class="tile"><span class="ic">🏢</span><b>Who they are</b><p>A marketing agency for dental, podiatry, med spa, chiro and optometry. Calgary + Seattle. Every video proves results: patients, rankings, leads.</p></div><div class="tile"><span class="ic">🎨</span><b>Their colors</b><p>Teal #00A7B5 accent, black, charcoal #212121, white. Teal only for keywords, title cards and end cards.</p></div><div class="tile"><span class="ic">🔤</span><b>Their type</b><p>Akkurat on their site. Use Inter Tight Bold for captions, ExtraBold for titles.</p></div><div class="tile"><span class="ic">♡</span><b>Their logo</b><p>White heart-check mark + &quot;mediaNV&quot; top-left on talking heads and testimonials. Centered on the end card.</p></div><div class="tile"><span class="ic">⬛</span><b>Captions: dark box</b><p>White bold text on a dark box. Their #1 revision note last time.</p></div><div class="tile"><span class="ic">⬇️</span><b>Captions: lower third</b><p>Never in the middle of the frame, never over faces.</p></div><div class="tile"><span class="ic">Aa</span><b>Captions: word for word</b><p>Synced to the audio, spelled right. Sentence case is fine.</p></div><div class="tile"><span class="ic">🖥️</span><b>Horizontal first</b><p>16:9 master for YouTube and the homepage, then a 9:16 reframe for Reels and Shorts.</p></div><div class="tile"><span class="ic">🏷️</span><b>Title cards</b><p>&quot;CLIENT EXPERIENCE&quot; before testimonials. Event name card in teal before recaps.</p></div><div class="tile"><span class="ic">🎬</span><b>Hide every jump cut</b><p>Booth and floor B-roll over every cut in an interview.</p></div><div class="tile"><span class="ic">📦</span><b>What to deliver</b><p>Edited, subtitled interviews, all raw B-roll organized, recap and promo reels.</p></div><div class="tile"><span class="ic">🚫</span><b>No Puro Flow branding</b><p>Media NV deliverables end on their logo only.</p></div></div></div></section>
+<footer class="ffoot"><div class="wrap"><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div><span class="who">PuroFlow Media × Media NV</span></div></footer></div>
+<script>
+const IDS=["start", "glance0", "glance1", "glance2", "v1", "v2", "v3", "v4", "v5", "v6", "v7", "v8", "v9", "v10", "v11", "v12", "v13", "v14", "v15", "rules", "end"],TABOF={"start": "start", "glance0": "pdc", "glance1": "refs", "glance2": "spear", "v1": "pdc", "v2": "pdc", "v3": "pdc", "v4": "pdc", "v5": "pdc", "v6": "pdc", "v7": "pdc", "v8": "pdc", "v9": "pdc", "v10": "refs", "v11": "refs", "v12": "spear", "v13": "spear", "v14": "spear", "v15": "spear", "rules": "rules", "end": "start"},FIRST={"start": "start", "pdc": "glance0", "refs": "glance1", "spear": "glance2", "rules": "rules"},SPK="<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M11 5 6 9H3v6h3l5 4z\"/><path d=\"m22 9-6 6M16 9l6 6\"/></svg>",SPKON="<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M11 5 6 9H3v6h3l5 4z\"/><path d=\"M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14\"/></svg>";
+(function(){
+const deck=document.getElementById('deck'),stage=document.getElementById('stage'),slides=[...stage.querySelectorAll('.slide')];
+const desktop=()=>getComputedStyle(deck).display!=='none';
+const load=v=>{if(v&&!v.src&&v.dataset.src)v.src=v.dataset.src};
+const spin=v=>{if(!v)return;load(v);const p=v.play();if(p)p.catch(()=>{})};
+const rest=v=>{if(v&&!v.paused)v.pause()};
+// ---------- desktop deck
+const fit=()=>{const k=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(-50%,-50%) scale(${k})`};
+fit();addEventListener('resize',fit);
+const bars=document.getElementById('bars'),count=document.getElementById('count');
+slides.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Slide '+(i+1));b.innerHTML='<i></i>';b.onclick=()=>go(i);bars.appendChild(b)});
+let cur=-1;
+function go(i){if(typeof i==='string')i=IDS.indexOf(i);i=Math.max(0,Math.min(slides.length-1,i));if(i===cur)return;cur=i;
+ slides.forEach((s,j)=>{s.classList.toggle('on',j===i);s.classList.toggle('before',j<i);if(j!==i)s.querySelectorAll('video').forEach(v=>{if(!v.classList.contains('bgv'))rest(v)})});
+ [...bars.children].forEach((b,j)=>{b.classList.toggle('cur',j===i);b.classList.toggle('done',j<i)});
+ count.textContent=String(i+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');
+ const tab=TABOF[IDS[i]];stage.querySelectorAll('.wtab').forEach(t=>t.setAttribute('aria-selected',t.dataset.tab===tab));
+ deck.classList.toggle('hide-mark',slides[i].classList.contains('cover'));
+ const s=slides[i];
+ s.querySelectorAll('video').forEach(v=>{if(!v.closest('.fan'))spin(v)});
+ if(s.classList.contains('cover'))playFront();
+ [i-1,i+1,i+2].forEach(j=>{const n=slides[j];if(n)n.querySelectorAll('video').forEach(v=>{if(!v.closest('.fan')){v.preload='auto';load(v)}})});
+ if(desktop())history.replaceState(null,'','#'+IDS[i]);
+}
+document.getElementById('next').onclick=()=>go(cur+1);document.getElementById('prev').onclick=()=>go(cur-1);
+stage.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();go(b.dataset.go)}));
+stage.querySelectorAll('.wtab').forEach(t=>t.addEventListener('click',()=>go(FIRST[t.dataset.tab])));
+// sound + progress on day slides
+slides.forEach(s=>{if(!s.classList.contains('day'))return;const v=s.querySelector('video.main'),b=s.querySelector('.snd'),bar=s.querySelector('.track i');if(!v||!b)return;
+ v.addEventListener('timeupdate',()=>{if(v.duration)bar.style.width=(v.currentTime/v.duration*100)+'%'});
+ b.addEventListener('click',()=>{v.muted=!v.muted;b.setAttribute('aria-pressed',!v.muted);b.innerHTML=(v.muted?SPK:SPKON)+'<span>'+(v.muted?'Tap for sound':'Sound on')+'</span>';if(!v.muted){v.currentTime=0;spin(v)}})});
+// fan: phones on a turning circle, drag or click to roll
+const fanEl=stage.querySelector('.fan'),fps=[...fanEl.querySelectorAll('.phone')],N=fps.length;
+const R=360,CX=298+700*9/16/2,STEP=150,ARC=34;let center=Math.floor(N/2);
+const wrapOff=o=>{while(o>N/2)o-=N;while(o<-N/2)o+=N;return o};
+const layout=(sp)=>{sp=sp||0;fps.forEach((p,i)=>{const f=wrapOff(i-center)+sp,a=Math.abs(f),th=f*ARC*Math.PI/180;const vis=a<2.6,depth=Math.cos(Math.min(Math.abs(th),Math.PI/2));const h=470+230*depth,w=h*9/16;
+ p.style.left=(CX+R*Math.sin(th)-w/2)+'px';p.style.height=h+'px';p.style.bottom=(a*24)+'px';p.style.zIndex=Math.round(100-a*10);
+ p.style.opacity=vis?Math.max(0,Math.min(1,a<1?1:1-(a-1)*.18-Math.max(0,a-2)*1.2)):0;p.style.transform=`rotateY(${-f*ARC*.55}deg)`;p.style.pointerEvents=vis?'':'none'})};
+function playFront(){fps.forEach((p,i)=>{const v=p.querySelector('video'),a=Math.abs(wrapOff(i-center));if(a<2.6&&slides[cur]&&slides[cur].classList.contains('cover'))spin(v);else rest(v)})}
+const roll=d=>{center=((center+d)%N+N)%N;layout();playFront()};
+layout();
+let fx=null,fy=null,moved=0,tgt=null;const kk=()=>Math.min(innerWidth/1920,innerHeight/1080)||1;
+fanEl.addEventListener('pointerdown',e=>{e.stopPropagation();fx=e.clientX;fy=e.clientY;moved=0;tgt=e.target.closest('.phone');fanEl.classList.add('dragging');try{fanEl.setPointerCapture(e.pointerId)}catch(_){}});
+fanEl.addEventListener('pointermove',e=>{if(fx===null)return;moved=(e.clientX-fx)/kk();layout(moved/STEP)});
+const end=e=>{if(fx===null)return;e.stopPropagation();fanEl.classList.remove('dragging');const dist=Math.hypot(e.clientX-fx,e.clientY-fy);fx=null;const st=Math.round(moved/STEP);
+ if(Math.abs(moved)>40){layout(moved/STEP);requestAnimationFrame(()=>roll(st?-st:(moved<0?1:-1)))}
+ else if(dist<8&&tgt){const off=wrapOff(+tgt.dataset.fi-center);if(off)roll(off);else go('v'+(+tgt.dataset.fi+1))}else layout()};
+fanEl.addEventListener('pointerup',end);fanEl.addEventListener('pointercancel',end);
+let auto=setInterval(()=>{if(slides[cur]&&slides[cur].classList.contains('cover')&&fx===null)roll(1)},4200);
+fanEl.addEventListener('pointerenter',()=>{clearInterval(auto)});
+fanEl.insertAdjacentHTML('beforeend','<div class="hint">Drag or click · tap the front one to open</div>');
+// keys, swipe, full screen
+addEventListener('keydown',e=>{if(!desktop())return;if(e.target.closest&&e.target.closest('button,a')&&(e.key===' '||e.key==='Enter'))return;
+ if(['ArrowRight','ArrowDown','PageDown',' '].includes(e.key)){e.preventDefault();go(cur+1)}else if(['ArrowLeft','ArrowUp','PageUp'].includes(e.key)){e.preventDefault();go(cur-1)}
+ else if(e.key==='Home')go(0);else if(e.key==='End')go(slides.length-1);else if(e.key==='f'||e.key==='F')toggleFs()});
+let sx=null,sy=null;deck.addEventListener('pointerdown',e=>{sx=e.clientX;sy=e.clientY});
+deck.addEventListener('pointerup',e=>{if(sx===null)return;const dx=e.clientX-sx,dy=e.clientY-sy;sx=null;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4)go(cur+(dx<0?1:-1))});
+const fsBtn=document.getElementById('fs');
+function toggleFs(){try{if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});else document.documentElement.requestFullscreen().catch(()=>{fsBtn.hidden=true})}catch(e){fsBtn.hidden=true}}
+if(!document.documentElement.requestFullscreen)fsBtn.hidden=true;fsBtn.onclick=toggleFs;
+document.addEventListener('fullscreenchange',()=>{fsBtn.textContent=document.fullscreenElement?'Exit full screen':'Full screen'});
+const h=location.hash.slice(1);go(IDS.includes(h)?h:0);
+addEventListener('hashchange',()=>{const x=location.hash.slice(1);if(desktop()&&IDS.includes(x))go(x)});
+// ---------- mobile feed: autoplay whatever is on screen
+const io='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(!desktop())return;}),{}):null;
+const fio='IntersectionObserver' in window?new IntersectionObserver(es=>es.forEach(e=>{if(desktop())return;const v=e.target;if(e.isIntersecting)spin(v);else rest(v)}),{rootMargin:'100px'}):null;
+document.querySelectorAll('.feed video.lz').forEach(v=>{if(fio)fio.observe(v);else{load(v);v.autoplay=true}});
+document.querySelectorAll('.feed .bgv').forEach(v=>{if(!desktop())spin(v)});
+addEventListener('resize',()=>{if(!desktop()){slides.forEach(s=>s.querySelectorAll('video').forEach(rest));document.querySelectorAll('.feed .bgv').forEach(spin)}else document.querySelectorAll('.feed video').forEach(rest)});
+if(!desktop()){slides.forEach(s=>s.querySelectorAll('video').forEach(rest))}
+// ---------- kick: make sure every on-screen video is playing (covers blocked autoplay, background tabs, low power)
+const onScreen=v=>{const r=v.getBoundingClientRect();return r.width>0&&r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth};
+function kick(){if(document.hidden)return;
+ if(desktop()){const s=slides[cur];if(!s)return;s.querySelectorAll('video').forEach(v=>{if(!v.closest('.fan'))spin(v)});if(s.classList.contains('cover'))playFront()}
+ else document.querySelectorAll('.feed video').forEach(v=>{if(v.classList.contains('bgv')||onScreen(v))spin(v)})}
+document.addEventListener('visibilitychange',kick);addEventListener('pageshow',kick);addEventListener('load',kick);
+['pointerdown','touchstart','keydown','wheel'].forEach(t=>addEventListener(t,kick,{passive:true}));
+addEventListener('scroll',()=>{clearTimeout(kick.t);kick.t=setTimeout(kick,150)},{passive:true});
+setTimeout(kick,600);setTimeout(kick,2000);
+})();
 
-<div class="vgroup"><h3>SPEAR Summit · San Diego</h3>
-<div class="vids">
-<a class="v t-test" href="https://drive.google.com/file/d/1lluIjfa1T9rmjt63afXZok56IgBk9DrK/view" target="_blank" rel="noopener"><div class="th"><span class="tag">Testimonial</span><span class="meta">1:15 · 16:9</span><b>Dr. Jeffrey Ellenberg, DMD</b></div><div class="bd"><strong>Study:</strong> the horizontal testimonial format. Results-first story ("rankings really, really moved up") with booth and floor B-roll.</div></a>
-<a class="v t-recap" href="https://www.dropbox.com/scl/fi/fhvkalyw5f57tf4j5ih2r/Event-Recap-San-Diego-1.mp4?rlkey=553vpkag500ap5w2jwx54afyg&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Recap</span><b>Event Recap San Diego 1</b></div><div class="bd"><strong>Study:</strong> SPEAR recap structure and music pacing.</div></a>
-<a class="v t-recap" href="https://www.dropbox.com/scl/fi/h5354s6knqrozoce8zoiv/Event-Recap-San-Diego-2.mp4?rlkey=3erq24rh59lgrypwbvlzdqzrm&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Recap</span><b>Event Recap San Diego 2</b></div><div class="bd"><strong>Study:</strong> second cut of the SPEAR recap.</div></a>
-<a class="v t-brand" href="https://www.dropbox.com/scl/fi/ixrgdyarf3uuqb2qo1nqg/Brand-Footage.mp4?rlkey=7chtywqbaktz70nfhjds5qbyi&dl=0" target="_blank" rel="noopener"><div class="th"><span class="tag">Brand film</span><b>Company Brand Footage</b></div><div class="bd"><strong>Study:</strong> the B-roll they use on their website. Clean, no captions.</div></a>
-</div></div>
-</div></section>
-
-<section id="refs"><div class="wrap">
-<div class="eyebrow">07 · Partner + interview references</div>
-<h2>The look we want for partner videos</h2>
-<p class="sub">Not Media NV videos, but this is the energy Felipe wants for the partner and interview pieces we're filming now.</p>
-<div class="vids">
-<a class="v t-ref" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/AIEdp2a2ODnp285xi03z4-c/The%20Center%20of%20Dental%20Artistry%20%28Deliverables%29?rlkey=klrq4gu9pdfby9atvpakx3x70&dl=0&preview=Taylor-TOKUYAMA+INTERVIEW.mp4" target="_blank" rel="noopener"><div class="th"><span class="tag">Partner interview</span><span class="meta">1:37 · 9:16</span><b>Felipe × Taylor Nelson · Tokuyama</b></div><div class="bd"><strong>Study:</strong> two people in frame, interviewer asks quick questions, brand color card insert (Tokuyama purple), hands-on product B-roll, clean captions.</div></a>
-<a class="v t-ref" href="https://www.dropbox.com/scl/fo/q2u7vdd6cozfcv0i3fab9/ANjz1PDLTqjbd2wNKjajsMo?rlkey=klrq4gu9pdfby9atvpakx3x70&dl=0&preview=Cental+for+Dental+Artistry+-+Dr.+Chan.mp4" target="_blank" rel="noopener"><div class="th"><span class="tag">Event highlight</span><span class="meta">0:57 · 9:16</span><b>Dr. Chan · Northwest Smile Designs</b></div><div class="bd"><strong>Study:</strong> establishing sign shot, lecture, close-up hands-on work with loupes, dinner networking. A full day told in under a minute.</div></a>
-</div>
-</div></section>
-
-<footer><div class="wrap"><img src="pfm-logo-d.png" alt="Puro Flow Media">Puro Flow Media · internal editor reference for Media NV work. Questions go in #medianv-fabian. Last updated Nov 13, 2026.</div></footer>
+</script>
 </body>
 </html>
