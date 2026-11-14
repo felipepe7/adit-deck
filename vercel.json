@@ -1,6 +1,13 @@
 {
   "routes": [
     {
+      "src": "/brand/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "*"
+      },
+      "continue": true
+    },
+    {
       "src": "^/blake(/(index\\.html)?)?$",
       "missing": [
         {
