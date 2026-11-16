@@ -868,6 +868,11 @@ function mock(kind, inCard, o){
       <div class="podium"><div><span>$5,000 · 7 hero videos + 10 reels</span><b>1st</b></div><div><span>$3,500 · 3 hero videos + 10 reels</span><b>2nd</b></div><div><span>$1,500 · 1 hero video + team photos</span><b>3rd</b></div></div>
       <div class="cta">Comment CHALLENGE</div></div>`;
   }
+  if (kind === "howtowin"){
+    return `<div class="mock light">${prod}${WM}<span class="tag">Adit Review Challenge · Dec 1</span><div class="h">How to<br><em>win</em></div><div class="sub">$10,000 in custom video content for the top 3 practices</div>
+      <div class="rows"><div class="row"><span class="r">1</span><span>1 point per new Google review</span></div><div class="row"><span class="r">2</span><span>Bonus points for tagging practices</span></div><div class="row"><span class="r">3</span><span>Rankings every Monday</span></div><div class="row"><span class="r">4</span><span>Winners announced in January</span></div></div>
+      <div class="cta">Comment CHALLENGE</div><div class="slides"><i class="on"></i><i></i><i></i><i></i><i></i></div></div>`;
+  }
   if (kind === "numbers"){
     return `<div class="mock light">${prod}${WM}<span class="tag">October by the numbers</span>
       <div class="stats"><div><b>184</b><span>new Google reviews</span></div><div><b>20</b><span>practices on the final board</span></div><div><b>31</b><span>days</span></div></div>
