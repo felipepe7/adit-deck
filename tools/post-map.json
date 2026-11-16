@@ -92,16 +92,9 @@
     "https://www.instagram.com/p/DfC5L8Pz-Ma/",
     "https://facebook.com/847463824059774/posts/1695287082610773",
     "https://www.linkedin.com/feed/update/urn:li:share:7521280616416346114",
-    "https://www.instagram.com/reel/Dfkg97Birj-/",
-    "https://www.facebook.com/reel/1114506954728195/",
-    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525996939834904576",
     "https://facebook.com/847463824059774/posts/1711391524333662",
     "https://facebook.com/847463824059774/posts/1711387727667375",
-    "https://www.linkedin.com/feed/update/urn:li:share:7526316030244179969",
-    "https://www.youtube.com/watch?v=j5OyHOqrPJw",
-    "https://www.facebook.com/reel/2715650595520514/",
-    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527447135794016256",
-    "https://www.instagram.com/reel/Dfw88ZSEjG8/"
+    "https://www.linkedin.com/feed/update/urn:li:share:7526316030244179969"
   ],
   "oct-26/mon": {
     "ig": "https://www.instagram.com/p/De_BzIGlSJG/",
@@ -188,5 +181,17 @@
     "fb": "https://www.facebook.com/reel/1713063840305819/",
     "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525606074541092864",
     "yt": "https://www.youtube.com/watch?v=AlSn-4Tx4Qg"
+  },
+  "nov-9/tue": {
+    "ig": "https://www.instagram.com/reel/Dfkg97Birj-/",
+    "fb": "https://www.facebook.com/reel/1114506954728195/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525996939834904576",
+    "yt": "https://www.youtube.com/watch?v=j5OyHOqrPJw"
+  },
+  "nov-9/sat": {
+    "ig": "https://www.instagram.com/reel/Dfw88ZSEjG8/",
+    "fb": "https://www.facebook.com/reel/2715650595520514/",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527447135794016256",
+    "yt": "https://www.youtube.com/watch?v=i8jFiee34Dc"
   }
 }

@@ -1282,6 +1282,90 @@ const STATS = {
     "comments": 12,
     "shares": 1
    }
+  },
+  "nov-9/tue": {
+   "ig": {
+    "kind": "reel",
+    "url": "https://www.instagram.com/reel/Dfkg97Birj-/",
+    "at": "2026-11-10T18:11:25.000Z",
+    "views": 694,
+    "watch": 14.2,
+    "likes": 20,
+    "comments": 5,
+    "shares": 4,
+    "saves": 1,
+    "reach": 459
+   },
+   "fb": {
+    "kind": "reel",
+    "url": "https://www.facebook.com/reel/1114506954728195/",
+    "at": "2026-11-10T18:07:38.000Z",
+    "views": 40,
+    "watch": 5,
+    "likes": 1
+   },
+   "li": {
+    "kind": "post",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7525996939834904576",
+    "at": "2026-11-10T19:04:57.000Z",
+    "views": 153,
+    "impressions": 524,
+    "likes": 11,
+    "shares": 1,
+    "video": true
+   },
+   "yt": {
+    "kind": "video",
+    "url": "https://www.youtube.com/watch?v=j5OyHOqrPJw",
+    "at": "2026-11-10T21:04:26.000Z",
+    "views": 190,
+    "watch": 2,
+    "likes": 3,
+    "comments": 0
+   },
+   "total": {
+    "views": 1077,
+    "likes": 35,
+    "comments": 5,
+    "shares": 5
+   }
+  },
+  "nov-9/sat": {
+   "ig": {
+    "kind": "reel",
+    "url": "https://www.instagram.com/reel/Dfw88ZSEjG8/",
+    "at": "2026-11-15T14:06:35.000Z",
+    "views": 109,
+    "watch": 2.2,
+    "likes": 2,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "reach": 83
+   },
+   "fb": {
+    "kind": "reel",
+    "url": "https://www.facebook.com/reel/2715650595520514/",
+    "at": "2026-11-14T18:32:10.000Z",
+    "views": 60,
+    "watch": 3,
+    "likes": 2
+   },
+   "li": {
+    "kind": "post",
+    "url": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7527447135794016256",
+    "at": "2026-11-14T19:07:31.000Z",
+    "views": 72,
+    "impressions": 222,
+    "likes": 5,
+    "video": true
+   },
+   "total": {
+    "views": 241,
+    "likes": 9,
+    "comments": 0,
+    "shares": 0
+   }
   }
  },
  "groupLog": []

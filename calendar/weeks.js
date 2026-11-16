@@ -378,7 +378,7 @@ const WEEKS = [
     close: { kind: "thanks" }
   },
   {
-    id: "nov-2", n: 6, tab: "Nov 2", range: "Nov 2 to 8", state: "Planned",
+    id: "nov-2", n: 6, tab: "Nov 2", range: "Nov 2 to 8", state: "Posted",
     theme: "Waitlist Week + Josh's Playbook",
     cover: { big: "NOV 2", to: "TO NOV 8", year: "2026" },
     summary: "8 posts, two a day on Tuesday, Thursday and Friday. Josh's playbook opens every weekday, and the evening posts build the waitlist for the December challenge.",
@@ -518,11 +518,11 @@ const WEEKS = [
     }
   },
   {
-    id: "nov-9", n: 7, tab: "Nov 9", range: "Nov 9 to 15", state: "Planned",
+    id: "nov-9", n: 7, tab: "Nov 9", range: "Nov 9 to 15", state: "Posted",
     theme: "The December Challenge Goes Public",
     cover: { big: "NOV 9", to: "TO NOV 15", year: "2026" },
-    summary: "7 posts, one a day. Monday launches the December Review Challenge and Wednesday's carousel explains how to win. Both get pinned. The rest of the week is Josh in the studio, built to start conversations with dental and ortho offices.",
-    glanceNote: "This is the week the December challenge goes public: $10,000 in prizes, starts Dec 1. The launch reel and the how-it-works carousel get pinned to the top of @get_adit, so every visitor sees them first, and every comment on any post gets the waitlist DM. Josh's new posts come from the indoor studio shoot.",
+    summary: "3 posts went live: Monday's challenge launch, Cindi James's testimonial on Tuesday and the Black Friday offer with Blake on the weekend. The planned Josh studio posts moved to later weeks.",
+    glanceNote: "The December challenge went public Monday and is pinned to the top of @get_adit. Tuesday's Cindi James testimonial was the best post of the week on every platform, and the Black Friday offer with Blake closed the week with a DEMO ask.",
     media: "media/w4/",
     days: [
       { id: "mon", day: "Monday", short: "Mon", date: "11/9", status: "Posted", format: "Reel · 34s · scored to Janice (instrumental) · 8:38 AM PT · Pin",
@@ -542,107 +542,44 @@ const WEEKS = [
         manychat: "CHALLENGE (and every other comment) gets the waitlist DM: follow @get_adit, then practice type, practice name, email, current Adit client yes or no, and cell for ranking texts.",
         notes: ["v7 (Nov 9): 2nd place is now 3 hero videos + 5 reels, prize badges read 1ST, 2ND and 3RD, new music (Janice instrumental) and a custom cover with Josh, Steven, Phillip and Felipe in matching Adit blue. Reposted on Instagram at 8:38 AM PT, then Facebook 8:53, LinkedIn 9:08, YouTube Short 9:23 and TikTok 9:38, 15 minutes apart. The old Tue noon TikTok is parked as a draft so it does not double post.", "v6 (Nov 9): new prize cards. 1st: 7 hero videos (vertical + horizontal) + 10 reels for IG, FB, TikTok, YouTube and LinkedIn. 2nd: 3 hero videos + 10 reels. 3rd: 1 hero video + office and team photos. Josh's caption now says every prize is a custom video content package. Swapped into every scheduled post.", "v5 cut: the opening is now Josh in the studio (no glasses, arched wall set), then Shelley with the team waving in front of the Align My Practice booth, then Josh again, replacing the conference crowd and booth clips. Prize, how-it-works and end card motion unchanged.", "Pinned as the top-left post on Instagram right after it goes live."],
         ask: "Comment CHALLENGE" },
-      { id: "tue", day: "Tuesday", short: "Tue", date: "11/10", status: "Ready", format: "Reel · 35s · Say this, not that · 10:00 AM PT",
-        title: "Words That Hurt Case Acceptance", bucket: "Thought Leadership / Say This, Not That", video: true,
-        talent: "Josh Gosnell",
-        hook: "Doctors, these words are costing you case acceptance 🦷",
+      { id: "tue", day: "Tuesday", short: "Tue", date: "11/10", status: "Posted", format: "Reel · 75s · Testimonial · 10:00 AM PT",
+        ig: "https://www.instagram.com/reel/Dfkg97Birj-/",
+        title: "\"It's Game Changing\": Cindi James", bucket: "Testimonial / Social Proof", video: true,
+        talent: "Cindi James, Peniche & Associates (with Jeff Holt)",
+        hook: "\"It's game changing.\" 🔥",
         caption: [
-          "Don't say price, say investment · Don't say expensive, say comprehensive · Don't say cheap option, say most cost-efficient option",
-          "Don't say you need to decide today, say let's find the right next step · Don't say do you understand, say what questions can I answer for you",
-          "Words are powerful. Use them wisely 💡",
-          "🏆 PS: The Adit Review Challenge starts Dec 1 with $10,000 in prizes. Comment CHALLENGE to get on the waitlist."
+          "Cindi James, partner at Peniche & Associates, on what Adit is bringing to the industry: capturing every new patient call and bringing new patients through the door.",
+          "Big shout out to Jeff Holt for making the trip all the way from Florida 🙌🏻",
+          "🏆 The Adit Google Review Challenge starts December 1. Comment CHALLENGE below to get on the waitlist."
         ],
-        thought: "Say this, not that is our most saved format. It follows the launch with pure value, so the feed doesn't read like an ad two days in a row, and the PS keeps the challenge in front of everyone who watches.",
-        cta: "Which one does your team still say? 👇",
-        tags: "#CaseAcceptance #DentalPractice #TreatmentCoordinator #PatientCommunication #DentalOffice",
-        manychat: "Every comment gets the waitlist DM.",
-        notes: ["Josh's case acceptance cut, already finished with the waitlist sticker and end card.", "Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45, TikTok at noon."],
-        ask: "Which one does your team say?" },
-      { id: "wed", day: "Wednesday", short: "Wed", date: "11/11", status: "Ready", format: "Carousel · 4 slides + motion slide · 10:00 AM PT · Pin",
-        title: "How to Win the December Challenge", bucket: "Challenge / How It Works", mock: "december",
-        hook: "$10,000 in prizes. Here's exactly how to win 🏆",
-        caption: [
-          "Slide 1: the prizes · Slide 2: how points work (1 point per new Google review in December) · Slide 3: bonus points for tagging other practices · Slide 4: rankings every Monday, winners in January · Slide 5: the motion recap",
-          "Save this so your team knows the plan before Dec 1 📌",
-          "Comment CHALLENGE to get on the waitlist 👇"
-        ],
-        thought: "Monday says it's coming, Wednesday explains it. A carousel gets saved and shared with office managers, and pinned next to the reel it answers every question before anyone has to ask.",
-        cta: "Comment CHALLENGE and tag the practice you're going to beat 👇",
-        tags: "#AditChallenge #GoogleReviews #DentalPractice #Orthodontics #PracticeGrowth",
-        manychat: "Every comment gets the waitlist DM. Tags count toward bonus points once the tagged practice joins the waitlist.",
-        notes: ["4 static slides plus the 25s motion slide, built in Adit's brand.", "Instagram 10:00 AM PT, Facebook 10:15 (photos), LinkedIn 10:30. The motion slide doubles as a YouTube Short at 10:45 and TikTok at noon. Pin next to Monday's reel."],
-        ask: "Comment CHALLENGE + tag a practice" },
-      { id: "thu", day: "Thursday", short: "Thu", date: "11/12", status: "In edit", format: "Reel · about 30s · Fill in the blank · 10:00 AM PT",
-        title: "The After-School Rush Feels Like...", bucket: "Engagement / Fill in the Blank", slides: ["thu.jpg"],
-        talent: "Josh Gosnell",
-        hook: "Fill in the blank: the after-school rush at my office feels like ______ 😅",
-        caption: [
-          "3 PM hits, the phones light up, the waiting room fills and the front desk is running a marathon.",
-          "Josh wants to know what it feels like in YOUR office. Best answer gets featured 👇",
-          "🏆 PS: The Adit Review Challenge starts Dec 1. Comment CHALLENGE to get on the waitlist."
-        ],
-        thought: "Fill in the blank is the easiest comment anyone can leave, and every ortho and pediatric office lives this rush. The comments become our next post, and every commenter gets the waitlist DM.",
-        cta: "Fill in the blank 👇",
-        tags: "#Orthodontics #PediatricDentistry #FrontDesk #DentalOffice #OfficeLife",
-        manychat: "Every comment gets the waitlist DM.",
-        notes: ["From the indoor studio shoot (C7661), no glasses. Editor: captions, the blank on screen, waitlist sticker and end card.", "Instagram 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45, TikTok at noon."],
-        ask: "Fill in the blank" },
-      { id: "fri", day: "Friday", short: "Fri", date: "11/13", status: "Waiting on Breeze", format: "Reel · about 45s · Winner story · 10:00 AM PT",
-        title: "What Winning Felt Like: Breeze Orthodontics", bucket: "Challenge / Winner Story", slides: ["fri.jpg"],
-        talent: "Dr. Rita Chuang (backup: Josh Gosnell)",
-        hook: "She got 40 new Google reviews in one month. Here's how 🥇",
-        caption: [
-          "Dr. Rita Chuang and the Breeze Orthodontics team won October's Adit Review Challenge with 46 points.",
-          "What worked, what didn't, and why reviews matter more than ever, in her words.",
-          "🏆 The next challenge starts Dec 1. Comment CHALLENGE to get on the waitlist."
-        ],
-        thought: "A real winner telling the story is the strongest proof the challenge works. Posted as a collab with Breeze so it reaches her followers too.",
+        thought: "A real partner, in her own words, the day after the launch. Social proof from someone the industry knows does what no Josh talking head can, and it became the best post of the week on every platform.",
         cta: "Comment CHALLENGE to get on the waitlist 👇",
-        tags: "#AditChallenge #Orthodontics #GoogleReviews #PracticeGrowth",
+        tags: "#Adit #DentalPractice #Orthodontics #PracticeGrowth #NewPatients #AditChallenge",
         manychat: "Every comment gets the waitlist DM.",
-        notes: ["Needs Dr. Rita's self-recorded video by Wednesday so it can be cut in time.", "Backup if it isn't in: Josh in the studio on new patient consult no-show rates (C7657), with the same waitlist ending."],
+        notes: ["Swapped in for Josh's case acceptance words, which moves to a later week.", "Instagram and Facebook 10:00 AM PT, LinkedIn 11:00, YouTube Short 1:00 PM. TikTok flagged it as spam risk and did not publish."],
         ask: "Comment CHALLENGE" },
-      { id: "sat", day: "Saturday", short: "Sat", date: "11/14", status: "In edit", format: "Reel · about 30s · Question · 9:00 AM PT",
-        title: "The Line That Closes a Hesitant Parent", bucket: "Engagement / Ortho Question", slides: ["sat.jpg"],
-        talent: "Josh Gosnell",
-        hook: "Treatment coordinators: what's the best thing you've ever said to close a hesitant parent? 💬",
+      { id: "sat", day: "Saturday", short: "Sat", date: "11/14", status: "Posted", format: "Reel · Black Friday offer · Collab with Blake Farrow · 10:30 AM PT",
+        ig: "https://www.instagram.com/reel/Dfw88ZSEjG8/",
+        title: "Black Friday: A Gift That Pays You Back", bucket: "Offer / Black Friday", cover: "sat.jpg",
+        talent: "Blake Farrow",
+        hook: "Doctors, give your practice a gift that actually pays you back 🎁",
         caption: [
-          "Every TC has that one line that turns \"we'll think about it\" into a start.",
-          "Drop yours below. We're collecting the best ones for a TC cheat sheet 📋",
-          "🏆 PS: The Adit Review Challenge starts Dec 1. Comment CHALLENGE to get on the waitlist."
+          "Adit answers the calls your front desk can't get to, texts patients automatically, fills open spots on your schedule and shows you how your office is really running, all in one place.",
+          "🔥 Black Friday: up to 40% off your first year + a $200 Amazon gift card",
+          "👇 Comment DEMO and we'll send you the link to grab your spot. It takes 60 seconds. Offer ends Nov 30, 2026."
         ],
-        thought: "Weekend posts that ask for a story get long comments, and TCs love sharing their best line. The answers turn into a carousel later in the month.",
-        cta: "Drop your best line 👇",
-        tags: "#TreatmentCoordinator #Orthodontics #CaseAcceptance #OrthoLife",
-        manychat: "Every comment gets the waitlist DM.",
-        notes: ["From the indoor studio shoot (C7666), no glasses. Editor: captions, question card, waitlist end card.", "Instagram 9:00 AM PT, Facebook 9:15, TikTok at noon. Skip LinkedIn on weekends."],
-        ask: "Drop your best line" },
-      { id: "sun", day: "Sunday", short: "Sun", date: "11/15", status: "In edit", format: "Reel · about 30s · Honest answers only · 9:00 AM PT",
-        title: "How Many Rings Before Pickup?", bucket: "Engagement / Ortho Question", slides: ["sun.jpg"],
-        talent: "Josh Gosnell",
-        hook: "Honest answers only: from 3 to 5 PM, how many rings before someone picks up at YOUR office? ☎️",
-        caption: [
-          "The after-school window is when new patients call, and when the front desk is busiest.",
-          "Be honest. 1 ring? 4? Voicemail? 👀",
-          "🏆 PS: The Adit Review Challenge starts Dec 1. Comment CHALLENGE to get on the waitlist."
-        ],
-        thought: "A number is the easiest answer to leave, and the honest ones start the conversation. Missed calls in that window are exactly what Adit fixes, and Josh never has to say it.",
-        cta: "Drop your number 👇",
-        tags: "#Orthodontics #FrontDesk #MissedCalls #DentalOffice #PatientExperience",
-        manychat: "Every comment gets the waitlist DM.",
-        notes: ["From the indoor studio shoot (C7663), no glasses. Editor: captions, ring counter graphic, waitlist end card.", "Instagram 9:00 AM PT, Facebook 9:15, TikTok at noon. Skip LinkedIn on weekends."],
-        ask: "Drop your number" }
+        thought: "The Black Friday push, led by Blake for optometry and dental. A clear offer, one ask (comment DEMO), and a deadline, so it drives demos instead of likes.",
+        cta: "Comment DEMO 👇",
+        tags: "#optometry #optometrist #eyecare #dentist #dentalpractice #practicegrowth #frontdesk #blackfriday",
+        manychat: "DEMO comments get the demo booking link by DM.",
+        notes: ["Facebook 10:30 AM PT, LinkedIn and YouTube Short 11:00 on Saturday. Instagram went live as a collab with @blakefarrowyo Sunday 6:00 AM PT.", "Friday's optometry \"2027 doesn't have to look like this year\" reel went up on Instagram and was taken down, so it is not counted here.", "TikTok flagged it as spam risk and did not publish."],
+        ask: "Comment DEMO" }
     ],
-    close: {
-      kind: "asks",
-      title: "What we need from the Adit team",
-      items: [
-        { k: "Launch day", v: "Monday at 10:00 AM PT the challenge reel goes live. Please share it to your own stories and reshare it in the Facebook groups you're in, so the first hour is strong." },
-        { k: "20 seconds", v: "From Monday, every demo and sales call ends with the challenge: comment CHALLENGE on @get_adit or follow and DM it to get on the waitlist." },
-        { k: "Winner stories", v: "Breeze, Cook and Canton each record a short video in their own office: what the challenge was like, what worked and why reviews matter. Breeze's is needed by Wednesday for Friday's post." },
-        { k: "Prizes", v: "Who on the Adit side sends October's gift cards ($1,000, $500, $250), and when? The winners are asking." }
-      ],
-      next: "Next week: Facebook groups round 2 starts Nov 16, the first doctor influencer collabs, and a 2 weeks to go countdown."
-    }
+    learnings: [
+      { k: "1,077", v: "views for Cindi James's testimonial across four platforms, the best of the week. A real partner on camera beat every Josh post." },
+      { k: "14.2s", v: "average Instagram watch on Cindi, more than double the launch reel (6.6s). People stay for real stories." },
+      { k: "TikTok", v: "flagged every post this week as spam risk, so none published there. The account needs a native, non-promo post to reset." }
+    ],
+    close: { kind: "thanks" }
   }
 ];
