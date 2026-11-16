@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book Larry Rizzo | Media NV</title>
+<meta name="description" content="Book time with Larry Rizzo, Sales Director at Media NV: a 15 minute quick connect, a 30 minute practice growth call, a 60 minute growth strategy session or a podcast. Plus your AAPPM pickleball photos or a custom reel.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Book time with Larry Rizzo, Media NV">
+<meta property="og:description" content="Practice growth calls, strategy sessions and podcast bookings with Larry Rizzo, Sales Director at Media NV.">
+<meta property="og:image" content="https://booklarry.puroflowmedia.com/og.jpg">
+<meta property="og:url" content="https://booklarry.puroflowmedia.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="orbitron.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="montserrat.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face{font-family:Orbitron;src:url(orbitron.woff2) format("woff2");font-weight:400 900;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(montserrat.woff2) format("woff2");font-weight:100 900;font-display:swap}
+  :root{
+    --black:#0A0A0A; --charcoal:#1A1A1A; --steel:#555555; --off:#F5F5F5; --white:#FFFFFF;
+    --deep:#1E3A5F; --flow:#5286C2; --mist:#9DB8E6;
+    --wall:#EEF0F3; --hair:rgba(10,10,10,.08);
+    --shadow:0 1px 2px rgba(10,10,10,.05),0 10px 30px rgba(30,58,95,.10);
+    --display:Orbitron,"Eurostile","Arial Black",sans-serif;
+    --body:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body{background:var(--wall);color:var(--black);font-family:var(--body);line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--flow);outline-offset:3px;border-radius:12px}
+  .in{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+  .band-dark{background:var(--black);color:var(--off);
+    background-image:radial-gradient(800px 420px at 50% -80px, rgba(30,58,95,.65), transparent 70%);background-repeat:no-repeat}
+  .hero{background-image:radial-gradient(720px 420px at 50% calc(min(37.5vw,300px) + 300px), rgba(30,58,95,.45), transparent 70%)}
+  .banner{position:relative;aspect-ratio:16/6;max-height:300px;width:100%;overflow:hidden;background:var(--black)}
+  .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.15) 0%,rgba(10,10,10,.55) 55%,rgba(10,10,10,.75) 100%);z-index:1}
+  .banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,rgba(10,10,10,0) 0%,rgba(10,10,10,.82) 72%,#0A0A0A 100%);z-index:1}
+  .btxt{position:absolute;z-index:2;right:max(12px,5vw);top:44%;transform:translateY(-50%);width:min(56%,430px);text-align:center;color:var(--white)}
+  .blogo{display:block;width:84%;max-width:300px;margin:0 auto}
+  .blogo img{display:block;width:100%;height:auto}
+  .brule{height:2px;width:52%;margin:clamp(7px,1.8vw,14px) auto;background:linear-gradient(90deg,transparent,var(--flow),transparent)}
+  .bname{font-family:var(--display);font-weight:800;letter-spacing:.08em;font-size:clamp(11px,3.3vw,23px);line-height:1.1}
+  .btitle{font-weight:600;letter-spacing:.2em;font-size:clamp(6.5px,1.75vw,11.5px);color:rgba(245,245,245,.8);margin-top:clamp(3px,.9vw,7px);text-transform:uppercase}
+  .profile{position:relative;padding-bottom:34px}
+  .avatar{--av:clamp(118px,34vw,164px);position:relative;z-index:3;display:block;width:var(--av);height:var(--av);margin-top:calc(var(--av) / -2);border-radius:50%;object-fit:cover;
+    border:4px solid var(--black);background:var(--charcoal);box-shadow:0 0 0 2px rgba(82,134,194,.75),0 14px 34px rgba(0,0,0,.55)}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(24px,7vw,32px);line-height:1.15;letter-spacing:.02em;margin:16px 0 8px;color:var(--white);text-wrap:balance}
+  .cred{display:inline-block;vertical-align:middle;position:relative;top:-3px;margin-left:4px;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.16em;
+    padding:5px 9px;border-radius:999px;border:1px solid rgba(82,134,194,.65);color:var(--mist)}
+  .headline{font-size:15px;line-height:1.45;color:rgba(245,245,245,.92)}
+  .meta,.loc{font-size:13.5px;color:rgba(245,245,245,.66);margin-top:8px}
+  .loc{margin-top:3px}
+  .hero a.tx,.lede a{color:var(--mist);text-decoration:underline;text-decoration-color:rgba(157,184,230,.45);text-underline-offset:3px}
+  .hero a.tx:hover,.lede a:hover{color:var(--white);text-decoration-color:var(--flow)}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .pill{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--off);
+    background:rgba(255,255,255,.05);border:1px solid rgba(245,245,245,.16);transition:border-color .2s ease, background .2s ease}
+  .pill svg{width:15px;height:15px;flex:none;color:var(--flow)}
+  .pill:hover{border-color:var(--flow);background:rgba(82,134,194,.14)}
+  .hbtns{display:flex;gap:10px;margin-top:18px}
+  .hbtn{flex:1;display:flex;justify-content:center;align-items:center;gap:8px;text-align:center;min-height:50px;padding:10px 12px;border-radius:14px;font-weight:700;font-size:15px;
+    color:var(--white);border:1.5px solid rgba(245,245,245,.3);background:none;font-family:inherit;cursor:pointer}
+  .hbtn.primary{background:var(--flow);border-color:var(--flow)}
+  .hbtn:hover{border-color:var(--mist)}
+  .lede{color:rgba(245,245,245,.68);font-size:15px;margin-top:18px}
+
+  main .in{padding-block:8px 44px}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);font-weight:700;margin:34px 0 14px;display:flex;align-items:center;gap:10px;scroll-margin-top:16px}
+  .label::after{content:"";flex:1;height:1px;background:var(--hair)}
+
+  /* AAPPM photos card */
+  .photos{display:grid;grid-template-columns:40% 1fr;border-radius:20px;overflow:hidden;background:var(--black);color:var(--white);box-shadow:var(--shadow);
+    background-image:radial-gradient(420px 220px at 100% 0, rgba(82,134,194,.38), transparent 70%),radial-gradient(380px 220px at 0 100%, rgba(30,58,95,.7), transparent 70%)}
+  .photos .vmedia{aspect-ratio:auto;min-height:240px}
+  .photos .pbody{padding:18px 16px;display:flex;flex-direction:column;justify-content:center}
+  .photos .when{align-self:flex-start;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--flow);color:var(--white);border-radius:999px;padding:6px 10px}
+  .photos h2{font-family:var(--display);font-weight:800;font-size:clamp(16px,4.6vw,21px);line-height:1.22;letter-spacing:.01em;margin:12px 0 6px;text-wrap:balance}
+  .photos p{color:rgba(245,245,245,.72);font-size:13px;margin-bottom:14px}
+  .photos .cta{background:var(--white);color:var(--black);border:0;font-family:inherit;cursor:pointer;width:100%}
+  .photos .cta:hover{background:var(--flow);color:var(--white)}
+
+  .book{display:grid;gap:16px;grid-template-columns:1fr}
+  .vcard{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--white);box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease}
+  .vcard:hover{box-shadow:0 1px 2px rgba(10,10,10,.06),0 16px 40px rgba(30,58,95,.18)}
+  .vcard:active{transform:scale(.985)}
+  .vmedia{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--charcoal)}
+  .vmedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .vmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.35) 0%,rgba(10,10,10,0) 26%)}
+  .vtop{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:2}
+  .chip{white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:7px 11px;border-radius:999px;color:var(--white);
+    background:rgba(10,10,10,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2)}
+  .chip.dur{background:var(--flow);border-color:transparent}
+  .vbody{padding:18px 18px 20px}
+  .vbody h2{font-family:var(--display);font-weight:800;font-size:clamp(18px,5.2vw,23px);line-height:1.2;letter-spacing:.02em;text-wrap:balance}
+  .vbody p{color:var(--steel);font-size:14px;margin:8px 0 16px}
+  .cta{display:flex;justify-content:center;align-items:center;gap:10px;background:var(--black);color:var(--white);font-weight:700;font-size:15px;min-height:50px;padding:12px 18px;border-radius:14px}
+  .vcard:hover .cta{background:var(--deep)}
+  .cta svg{width:16px;height:16px}
+  .vcard.wide{flex-direction:row}
+  .vcard.wide .vmedia{flex:0 0 40%;aspect-ratio:4/5}
+  .vcard.wide .vtop{justify-content:flex-end}
+  .vcard.wide .vbody{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:16px}
+  .vcard.wide .vbody h2{font-size:clamp(15px,4.4vw,20px)}
+  .vcard.wide .vbody p{font-size:13px;margin:6px 0 14px}
+  .vcard.wide .cta{min-height:44px;font-size:14px;padding:10px 14px}
+  .eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--flow);margin-bottom:6px}
+  .note{font-size:13px;color:var(--steel);margin-top:14px;padding:12px 14px;border-left:3px solid var(--flow);background:rgba(82,134,194,.10);border-radius:0 10px 10px 0}
+  .note a,.panel a{color:var(--deep);font-weight:600;text-decoration:underline;text-decoration-color:rgba(30,58,95,.3);text-underline-offset:3px}
+
+  .panel{background:var(--white);border-radius:20px;padding:22px 20px;box-shadow:var(--shadow)}
+  .panel h3{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:.02em;margin-bottom:8px;text-wrap:balance}
+  .panel p{color:var(--steel);font-size:14px}
+  .facts{list-style:none;display:grid;gap:10px;margin-top:16px}
+  .facts li{display:flex;gap:12px;font-size:14px}
+  .facts li::before{content:"";flex:none;width:8px;height:8px;margin-top:7px;border-radius:50%;background:var(--flow)}
+  .facts li:nth-child(even)::before{background:var(--deep)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:16px}
+  .stats div{background:var(--wall);border-radius:12px;padding:10px 4px;text-align:center}
+  .stats b{display:block;font-family:var(--display);font-size:17px;color:var(--flow)}
+  .stats span{font-size:10.5px;color:var(--steel);line-height:1.25;display:block;margin-top:3px}
+
+  .list{display:grid;gap:10px}
+  .item{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--white);border-radius:16px;box-shadow:0 1px 2px rgba(10,10,10,.04)}
+  .item > div:nth-child(2){min-width:0}
+  .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(82,134,194,.12);color:var(--deep);flex:none}
+  .ico svg{width:20px;height:20px}
+  .item small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+  .item span{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+  .item .arr{margin-left:auto;color:#9AA3AE;font-size:20px}
+
+  .how-band .in{padding-block:36px 40px}
+  .how-band .label{color:rgba(245,245,245,.55);margin-top:0}
+  .how-band .label::after{background:rgba(245,245,245,.12)}
+  .how{counter-reset:s;display:grid;gap:12px}
+  .how li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(245,245,245,.85)}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:12px;width:26px;height:26px;flex:none;
+    border-radius:8px;display:grid;place-items:center;background:rgba(82,134,194,.2);color:var(--flow)}
+  footer{text-align:center;margin-top:36px;padding-top:26px;border-top:1px solid rgba(245,245,245,.12)}
+  footer .motto{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:.04em;line-height:1.4}
+  footer .motto span{color:var(--flow)}
+  footer small{display:block;margin-top:12px;font-size:10px;letter-spacing:.3em;color:rgba(245,245,245,.5)}
+
+  /* photo access sheet */
+  dialog.sheet{border:0;padding:0;margin:auto;width:min(520px,calc(100% - 24px));max-height:calc(100% - 24px);border-radius:22px;background:var(--black);color:var(--off);
+    box-shadow:0 30px 80px rgba(0,0,0,.6);overflow:auto}
+  dialog.sheet::backdrop{background:rgba(10,10,10,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+  .sheet .shead{position:relative;aspect-ratio:16/7;overflow:hidden;background:var(--charcoal)}
+  .sheet .shead img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.8}
+  .sheet .shead::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.1),#0A0A0A)}
+  .sheet .x{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(10,10,10,.55);color:var(--white);
+    font-size:20px;line-height:1;cursor:pointer}
+  .sheet .sbody{padding:4px 20px 22px}
+  .sheet h3{font-family:var(--display);font-weight:800;font-size:clamp(18px,5vw,22px);line-height:1.2;letter-spacing:.01em;text-wrap:balance}
+  .sheet .sub{color:rgba(245,245,245,.7);font-size:14px;margin:8px 0 16px}
+  .field{display:block;margin-bottom:12px}
+  .field span{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(245,245,245,.6);margin-bottom:6px}
+  .field input{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:1.5px solid rgba(245,245,245,.18);background:rgba(255,255,255,.06);color:var(--white);
+    font-family:inherit;font-size:16px}
+  .field input:focus{outline:none;border-color:var(--flow);background:rgba(82,134,194,.12)}
+  .field input[aria-invalid="true"]{border-color:#E8A33D}
+  .reel{display:flex;gap:12px;align-items:flex-start;margin:4px 0 10px;padding:12px 14px;border-radius:12px;border:1.5px solid rgba(82,134,194,.45);background:rgba(82,134,194,.1);cursor:pointer}
+  .reel input{width:20px;height:20px;margin-top:2px;accent-color:#5286C2;flex:none}
+  .reel b{display:block;font-size:14px;color:var(--white)}
+  .reel small{display:block;font-size:12.5px;color:rgba(245,245,245,.65);margin-top:2px}
+  .err{min-height:18px;font-size:13px;color:#E8A33D;margin:2px 0 8px}
+  .sheet .go{width:100%;border:0;cursor:pointer;font-family:inherit;background:var(--flow)}
+  .sheet .go:hover{background:var(--deep)}
+  .sheet .go[disabled]{opacity:.6;cursor:wait}
+  .fine{font-size:11.5px;color:rgba(245,245,245,.5);margin-top:12px;text-align:center}
+  .done{text-align:center;padding:8px 0 4px}
+  .done .pin{display:inline-block;font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:.3em;padding:12px 18px 12px 26px;border-radius:14px;margin:10px 0 14px;
+    background:rgba(82,134,194,.16);border:1px solid rgba(82,134,194,.5);color:var(--white)}
+  .done p{color:rgba(245,245,245,.75);font-size:14px}
+  .done .cta{background:var(--white);color:var(--black);margin-top:16px}
+  .done .cta:hover{background:var(--flow);color:var(--white)}
+
+  @media (min-width:600px){ .vcard.wide .vmedia{flex-basis:34%} .chip{font-size:10px;letter-spacing:.1em;padding:6px 9px} .vtop{top:10px;left:10px;right:10px} }
+  @media (prefers-reduced-motion:reduce){ .vcard,.pill{transition:none} html{scroll-behavior:auto} }
+</style>
+</head>
+<body>
+
+<header class="hero band-dark">
+  <div class="banner">
+    <video src="media/banner.mp4" poster="media/banner.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="btxt">
+      <a class="blogo" href="https://www.medianv.com/" target="_blank" rel="noopener"><img src="medianv-logo-white.svg" alt="Media NV" width="5520" height="1260"></a>
+      <div class="brule"></div>
+      <div class="bname">LARRY RIZZO</div>
+      <div class="btitle">Sales Director · Exhibits</div>
+    </div>
+  </div>
+  <div class="in profile">
+    <img class="avatar" src="larry.jpg" alt="Larry Rizzo, Sales Director at Media NV" width="480" height="480">
+    <h1>Larry Rizzo <span class="cred">MEDIA NV</span></h1>
+    <p class="headline">Sales Director and Exhibits Coordinator at <a class="tx" href="https://www.medianv.com/" target="_blank" rel="noopener">Media NV</a> | Helping private practices turn their website, Google and reviews into new patients</p>
+    <p class="meta">1,200+ healthcare practices signed · 200+ medical conferences · Former Senior Sales Director at Doctor Multimedia</p>
+    <p class="loc">San Diego, California · Serving practices across the US and Canada</p>
+    <div class="pills">
+      <a class="pill" href="https://www.linkedin.com/in/lawrence-rizzo-3b12b763/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+        LinkedIn
+      </a>
+      <a class="pill" href="https://www.medianv.com/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        medianv.com
+      </a>
+      <a class="pill" href="https://www.instagram.com/la_riz/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @la_riz
+      </a>
+    </div>
+    <div class="hbtns">
+      <a class="hbtn primary" href="#book">Book a call</a>
+      <button class="hbtn" type="button" data-photos>📸 Photos or a custom reel</button>
+    </div>
+    <p class="lede">Larry has spent years on the conference floor with private practice owners: dental, podiatry, chiropractic, aesthetics, optometry and more. Now at <a href="https://www.medianv.com/" target="_blank" rel="noopener">Media NV</a>, he helps practices turn their website, Google profile, reviews, ads and AI search into a steady flow of new patients, with a team that has served 1,000+ practices.</p>
+  </div>
+</header>
+
+<main>
+  <div class="in">
+    <div class="label" id="photos">AAPPM Pickleball Tournament · From Media NV</div>
+    <section class="photos">
+      <div class="vmedia">
+        <video src="media/photos.mp4" poster="media/photos.jpg" autoplay muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="pbody">
+        <span class="when">236 photos</span>
+        <h2>Your photos or a custom reel, from Media NV</h2>
+        <p>Every game, the podium, the drone shots and the conference. Want a custom reel of you on the court? Media NV will have one made for you. Enter your info and the gallery opens right away.</p>
+        <button class="cta" type="button" data-photos>Get my photos or reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </section>
+
+    <div class="label" id="book">Book time with Larry</div>
+    <section class="book">
+      <a class="vcard wide" href="https://calendar.app.google/LdptbHz5S4WRtvWh7" target="_blank" rel="noopener" aria-label="Book a 15 minute Quick Connect with Mark">
+        <div class="vmedia">
+          <video data-src="media/c15.mp4" poster="media/c15.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip dur">15 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Quick Connect</div>
+          <h2>Is Media NV the right fit?</h2>
+          <p>Meet Larry, share where your practice is today, and find out if Media NV can bring you more new patients.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="vcard wide" href="https://calendar.app.google/MYsauw3xvtS5pt4y8" target="_blank" rel="noopener" aria-label="Book a 30 minute Practice Growth Call with Mark">
+        <div class="vmedia">
+          <video data-src="media/c30.mp4" poster="media/c30.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip dur">30 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Practice Growth Call</div>
+          <h2>Your website, Google and ads, reviewed</h2>
+          <p>Walk through what's working and what isn't, and leave with a clear plan to bring in more new patients every month.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="vcard wide" href="https://calendar.app.google/dY9Q7gaRPcM5Vp8Y9" target="_blank" rel="noopener" aria-label="Book a 60 minute Practice Growth Strategy session with Mark">
+        <div class="vmedia">
+          <video data-src="media/c60.mp4" poster="media/c60.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip dur">60 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Growth Strategy Session</div>
+          <h2>A 90 day plan for your practice</h2>
+          <p>Larry reviews your website, Google Business Profile, reviews, ads and AI search visibility, then maps out your growth plan live.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+    <p class="note">Calls are on Google Meet. Times show in your own time zone. Fill out the short form so Larry comes prepared.</p>
+
+    <div class="label" id="podcast">Podcast with Larry</div>
+    <section class="book">
+      <a class="vcard wide" href="https://calendar.app.google/ywymLAX81XLmpdQx5" target="_blank" rel="noopener" aria-label="Book Larry as a podcast guest">
+        <div class="vmedia">
+          <video data-src="media/cpod.mp4" poster="media/cpod.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip dur">60 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Podcast Guest</div>
+          <h2>Pull up a chair with Larry</h2>
+          <p>For podcast hosts in healthcare and practice growth. Larry has signed 1,200+ practices and talks patient acquisition, Google rankings, reviews and what top practices do differently.</p>
+          <span class="cta">Book a recording date <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+
+    <div class="label">About Larry</div>
+    <section class="panel">
+      <h3>A career built on the conference floor</h3>
+      <p>Larry started as an SDR, earned AE in his first month and grew into Senior Sales Director, signing more than 1,200 private practice healthcare facilities and averaging nearly 20 new accounts a month. He has worked 200+ medical conferences across dental, aesthetics, chiropractic, podiatry, naturopathic medicine and optometry, and he speaks and trains sales teams. Before sales, he taught high school and led outdoor leadership programs at UC San Diego.</p>
+      <ul class="facts">
+        <li><span>Sales Director and Exhibits Coordinator at <a href="https://www.medianv.com/" target="_blank" rel="noopener">Media NV</a> since November 2025</span></li>
+        <li><span>7+ years at Doctor Multimedia, rising from SDR to Senior Sales Director</span></li>
+        <li><span>Top rep in new accounts, total units and revenue from 2020 to 2025</span></li>
+        <li><span>Speaker at medical conferences and trainer for in-office and remote sales teams</span></li>
+        <li><span>Based in San Diego, California</span></li>
+      </ul>
+      <div class="stats" aria-label="Media NV by the numbers">
+        <div><b>12+</b><span>years in practice marketing</span></div>
+        <div><b>1K+</b><span>practices served</span></div>
+        <div><b>$50M+</b><span>revenue generated</span></div>
+        <div><b>100%</b><span>client retention</span></div>
+      </div>
+      <p class="note" style="margin-top:16px">Media NV numbers from <a href="https://www.medianv.com/" target="_blank" rel="noopener">medianv.com</a>. Services: SEO and AI search, websites, PPC, social media, review generation, front desk coaching, video and photography.</p>
+    </section>
+
+    <div class="label">Connect</div>
+    <section class="list">
+      <a class="item" href="https://www.linkedin.com/in/lawrence-rizzo-3b12b763/" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></div>
+        <div><small>Larry on LinkedIn</small><span>Lawrence Rizzo</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="mailto:lawrence@medianv.com">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <div><small>Email Larry</small><span>lawrence@medianv.com</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="https://www.medianv.com/" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <div><small>Media NV</small><span>medianv.com</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="https://www.instagram.com/medianvmarketing/" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+        <div><small>Media NV on Instagram</small><span>@medianvmarketing</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="https://www.instagram.com/la_riz/" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+        <div><small>Larry on Instagram</small><span>@la_riz</span></div><div class="arr">›</div>
+      </a>
+    </section>
+  </div>
+</main>
+
+<section class="band-dark how-band">
+  <div class="in">
+    <div class="label">How it works</div>
+    <ol class="how">
+      <li>Pick the option that fits: a quick connect, a practice growth call, a strategy session or a podcast recording.</li>
+      <li>Fill out the short form so Larry knows your practice and what you want to cover.</li>
+      <li>You get a calendar invite with a Google Meet link. Join from a quiet spot where you can focus.</li>
+    </ol>
+    <footer>
+      <div class="motto">More new patients, <span>every month.</span></div>
+      <small>LARRY RIZZO · MEDIA NV</small>
+    </footer>
+  </div>
+</section>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="shead"><img src="media/photos.jpg" alt=""><button class="x" type="button" aria-label="Close" data-close>×</button></div>
+  <div class="sbody">
+    <form id="pform" novalidate>
+      <h3 id="sheetTitle">Your AAPPM photos or a custom reel 📸</h3>
+      <p class="sub">236 photos from the tournament and the conference, plus a custom reel made for you on behalf of Media NV. Tell us where to send it and the gallery opens right away.</p>
+      <label class="field"><span>Full name</span><input name="name" autocomplete="name" required></label>
+      <label class="field"><span>Cell phone</span><input name="cell" type="tel" inputmode="tel" autocomplete="tel" placeholder="(555) 555-5555" required></label>
+      <label class="field"><span>Email</span><input name="email" type="email" inputmode="email" autocomplete="email" required></label>
+      <label class="field"><span>Practice or company name or website</span><input name="practice" autocomplete="organization" placeholder="Smith Foot &amp; Ankle or smithfoot.com" required></label>
+      <label class="reel"><input type="checkbox" name="reel" value="yes" checked><span><b>🎬 Make me a custom reel too</b><small>Media NV will have a short reel of you made from the day's footage</small></span></label>
+      <p class="err" id="perr" role="alert"></p>
+      <button class="cta go" type="submit">Open my photos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      <p class="fine">Your info goes to Larry and the Media NV team. We'll never sell it.</p>
+    </form>
+    <div class="done" id="pdone" hidden>
+      <h3>You're in! 🎉</h3>
+      <p>Your download PIN is</p>
+      <div class="pin">4658</div>
+      <p>Enter it in the gallery when it asks, to download your favorites in full resolution.</p>
+      <a class="cta" id="pgo" href="https://puroflowmedia.pixieset.com/podiatrypickleball/" target="_blank" rel="noopener">Open the gallery <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</dialog>
+
+<script>
+  (function(){
+    var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    /* card videos: load and play only when on screen */
+    var lazy=[].slice.call(document.querySelectorAll('video[data-src]'));
+    function wake(v){ if(!v.src){ v.src=v.getAttribute('data-src'); } if(!reduce){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} } }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ wake(e.target); } else { e.target.pause(); } }); },{rootMargin:'200px 0px'});
+      lazy.forEach(function(v){ io.observe(v); });
+    } else { lazy.forEach(wake); }
+    var vids=[].slice.call(document.querySelectorAll('video'));
+    vids.forEach(function(v){ if(reduce){ v.removeAttribute('autoplay'); v.pause(); } });
+    document.addEventListener('visibilitychange',function(){
+      if(!document.hidden && !reduce){ vids.forEach(function(v){ if(v.src && v.getBoundingClientRect().top < innerHeight){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} } }); }
+    });
+
+    /* photo access */
+    var GALLERY='https://puroflowmedia.pixieset.com/podiatrypickleball/';
+    var FORM='https://docs.google.com/forms/d/e/1FAIpQLSdhI7ub7uJF2drbIimd6qFmnzacyU-fds0KuDQLqFOQg4DwCw/formResponse';
+    var IDS={name:'entry.1085987007',cell:'entry.1218226325',email:'entry.1624045767',practice:'entry.1600833402',reel:'entry.1658915577'};
+    var sheet=document.getElementById('sheet'), form=document.getElementById('pform'), done=document.getElementById('pdone'), err=document.getElementById('perr');
+    function open(){ var had=false; try{ had=localStorage.getItem('mnv-aappm')==='1'; }catch(e){}
+      if(had){ form.hidden=true; done.hidden=false; }
+      if(sheet.showModal){ sheet.showModal(); } else { sheet.setAttribute('open',''); } }
+    function close(){ if(sheet.close){ sheet.close(); } else { sheet.removeAttribute('open'); } }
+    [].forEach.call(document.querySelectorAll('[data-photos]'),function(b){ b.addEventListener('click',open); });
+    sheet.querySelector('[data-close]').addEventListener('click',close);
+    sheet.addEventListener('click',function(e){ if(e.target===sheet){ close(); } });
+
+    function bad(input,msg){ input.setAttribute('aria-invalid','true'); err.textContent=msg; input.focus(); return false; }
+    form.addEventListener('submit',function(e){
+      e.preventDefault(); err.textContent='';
+      [].forEach.call(form.elements,function(el){ el.removeAttribute && el.removeAttribute('aria-invalid'); });
+      var f=form.elements, name=f.name.value.trim(), cell=f.cell.value.trim(), email=f.email.value.trim(), practice=f.practice.value.trim(), reel=f.reel.checked;
+      if(!name) return bad(f.name,'Add your name.');
+      if(cell.replace(/\D/g,'').length<10) return bad(f.cell,'Add a cell number we can text, with area code.');
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return bad(f.email,'Add a valid email.');
+      if(!practice) return bad(f.practice,'Add your practice or company name or website.');
+      var btn=form.querySelector('.go'); btn.disabled=true; btn.firstChild.textContent='Opening your photos… ';
+      var data=new FormData();
+      data.append(IDS.name,name); data.append(IDS.cell,cell); data.append(IDS.email,email); data.append(IDS.practice,practice); data.append(IDS.reel, reel ? 'Custom reel: YES' : 'Custom reel: no');
+      var finish=function(){ try{ localStorage.setItem('mnv-aappm','1'); }catch(x){} form.hidden=true; done.hidden=false;
+        setTimeout(function(){ window.location.href=GALLERY; },2600); };
+      fetch(FORM,{method:'POST',mode:'no-cors',body:data}).then(finish,finish);
+    });
+  })();
+</script>
+</body>
+</html>
