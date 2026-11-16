@@ -271,6 +271,26 @@
       "has": [
         {
           "type": "host",
+          "value": "bookmark.puroflowmedia.com"
+        }
+      ],
+      "dest": "/mark/index.html"
+    },
+    {
+      "src": "^/(?!mark/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookmark.puroflowmedia.com"
+        }
+      ],
+      "dest": "/mark/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
           "value": "bookshelly.puroflowmedia.com"
         }
       ],
