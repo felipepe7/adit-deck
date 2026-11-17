@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Media;Puro Flow;;;
+FN:Puro Flow Media
+ORG:Puro Flow Media
+TITLE:Cinematic content, personal brand and growth
+EMAIL;TYPE=WORK,INTERNET:felipe@puroflowmedia.com
+EMAIL;TYPE=WORK,INTERNET:adrian@puroflowmedia.com
+URL:https://puroflowmedia.com
+URL;TYPE=Booking:https://calendar.app.google/qAi9qbfBRyfU383NA
+X-SOCIALPROFILE;TYPE=instagram:https://www.instagram.com/puroflowmedia/
+ADR;TYPE=WORK:;;;San Diego;CA;;USA
+NOTE:Quick questions: message us in your Slack channel. Book a call or podcast: https://book.puroflowmedia.com
+END:VCARD

@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Puro Flow Media | Connect</title>
+<meta name="description" content="Book a call or a podcast recording, send a quick question, or save our contact. Puro Flow Media, San Diego.">
+<meta name="theme-color" content="#0A0A0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Puro Flow Media | Connect">
+<meta property="og:description" content="Book a call, send a quick question, or save our contact.">
+<meta property="og:image" content="https://book.puroflowmedia.com/og.jpg">
+<meta property="og:url" content="https://book.puroflowmedia.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="orbitron.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+  @font-face{font-family:Orbitron;src:url(orbitron.ttf) format("truetype");font-weight:400 900;font-display:swap}
+  @font-face{font-family:Montserrat;src:url(montserrat.ttf) format("truetype");font-weight:100 900;font-display:swap}
+  /* Layout: dark branded header band, light "studio wall" middle so the reels pop, dark footer band */
+  :root{
+    --black:#0A0A0A; --charcoal:#1A1A1A; --steel:#555555; --off:#F5F5F5; --white:#FFFFFF;
+    --deep:#1E3A5F; --flow:#5286C2;
+    --wall:#EEF0F3;           /* light middle, slightly cool so it sits with the blues */
+    --hair:rgba(10,10,10,.08);
+    --shadow:0 1px 2px rgba(10,10,10,.05),0 10px 30px rgba(30,58,95,.10);
+    --display:Orbitron,"Eurostile","Arial Black",sans-serif;
+    --body:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;
+    color-scheme:light;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--wall);color:var(--black);font-family:var(--body);line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  a:focus-visible{outline:2px solid var(--flow);outline-offset:3px;border-radius:12px}
+  .in{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+  /* dark bands */
+  .band-dark{background:var(--black);color:var(--off);
+    background-image:radial-gradient(800px 420px at 50% -80px, rgba(30,58,95,.65), transparent 70%);background-repeat:no-repeat}
+  header .in{text-align:center;padding-block:40px 44px}
+  header img{width:min(250px,64vw);height:auto;display:block;margin:0 auto}
+  .tag{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:rgba(245,245,245,.6);margin-top:14px}
+  .tag b{color:var(--flow);font-weight:600}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(22px,6.2vw,30px);line-height:1.15;letter-spacing:.02em;margin:26px 0 10px;text-wrap:balance}
+  .lede{color:rgba(245,245,245,.66);font-size:15px;max-width:440px;margin:0 auto}
+
+  /* light middle */
+  main .in{padding-block:8px 44px}
+  .label{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);font-weight:700;margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+  .label::after{content:"";flex:1;height:1px;background:var(--hair)}
+
+  .book{display:grid;gap:16px}
+  .vcard{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;background:var(--white);box-shadow:var(--shadow);
+    transition:transform .2s ease, box-shadow .2s ease}
+  .vcard:hover{box-shadow:0 1px 2px rgba(10,10,10,.06),0 16px 40px rgba(30,58,95,.18)}
+  .vcard:active{transform:scale(.985)}
+  .vmedia{position:relative;aspect-ratio:4/5;max-width:100%;overflow:hidden;background:var(--charcoal)}
+  .vmedia video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .vmedia::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.35) 0%,rgba(10,10,10,0) 26%)}
+  .vtop{position:absolute;top:14px;left:14px;right:14px;display:flex;justify-content:space-between;align-items:center;z-index:2}
+  .chip{white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:7px 11px;border-radius:999px;color:var(--white);
+    background:rgba(10,10,10,.55);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2)}
+  .chip.dur{background:var(--flow);border-color:transparent}
+  .vbody{padding:18px 18px 20px}
+  .vbody h2{font-family:var(--display);font-weight:800;font-size:clamp(18px,5.2vw,23px);line-height:1.2;letter-spacing:.02em;text-wrap:balance}
+  .vbody p{color:var(--steel);font-size:14px;margin:8px 0 16px}
+  .cta{display:flex;justify-content:center;align-items:center;gap:10px;background:var(--black);color:var(--white);font-weight:700;font-size:15px;
+    min-height:50px;padding:12px 18px;border-radius:14px}
+  .vcard:hover .cta{background:var(--deep)}
+  .cta svg{width:16px;height:16px}
+  /* compact row card (15 min) and landscape card (podcast) */
+  .vcard.wide{flex-direction:row}
+  .vcard.wide .vmedia{flex:0 0 40%;aspect-ratio:4/5}
+  .vcard.wide .vtop{justify-content:flex-end}
+  .vcard.wide .vbody{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center;padding:16px}
+  .vcard.wide .vbody h2{font-size:clamp(16px,4.6vw,20px)}
+  .vcard.wide .vbody p{font-size:13px;margin:6px 0 14px}
+  .vcard.wide .cta{min-height:44px;font-size:14px;padding:10px 14px}
+  .eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--flow);margin-bottom:6px}
+  .vmedia.land{aspect-ratio:16/9}
+  .book.calls{grid-template-columns:1fr !important}
+  .note{font-size:13px;color:var(--steel);margin-top:14px;padding:12px 14px;border-left:3px solid var(--flow);background:rgba(82,134,194,.10);border-radius:0 10px 10px 0}
+
+  .panel{background:var(--white);border-radius:20px;padding:22px 20px;box-shadow:var(--shadow)}
+  .panel h3{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:.02em;margin-bottom:6px}
+  .panel p{color:var(--steel);font-size:14px}
+  .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .btn{flex:1 1 220px;display:inline-flex;justify-content:center;align-items:center;gap:9px;min-height:50px;padding:12px 16px;border-radius:14px;
+    font-weight:700;font-size:14px;background:var(--white);border:1.5px solid rgba(10,10,10,.14);color:var(--black)}
+  .btn.primary{background:var(--flow);border-color:transparent;color:var(--white)}
+  .btn.dark{background:var(--black);border-color:transparent;color:var(--white)}
+  .btn svg{width:18px;height:18px;flex:none}
+  .urgent{margin-top:16px;font-size:13px;color:var(--steel)}
+  .urgent b{color:var(--black)}
+
+  .list{display:grid;gap:10px}
+  .item{display:flex;align-items:center;gap:14px;padding:14px 16px;background:var(--white);border-radius:16px;box-shadow:0 1px 2px rgba(10,10,10,.04)}
+  .item > div:nth-child(2){min-width:0}
+  .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(82,134,194,.12);color:var(--deep);flex:none}
+  .ico svg{width:20px;height:20px}
+  .item small{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+  .item span{font-weight:600;font-size:15px;overflow-wrap:anywhere}
+  .item .arr{margin-left:auto;color:#9AA3AE;font-size:20px}
+
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .person{background:var(--white);border-radius:16px;padding:16px 12px;text-align:center;box-shadow:0 1px 2px rgba(10,10,10,.04)}
+  .av{width:46px;height:46px;border-radius:50%;margin:0 auto 10px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px;
+    background:linear-gradient(135deg,var(--deep),var(--flow));color:var(--white)}
+  .person b{display:block;font-size:15px}
+  .person em{display:block;font-style:normal;font-size:12px;color:var(--steel);line-height:1.35;margin-top:3px}
+
+  /* dark footer band */
+  .how-band .in{padding-block:36px 40px}
+  .how-band .label{color:rgba(245,245,245,.55);margin-top:0}
+  .how-band .label::after{background:rgba(245,245,245,.12)}
+  .how{counter-reset:s;display:grid;gap:12px}
+  .how li{list-style:none;display:flex;gap:12px;align-items:flex-start;font-size:14px;color:rgba(245,245,245,.85)}
+  .how li::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:800;font-size:12px;width:26px;height:26px;flex:none;
+    border-radius:8px;display:grid;place-items:center;background:rgba(82,134,194,.2);color:var(--flow)}
+  footer{text-align:center;margin-top:36px;padding-top:26px;border-top:1px solid rgba(245,245,245,.12)}
+  footer .motto{font-family:var(--display);font-weight:800;font-size:16px;letter-spacing:.06em}
+  footer .motto span{color:var(--flow)}
+  footer small{display:block;margin-top:10px;font-size:10px;letter-spacing:.3em;color:rgba(245,245,245,.5)}
+
+
+  /* hero: drone banner + profile (matches the partner booking pages) */
+  :root{--mist:#9DB8E6}
+  .hero{background-image:radial-gradient(720px 420px at 50% calc(min(37.5vw,300px) + 300px), rgba(30,58,95,.45), transparent 70%)}
+  .banner{position:relative;aspect-ratio:16/6;max-height:300px;width:100%;overflow:hidden;background:var(--black)}
+  .banner video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .banner::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.15) 0%,rgba(10,10,10,.55) 55%,rgba(10,10,10,.75) 100%);z-index:1}
+  .banner::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg,rgba(10,10,10,0) 0%,rgba(10,10,10,.82) 72%,#0A0A0A 100%);z-index:1}
+  .btxt{position:absolute;z-index:2;right:max(12px,5vw);top:44%;transform:translateY(-50%);width:min(56%,430px);text-align:center;color:var(--white)}
+  .btxt img{display:block;width:88%;max-width:320px;height:auto;margin:0 auto}
+  .brule{height:2px;width:52%;margin:clamp(7px,1.8vw,14px) auto;background:linear-gradient(90deg,transparent,var(--flow),transparent)}
+  .bname{font-family:var(--display);font-weight:800;letter-spacing:.08em;font-size:clamp(11px,3.3vw,23px);line-height:1.1}
+  .btitle{font-weight:600;letter-spacing:.2em;font-size:clamp(6.5px,1.75vw,11.5px);color:rgba(245,245,245,.8);margin-top:clamp(3px,.9vw,7px);text-transform:uppercase}
+  header .in.profile{text-align:left;padding-block:0 34px}
+  .avatar{--av:clamp(118px,34vw,164px);position:relative;z-index:3;display:block;width:var(--av);height:var(--av);margin:calc(var(--av) / -2) 0 0;border-radius:50%;object-fit:cover;
+    border:4px solid var(--black);background:var(--charcoal);box-shadow:0 0 0 2px rgba(82,134,194,.75),0 14px 34px rgba(0,0,0,.55)}
+  .profile h1{font-size:clamp(24px,7vw,32px);margin:16px 0 8px;color:var(--white)}
+  .cred{display:inline-block;vertical-align:middle;position:relative;top:-3px;margin-left:4px;font-family:var(--body);font-weight:700;font-size:11px;letter-spacing:.16em;
+    padding:5px 9px;border-radius:999px;border:1px solid rgba(82,134,194,.65);color:var(--mist)}
+  .headline{font-size:15px;line-height:1.45;color:rgba(245,245,245,.92)}
+  .meta,.loc{font-size:13.5px;color:rgba(245,245,245,.66);margin-top:8px}
+  .loc{margin-top:3px}
+  .profile a.tx{color:var(--mist);text-decoration:underline;text-decoration-color:rgba(157,184,230,.45);text-underline-offset:3px}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .pill{display:inline-flex;align-items:center;gap:7px;min-height:36px;padding:7px 12px;border-radius:999px;font-size:13px;font-weight:600;color:var(--off);
+    background:rgba(255,255,255,.05);border:1px solid rgba(245,245,245,.16)}
+  .pill svg{width:15px;height:15px;flex:none;color:var(--flow)}
+  .hbtns{display:flex;gap:10px;margin-top:18px}
+  .hbtn{flex:1;display:flex;justify-content:center;align-items:center;gap:8px;text-align:center;min-height:50px;padding:10px 12px;border-radius:14px;font-weight:700;font-size:15px;
+    color:var(--white);border:1.5px solid rgba(245,245,245,.3)}
+  .hbtn.primary{background:var(--flow);border-color:var(--flow)}
+  .profile .lede{max-width:none;margin:18px 0 0;color:rgba(245,245,245,.68)}
+  video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+
+  @media (min-width:600px){ .book{grid-template-columns:1fr 1fr} .vcard.wide{grid-column:1/-1} .vcard.wide .vmedia{flex-basis:34%} .team{grid-template-columns:repeat(4,1fr)} .chip{font-size:10px;letter-spacing:.1em;padding:6px 9px} .vtop{top:10px;left:10px;right:10px} }
+  @media (prefers-reduced-motion:reduce){ .vcard{transition:none} }
+</style>
+</head>
+<body>
+
+<header class="hero band-dark">
+  <div class="banner">
+    <video src="banner.mp4" poster="banner.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+    <div class="btxt">
+      <img src="logo.png" alt="Puro Flow Media" width="1200" height="218">
+      <div class="brule"></div>
+      <div class="bname">FELIPE TOSCANO</div>
+      <div class="btitle">Founder · Creative Director</div>
+    </div>
+  </div>
+  <div class="in profile">
+    <img class="avatar" src="felipe.jpg" alt="Felipe Toscano, Founder and Creative Director of Puro Flow Media" width="480" height="480">
+    <h1>Felipe Toscano <span class="cred">PURO FLOW</span></h1>
+    <p class="headline">Founder, CEO and Creative Director at <a class="tx" href="https://puroflowmedia.com" target="_blank" rel="noopener">Puro Flow Media</a> | Story-driven content and personal brands for doctors, entrepreneurs and founders</p>
+    <p class="meta">Content partner to Adit and Media NV · Filming at PDC Vancouver, SPEAR Summit and AAPPM</p>
+    <p class="loc">San Diego, California · Filming across the US</p>
+    <div class="pills">
+      <a class="pill" href="https://puroflowmedia.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        puroflowmedia.com
+      </a>
+      <a class="pill" href="https://www.instagram.com/puroflow" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @puroflow
+      </a>
+      <a class="pill" href="https://www.instagram.com/felipepe7/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        @felipepe7
+      </a>
+    </div>
+    <div class="hbtns">
+      <a class="hbtn primary" href="#book">Book a call</a>
+      <a class="hbtn" href="puro-flow-media.vcf">Save my contact</a>
+    </div>
+    <p class="lede">Create in <b style="color:var(--flow)">Flow</b> State. Book time with our team, send a quick question, or save our info. Everything you need is one tap away.</p>
+  </div>
+</header>
+
+<main>
+  <div class="in">
+    <div class="label" id="book">Book a call</div>
+    <section class="book calls">
+      <a class="vcard wide" href="https://calendar.app.google/aSxQ9cB82K73zXG57" target="_blank" rel="noopener" aria-label="Book a 15 minute Shoot Prep Call">
+        <div class="vmedia">
+          <video src="prep.mp4" poster="prep.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="vtop"><span class="chip dur">15 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Shoot Prep Call</div>
+          <h2>Lock in your shoot day</h2>
+          <p>Location, wardrobe, talking points and timing, covered before we roll cameras.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="vcard wide" href="https://calendar.app.google/AF7a74scA7MGf91eA" target="_blank" rel="noopener" aria-label="Book a 30 minute Client Check-In">
+        <div class="vmedia">
+          <video src="checkin.mp4" poster="checkin.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="vtop"><span class="chip dur">30 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Client Check-In</div>
+          <h2>Reviews, approvals and next steps</h2>
+          <p>For current clients. A focused check-in to keep your content moving.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="vcard wide" href="https://calendar.app.google/qAi9qbfBRyfU383NA" target="_blank" rel="noopener" aria-label="Book a 60 minute Strategy Session">
+        <div class="vmedia">
+          <video src="strategy.mp4" poster="strategy.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="vtop"><span class="chip dur">60 min</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Strategy Session</div>
+          <h2>Big-picture strategy and new projects</h2>
+          <p>For new partners, demos, onboarding and quarterly planning with Felipe.</p>
+          <span class="cta">Pick a time <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+    <p class="note">Calls open starting the next business day, Monday to Friday. Every call is on Google Meet and recorded with our AI notetaker, so nothing gets missed.</p>
+
+    <div class="label">Book a testimonial shoot</div>
+    <section class="book calls">
+      <a class="vcard wide" href="https://calendar.app.google/LSKetNg6ig8cn8GE8" target="_blank" rel="noopener" aria-label="Book a Client Testimonial Shoot">
+        <div class="vmedia">
+          <video src="testimonial.mp4" poster="testimonial.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="vtop"><span class="chip dur">On site</span></div>
+        </div>
+        <div class="vbody">
+          <div class="eyebrow">Client Testimonial Shoot</div>
+          <h2>We film your clients for you</h2>
+          <p>Current clients: book our crew to film a cinematic client testimonial at your office or on location, with you or without you there.</p>
+          <span class="cta">Book a date <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+    <p class="note">Testimonial shoots need at least 5 days notice. Add the address and who we're filming in the form, and we'll confirm everything in your Slack channel.</p>
+
+    <div class="label">Book a podcast</div>
+    <section class="book">
+      <a class="vcard" href="https://calendar.app.google/q7swDSsc2ZnZXXeA8" target="_blank" rel="noopener" aria-label="Book a 90 minute Podcast Recording" style="grid-column:1/-1">
+        <div class="vmedia land">
+          <video src="podcast.mp4" poster="podcast.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <div class="vtop"><span class="chip">Podcast Recording</span><span class="chip dur">90 min</span></div>
+        </div>
+        <div class="vbody">
+          <h2>Your show, shot like a film</h2>
+          <p>Multi-camera video, clean audio, lighting and direction. You bring the conversation, we handle the rest and cut it into clips.</p>
+          <span class="cta">Book a recording date <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+    </section>
+    <p class="note">Podcast dates open 7 days out, one recording per day. We confirm the location (our setup or your space) after you book.</p>
+
+    <div class="label">Quick question?</div>
+    <section class="panel">
+      <h3>Ask us in Slack</h3>
+      <p>Drop it in your private Slack channel. Adrian, our Client Success Manager, jumps on it during business hours (Monday to Friday, 9 AM to 5 PM PT).</p>
+      <div class="row">
+        <a class="btn primary" href="https://puroflowmedia.slack.com" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 15a2 2 0 1 1-2-2h2v2zm1 0a2 2 0 1 1 4 0v5a2 2 0 1 1-4 0v-5zm2-9a2 2 0 1 1 2-2v2H9zm0 1a2 2 0 1 1 0 4H4a2 2 0 1 1 0-4h5zm9 2a2 2 0 1 1 2 2h-2V9zm-1 0a2 2 0 1 1-4 0V4a2 2 0 1 1 4 0v5zm-2 9a2 2 0 1 1-2 2v-2h2zm0-1a2 2 0 1 1 0-4h5a2 2 0 1 1 0 4h-5z"/></svg>
+          Open Slack
+        </a>
+        <a class="btn" href="mailto:adrian@puroflowmedia.com?subject=Quick%20question%20for%20Puro%20Flow%20Media">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          No Slack yet? Email Adrian
+        </a>
+      </div>
+      <p class="urgent"><b>Something urgent today?</b> Message us in Slack with the word URGENT and we'll get you on a call the same day.</p>
+    </section>
+
+    <div class="label">Contact</div>
+    <section class="list">
+      <a class="item" href="mailto:felipe@puroflowmedia.com">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div><small>Felipe Toscano</small><span>felipe@puroflowmedia.com</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="mailto:adrian@puroflowmedia.com">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+        <div><small>Client Success</small><span>adrian@puroflowmedia.com</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="https://www.instagram.com/puroflow" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+        <div><small>Instagram</small><span>@puroflowmedia</span></div><div class="arr">›</div>
+      </a>
+      <a class="item" href="https://puroflowmedia.com" target="_blank" rel="noopener">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div>
+        <div><small>Website</small><span>puroflowmedia.com</span></div><div class="arr">›</div>
+      </a>
+      <div class="item">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+        <div><small>Studio</small><span>San Diego, California</span></div>
+      </div>
+    </section>
+    <div class="row">
+      <a class="btn dark" href="puro-flow-media.vcf" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>
+        Save our contact
+      </a>
+    </div>
+
+    <div class="label">Your team</div>
+    <section class="team">
+      <div class="person"><div class="av">FT</div><b>Felipe</b><em>Founder and Creative Director</em></div>
+      <div class="person"><div class="av">AZ</div><b>Adrian</b><em>Client Success Manager and AI Integrator</em></div>
+      <div class="person"><div class="av">KE</div><b>Kevin</b><em>Marketing Director</em></div>
+      <div class="person"><div class="av">E</div><b>Eddie</b><em>Product Designer</em></div>
+    </section>
+  </div>
+</main>
+
+<section class="band-dark how-band">
+  <div class="in">
+    <div class="label">How we work</div>
+    <ol class="how">
+      <li>Quick questions and files go in Slack, so everything lives in one place.</li>
+      <li>Book a 15-minute shoot prep before filming, a 30-minute check-in for reviews and approvals, or a 60-minute session for strategy. Client testimonial shoots and podcasts get their own booking pages.</li>
+      <li>Fill out the short form when you book, so we show up prepared.</li>
+      <li>Join from a quiet spot where you can focus (not while driving). We record the call and send the summary.</li>
+    </ol>
+    <footer>
+      <div class="motto">Victims Wait. <span>Heroes Create.</span></div>
+      <small>PURO FLOW MEDIA · CREATE IN FLOW STATE.</small>
+    </footer>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var vids=[].slice.call(document.querySelectorAll('video'));
+    var reduce=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    vids.forEach(function(v){ if(reduce){ v.removeAttribute('autoplay'); v.pause(); } });
+    document.addEventListener('visibilitychange',function(){
+      if(!document.hidden && !reduce){ vids.forEach(function(v){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} }); }
+    });
+  })();
+</script>
+</body>
+</html>
