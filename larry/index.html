@@ -183,6 +183,7 @@
 
   @media (min-width:600px){ .vcard.wide .vmedia{flex-basis:34%} .chip{font-size:10px;letter-spacing:.1em;padding:6px 9px} .vtop{top:10px;left:10px;right:10px} }
   @media (prefers-reduced-motion:reduce){ .vcard,.pill{transition:none} html{scroll-behavior:auto} }
+video::-webkit-media-controls-start-playback-button,video::-webkit-media-controls-overlay-play-button,video::-webkit-media-controls{display:none!important;-webkit-appearance:none}
 </style>
 </head>
 <body>
@@ -398,6 +399,11 @@
     } else { lazy.forEach(wake); }
     var vids=[].slice.call(document.querySelectorAll('video'));
     vids.forEach(function(v){ if(reduce){ v.removeAttribute('autoplay'); v.pause(); } });
+    /* iPhone Low Power Mode blocks autoplay: start every on-screen video on the first touch anywhere */
+    function playVisible(){ if(reduce) return; vids.forEach(function(v){ if(!v.src && v.getAttribute('data-src')){ var r=v.getBoundingClientRect(); if(r.top < innerHeight+200 && r.bottom > -200){ v.src=v.getAttribute('data-src'); } } if(v.src && v.paused){ var r2=v.getBoundingClientRect(); if(r2.top < innerHeight && r2.bottom > 0){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} } } }); }
+    ['touchstart','touchend','pointerdown','click','keydown'].forEach(function(ev){ document.addEventListener(ev, playVisible, {passive:true, capture:true}); });
+    window.addEventListener('scroll', function(){ playVisible(); }, {passive:true});
+    window.addEventListener('load', playVisible);
     document.addEventListener('visibilitychange',function(){
       if(!document.hidden && !reduce){ vids.forEach(function(v){ if(v.src && v.getBoundingClientRect().top < innerHeight){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} } }); }
     });
