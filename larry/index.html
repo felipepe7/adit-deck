@@ -426,7 +426,7 @@
       if(!practice) return bad(f.practice,'Add your practice or company name or website.');
       var btn=form.querySelector('.go'); btn.disabled=true; btn.firstChild.textContent='Opening your photos… ';
       var data=new FormData();
-      data.append(IDS.name,name); data.append(IDS.cell,cell); data.append(IDS.email,email); data.append(IDS.practice,practice); data.append(IDS.reel, reel ? 'Custom reel: YES' : 'Custom reel: no');
+      data.append(IDS.name,name); data.append(IDS.cell,cell); data.append(IDS.email,email); data.append(IDS.practice,practice); data.append(IDS.reel, (reel ? 'Custom reel: YES' : 'Custom reel: no') + ' · via booklarry.puroflowmedia.com (Larry)');
       var finish=function(){ try{ localStorage.setItem('mnv-aappm','1'); }catch(x){} form.hidden=true; done.hidden=false;
         setTimeout(function(){ window.location.href=GALLERY; },2600); };
       fetch(FORM,{method:'POST',mode:'no-cors',body:data}).then(finish,finish);
