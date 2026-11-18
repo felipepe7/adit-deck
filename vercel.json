@@ -38,6 +38,26 @@
       "has": [
         {
           "type": "host",
+          "value": "inspiration.edits.puroflowmedia.com"
+        }
+      ],
+      "dest": "/howtoedit/inspiration/index.html"
+    },
+    {
+      "src": "^/(?!howtoedit/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "inspiration.edits.puroflowmedia.com"
+        }
+      ],
+      "dest": "/howtoedit/inspiration/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
           "value": "edits.medianv.puroflowmedia.com"
         }
       ],

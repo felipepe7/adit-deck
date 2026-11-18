@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Inspiration Edits · Puro Flow Media</title>
+<meta name="description" content="How we study cinematic, quote-driven reels (shots, grade, text and sound) and turn that feeling into branded reels for every client.">
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Puro Flow Media">
+<meta property="og:title" content="Inspiration Edits 🎬 Puro Flow Media">
+<meta property="og:description" content="Steal the feeling, not the footage. The HRLVL breakdown: shots, grade, text and sound design.">
+<meta property="og:url" content="https://inspiration.edits.puroflowmedia.com/">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F5F5F5;--ink:#0A0A0A;--char:#1A1A1A;--steel:#555555;--blue:#1E3A5F;--lit:#5286C2;--card:#FFFFFF;--line:rgba(10,10,10,.09);--display:"Orbitron","Arial Black",sans-serif;--body:"Montserrat","Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:var(--blue)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.label{display:flex;align-items:center;gap:.8em;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--lit)}
+.label::before{content:"";width:24px;height:2px;background:var(--lit)}
+header{background:#0A0A0A;color:#F5F5F5;padding:28px 0 56px;position:relative;overflow:hidden}
+header::after{content:"";position:absolute;inset:auto -10% -40% -10%;height:70%;background:radial-gradient(closest-side,rgba(82,134,194,.35),transparent);pointer-events:none}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.top img{height:28px;filter:invert(1)}
+.top span{font-size:12px;color:#9AA4B2;letter-spacing:.08em}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(34px,7vw,68px);line-height:1;margin:46px 0 14px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:var(--lit)}
+.sub{max-width:640px;font-size:clamp(16px,2.2vw,19px);color:#C9D2DC;margin:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.pills span{border:1px solid rgba(245,245,245,.22);border-radius:999px;padding:7px 14px;font-size:13px;color:#E6EBF0}
+nav{position:sticky;top:0;z-index:9;background:rgba(245,245,245,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .in{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;max-width:1080px;margin:0 auto;scrollbar-width:none}
+nav a{flex:none;text-decoration:none;font-size:13px;font-weight:600;color:var(--blue);padding:8px 13px;border-radius:999px;background:#E8ECF1}
+nav a:hover{background:var(--blue);color:#fff}
+section{padding:52px 0 8px}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(22px,4vw,34px);line-height:1.1;margin:10px 0 12px}
+.lead{font-size:17px;color:var(--char);max-width:760px;margin:0 0 22px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--card);border-radius:18px;padding:20px;box-shadow:0 10px 30px rgba(10,10,10,.06);border:1px solid var(--line)}
+.card h3{font-family:var(--display);font-size:15px;letter-spacing:.06em;margin:0 0 8px;color:var(--blue)}
+.card p{margin:0;color:var(--char);font-size:15px}
+.num{font-family:var(--display);font-size:36px;font-weight:900;color:var(--lit);line-height:1;margin-bottom:8px}
+.reel{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:start;background:var(--card);border-radius:22px;padding:20px;margin:18px 0;border:1px solid var(--line);box-shadow:0 10px 30px rgba(10,10,10,.06)}
+.reel .embed{min-width:0}
+.reel .embed blockquote{margin:0!important;min-width:0!important;width:100%!important}
+.reel h3{font-family:var(--display);font-size:20px;margin:6px 0 4px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 14px}
+.meta span{font-size:12px;font-weight:600;background:#EEF2F6;color:var(--blue);padding:5px 10px;border-radius:999px}
+.meta span.a{background:var(--blue);color:#fff}
+.rows{display:grid;gap:10px}
+.row{border-left:3px solid var(--lit);padding:2px 0 2px 12px}
+.row b{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:2px}
+.row p{margin:0;font-size:15px}
+.shots{list-style:none;padding:0;margin:0;display:grid;gap:4px;font-size:14px}
+.shots li{display:grid;grid-template-columns:48px 1fr;gap:8px}
+.shots li i{font-style:normal;font-weight:700;color:var(--lit);font-variant-numeric:tabular-nums}
+.steal{margin-top:14px;background:#0A0A0A;color:#F5F5F5;border-radius:14px;padding:14px 16px;font-size:15px}
+.steal b{color:var(--lit);font-family:var(--display);font-size:12px;letter-spacing:.18em;display:block;margin-bottom:4px}
+.mix{width:100%;border-collapse:collapse;background:var(--card);border-radius:16px;overflow:hidden;font-size:15px}
+.mix th,.mix td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+.mix th{background:var(--blue);color:#fff;font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+.mix tr:last-child td{border-bottom:0}
+.tablewrap{overflow-x:auto;border-radius:16px;box-shadow:0 10px 30px rgba(10,10,10,.06)}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;counter-reset:s}
+.flow div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;counter-increment:s;position:relative}
+.flow div::before{content:counter(s,decimal-leading-zero);font-family:var(--display);font-weight:900;color:var(--lit);font-size:22px;display:block;margin-bottom:6px}
+.flow b{display:block;margin-bottom:4px}
+.flow p{margin:0;font-size:14px;color:var(--char)}
+.apply{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:24px;align-items:start;background:#0A0A0A;color:#F5F5F5;border-radius:22px;padding:22px}
+.apply h3{font-family:var(--display);font-size:22px;margin:4px 0 10px}
+.apply p,.apply li{color:#D7DEE6;font-size:15px}
+.apply .label{color:var(--lit)}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.check li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 44px;position:relative;font-size:15px}
+.check li::before{content:"";position:absolute;left:14px;top:13px;width:18px;height:18px;border-radius:5px;border:2px solid var(--lit)}
+.note{font-size:13px;color:var(--steel);margin-top:14px}
+footer{margin-top:60px;background:#0A0A0A;color:#9AA4B2;padding:28px 0;font-size:13px;text-align:center}
+footer a{color:#F5F5F5}
+@media (max-width:760px){.reel,.apply{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top"><img src="logo_d.png" alt="Puro Flow Media"><span>EDITOR LIBRARY · INSPIRATION</span></div>
+    <h1>Steal the <em>feeling</em>,<br>not the footage.</h1>
+    <p class="sub">How we study cinematic, quote-driven inspiration reels, break down the shots, the grade, the text and above all the sound, then rebuild that emotion for every client we edit for.</p>
+    <div class="pills"><span>🎬 Shot selection</span><span>🎨 Cinematic grade</span><span>🔤 Quote text</span><span>🎧 Sound design + audio</span><span>🔁 Apply to clients</span></div>
+  </div>
+</header>
+<nav><div class="in">
+  <a href="#why">Why</a><a href="#hrlvl">HRLVL breakdown</a><a href="#formula">Shot formula</a><a href="#sound">Sound + audio</a><a href="#text">Quote text</a><a href="#apply">Apply it</a><a href="#delon">Delon example</a><a href="#checklist">Checklist</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="why">
+  <div class="label">The rule</div>
+  <h2>Inspiration → Translate → Apply</h2>
+  <p class="lead">We don't copy reels. We study why a reel makes you feel something in the first two seconds, then we rebuild that exact feeling with our client's footage, our client's brand and audio that fits their industry. A fitness brand, a dentist, a drywall contractor and a wealth advisor all get the same cinematic energy, just translated.</p>
+  <div class="grid3">
+    <div class="card"><div class="num">01</div><h3>INSPIRATION</h3><p>Find a reel that gives you chills. Watch it 5 times with sound on. Write down the hook, the shot order, the text style and every sound you hear.</p></div>
+    <div class="card"><div class="num">02</div><h3>TRANSLATE</h3><p>Turn each moment into its client version: the "grind" shot, the "payoff" shot, the one-line quote, the beat that hits.</p></div>
+    <div class="card"><div class="num">03</div><h3>APPLY</h3><p>Cut it with the client's footage, logo and colors, plus licensed music and sound design that matches the emotion. Never reuse the inspiration's audio or clips.</p></div>
+  </div>
+</section>
+
+<section id="hrlvl">
+  <div class="label">Case study · @hrlvlclub</div>
+  <h2>The HRLVL breakdown</h2>
+  <p class="lead"><a href="https://www.instagram.com/hrlvlclub/" target="_blank" rel="noopener">HRLVL</a> is an Austin apparel brand with 77 posts and under 2K followers, and their top reels still pull 15K to 20K views. That's the lesson: the edit, the grade and the sound are doing the selling, not the follower count. Tap each reel, watch it with sound on, then read the breakdown.</p>
+
+  <article class="reel" id="r1">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/ClrY_ZKpAkH/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/ClrY_ZKpAkH/" target="_blank" rel="noopener">Watch "Relentless Pursuit" on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Reel 01</div>
+      <h3>RELENTLESS PURSUIT.</h3>
+      <div class="meta"><span>11 sec</span><span>19.7K views · top reel</span><span class="a">🎧 Audio: "BE#1" (their own sound)</span></div>
+      <div class="rows">
+        <div class="row"><b>Hook</b><p>Opens almost black: a silhouette in a dark car, then rain on the windshield. No face, no text. You lean in because you can't see yet.</p></div>
+        <div class="row"><b>Shot order</b>
+          <ul class="shots">
+            <li><i>0:00</i>Low-key silhouette in the car, mood before story</li>
+            <li><i>0:02</i>Rain on the glass, texture shot</li>
+            <li><i>0:03</i>Over-the-shoulder from behind, still no face</li>
+            <li><i>0:05</i>Sweat close-up outdoors, golden light: first face</li>
+            <li><i>0:06</i>Wide dumbbell press: the effort</li>
+            <li><i>0:08</i>Cold plunge, face at water level: the recovery</li>
+            <li><i>0:09</i>Tracking run on an empty road</li>
+            <li><i>0:10</i>Top-down plunge to close</li>
+          </ul></div>
+        <div class="row"><b>Cinematic</b><p>Natural light only, shallow depth of field, slow motion on the sweat and water, tight crops. Grind and recovery alternate so it never feels like a gym montage.</p></div>
+        <div class="row"><b>Sound · how to rebuild it</b><p>The audio is uploaded under their own name, so it's a custom sound, not a trending song. Our version: a dark ambient bed, rain and car foley under the cold open, the beat landing on the first face reveal, water and an impact on the plunge.</p></div>
+      </div>
+      <div class="steal"><b>STEAL THIS</b>Hide the face for the first 3 seconds. Mood and texture first, the person second.</div>
+    </div>
+  </article>
+
+  <article class="reel" id="r2">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CnC9-YKKnv7/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/CnC9-YKKnv7/" target="_blank" rel="noopener">Watch "Take Control" on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Reel 02</div>
+      <h3>TAKE CONTROL.</h3>
+      <div class="meta"><span>14 sec</span><span>18.5K views</span><span class="a">🎧 Audio: "TAKECONTROL" (their own sound)</span></div>
+      <div class="rows">
+        <div class="row"><b>Hook</b><p>The voice leads. One word on screen per cut ("to remember", "enemy", "responsibility", "take", "if", "the"), so the viewer reads and listens at the same time.</p></div>
+        <div class="row"><b>Shot order</b>
+          <ul class="shots">
+            <li><i>0:00</i>Hands working a camera, dark room</li>
+            <li><i>0:02</i>Head down, shirtless, low light: the struggle</li>
+            <li><i>0:04</i>Backlit silhouette</li>
+            <li><i>0:06</i>Green-lit floor detail, almost abstract</li>
+            <li><i>0:08</i>Medicine ball slam, motion blur</li>
+            <li><i>0:09</i>Red jacket and cap: the one color pop in the reel</li>
+            <li><i>0:11</i>Equipment detail, belt and bar</li>
+            <li><i>0:13</i>Physique reveal: the payoff</li>
+          </ul></div>
+        <div class="row"><b>Cinematic</b><p>Low-key lighting with one hard source, muted colors with a single accent color, cuts timed to the spoken word rather than the beat.</p></div>
+        <div class="row"><b>Sound · how to rebuild it</b><p>The on-screen words follow a spoken line, so the voice drives the cut. Our version: one voiceover line over a cinematic bed, a half beat of space before the key word ("take"), the music swelling under the reveal. The words carry the emotion, the music carries the momentum.</p></div>
+      </div>
+      <div class="steal"><b>STEAL THIS</b>One word per cut, synced to the voice. Save the strongest visual for the last word.</div>
+    </div>
+  </article>
+
+  <article class="reel" id="r3">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/Czy3cTDuWv2/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/Czy3cTDuWv2/" target="_blank" rel="noopener">Watch "The Endurance Hat" on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Reel 03</div>
+      <h3>THE ENDURANCE HAT.</h3>
+      <div class="meta"><span>30 sec</span><span>18.4K views</span><span class="a">🎧 Audio: Original audio</span><span>Collab with the founder</span></div>
+      <div class="rows">
+        <div class="row"><b>Hook</b><p>Mid-stride on a track, logo centered on screen from frame one. It's a product launch that feels like a short film.</p></div>
+        <div class="row"><b>Shot order</b>
+          <ul class="shots">
+            <li><i>0:02</i>Side tracking run on the track</li>
+            <li><i>0:06</i>Same run, tighter, product in frame</li>
+            <li><i>0:10</i>Bridge run, new location, same pace</li>
+            <li><i>0:13</i>Silhouette against the rail</li>
+            <li><i>0:17</i>Golden-hour close-up, sunglasses and hat</li>
+            <li><i>0:21</i>Outdoor deadlift: the strength beat</li>
+            <li><i>0:25</i>Second lift angle</li>
+            <li><i>0:28</i>Black card with the drop date: 11.22.23</li>
+          </ul></div>
+        <div class="row"><b>Cinematic</b><p>Smooth side tracking at the runner's speed, warm golden-hour grade, a logo watermark that never leaves. Location changes keep 30 seconds from feeling long.</p></div>
+        <div class="row"><b>Sound · how to rebuild it</b><p>Our version: footsteps and breathing as the rhythm section, a steady driving track building under the run, then a cut to silence on the black date card. That silence is what makes the date stick.</p></div>
+      </div>
+      <div class="steal"><b>STEAL THIS</b>End on a black card with one fact (a date, an offer, a name) and drop the music to silence under it.</div>
+    </div>
+  </article>
+
+  <article class="reel" id="r4">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/ClozzDcJtO5/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/ClozzDcJtO5/" target="_blank" rel="noopener">Watch "Work or be out worked" on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Reel 04</div>
+      <h3>WORK OR BE OUT WORKED.</h3>
+      <div class="meta"><span>10 sec</span><span>17.9K views</span><span class="a">🎧 Audio: "PURSUIT" (their own sound)</span></div>
+      <div class="rows">
+        <div class="row"><b>Hook</b><p>Full black and white at night with tiny, wide-spaced text in the middle of the frame. It looks expensive before anything happens.</p></div>
+        <div class="row"><b>Shot order</b>
+          <ul class="shots">
+            <li><i>0:00</i>Black frame, small text fades in</li>
+            <li><i>0:02</i>Dark detail, text holds</li>
+            <li><i>0:03</i>Walking silhouette, cap on</li>
+            <li><i>0:05</i>Runner with a backlight flare behind him</li>
+            <li><i>0:06</i>Face in the ice bath, eyes closed</li>
+            <li><i>0:07</i>Close-up, breathing</li>
+            <li><i>0:08</i>Apparel detail with the "ELEVATE" print</li>
+            <li><i>0:10</i>Top-down gym floor to close</li>
+          </ul></div>
+        <div class="row"><b>Cinematic</b><p>Monochrome grade, crushed blacks, one bright practical light per shot (headlight, flare). Product shows up as a texture, never a sales shot.</p></div>
+        <div class="row"><b>Sound · how to rebuild it</b><p>At 10 seconds it has to loop. Our version: start and end on the same low pad so the replay feels seamless, with breathing and water up loud in the mix, almost ASMR, so it feels personal.</p></div>
+      </div>
+      <div class="steal"><b>STEAL THIS</b>Black and white plus one light source equals premium. Make short reels loop cleanly.</div>
+    </div>
+  </article>
+
+  <article class="reel" id="r5">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/CsRQMRtNUxJ/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/CsRQMRtNUxJ/" target="_blank" rel="noopener">Watch "Drop 002" on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Reel 05</div>
+      <h3>DROP 002 · 4 DAYS OUT</h3>
+      <div class="meta"><span>35 sec</span><span>17.7K views</span><span class="a">🎧 Audio: "HRLVL" (named after the brand)</span></div>
+      <div class="rows">
+        <div class="row"><b>Why it's here</b><p>The audio carries the brand's name. They treat their sound as a brand asset, the same way they treat the logo. Anyone who reuses it is advertising them.</p></div>
+        <div class="row"><b>Your job</b><p>Watch it with sound on and write down the hook, the first beat drop, every sound effect you hear and the moment the countdown appears. Post your notes in your editor channel before you cut anything for a client.</p></div>
+      </div>
+      <div class="steal"><b>STEAL THIS</b>Give every client a signature sound: the same intro hit, riser or sonic logo on every reel.</div>
+    </div>
+  </article>
+</section>
+
+<section id="formula">
+  <div class="label">Shot selection</div>
+  <h2>The cinematic shot formula</h2>
+  <p class="lead">Every HRLVL reel follows the same emotional arc. Build every inspiration-style reel in this order, whatever the industry.</p>
+  <div class="flow">
+    <div><b>Mood</b><p>Silhouette, low light, texture (rain, steam, dust). No face, no logo yet.</p></div>
+    <div><b>The grind</b><p>The hard part of the job: effort, sweat, hands, tools, early mornings.</p></div>
+    <div><b>The human</b><p>First real face close-up, eyes and breath. This is where the beat lands.</p></div>
+    <div><b>Motion</b><p>Tracking shot, walking, driving, running. Momentum for the middle.</p></div>
+    <div><b>The payoff</b><p>Result, reveal, finished work, happy client, confidence.</p></div>
+    <div><b>The brand</b><p>Logo, product, offer or date on black. Sound drops out.</p></div>
+  </div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><h3>CAMERA</h3><p>Shallow depth of field, slow motion on texture shots (shoot 60fps or higher), tight crops, slow push-ins. Handheld micro-movement is fine; shaky is not.</p></div>
+    <div class="card"><h3>LIGHT</h3><p>Golden hour, night with one practical light, or a hard window light. Backlight and flare make anyone look cinematic.</p></div>
+    <div class="card"><h3>GRADE</h3><p>Pick one look per reel: monochrome, warm golden or muted with one accent color. Crushed blacks, no oversaturation.</p></div>
+  </div>
+</section>
+
+<section id="sound">
+  <div class="label">The most important part</div>
+  <h2>Sound engineering + audio</h2>
+  <p class="lead">Viewers forgive an average shot but they scroll on bad audio. The audio is what creates the emotion, sparks the hype and makes people replay. Notice that HRLVL names its sounds after its own campaigns ("BE#1", "TAKECONTROL", "PURSUIT", "HRLVL"). Their audio is part of the brand.</p>
+  <div class="tablewrap"><table class="mix">
+    <tr><th>Layer</th><th>What it does</th><th>How we build it</th></tr>
+    <tr><td><b>1 · Voice or quote</b></td><td>Carries the message and the emotion</td><td>One line, 12 words max. Client's own voice first, a pro voiceover second. Clean it, compress it, and keep it the loudest thing in the mix.</td></tr>
+    <tr><td><b>2 · Music bed</b></td><td>Sets the mood: grit, hype, calm or luxury</td><td>Licensed only (Artlist or Epidemic for ads, Instagram's library for organic). Dark cinematic or ambient for grind, driving for hype, warm piano or strings for heart. Duck it under the voice.</td></tr>
+    <tr><td><b>3 · Sound design</b></td><td>Makes every cut feel physical</td><td>Risers into the drop, whooshes on transitions, a low impact or sub hit on the reveal, reverse swells before the quote.</td></tr>
+    <tr><td><b>4 · Foley</b></td><td>Makes it real and personal</td><td>Recorded or library sounds of the actual action: breathing, footsteps, water, tools, plates, keys, the drill. Foley is what sells a slow-motion shot.</td></tr>
+    <tr><td><b>5 · Silence</b></td><td>Creates tension and makes the payoff hit</td><td>Drop everything for a half beat before the key word or reveal. End on silence or a single hit under the logo card.</td></tr>
+  </table></div>
+  <div class="grid3" style="margin-top:14px">
+    <div class="card"><h3>CUT ON THE BEAT</h3><p>Hard cuts on kicks and snares, slow-motion on the swells. The biggest visual lands on the drop, about two thirds of the way through.</p></div>
+    <div class="card"><h3>MIX FOR PHONES</h3><p>Most people watch on phone speakers. Check the mix on your phone before you export: the voice clear, no muddy bass, no clipping.</p></div>
+    <div class="card"><h3>LOOP IT</h3><p>Under 15 seconds? End on the same sound you start on so the replay feels seamless. Replays push reach.</p></div>
+  </div>
+  <p class="note">Rights: we study these reels for structure and feel. We never rip another creator's audio or footage into a client reel. Rebuild the sound with licensed music and our own recordings.</p>
+</section>
+
+<section id="text">
+  <div class="label">Quote text</div>
+  <h2>Branded quote and inspirational text</h2>
+  <div class="grid3">
+    <div class="card"><h3>SMALL AND SPACED</h3><p>Small, all caps and widely letter-spaced, centered. It looks premium because it doesn't shout.</p></div>
+    <div class="card"><h3>ONE WORD PER CUT</h3><p>For voice-led reels, change the word on every cut and sync it to the spoken word.</p></div>
+    <div class="card"><h3>CLIENT BRAND ONLY</h3><p>Client fonts and colors from their brand guidelines. One accent color for the key word. Logo on the end card.</p></div>
+    <div class="card"><h3>WRITE ORIGINAL QUOTES</h3><p>Short, true to the client's world, no clichés. Pull lines from their own interviews when we have them: their words land hardest.</p></div>
+  </div>
+</section>
+
+<section id="apply">
+  <div class="label">Translate it</div>
+  <h2>Apply it to every client</h2>
+  <p class="lead">Same arc, same sound layers, different world. The only things that change are the shots, the quote and the energy of the music.</p>
+  <div class="tablewrap"><table class="mix">
+    <tr><th>Client world</th><th>The grind shots</th><th>The payoff shots</th><th>Audio energy</th><th>Quote style</th></tr>
+    <tr><td><b>Dental + medical</b></td><td>Early lights on, gloves on, loupes, hands, focus</td><td>Patient smile reveal, team high five, the "after"</td><td>Warm cinematic, builds to uplifting</td><td>"Every smile we fix changes a life."</td></tr>
+    <tr><td><b>Contractors + trades</b></td><td>Dust, tools, plaster trowel, sunrise job site</td><td>Finished room reveal, homeowner reaction</td><td>Driving percussion, tool foley as rhythm</td><td>"We don't do average walls."</td></tr>
+    <tr><td><b>Finance + insurance</b></td><td>Late nights, calls, city at night, walking in</td><td>Handshake, family moment, lifestyle</td><td>Dark luxury, deep bass, minimal</td><td>"Wealth is built quietly."</td></tr>
+    <tr><td><b>Founders + coaches</b></td><td>Stage prep, notes, the empty room before</td><td>Crowd, applause, the win</td><td>Hype build to a big drop</td><td>Their own strongest line from a talk</td></tr>
+    <tr><td><b>Fitness + apparel</b></td><td>Exactly like HRLVL: sweat, cold plunge, dark gym</td><td>Physique, product, drop date</td><td>Dark ambient to aggressive</td><td>One word per cut</td></tr>
+  </table></div>
+</section>
+
+<section id="delon">
+  <div class="label">We already did this</div>
+  <h2>The Delon reel</h2>
+  <div class="apply">
+    <div class="embed"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DUHkunXDOuR/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DUHkunXDOuR/" target="_blank" rel="noopener">Watch the Delon reel on Instagram</a></blockquote></div>
+    <div>
+      <div class="label">Inspiration applied</div>
+      <h3>Same cinematic energy, built for finance</h3>
+      <p>This is the model for every inspiration edit. We took the music-led, cinematic style you see in reels like HRLVL's and translated it for Delon. It uses his footage, his brand and audio picked for his world, not a fitness brand's.</p>
+      <p>Before you cut, watch it next to the HRLVL reels above. Find the mood opener, the beat drop, the payoff and the brand moment, then hit the same marks for the client you're editing.</p>
+    </div>
+  </div>
+</section>
+
+<section id="checklist">
+  <div class="label">Before you export</div>
+  <h2>Inspiration edit checklist</h2>
+  <ul class="check">
+    <li>I watched the inspiration reel 5 times with sound on and wrote down its hook, shot order, text style and every sound layer</li>
+    <li>The first 3 seconds are mood: texture or silhouette, no logo, no talking head</li>
+    <li>The music is licensed and matches the client's world (grit, hype, calm or luxury)</li>
+    <li>Voice or quote is the loudest layer, with music ducked underneath</li>
+    <li>Sound design is in: riser, whooshes, an impact on the reveal and real foley</li>
+    <li>Cuts land on the beat, and the biggest shot lands on the drop</li>
+    <li>Quote text is small, spaced, centered and in the client's brand font and colors</li>
+    <li>One grade for the whole reel (monochrome, golden or muted with one accent)</li>
+    <li>Ends on the client's logo or offer card, with silence or a single hit under it</li>
+    <li>I checked the mix on my phone speaker before posting it for review</li>
+  </ul>
+</section>
+
+</main>
+<footer><div class="wrap">Puro Flow Media · Editor Library · <a href="https://edit.puroflowmedia.com/">How To Edit</a> · <a href="https://edit.puroflowmedia.com/medianv/">Media NV Edits</a></div></footer>
+<script async src="https://www.instagram.com/embed.js"></script>
+</body>
+</html>
