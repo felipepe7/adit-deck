@@ -619,7 +619,7 @@ const WEEKS = [
         cta: "Comment DEMO 👇",
         tags: "#optometry #optometrist #eyecare #dentist #dentalpractice #practicegrowth #blackfriday",
         manychat: "DEMO comments get the demo booking link by DM.",
-        notes: ["Yash's Deal Dropped cut (C8342) with the branded Black Friday intro and the new DEMO outro, Adit colors only, Timeless (instrumental).", "Instagram as a collab with @blakefarrowyo 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        notes: ["The Deal Dropped cut (C8342) with the branded Black Friday intro and the new DEMO outro, Adit colors only, Timeless (instrumental).", "Instagram as a collab with @blakefarrowyo 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
         ask: "Comment DEMO" },
       { id: "wed", day: "Wednesday", short: "Wed", date: "11/18", status: "Ready", format: "Carousel · 4 slides + motion slide · 10:00 AM PT · Pin",
         title: "How to Win the December Challenge", bucket: "Challenge / How It Works", mock: "howtowin",
@@ -663,7 +663,7 @@ const WEEKS = [
         cta: "Comment CHALLENGE to get on the waitlist 👇",
         tags: "#Chiropractic #Chiropractor #GoogleReviews #AditChallenge #PracticeGrowth #PatientExperience",
         manychat: "Every comment gets the waitlist DM.",
-        notes: ["Felipe films Dr. Jesse's Google review testimonial plus office and chiro content on his stop in Missouri this week. Same-day turnaround from Yash once the footage is uploaded.", "Collab invite to @dr.jesse_cook. If the shoot moves past Thursday, Josh's \"The Line That Closes a Hesitant Parent\" (C7666) posts Friday instead and Dr. Jesse leads next week."],
+        notes: ["Felipe films Dr. Jesse's Google review testimonial plus office and chiro content on his stop in Missouri this week. Same-day turnaround from our editing team once the footage is uploaded.", "Collab invite to @dr.jesse_cook. If the shoot moves past Thursday, Josh's \"The Line That Closes a Hesitant Parent\" (C7666) posts Friday instead and Dr. Jesse leads next week."],
         ask: "Comment CHALLENGE" }
     ],
     close: {
