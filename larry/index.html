@@ -489,6 +489,9 @@ video::-webkit-media-controls-start-playback-button,video::-webkit-media-control
       tcards.forEach(function(c){ tio.observe(c); });
     }
 
+    /* deep links like #abboud-itenberg land on that video */
+    window.addEventListener('load',function(){ var h=location.hash.slice(1), el=h&&document.getElementById(h); if(el){ setTimeout(function(){ el.scrollIntoView({block:'start',inline:'start'}); },250); } });
+
     /* photo access */
     var GALLERY='https://puroflowmedia.pixieset.com/podiatrypickleball/';
     var FORM='https://docs.google.com/forms/d/e/1FAIpQLSdhI7ub7uJF2drbIimd6qFmnzacyU-fds0KuDQLqFOQg4DwCw/formResponse';
