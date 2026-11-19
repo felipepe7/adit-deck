@@ -297,6 +297,16 @@
       "dest": "/mark/index.html"
     },
     {
+      "src": "^/media/aappm/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "bookmark.puroflowmedia.com"
+        }
+      ],
+      "dest": "/media/aappm/$1"
+    },
+    {
       "src": "^/(?!mark/)(.*)$",
       "has": [
         {
@@ -315,6 +325,16 @@
         }
       ],
       "dest": "/larry/index.html"
+    },
+    {
+      "src": "^/media/aappm/(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "booklarry.puroflowmedia.com"
+        }
+      ],
+      "dest": "/media/aappm/$1"
     },
     {
       "src": "^/(?!larry/)(.*)$",
