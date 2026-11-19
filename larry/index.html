@@ -181,6 +181,23 @@
   .done .cta{background:var(--white);color:var(--black);margin-top:16px}
   .done .cta:hover{background:var(--flow);color:var(--white)}
 
+  /* AAPPM testimonials */
+  .tintro{font-size:14px;color:var(--steel);margin:-4px 0 14px}
+  .tgrid{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:2px 2px 12px;margin:0 -2px;scrollbar-width:none}
+  .tgrid::-webkit-scrollbar{display:none}
+  .tcard{position:relative;flex:0 0 66%;max-width:270px;scroll-snap-align:start;scroll-margin-top:16px;border-radius:20px;overflow:hidden;background:var(--black);color:var(--white);box-shadow:var(--shadow);cursor:pointer;-webkit-tap-highlight-color:transparent}
+  .tcard .vmedia{aspect-ratio:9/16}
+  .tcard .vmedia::after{background:linear-gradient(180deg,rgba(10,10,10,.35) 0%,rgba(10,10,10,0) 22%,rgba(10,10,10,0) 52%,rgba(10,10,10,.88) 100%)}
+  .tcard .vtop{justify-content:flex-end}
+  .tcard .snd{display:inline-flex;align-items:center;gap:6px}
+  .tcard .snd svg{width:13px;height:13px}
+  .tcard.on .snd{background:var(--flow);border-color:transparent}
+  .tcap{position:absolute;left:14px;right:14px;bottom:14px;z-index:2}
+  .tcap b{display:block;font-family:var(--display);font-weight:800;font-size:15px;line-height:1.22;letter-spacing:.01em;text-wrap:balance}
+  .tcap small{display:block;font-size:12px;color:rgba(245,245,245,.75);margin-top:4px}
+  .thint{font-size:12px;color:var(--steel);text-align:center;margin-top:2px}
+  @media (min-width:600px){ .tcard{flex-basis:38%} }
+
   @media (min-width:600px){ .vcard.wide .vmedia{flex-basis:34%} .chip{font-size:10px;letter-spacing:.1em;padding:6px 9px} .vtop{top:10px;left:10px;right:10px} }
   video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
   video::-webkit-media-controls,video::-webkit-media-controls-panel,video::-webkit-media-controls-overlay-play-button{display:none!important;opacity:0!important}
@@ -243,6 +260,47 @@ video::-webkit-media-controls-start-playback-button,video::-webkit-media-control
         <button class="cta" type="button" data-photos>Get my photos or reel <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </section>
+
+    <div class="label" id="testimonials">Testimonials · AAPPM 2026</div>
+    <p class="tintro">Real conversations from the AAPPM conference floor. Tap any video for sound.</p>
+    <section class="tgrid" aria-label="Testimonials from AAPPM 2026">
+      <article class="tcard" id="abboud-itenberg" role="button" tabindex="0" aria-label="Play Dr. George Abboud &amp; Dr. Ilana Itenberg with sound">
+        <div class="vmedia">
+          <video data-src="https://adit-deck.vercel.app/media/aappm/t-abboud-itenberg.mp4" poster="https://adit-deck.vercel.app/media/aappm/t-abboud-itenberg.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip snd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></span></div>
+        </div>
+        <div class="tcap"><b>Dr. George Abboud &amp; Dr. Ilana Itenberg</b><small>Podiatrists, AAPPM 2026</small></div>
+      </article>
+      <article class="tcard" id="ann-dosen" role="button" tabindex="0" aria-label="Play Ann Dosen with sound">
+        <div class="vmedia">
+          <video data-src="https://adit-deck.vercel.app/media/aappm/t-ann-dosen.mp4" poster="https://adit-deck.vercel.app/media/aappm/t-ann-dosen.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip snd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></span></div>
+        </div>
+        <div class="tcap"><b>Ann Dosen</b><small>PodiatryMeetings.com</small></div>
+      </article>
+      <article class="tcard" id="schneider" role="button" tabindex="0" aria-label="Play Andrew Schneider with sound">
+        <div class="vmedia">
+          <video data-src="https://adit-deck.vercel.app/media/aappm/t-schneider.mp4" poster="https://adit-deck.vercel.app/media/aappm/t-schneider.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip snd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></span></div>
+        </div>
+        <div class="tcap"><b>Andrew Schneider</b><small>President of the AAPPM, with Mark</small></div>
+      </article>
+      <article class="tcard" id="pickleball" role="button" tabindex="0" aria-label="Play AAPPM Pickleball Tournament with sound">
+        <div class="vmedia">
+          <video data-src="https://adit-deck.vercel.app/media/aappm/t-pickleball.mp4" poster="https://adit-deck.vercel.app/media/aappm/t-pickleball.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip snd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></span></div>
+        </div>
+        <div class="tcap"><b>AAPPM Pickleball Tournament</b><small>The doctors on the court</small></div>
+      </article>
+      <article class="tcard" id="mark-about" role="button" tabindex="0" aria-label="Play Meet Mark Scheftner with sound">
+        <div class="vmedia">
+          <video data-src="https://adit-deck.vercel.app/media/aappm/t-mark-about.mp4" poster="https://adit-deck.vercel.app/media/aappm/t-mark-about.jpg" muted loop playsinline preload="none"></video>
+          <div class="vtop"><span class="chip snd"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="m22 9-6 6M16 9l6 6"/></svg><span>Tap for sound</span></span></div>
+        </div>
+        <div class="tcap"><b>Meet Mark Scheftner</b><small>Director of Business Development, Media NV</small></div>
+      </article>
+    </section>
+    <p class="thint">Swipe for more ›</p>
 
     <div class="label" id="book">Book time with Larry</div>
     <section class="book">
@@ -415,6 +473,21 @@ video::-webkit-media-controls-start-playback-button,video::-webkit-media-control
     document.addEventListener('visibilitychange',function(){
       if(!document.hidden && !reduce){ vids.forEach(function(v){ if(v.src && v.getBoundingClientRect().top < innerHeight){ var p=v.play(); if(p&&p.catch){p.catch(function(){});} } }); }
     });
+
+    /* testimonials: tap a card for sound, only one plays with sound at a time */
+    var tcards=[].slice.call(document.querySelectorAll('.tcard'));
+    function tset(c,on){ var v=c.querySelector('video'); v.muted=!on; c.classList.toggle('on',on); c.querySelector('.snd span').textContent=on?'Sound on':'Tap for sound'; }
+    tcards.forEach(function(c){
+      function tap(){ var v=c.querySelector('video'), turnOn=!c.classList.contains('on');
+        tcards.forEach(function(o){ tset(o,false); });
+        if(turnOn){ if(!v.src){ v.src=v.getAttribute('data-src'); } v.currentTime=0; tset(c,true); var p=v.play(); if(p&&p.catch){p.catch(function(){});} } }
+      c.addEventListener('click',tap);
+      c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); tap(); } });
+    });
+    if('IntersectionObserver' in window){
+      var tio=new IntersectionObserver(function(es){ es.forEach(function(e){ if(!e.isIntersecting && e.target.classList.contains('on')){ tset(e.target,false); } }); },{threshold:0.25});
+      tcards.forEach(function(c){ tio.observe(c); });
+    }
 
     /* photo access */
     var GALLERY='https://puroflowmedia.pixieset.com/podiatrypickleball/';
