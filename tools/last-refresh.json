@@ -1,17 +1,11 @@
 {
-  "at": "2026-11-19T13:41:16.059Z",
+  "at": "2026-11-20T13:41:42.775Z",
   "autoMatched": [
     {
-      "net": "ig",
-      "url": "https://www.instagram.com/reel/Df40sBVCYUN/",
+      "net": "yt",
+      "url": "https://www.youtube.com/watch?v=q2Gd1J3n3co",
       "day": "nov-16/tue",
-      "score": 0.96
-    },
-    {
-      "net": "fb",
-      "url": "https://www.facebook.com/reel/2536052417152540/",
-      "day": "nov-16/tue",
-      "score": 0.96
+      "score": 0.47
     }
   ],
   "unmatched": []
