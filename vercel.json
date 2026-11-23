@@ -405,6 +405,26 @@
         }
       ],
       "dest": "/joseph/$1"
+    },
+    {
+      "src": "^/$",
+      "has": [
+        {
+          "type": "host",
+          "value": "jovic.puroflowmedia.com"
+        }
+      ],
+      "dest": "/jovic/index.html"
+    },
+    {
+      "src": "^/(?!jovic/)(.*)$",
+      "has": [
+        {
+          "type": "host",
+          "value": "jovic.puroflowmedia.com"
+        }
+      ],
+      "dest": "/jovic/$1"
     }
   ]
 }

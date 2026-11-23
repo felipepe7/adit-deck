@@ -1,0 +1,26 @@
+{
+  "_about": "Which native post on each platform belongs to which calendar day. Keys are <week id>/<day id> from calendar/weeks.js. refresh.mjs adds new matches on its own and lists anything it could not place in tools/last-refresh.json. _ignore holds posts that are not part of the calendar (Victor's own posts). Add \"_posted\": [\"li\"] to a day when a platform is live but has no link or analytics row (the LinkedIn personal profile): it flips to Posted without numbers.",
+  "_ignore": [
+    "https://www.instagram.com/p/Df7lJwxGqEn/"
+  ],
+  "nov-16/thu-crew": {
+    "tt": "https://www.tiktok.com/@jovicflooringsupply/video/7710032089587911949",
+    "fb": "https://www.facebook.com/reel/1843123050040498/",
+    "yt": "https://www.youtube.com/watch?v=9hgzhLFjMsE",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529329603753218048/"
+  },
+  "nov-16/thu-bf": {
+    "ig": "https://www.instagram.com/reel/Df8mOKnjU9w/",
+    "tt": "https://www.tiktok.com/@jovicflooringsupply/video/7710076837510139150",
+    "fb": "https://www.facebook.com/reel/1482038917195307/",
+    "yt": "https://www.youtube.com/watch?v=c5VJ3lm0yrU",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529372141641682944/"
+  },
+  "nov-16/fri": {
+    "ig": "https://www.instagram.com/reel/DgBTGUGCPAc/",
+    "tt": "https://www.tiktok.com/@jovicflooringsupply/video/7710316155214318861",
+    "fb": "https://www.facebook.com/reel/1140998921968846/",
+    "yt": "https://www.youtube.com/watch?v=cECsPG0JYmQ",
+    "li": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7529621297341911042/"
+  }
+}
