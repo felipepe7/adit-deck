@@ -1,11 +1,11 @@
 {
   "_about": "Which original file feeds which calendar day. Key is <media folder>/<day id> from calendar/weeks.js; the words are matched (any case) against the original file name by tools/build-media.mjs.",
-  "w1116/thu": ["why keep looking"],
   "w1116/thu-bf": ["avoid running short"],
   "w1116/fri": ["who is victor"],
   "w1123/mon": ["how did jovic start"],
-  "w1123/wed": ["how fast can you"],
-  "w1130/mon": ["contractor faq"],
-  "w1130/wed": ["pain points"],
-  "w1130/fri": ["flooring tour"]
+  "w1123/tue": ["how fast can you"],
+  "w1123/tue-wkl": ["why keep looking"],
+  "w1123/wed": ["contractor faq"],
+  "w1123/thu": ["pain points"],
+  "w1123/fri": ["flooring tour"]
 }
