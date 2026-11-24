@@ -19,7 +19,7 @@ const WEEKS = [
    "to": "TO NOV 22",
    "year": "2026"
   },
-  "summary": "Three reels went live this week: Your Crew Shouldn't Be Waiting on Flooring and the Black Friday running-short reel on Thursday, then Who Is Victor on Friday. Why Keep Looking?, Victor's top performer, moved to the Nov 23 week.",
+  "summary": "Three reels went live this week: Your Crew Shouldn't Be Waiting on Flooring and the Black Friday running-short reel on Thursday, then Who Is Victor on Friday.",
   "glanceNote": "Times are Pacific Time. Each post shows Posted, with its live link and numbers, once it is up. Captions are rewritten for each platform.",
   "media": "media/w1116/",
   "days": [
@@ -180,7 +180,7 @@ const WEEKS = [
    "to": "TO NOV 29",
    "year": "2026"
   },
-  "summary": "Five reels, one a day from Monday to Friday, each ending with the Black Friday offer. The sale ends Friday 11/27. Why Keep Looking? is held for Tuesday evening.",
+  "summary": "Five reels, Monday to Thursday, each ending with the Black Friday offer. Tuesday has two, the second at 6:30 PM. The sale ends Friday 11/27.",
   "glanceNote": "Every post runs on Instagram, Facebook, TikTok, LinkedIn and YouTube, spread through the day. Times are Pacific Time. Captions are rewritten for each platform. The Black Friday sale ends Friday 11/27.",
   "media": "media/w1123/",
   "days": [
@@ -287,60 +287,11 @@ const WEEKS = [
     ]
    },
    {
-    "id": "tue-wkl",
+    "id": "wed",
     "day": "Tuesday",
     "short": "Tue",
     "jump": "Tue 6PM",
     "date": "11/24",
-    "status": "Ready",
-    "format": "Reel · 5 platforms",
-    "title": "Why Keep Looking?",
-    "bucket": "Top performer",
-    "cover": "tue-wkl.jpg",
-    "times": [
-     {
-      "k": "ig",
-      "t": "6:30 PM",
-      "s": "Not scheduled"
-     },
-     {
-      "k": "fb",
-      "t": "6:30 PM",
-      "s": "Not scheduled"
-     },
-     {
-      "k": "tt",
-      "t": "6:30 PM",
-      "s": "Not scheduled"
-     },
-     {
-      "k": "yt",
-      "t": "6:30 PM",
-      "s": "Not scheduled"
-     },
-     {
-      "k": "li",
-      "t": "6:30 PM",
-      "s": "Not scheduled"
-     }
-    ],
-    "hook": "Already found a flooring supplier you can count on? Then you can stop looking.",
-    "caption": [
-     "Better pricing, faster delivery and real customer service from Jovic Flooring Supply in San Diego."
-    ],
-    "thought": "This was one of Victor's best-performing reels on Instagram. Putting the same message in front of contractors on every platform shows what a proven post can do.",
-    "cta": "Black Friday: 30¢ off every sq ft and free delivery over 1,500 sq ft. Sale ends Nov 27. Call or text (619) 678-6938, or send us a DM.",
-    "tags": "#SanDiegoContractor #FlooringSupply #LVP #VinylFlooring #SanDiegoFlooring",
-    "notes": [
-     "Held for Tuesday 11/24 at 6:30 PM. Not scheduled yet: waiting on the original video file."
-    ]
-   },
-   {
-    "id": "wed",
-    "day": "Wednesday",
-    "short": "Wed",
-    "jump": "Wed",
-    "date": "11/25",
     "status": "Scheduled",
     "format": "Reel · 5 platforms",
     "title": "Contractor FAQ Series",
@@ -349,27 +300,27 @@ const WEEKS = [
     "times": [
      {
       "k": "ig",
-      "t": "2:15 PM",
+      "t": "6:30 PM",
       "s": "Scheduled"
      },
      {
       "k": "fb",
-      "t": "3:30 PM",
+      "t": "6:30 PM",
       "s": "Scheduled"
      },
      {
       "k": "tt",
-      "t": "10:00 AM",
+      "t": "6:30 PM",
       "s": "Scheduled"
      },
      {
       "k": "yt",
-      "t": "4:00 PM",
+      "t": "6:30 PM",
       "s": "Scheduled"
      },
      {
       "k": "li",
-      "t": "11:00 AM",
+      "t": "6:30 PM",
       "s": "Scheduled"
      }
     ],
@@ -388,10 +339,10 @@ const WEEKS = [
    },
    {
     "id": "thu",
-    "day": "Thursday",
-    "short": "Thu",
-    "jump": "Thu",
-    "date": "11/26",
+    "day": "Wednesday",
+    "short": "Wed",
+    "jump": "Wed",
+    "date": "11/25",
     "status": "Scheduled",
     "format": "Reel · 5 platforms",
     "title": "Contractor Pain Points and Objections #3",
@@ -439,10 +390,10 @@ const WEEKS = [
    },
    {
     "id": "fri",
-    "day": "Friday",
-    "short": "Fri",
-    "jump": "Fri",
-    "date": "11/27",
+    "day": "Thursday",
+    "short": "Thu",
+    "jump": "Thu",
+    "date": "11/26",
     "status": "Scheduled",
     "format": "Reel · 5 platforms",
     "title": "Jovic Flooring Tour",
