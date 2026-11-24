@@ -296,7 +296,7 @@ const WEEKS = [
     "format": "Reel · 5 platforms",
     "title": "Why Keep Looking?",
     "bucket": "Top performer",
-    "video": true,
+    "cover": "tue-wkl.jpg",
     "times": [
      {
       "k": "ig",

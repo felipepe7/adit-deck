@@ -1,5 +1,6 @@
 {
   "_about": "Which original file feeds which calendar day. Key is <media folder>/<day id> from calendar/weeks.js; the words are matched (any case) against the original file name by tools/build-media.mjs.",
+  "w1116/thu-crew": ["your crew"],
   "w1116/thu-bf": ["avoid running short"],
   "w1116/fri": ["who is victor"],
   "w1123/mon": ["how did jovic start"],
