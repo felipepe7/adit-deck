@@ -677,5 +677,89 @@ const WEEKS = [
       ],
       next: "Next week (Thanksgiving week): 1 week to go countdown, the last Black Friday push before Nov 30, and Dr. Rita's Breeze Orthodontics shoot once Felipe is back in San Diego."
     }
+  },
+  {
+    id: "nov-23", n: 9, tab: "Nov 23", range: "Nov 23 to 27", state: "Planned",
+    theme: "Black Friday Week with Dr. Jesse Cook",
+    cover: { big: "NOV 23", to: "TO NOV 27", year: "2026" },
+    summary: "Black Friday is here. One post a day, Tuesday to Friday, all four from Dr. Jesse Cook's Missouri shoot: a real chiropractor on why calls get missed and what fixed it. Every post asks for one thing, comment DEMO, and posts as a collab with @dr.jesse_cook.",
+    glanceNote: "Real doctors beat talking heads, so Black Friday week is all Dr. Jesse. Each reel names one problem every chiro and dental office has (missed calls, a slammed front desk, too many logins) and ends on the Black Friday deal. Every DEMO comment gets the booking link by DM.",
+    media: "media/w6/",
+    days: [
+      { id: "tue", day: "Tuesday", short: "Tue", date: "11/24", status: "Final revisions today", format: "Reel · 33s · Doctor story · 10:00 AM PT · Collab",
+        title: "Who Called While I Was Adjusting?", bucket: "Doctor Story / Missed Calls", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1BBo_QDvbwVmuXvGp_1LsC0Y4QAO3ViPW/view?usp=drive_link",
+        hook: "Here's who calls a chiropractor in one hour, and who you lose if nobody answers 📞",
+        caption: [
+          "A new patient ready to book. A car-accident patient their attorney told to call. A mom asking if you see kids. A patient trying to reschedule instead of quietly dropping off their care plan.",
+          "Every one of those calls is someone deciding whether to trust you. Dr. Jesse Cook stopped missing them with Adit.",
+          "🔥 Black Friday: up to 40% off your first year + a $200 Amazon gift card when you book a demo before Nov 30. Comment DEMO 👇"
+        ],
+        thought: "Opens Black Friday week with the pain every office feels but never counts: the calls that ring out. Dr. Jesse lists real callers, so owners picture their own phone, and the offer lands as the fix instead of an ad.",
+        cta: "Comment DEMO and we'll send you the link 👇",
+        tags: "#Chiropractic #Chiropractor #MissedCalls #FrontDesk #PracticeGrowth #BlackFriday #Adit",
+        manychat: "Black Friday DEMO flow: every DEMO comment gets the demo booking link by DM. Live before it posts.",
+        notes: ["Today's revisions from Felipe: Adit logo on screen the whole video, branded Adit captions every time he says Adit, and an outro with Cook Chiropractic + Adit logos ending on the Black Friday DEMO offer in Cook Chiropractic red.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        ask: "Comment DEMO" },
+      { id: "wed", day: "Wednesday", short: "Wed", date: "11/25", status: "Final revisions today", format: "Reel · 33s · Doctor story · 10:00 AM PT · Collab",
+        title: "My Front Desk Isn't the Problem", bucket: "Doctor Story / Front Desk", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1QrAPOEWFv23opRYNuBumN4rybMABBIoL/view?usp=drive_link",
+        hook: "If your front desk is missing calls, it's not because they aren't working hard 💙",
+        caption: [
+          "Check-ins, insurance, care-plan payments, intake forms, a full lobby and a phone that won't stop.",
+          "That's not an effort problem, it's a capacity problem. Dr. Jesse didn't hire another person. He gave the team he already has some backup.",
+          "🔥 Black Friday: up to 40% off your first year + a $200 Amazon gift card when you book a demo before Nov 30. Comment DEMO 👇"
+        ],
+        thought: "Takes the owner's side and the front desk's side at the same time. Office managers share this one because it defends them, which puts the Black Friday offer in front of the person who actually books the demo.",
+        cta: "Tag your front desk hero, then comment DEMO 👇",
+        tags: "#FrontDesk #OfficeManager #Chiropractic #DentalOffice #PracticeManagement #BlackFriday #Adit",
+        manychat: "Black Friday DEMO flow: every DEMO comment gets the demo booking link by DM. Live before it posts.",
+        notes: ["Same revisions as Tuesday: Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit Black Friday outro.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        ask: "Tag your front desk + comment DEMO" },
+      { id: "thu", day: "Thursday", short: "Thu", date: "11/26", status: "Final revisions today", format: "Reel · 31s · Doctor story · 10:00 AM PT · Collab · Thanksgiving",
+        title: "Both Hands Are Busy", bucket: "Doctor Story / Missed Calls", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1En0fzG9FsIP6X2i5z-4HvIO4vbXNDzJf/view?usp=drive_link",
+        hook: "I adjust with both hands. So who's answering my phone? 🙌🏻",
+        caption: [
+          "When Dr. Jesse is with a patient, he's with that patient. But the phone doesn't stop ringing just because he's busy.",
+          "If nobody picks up, they don't leave a voicemail. They call the next clinic on Google.",
+          "🦃 Happy Thanksgiving from all of us at Adit. The Black Friday deal ends Nov 30: up to 40% off your first year + a $200 Amazon gift card. Comment DEMO 👇"
+        ],
+        thought: "Thanksgiving is a light-scroll day, so it gets the shortest, simplest story: one doctor, two busy hands, one ringing phone. It keeps Black Friday in the feed without feeling like a hard sell on a holiday.",
+        cta: "Comment DEMO 👇",
+        tags: "#Chiropractor #Chiropractic #PatientExperience #MissedCalls #Thanksgiving #BlackFriday #Adit",
+        manychat: "Black Friday DEMO flow: every DEMO comment gets the demo booking link by DM. Live before it posts.",
+        notes: ["Same revisions as Tuesday: Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit Black Friday outro.", "Schedule Wednesday night so nobody has to post on Thanksgiving. Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        ask: "Comment DEMO" },
+      { id: "fri", day: "Friday", short: "Fri", date: "11/27", status: "Final revisions today", format: "Reel · 34s · Why I chose Adit · 9:00 AM PT · Collab · Black Friday",
+        title: "One System Instead of Five", bucket: "Offer / Black Friday", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1Iy8ja1BGNP2PrQbXZP7RzE6eBmQga8mz/view?usp=drive_link",
+        hook: "I didn't need more software. I needed fewer logins 🔑",
+        caption: [
+          "Phones in one place, texts in another, scheduling somewhere else and intake forms on a clipboard.",
+          "Adit pulls it into one system: phones, reminders, texting, online scheduling, digital forms and payments, and it works alongside the practice software you already use.",
+          "🔥 It's Black Friday: up to 40% off your first year + a $200 Amazon gift card when you book a demo before Nov 30. Comment DEMO 👇"
+        ],
+        thought: "Black Friday itself gets the clearest 'why Adit' story of the shoot. The first three days named the problems, this one names the fix, on the day buyers are already looking for deals. It posts an hour earlier to catch the morning deal scroll.",
+        cta: "Comment DEMO and we'll send you the link. It takes 60 seconds 👇",
+        tags: "#BlackFriday #Chiropractic #DentalPractice #PracticeManagement #AllInOne #PracticeGrowth #Adit",
+        manychat: "Black Friday DEMO flow: every DEMO comment gets the demo booking link by DM. Live before it posts.",
+        notes: ["Same revisions as Tuesday: Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit Black Friday outro.", "Instagram as a collab with @dr.jesse_cook 9:00 AM PT, Facebook 9:15, LinkedIn 9:30, YouTube Short 9:45. Share to Adit's stories and the Facebook groups."],
+        ask: "Comment DEMO" }
+    ],
+    close: {
+      kind: "asks",
+      title: "What we need from the Adit team",
+      items: [
+        { k: "Collab", v: "Accept the collab invites so all four reels land on both @get_adit and @dr.jesse_cook." },
+        { k: "Black Friday", v: "Share Friday's reel to your stories and in the Facebook groups you're in. Every DEMO comment gets the booking link automatically." },
+        { k: "Dr. Jesse", v: "A quick thank-you from his Adit rep. He gave us a full Saturday of content, and these four are only the start." }
+      ],
+      next: "Next week: the final countdown to the Dec 1 Review Challenge and the last Black Friday push before Nov 30 closes."
+    }
   }
 ];

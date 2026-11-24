@@ -87,6 +87,12 @@ button{font:inherit;color:inherit}
 .results div{display:flex;flex-direction:column;gap:.35em}
 .results b{font-family:var(--display);font-weight:800;color:var(--white);font-variant-numeric:tabular-nums}
 .results span{font-family:var(--body);font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.covs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:10px;max-width:420px}
+.cov-o{display:block;text-decoration:none;color:inherit}
+.cov-o img{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:12px;box-shadow:0 0 0 1px rgba(245,245,245,.14);transition:transform .25s}
+.cov-o:hover img{transform:translateY(-3px)}
+.cov-o span{display:block;margin-top:6px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center}
+.status[data-s="Final revisions today"] i{background:var(--warn)}
 .notebox{border:1px solid rgba(245,245,245,.14);border-left:3px solid var(--warn);border-radius:10px;background:rgba(245,245,245,.03)}
 .notebox p{margin:0;color:#D9DBDF}
 .notebox p + p{margin-top:.5em}
@@ -949,6 +955,12 @@ function watchLive(root, revealSel){
 function phone(w, d, cls, opts){ opts = opts||{}; return `<div class="phone ${cls||""}"><div class="screen"><span class="island"></span>${screenInner(w,d,opts)}</div></div>`; }
 function status(s){ return `<span class="status" data-s="${esc(s)}"><i></i>${esc(s)}</span>`; }
 function results(r){ return r ? `<div class="results">${r.map(x=>`<div><b>${x[0]}</b><span>${x[1]}</span></div>`).join("")}</div>` : ""; }
+/* thumbnail covers: every scheduled post ships with light, dark and Adit-blue cover options (tap to open full size) */
+const COVN = { light: "Light", dark: "Dark", blue: "Adit Blue" };
+function covers(w, d){
+  if (!d.covers || !d.covers.length) return "";
+  return `<div class="blk covblk"><div class="label">Thumbnail covers</div><div class="covs">${d.covers.map(c=>{ const src = w.media + d.id + "-cover-" + c + ".jpg"; return `<a class="cov-o" href="${src}" target="_blank" rel="noopener"><img src="${src}" alt="${esc(d.title)} cover, ${COVN[c]||c}" loading="lazy"><span>${COVN[c]||c}</span></a>`; }).join("")}</div></div>`;
+}
 function notes(d){
   const n = [];
   if (d.manychat) n.push(`<p><b>ManyChat:</b> ${esc(d.manychat)}</p>`);
@@ -1025,7 +1037,7 @@ function buildDeck(){
         <div class="two">
           <div class="blk"><div class="label">Caption</div><div class="txt">${d.caption.map(p=>`<p>${esc(p)}</p>`).join("")}</div></div>
           <div><div class="blk"><div class="label">Thought behind it</div><div class="txt"><p>${esc(d.thought)}</p></div></div>
-          <div class="blk"><div class="label">CTA + Hashtags</div><div class="txt"><p>${esc(d.cta)}</p></div><p class="hash">${esc(d.tags)}</p></div></div>
+          <div class="blk"><div class="label">CTA + Hashtags</div><div class="txt"><p>${esc(d.cta)}</p></div><p class="hash">${esc(d.tags)}</p></div>${covers(w,d)}</div>
         </div>
         <div class="foot">${posted ? plats(st) + notes(d) : actions(d) + notes(d) + results(d.results)}</div>
       </div></section>`});
@@ -1176,6 +1188,7 @@ function buildFeed(){
     <div class="blk"><div class="label">Hook</div><p class="hook">${esc(d.hook)}</p></div>
     <div class="blk"><div class="label">Caption</div><div class="txt">${d.caption.map(p=>`<p>${esc(p)}</p>`).join("")}</div></div>
     <div class="blk"><div class="label">Thought behind it</div><div class="txt"><p>${esc(d.thought)}</p></div></div>
+    ${covers(w,d)}
     <div class="blk"><div class="label">CTA + Hashtags</div><div class="txt"><p>${esc(d.cta)}</p></div><p class="hash">${esc(d.tags)}</p></div>
     ${notes(d)}
     <div class="acts">${posted ? (d.drive ? `<a class="btn ghost" href="${d.drive}" target="_blank" rel="noopener">${d.slides?"Open design file":"Open video file"} ${ARROW}</a>` : "") : actions(d)}</div>
