@@ -244,3 +244,131 @@ const GROUP_MONTHS = [
     ]
   }
 ];
+
+/* ---------------- THE VAULT ----------------
+   Every group-ready post we have, in one place, with no dates. Each month we pick from here
+   and put the picks into that month's slots. New footage goes into VAULT_NEW. */
+const VAULT_NEW = [
+  /* Dr. Jesse Cook, Cook Chiropractic (Warrenton, MO). Filmed Nov 2026, final cuts Nov 25. */
+  { id: "C5", v: "chiro", status: "Needs clean outro", kind: "Story · Missed calls", room: "Solo doc rooms",
+    title: "Both Hands Are Busy. Who's Answering?", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w6/thu.mp4", poster: "media/w6/thu.jpg" }, format: "Native video · 31s",
+    caption: [
+      "Question for the solo docs in here.",
+      "Dr. Jesse Cook (Cook Chiropractic, Warrenton MO) put it simply: he adjusts with both hands, so when he's with a patient, nobody's grabbing the phone.",
+      "And the people calling don't leave a voicemail. They call the next clinic on Google.",
+      "How do you handle calls while you're mid-adjustment?"
+    ],
+    firstComment: "Full disclosure, I work with Adit, which Dr. Jesse uses for this. Happy to share how his office set it up.",
+    why: "The most natural front desk conversation in a chiro room, said by a real solo chiropractor instead of us. Every doc in the room has lived it.",
+    notes: ["This cut ends on the Black Friday offer. After Nov 30, ask for a version with the plain Cook Chiropractic + Adit outro before it goes into a group."],
+    drive: "https://drive.google.com/file/d/1Xmh7R1pSqQGoZexnG967Q2N9xD9FmYta/view?usp=drive_link" },
+
+  { id: "C6", v: "chiro", status: "Needs clean outro", kind: "Story · Missed calls", room: "All chiro rooms",
+    title: "Who Called While I Was Adjusting?", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w6/tue.mp4", poster: "media/w6/tue.jpg" }, format: "Native video · 33s",
+    caption: [
+      "Dr. Jesse Cook listed who calls a chiro office in a single hour: a new patient ready to book, a car-accident patient whose attorney told them to call, a mom asking if you see kids, and a patient trying to reschedule instead of dropping their care plan.",
+      "Every one of those is someone deciding whether to trust you.",
+      "Which of those calls hurts the most when it goes to voicemail in your office?"
+    ],
+    firstComment: "I work with Adit, the system Dr. Jesse uses. Glad to answer questions on how the call rules work.",
+    why: "PI and new-patient calls are where chiro offices feel missed calls in dollars. Listing real callers makes every owner picture their own phone, and the question gets them ranking their own pain.",
+    notes: ["Ends on the Black Friday offer. Needs the plain outro before it posts in a group after Nov 30."],
+    drive: "https://drive.google.com/file/d/1cHcjUFHGlbqoChpwbO5KFtneLmWAkGdt/view?usp=drive_link" },
+
+  { id: "C7", v: "chiro", status: "Needs clean outro", kind: "Debate · Front desk", room: "Office manager rooms",
+    title: "My Front Desk Isn't the Problem", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w6/wed.mp4", poster: "media/w6/wed.jpg" }, format: "Native video · 33s",
+    caption: [
+      "This one's for the front desk teams.",
+      "Check-ins, insurance, care-plan payments, intake forms, a full lobby and a phone that won't stop. Dr. Jesse Cook's take: when calls get missed, it isn't an effort problem, it's a capacity problem.",
+      "Front desk folks, agree or disagree? What's the one thing that would take the most off your plate?"
+    ],
+    firstComment: "I work with Adit. Dr. Jesse's office uses it to back up his front desk, happy to share what they changed.",
+    why: "It takes the front desk's side, so office managers share it and answer the question. That puts the conversation in front of the person who actually books the demo.",
+    notes: ["Ends on the Black Friday offer. Needs the plain outro before it posts in a group after Nov 30."],
+    drive: "https://drive.google.com/file/d/14lLUNNxRBvqLlT6jYS6LBANX0ANTZreW/view?usp=drive_link" },
+
+  { id: "C8", v: "chiro", status: "Needs clean outro", kind: "Debate · Tech stack", room: "Owner rooms",
+    title: "One System Instead of Five", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w6/fri.mp4", poster: "media/w6/fri.jpg" }, format: "Native video · 34s",
+    caption: [
+      "Curious how many logins the owners in here deal with every day.",
+      "Dr. Jesse Cook had phones in one place, texts in another, scheduling somewhere else and intake forms on a clipboard. He said he didn't need more software, he needed fewer logins.",
+      "How many systems does your front desk jump between?"
+    ],
+    firstComment: "I work with Adit, which is what Dr. Jesse moved to. Happy to share what it replaced in his office.",
+    why: "Owners love comparing their tech stacks, and the question is easy to answer with a number. Every answer is a practice telling us how much pain they're in.",
+    notes: ["Ends on the Black Friday offer. Needs the plain outro before it posts in a group after Nov 30."],
+    drive: "https://drive.google.com/file/d/1pgTNJpjOZRmHBXuQ9Q1Wom8DMTHn8KYj/view?usp=drive_link" },
+
+  { id: "C9", v: "chiro", status: "Ready", kind: "Story · AI objection", room: "All chiro rooms",
+    title: "I Was Skeptical About AI", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w7/mon.mp4", poster: "media/w7/mon.jpg" }, format: "Native video · 26s",
+    caption: [
+      "Honest question for the hometown practices in here.",
+      "Dr. Jesse Cook runs a small-town chiro office where people expect a real person. His worry about AI on the phones was that it would make the office feel cold.",
+      "What changed his mind: it doesn't replace his team. It catches the calls they physically can't get to, and the team takes it from there.",
+      "Would you let AI answer your overflow calls, or is that a hard no for your patients?"
+    ],
+    firstComment: "I work with Adit, the system he's talking about. Happy to answer questions, skeptics welcome.",
+    why: "Every chiro owner who hasn't tried AI has this exact objection. A small-town doc saying it out loud starts an honest debate instead of a pitch, and the skeptics in the comments are the people we want to talk to.",
+    notes: ["The reel ends with 'comment DEMO.' In a group, let the first comment do the work instead."],
+    drive: "https://drive.google.com/file/d/1LCiQ5h5gHd6pULLL0jj6i5cbPJcaWsDw/view?usp=drive_link" },
+
+  { id: "C10", v: "chiro", status: "Ready", kind: "Story · Reviews", room: "Chiro marketing rooms",
+    title: "How We Placed Near the Top", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w7/tue.mp4", poster: "media/w7/tue.jpg" }, format: "Native video · 28s",
+    caption: [
+      "Dr. Jesse Cook's small-town chiro office almost won a Google review challenge against 19 other practices, most of them dental and ortho.",
+      "His take: in a small town, reviews are how people decide who to trust. Every review is a patient telling someone else to go see Dr. Cook.",
+      "How do you ask for reviews in your office? At checkout, by text after the visit, or does the doctor ask in the room?"
+    ],
+    firstComment: "I work with Adit, which ran the challenge. The December one is open if your office wants in.",
+    why: "Pairs with C1, now with Dr. Jesse on camera. A chiro office out-asking dental practices is a story chiro rooms want to hear, and the question is pure peer advice.",
+    notes: ["Best in December while the Review Challenge is running."],
+    drive: "https://drive.google.com/file/d/18N9z8Cqgc7SfuG5NBn3SRFcZ1P1CMpJI/view?usp=drive_link" },
+
+  { id: "C11", v: "chiro", status: "Ready", kind: "Debate · Retention", room: "All chiro rooms",
+    title: "The Patient Who Quietly Disappears", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w7/wed.mp4", poster: "media/w7/wed.jpg" }, format: "Native video · 27s",
+    caption: [
+      "The patient you lose isn't the one who complains. It's the one who just stops coming.",
+      "That's how Dr. Jesse Cook put it. They miss one visit, life gets busy, and the care plan never gets finished.",
+      "What's worked best in your office to bring those patients back before they drift for good?"
+    ],
+    firstComment: "I work with Adit. Dr. Jesse uses our automatic follow-ups for this, happy to share how they're set up.",
+    why: "Care-plan drop-off is the number one chiro pain in the playbook. This is the doctor-voice version of C3, and the question asks the room for their own playbook.",
+    drive: "https://drive.google.com/file/d/1wBSV463g4R7OJmxphWHV4EU0MTO5ySht/view?usp=drive_link" },
+
+  { id: "C12", v: "chiro", status: "Ready", kind: "Question · No-shows", room: "Office manager rooms",
+    title: "Reminders That Actually Work", talent: "Dr. Jesse Cook, Cook Chiropractic",
+    media: { type: "video", src: "media/w7/thu.mp4", poster: "media/w7/thu.jpg" }, format: "Native video · 27s",
+    caption: [
+      "Dr. Jesse Cook says no-shows aren't a scheduling problem, they're a reminder problem. People don't skip, they forget.",
+      "His office sends reminders by text, patients reply right there, and if they need to they reschedule instead of disappearing.",
+      "What does your reminder routine look like? Text, call, email, or all three?"
+    ],
+    firstComment: "I work with Adit, the system his office uses for two-way texts. Happy to share their setup.",
+    why: "No-shows are universal, and 'what's your reminder routine' is the easiest question in any group to answer. Office managers swap tips, and we learn what every office is using today.",
+    drive: "https://drive.google.com/file/d/1xS36uz9qeUyrU9CV4pwnS8uBu2mI0-s8/view?usp=drive_link" }
+];
+
+(() => {
+  const order = VERTICALS.map(v => v.id);
+  const seen = new Set(), lib = [];
+  GROUP_MONTHS.slice().reverse().forEach(mo => mo.menu.forEach(x => { if (!seen.has(x.id) && x.kind !== "Coming") { seen.add(x.id); lib.push(x); } }));
+  VAULT_NEW.forEach(x => { if (!seen.has(x.id)) { seen.add(x.id); lib.push(x); } });
+  lib.sort((a, b) => order.indexOf(a.v) - order.indexOf(b.v));
+  GROUP_MONTHS.unshift({
+    id: "vault", vault: true, tab: "Vault", year: "Every post", state: "Library",
+    summary: "Every Facebook group post we have, with no dates on it. Each month we pick from here on the weekly call and drop the picks into that month's slots. New footage lands here first.",
+    menu: lib,
+    asks: [
+      { k: "Pick for December", v: "Choose two posts per vertical from the vault for December's sponsored group slots." },
+      { k: "Clean outros", v: "C5 to C8 end on the Black Friday offer. We'll swap in the plain Cook Chiropractic + Adit outro so they can go into groups after Nov 30." },
+      { k: "Dr. Jesse's OK", v: "Get Dr. Jesse Cook's OK to post his reels in chiro Facebook groups under his name." }
+    ]
+  });
+})();

@@ -761,5 +761,89 @@ const WEEKS = [
       ],
       next: "Next week: the final countdown to the Dec 1 Review Challenge and the last Black Friday push before Nov 30 closes."
     }
+    },
+  {
+    id: "nov-30", n: 10, tab: "Nov 30", range: "Nov 30 to Dec 3", state: "Planned",
+    theme: "Dr. Jesse, Part Two: Trust, Reviews and Patients Who Come Back",
+    cover: { big: "NOV 30", to: "TO DEC 3", year: "2026" },
+    summary: "Four more reels from Dr. Jesse Cook's Missouri shoot, Monday to Thursday. Monday closes Black Friday, Tuesday kicks off the December Review Challenge with his own review story, and Wednesday and Thursday cover retention and no-shows. Every post is a collab with @dr.jesse_cook and ends on one comment word.",
+    glanceNote: "Same doctor, new problems. Last week was about missed calls. This week is what keeps a small-town practice full: trusting AI, Google reviews, patients who drift away and patients who forget. Each reel has its own comment word so we can see which topic pulls the most demo requests.",
+    media: "media/w7/",
+    days: [
+      { id: "mon", day: "Monday", short: "Mon", date: "11/30", status: "Ready", format: "Reel · 26s · Doctor story · 10:00 AM PT · Collab · Black Friday ends",
+        title: "I Was Skeptical About AI", bucket: "Doctor Story / Objection", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1LCiQ5h5gHd6pULLL0jj6i5cbPJcaWsDw/view?usp=drive_link",
+        hook: "Honestly? I didn't want a robot answering my phones 🤖",
+        caption: [
+          "Dr. Jesse runs a hometown practice. People in his town expect a real person, so his worry was that AI would make the office feel cold.",
+          "What he learned: it doesn't replace his team. It catches the calls they physically can't get to, and his team takes it from there.",
+          "⏰ Last day of Black Friday: up to 40% off your first year + a $200 Amazon gift card when you book a demo today. Comment DEMO 👇"
+        ],
+        thought: "Every owner who hasn't bought yet has the same objection: AI will feel impersonal. A small-town chiropractor saying it out loud, then saying what changed his mind, answers it better than any feature list. Posting it on the last day of the deal gives the fence-sitters a reason to act today.",
+        cta: "Comment DEMO and a team member at Adit will reach out today 👇",
+        tags: "#Chiropractic #Chiropractor #AI #SmallTownPractice #PatientExperience #BlackFriday #Adit",
+        manychat: "Black Friday DEMO flow (last day): every DEMO comment gets the demo booking link by DM. Switch the flow to the regular DEMO offer at midnight.",
+        notes: ["Final cut (Nov 25): Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit outro.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45. Share to stories at 5 PM with a 'deal ends tonight' sticker."],
+        ask: "Comment DEMO" },
+      { id: "tue", day: "Tuesday", short: "Tue", date: "12/1", status: "Ready", format: "Reel · 28s · Doctor story · 10:00 AM PT · Collab · Challenge day 1",
+        title: "How We Placed Near the Top", bucket: "Challenge / Social Proof", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/18N9z8Cqgc7SfuG5NBn3SRFcZ1P1CMpJI/view?usp=drive_link",
+        hook: "Here's how we almost took 1st place in Adit's Google Review Challenge 🏆",
+        caption: [
+          "In a small town, reviews are how people decide who to trust. Every review Dr. Jesse's patients left told someone else to go see Dr. Cook.",
+          "He finished near the top of the last challenge, and he wants to thank every patient who helped.",
+          "🏆 The December Review Challenge starts today: $10,000 in prizes, 1 point for every new Google review. Comment REVIEW 👇"
+        ],
+        thought: "Day one of the December challenge needs proof that regular practices can win it. A past contender telling his own story is that proof, and it frames reviews as trust, not vanity. It's the most shareable reel of the shoot for other offices.",
+        cta: "Comment REVIEW and a team member will reach out shortly 👇",
+        tags: "#GoogleReviews #Chiropractic #SmallBusiness #PatientTrust #ReviewChallenge #Adit",
+        manychat: "New REVIEW flow: every REVIEW comment gets the December challenge sign-up link plus the demo link by DM. Build and test before Tuesday.",
+        notes: ["Final cut (Nov 25): Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit outro.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45. Pin next to the challenge launch reel for the first week of December."],
+        ask: "Comment REVIEW" },
+      { id: "wed", day: "Wednesday", short: "Wed", date: "12/2", status: "Ready", format: "Reel · 27s · Doctor story · 10:00 AM PT · Collab",
+        title: "The Patient Who Quietly Disappears", bucket: "Doctor Story / Retention", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1wBSV463g4R7OJmxphWHV4EU0MTO5ySht/view?usp=drive_link",
+        hook: "The patient you lose isn't the one who complains. It's the one who just stops coming 👋🏻",
+        caption: [
+          "They miss one visit. Life gets busy. They never rebook, and the care plan that would have done its job never gets finished.",
+          "Adit brings them back before they drift, with automatic follow-ups that reach out while there's still time.",
+          "Comment RETURN and we'll show you how 👇"
+        ],
+        thought: "Retention is the quiet revenue leak every practice owner knows about and nobody tracks. Naming the patient who 'just stops coming' makes owners think of real names on their schedule, which is the moment they want to see the fix.",
+        cta: "Comment RETURN 👇",
+        tags: "#PatientRetention #Chiropractic #CarePlan #PracticeGrowth #DentalPractice #Adit",
+        manychat: "New RETURN flow: every RETURN comment gets a short note on Adit's recall and follow-up texts plus the demo booking link by DM.",
+        notes: ["Final cut (Nov 25): Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit outro.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        ask: "Comment RETURN" },
+      { id: "thu", day: "Thursday", short: "Thu", date: "12/3", status: "Ready", format: "Reel · 27s · Doctor story · 10:00 AM PT · Collab",
+        title: "Reminders That Actually Work", bucket: "Doctor Story / No-Shows", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1xS36uz9qeUyrU9CV4pwnS8uBu2mI0-s8/view?usp=drive_link",
+        hook: "No-shows aren't a scheduling problem. They're a reminder problem ⏰",
+        caption: [
+          "People don't skip. They forget.",
+          "At Cook Chiropractic, automatic reminders go out by text. Patients reply right there, and if they need to, they reschedule instead of disappearing.",
+          "Want to see how Adit cuts down on empty slots? Comment REMIND 👇"
+        ],
+        thought: "Closes the shoot on the most universal pain: empty slots. It pairs with Wednesday (the patient who drifts away for good vs. the one who forgets once) and ends on the simplest product proof Adit has, a two-way text.",
+        cta: "Comment REMIND 👇",
+        tags: "#NoShows #AppointmentReminders #Chiropractic #DentalOffice #FrontDesk #Adit",
+        manychat: "New REMIND flow: every REMIND comment gets a quick look at two-way text reminders plus the demo booking link by DM.",
+        notes: ["Final cut (Nov 25): Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit outro.", "Instagram as a collab with @dr.jesse_cook 10:00 AM PT, Facebook 10:15, LinkedIn 10:30, YouTube Short 10:45."],
+        ask: "Comment REMIND" }
+    ],
+    close: {
+      kind: "asks",
+      title: "What we need from the Adit team",
+      items: [
+        { k: "ManyChat", v: "Three new comment words this week: REVIEW (Tue), RETURN (Wed) and REMIND (Thu). Each flow needs its DM copy approved before it posts." },
+        { k: "Collab", v: "Accept the collab invites so all four reels land on both @get_adit and @dr.jesse_cook." },
+        { k: "Challenge", v: "Tuesday's reel is day one of the December Review Challenge. Share it to stories and pin it next to the launch reel." }
+      ],
+      next: "Next week: the first Monday leaderboard of the December challenge."
+    }
   }
 ];

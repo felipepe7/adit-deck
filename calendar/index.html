@@ -474,6 +474,8 @@ a.plat:focus-visible{outline:2px solid var(--blue-lit);outline-offset:3px}
 .mcard .status{font-size:10px;padding:5px 9px;align-self:flex-start}
 .status[data-s="Waiting on Adit"] i,.status[data-s="Needs numbers check"] i,.status[data-s="After Nov 2"] i{background:var(--warn)}
 .status[data-s="No group access"] i{background:#E5484D}
+.status[data-s="Needs clean outro"] i{background:var(--warn)}
+.vaultnote{margin-top:16px;border:1px solid rgba(13,27,42,.12);border-radius:16px;padding:16px 20px;background:rgba(255,255,255,.85);font:500 14.5px/1.5 var(--body);color:#34404E}.vaultnote b{color:var(--blue-lit)}
 .ytm{position:absolute;inset:0;background:#000;overflow:hidden}
 .ytm .bg{position:absolute;inset:-10%;width:120%;height:120%;object-fit:cover;filter:blur(18px) brightness(.5)}
 .ytm .fg{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);width:100%;aspect-ratio:16/9;object-fit:cover}
@@ -508,7 +510,7 @@ button.slot:focus-visible{outline:2px solid var(--blue-lit);outline-offset:2px}
 .slt tr.locked .gname{color:var(--muted)}
 .lockmsg{display:flex;align-items:center;gap:10px;color:var(--warn);font:600 13.5px/1.45 var(--body)}
 .lockmsg svg{width:16px;height:16px;flex:none}
-.rooms{--vr:110,152,204;margin-top:16px;padding:22px 24px 24px;border-radius:20px;border:1px solid rgba(var(--vr),.3);background:radial-gradient(130% 150% at 0% 0%,rgba(var(--vr),.17),transparent 58%),rgba(22,22,22,.72)}
+.rooms{--vr:110,152,204;margin-top:16px;padding:22px 24px 24px;border-radius:20px;border:1px solid rgba(var(--vr),.3);background:radial-gradient(130% 150% at 0% 0%,rgba(var(--vr),.17),transparent 58%),rgba(255,255,255,.9)}
 .glsec .rooms{margin-top:18px}
 .rooms-h{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}
 .rt{display:flex;align-items:center;gap:12px;flex-wrap:wrap;min-width:0}
@@ -552,7 +554,7 @@ a.room.off:hover{border-color:rgba(13,27,42,.5);background:rgba(13,27,42,.05);bo
 .gfoot a{color:var(--muted)}
 .drawer{position:fixed;inset:0;z-index:50}
 .dscrim{position:absolute;inset:0;background:rgba(0,0,0,.62);animation:dfade .25s both}
-.dpanel{position:absolute;top:0;right:0;bottom:0;width:min(1000px,100%);background:#101010;border-left:1px solid var(--line);display:grid;grid-template-columns:350px minmax(0,1fr);overflow:hidden;animation:dslide .35s cubic-bezier(.2,.7,.2,1) both}
+.dpanel{position:absolute;top:0;right:0;bottom:0;width:min(1000px,100%);background:#F6F8FB;color:#0D1B2A;border-left:1px solid var(--line);display:grid;grid-template-columns:350px minmax(0,1fr);overflow:hidden;animation:dslide .35s cubic-bezier(.2,.7,.2,1) both}
 @keyframes dfade{from{opacity:0}}
 @keyframes dslide{from{transform:translateX(40px);opacity:0}}
 .dmedia{padding:34px 0 34px 34px;display:flex;flex-direction:column;gap:14px;align-items:stretch;overflow-y:auto}
@@ -765,6 +767,7 @@ let soundOn = false, mode = null, week = null, cleanup = [];
 /* ---------- live numbers (stats.js, rebuilt every morning from Metricool) ---------- */
 const ST = typeof STATS !== "undefined" ? STATS : null;
 const GM = typeof GROUP_MONTHS !== "undefined" && GROUP_MONTHS.length ? GROUP_MONTHS : null;
+const GDEF = GM && (GM.find(x => x.vault) || GM[GM.length - 1]);
 const GL = typeof GROUP_LIST !== "undefined" ? GROUP_LIST : null;
 const VS = typeof VERTICALS !== "undefined" ? VERTICALS : [];
 let view = "organic", gmonth = null, gvert = "all";
@@ -831,7 +834,7 @@ function scoreLead(w){
 }
 function modesNav(){
   const lw = WEEKS[WEEKS.length - 1], ow = (view === "organic" && week) ? week : lw;
-  return `<nav class="modes" aria-label="Choose a view"><a href="#${ow.id}"${view === "organic" ? ' aria-current="page"' : ""}>Organic</a>${GM ? `<a href="#groups-${(gmonth || GM[GM.length - 1]).id}"${view === "groups" ? ' aria-current="page"' : ""}>Facebook Groups</a>` : ""}</nav>`;
+  return `<nav class="modes" aria-label="Choose a view"><a href="#${ow.id}"${view === "organic" ? ' aria-current="page"' : ""}>Organic</a>${GM ? `<a href="#groups-${(gmonth || GDEF).id}"${view === "groups" ? ' aria-current="page"' : ""}>Facebook Groups</a>` : ""}</nav>`;
 }
 
 function weekFromHash(){
@@ -1256,6 +1259,7 @@ const vinfo = id => VS.find(v => v.id === id) || { id, label: id, color: "#6E98C
 const MI = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
 function logFor(m){
   const L = (ST && ST.groupLog) || [];
+  if (m.vault) return L;
   return L.filter(e => { const s = String(e.date || ""); const t = Date.parse(s) || Date.parse(s.replace(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/, "$3-$1-$2"));
     if (!t) return true; const d = new Date(t); return d.getMonth() === MI[m.id] && String(d.getFullYear()) === String(m.year); });
 }
@@ -1336,7 +1340,12 @@ function buildGroups(){
   const H = typeof GROUPS_HUB !== "undefined" ? GROUPS_HUB : {};
   const tile = (b, span, small, warn) => `<div class="gtile${warn ? " warn" : ""}"><b>${b}</b><span>${span}</span>${small ? `<small>${esc(small)}</small>` : ""}</div>`;
   let tiles;
-  if (all) tiles = tile(tot.all, "Groups on our list", `${tot.access} where someone on our side has access`)
+  const VM = all ? m.menu : m.menu.filter(x => x.v === vid), vidN = VM.filter(x => (x.media || {}).type === "video").length;
+  if (m.vault) tiles = tile(VM.length, "Posts in the vault", all ? `Across ${VS.filter(v => m.menu.some(x => x.v === v.id)).length} verticals` : `For ${vi.label.toLowerCase()} rooms`)
+    + tile(VM.filter(x => x.status === "Ready").length, "Ready to post", `${VM.filter(x => x.status !== "Ready").length} waiting on something`)
+    + tile(vidN, "Native videos", VM.length - vidN ? `${VM.length - vidN} image or link ${VM.length - vidN === 1 ? "post" : "posts"}` : "Every one is a native upload")
+    + tile(S1.open, "Sponsored groups open", `${S1.sp} sponsored · ${S1.all} groups on our list`, S1.open < S1.sp);
+  else if (all) tiles = tile(tot.all, "Groups on our list", `${tot.access} where someone on our side has access`)
     + tile(tot.sp, "Sponsored groups", `${tot.open} we can post in today`, tot.open < tot.sp)
     + tile(tot.slots, `Post slots in ${m.tab}`, tot.tbc ? `${tot.tbc} of them wait on a confirmed limit` : "Two per open sponsored group")
     + tile(tot.menu, "Posts on the menu", `${tot.ready} ready now · ${tot.posted} posted so far`);
@@ -1345,7 +1354,7 @@ function buildGroups(){
     + tile(`${S1.open} of ${S1.sp}`, "Sponsored groups open", locked.length ? `Locked: ${locked.join(", ")}` : "Every one of them is open", S1.open < S1.sp)
     + tile(S1.slots, `Post slots in ${m.tab}`, S1.tbc ? `${S1.tbc} of them wait on a confirmed limit` : S1.slots ? "Two per open sponsored group" : "Nothing to post into yet", !S1.slots)
     + tile(S1.menu, "Posts on the menu", `${S1.ready} ready now · ${S1.posted} posted so far`); }
-  const intro = !all && !S1.open ? `Every post below is ready. We just need a room to put them in: no one on our side can post in any of the ${S1.all} ${vi.label.toLowerCase()} groups yet.` : m.summary;
+  const intro = !all && !S1.open && !m.vault ? `Every post below is ready. We just need a room to put them in: no one on our side can post in any of the ${S1.all} ${vi.label.toLowerCase()} groups yet.` : m.summary;
   const menuBlock = all
     ? VS.map(v => { const items = m.menu.filter(x => x.v === v.id); return items.length ? `<div class="vblock" style="--vc:${v.color}"><div class="vtitle"><i></i>${v.label}<span>${items.length} posts</span></div><div class="mgrid">${items.map(mcard).join("")}</div></div>` : ""; }).join("")
     : `<div class="mgrid">${m.menu.filter(x => x.v === vid).map(mcard).join("")}</div>`;
@@ -1359,9 +1368,9 @@ function buildGroups(){
       <div class="rail-note"><b>How a month runs</b><p>Week 1: Post 1 goes into every sponsored group we can post in.</p><p>Week 3: whatever won week 1 reruns in the rooms that haven't seen it.</p><p>Every day: soldiers comment, answer questions and log what they see. They don't pitch.</p></div>
       ${H.postLog ? `<a class="btn ghost" href="${H.postLog}" target="_blank" rel="noopener">Group Post Log ${ARROW}</a>` : ""}${H.mastersheet ? `<a class="btn ghost" href="${H.mastersheet}" target="_blank" rel="noopener">Groups Mastersheet ${ARROW}</a>` : ""}</aside>
     <main class="gmain">
-      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.tab} ${m.year} · ${m.state}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div>${all ? "" : roomsWall(vid, { sub: "on our list · open any of them on Facebook" })}<div class="ghow"><div><b>${m.weeks.w1.label} · ${m.weeks.w1.range}</b><p>Post 1 goes into every sponsored group we can post in.</p></div><div><b>${m.weeks.w3.label} · ${m.weeks.w3.range}</b><p>Whatever won week 1 reruns in the rooms that haven't seen it. Pick it by ${esc(m.decideBy)}.</p></div><div><b>Every day</b><p>Soldiers comment, answer questions and log each post in the Group Post Log. They don't pitch.</p></div></div></section>
-      <section class="gsec menu"><h2 class="h2">The menu</h2><p class="lead">Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.</p>${menuBlock}</section>
-      <section class="gsec pbreak"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>
+      <section class="ghero" style="${vi ? `--vc:${vi.color}` : ""}"><div class="eyebrow">Facebook Groups · ${m.vault ? "The Vault · every post, no dates" : `${m.tab} ${m.year} · ${m.state}`}</div><h1>${vi ? `<i></i>${esc(vi.label)}` : "All verticals"}</h1><p>${esc(intro)}</p><div class="gtiles">${tiles}</div>${all ? "" : roomsWall(vid, { sub: "on our list · open any of them on Facebook" })}${m.vault ? `<div class="vaultnote"><b>How the vault works.</b> Nothing in here has a date. On the weekly call we pick what goes into each month's sponsored group slots, and the month tab shows where every pick went and how it did.</div>` : `<div class="ghow"><div><b>${m.weeks.w1.label} · ${m.weeks.w1.range}</b><p>Post 1 goes into every sponsored group we can post in.</p></div><div><b>${m.weeks.w3.label} · ${m.weeks.w3.range}</b><p>Whatever won week 1 reruns in the rooms that haven't seen it. Pick it by ${esc(m.decideBy)}.</p></div><div><b>Every day</b><p>Soldiers comment, answer questions and log each post in the Group Post Log. They don't pitch.</p></div></div>`}</section>
+      <section class="gsec menu"><h2 class="h2">${m.vault ? "Everything we have" : "The menu"}</h2><p class="lead">${m.vault ? `Every post we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"}, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it has gone so far.` : `Posts we can put in front of ${all ? "each vertical" : esc(vi.label.toLowerCase()) + " rooms"} this month, built from what's already filmed. Tap any post for the group caption, why it fits the room and where it goes.`}</p>${menuBlock}</section>
+      ${m.vault ? "" : `<section class="gsec pbreak"><h2 class="h2">Sponsored groups · ${m.tab}</h2><p class="lead">Two posts per group per month. Week 1 tests, week 3 reruns the winner in the rooms that haven't seen it. Tap a slot to open the post.</p>${slotTable(m, vids)}</section>`}
       ${lists ? `<section class="gsec pbreak glsec"><h2 class="h2">Every group on our list</h2><p class="lead">From the FB Groups Mastersheet. Sponsored groups get Adit's two official posts a month. Everywhere else, soldiers comment and ask questions.</p>${lists}</section>` : ""}
       ${asks ? `<section class="gsec"><h2 class="h2">What we need from the Adit team</h2><div class="gasks">${asks}</div></section>` : ""}
       <footer class="gfoot"><div>Groups synced from the FB Groups Mastersheet${GL && GL.updated ? ` on ${stamp(GL.updated)}` : ""}. Results come from the Group Post Log.</div><div class="flowline">CREATE IN <em>FLOW</em> STATE.</div></footer>
@@ -1391,7 +1400,7 @@ function openDrawer(id){
   const m = gmonth, x = m && m.menu.find(i => i.id === id); if (!x) return;
   closeDrawer();
   const vc = vinfo(x.v).color, md = x.media || {};
-  const where = []; Object.entries(m.slots).forEach(([gk, s]) => ["w1", "w3"].forEach(wk => { if (s[wk] && s[wk].post === id) where.push({ gk, wk, day: s[wk].day }); }));
+  const where = []; (m.vault ? GM.filter(g => g.slots) : [m]).forEach(mo => Object.entries(mo.slots || {}).forEach(([gk, s]) => ["w1", "w3"].forEach(wk => { if (s[wk] && s[wk].post === id) where.push({ gk, wk, day: s[wk].day, mo }); })));
   const gByKey = k => { for (const v of VS){ const V = vgroups(v.id), g = V.sponsored.find(g => g.key === k) || V.all.find(g => g.key === k); if (g) return g; } return { name: k }; };
   const log = logFor(m).filter(e => e.post === id);
   let media;
@@ -1402,8 +1411,8 @@ function openDrawer(id){
   if (x.drive) acts.push(`<a class="btn solid" href="${x.drive}" target="_blank" rel="noopener">Open video file ${ARROW}</a>`);
   if (x.yt) acts.push(`<a class="btn ${x.drive ? "ghost" : "solid"}" href="${x.yt}" target="_blank" rel="noopener">Watch on YouTube ${ARROW}</a>`);
   if (x.ig) acts.push(`<a class="btn ghost" href="${x.ig}" target="_blank" rel="noopener">See it on Instagram ${ARROW}</a>`);
-  const whereHtml = where.length ? where.map(p => { const e = log.find(l => l.group === p.gk); return `<div>${esc(gByKey(p.gk).name)}<span>${esc(m.weeks[p.wk].label)} · ${esc(p.day)}${e ? ` · ${fmtN(e.views)} views, ${fmtN(e.comments)} comments` : ""}</span></div>`; }).join("")
-    : `<div>${esc(x.room)}<span>${x.status === "No group access" ? "Waiting on group access" : "Placed on the weekly call"}</span></div>`;
+  const whereHtml = where.length ? where.map(p => { const e = log.find(l => l.group === p.gk); return `<div>${esc(gByKey(p.gk).name)}<span>${esc(p.mo.vault ? "" : (m.vault ? p.mo.tab + " · " : ""))}${esc(p.mo.weeks[p.wk].label)} · ${esc(p.day)}${e ? ` · ${fmtN(e.views)} views, ${fmtN(e.comments)} comments` : ""}</span></div>`; }).join("")
+    : `<div>${esc(x.room)}<span>${x.status === "No group access" ? "Waiting on group access" : m.vault ? "Not placed yet · pick it for a month on the weekly call" : "Placed on the weekly call"}</span></div>`;
   const el = document.createElement("div");
   el.className = "drawer"; el.style.setProperty("--vc", vc);
   el.innerHTML = `<div class="dscrim"></div><aside class="dpanel" role="dialog" aria-modal="true" aria-label="${esc(x.title)}"><button class="dclose" type="button" aria-label="Close">${XI}</button>
@@ -1449,7 +1458,7 @@ function parseHash(){
   const h = (location.hash || "").slice(1);
   if (GM && /^groups(-|$)/.test(h)){
     const p = h.split("-");
-    return { view: "groups", m: GM.find(x => x.id === p[1]) || GM[GM.length - 1], v: VS.some(x => x.id === p[2]) ? p[2] : "all" };
+    return { view: "groups", m: GM.find(x => x.id === p[1]) || GDEF, v: VS.some(x => x.id === p[2]) ? p[2] : "all" };
   }
   return { view: "organic", w: weekFromHash() };
 }
