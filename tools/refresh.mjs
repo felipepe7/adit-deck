@@ -186,16 +186,20 @@ if (allJ && spJ) {
     V[cur].all.push({ key: slug(name), name: disp(name), url: link || null, partner: yes(r[2]), access: yes(r[3]), devi: yes(r[4]) });
   });
   cur = null;
+  // Read the Access / Can We Post columns by header so a column reorder in the sheet can't swap them.
+  const spHead = ((spJ.values || [])[0] || []).map(h => String(h || "").trim().toLowerCase());
+  let iAccess = spHead.findIndex(h => h.startsWith("access")); if (iAccess < 0) iAccess = 4;
+  let iPost = spHead.findIndex(h => h.includes("can we")); if (iPost < 0) iPost = 5;
   (spJ.values || []).forEach(r => {
     const name = (r[0] || "").trim(), link = (r[1] || "").trim();
     if (!name) return;
     const v = VMAP[name.toLowerCase()];
     if (v && !/^https?:/.test(link)) { cur = v; return; }
     if (!cur) return;
-    const posters = String(r[4] || "").split(",").map(s => s.trim()).filter(s => s && s.toLowerCase() !== "none");
+    const posters = String(r[iAccess] || "").split(",").map(s => s.trim()).filter(s => s && s.toLowerCase() !== "none");
     const match = V[cur].all.find(g => (link && g.url && norm(g.url) === norm(link)) || g.key === slug(name));
     const g = { key: match ? match.key : slug(name), name: disp(name), url: link || (match && match.url) || null, freq: int(r[2]) ?? null,
-      soldier: (r[3] || "").trim() || null, posters, comment: yes(r[5]),
+      soldier: (r[3] || "").trim() || null, posters, comment: yes(r[iPost]),
       partner: match ? match.partner : true, access: posters.length ? true : (match ? match.access : null), devi: match ? match.devi : null };
     if (match) match.sponsored = true;
     V[cur].sponsored.push(g);
