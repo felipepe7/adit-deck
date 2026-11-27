@@ -749,7 +749,23 @@ const WEEKS = [
         tags: "#BlackFriday #Chiropractic #DentalPractice #PracticeManagement #AllInOne #PracticeGrowth #Adit",
         manychat: "Black Friday DEMO flow: every DEMO comment gets the demo booking link by DM. Live before it posts.",
         notes: ["Final cut (Nov 25): Adit logo watermark, branded Adit captions, Cook Chiropractic + Adit Black Friday outro.", "Instagram as a collab with @dr.jesse_cook 9:00 AM PT, Facebook 9:15, LinkedIn 9:30, YouTube Short 9:45. Share to Adit's stories and the Facebook groups."],
-        ask: "Comment DEMO" }
+        ask: "Comment DEMO" },
+      { id: "fri2", day: "Friday", short: "Fri", date: "11/27", status: "Scheduled", format: "Reel · 29s · Challenge announcement · 6:55 AM PT · Collab x3",
+        title: "The December Challenge", bucket: "Challenge / Social Proof", video: true, covers: ["light", "dark", "blue"],
+        talent: "Dr. Jesse Cook, Cook Chiropractic",
+        drive: "https://drive.google.com/file/d/1UIs5sh1YDR5g8h_-ZeZBDPx2g6RVoVZw/view?usp=drive_link",
+        hook: "Chiropractors and dentists, the next Adit Google Review Challenge kicks off December 1st 🏆",
+        caption: [
+          "Dr. Jesse Cook (@dr.jesse_cook) of @cook_chiropractic finished 2nd in the last challenge, right behind Dr. Rita Chuang (@drritasmiles) of Breeze Orthodontics in California. And he's coming back for more.",
+          "💰 $10,000 in professional photo and video shoot prizes · ⭐ 1 point for every new Google review · 📅 Starts December 1",
+          "Want in? Comment CHALLENGE and a team member will reach out shortly. Answer every question so you're fully entered 👇🏻"
+        ],
+        thought: "Dr. Jesse saying out loud that he took 2nd behind Dr. Rita is the best proof the challenge is winnable for a regular office, chiro or ortho. Posting it Black Friday morning, four days before Dec 1, gives offices the weekend to sign up.",
+        cta: "Comment CHALLENGE 👇🏻",
+        tags: "#GoogleReviews #ReviewChallenge #Chiropractic #DentalPractice #Orthodontics #PracticeGrowth #Adit",
+        manychat: "CHALLENGE flow: every CHALLENGE comment gets the $10,000 Review Challenge sign-up questions by DM.",
+        notes: ["Scheduled in Metricool (Nov 27): Instagram as a collab with @dr.jesse_cook, @cook_chiropractic and @drritasmiles at 6:55 AM PT, Facebook Reel 10:00, TikTok 10:30, LinkedIn 11:00, YouTube Short 4:00 PM.", "Light cover used as the thumbnail on every platform."],
+        ask: "Comment CHALLENGE" }
     ],
     close: {
       kind: "asks",
